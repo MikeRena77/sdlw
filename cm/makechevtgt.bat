@@ -1,0 +1,1 @@
+pkzip25 -add -rec -path=relative  -excl=database\*.* ..\target.zip

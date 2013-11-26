@@ -1,0 +1,64 @@
+########################################################################
+# $Header: takeHrSnapShots.pl,v 1.0 2008/06/04 mha Exp $
+#
+# Written
+#    by Michael Andrews (MHA)
+#    for AAFES HQ
+#
+# This Perl script runs the htakess command for the HR projects
+#
+# Command line usage:
+#    perl takeHrSnapShots.pl
+#
+#    Version    Date       by   Change Description
+#       1.0     6/04/2008  MHA  Script to handle promotion from Merge to QA after the OM Formal Build
+#
+########################################################################
+use Env;
+
+$scripDir       =   "C:\\hScripts";
+$project        =   "";
+$snapshot       =   "";
+
+# redirect STDOUT and STDERR to takeHrSnapShots$$.log
+open SAVEOUT, ">&STDOUT";
+open SAVEERR, ">&STDERR";
+
+open STDOUT, ">$scripDir/logs/takeHrSnapShots$$.log"
+    or die "Can't redirect stdout $!\n";
+open STDERR, ">&STDOUT" or die "Can't redirect stderr $!\n";
+
+select STDERR; $| = 1;     # make unbuffered
+select STDOUT; $| = 1;     # make unbuffered
+
+print scalar localtime;
+print "\n";
+print("-----BEGIN takeHrSnapShots------------------------------\n");
+
+open (ENVLIST, "$scripDir\\prj") or die "Can't open $scripDir\\prj: $!\n";
+ITEM: while (<ENVLIST>)
+    {
+        $/ = " \n";
+        $project = $_;
+        chomp ($project);
+        $ENV{'PROJECT'} = $project;
+        $timetsamp  =   localtime;
+        print $timetsamp "\n";
+        $snapshot   =   $project . $timetsamp;
+        print ($snapshot)"\n";
+print             ("htakess -b \"PRODSWA\" -en \"$project\" -st \"Alpha\" -ss \"$snapshot\" -ve -eh \"%HARVESTHOME%\\hsync.dfo\" -oa \">>&STDOUT\" -wts \n");
+$error_exit=system("htakess -b \"PRODSWA\" -en \"$project\" -st \"Alpha\" -ss \"$snapshot\" -ve -eh \"%HARVESTHOME%\\hsync.dfo\" -oa \">>&STDOUT\" -wts");
+if ($error_exit != 0){ print "Error: $error_exit\n"};
+        
+        next ITEM;
+    }
+close (ENVLIST);
+
+print("-----END takeHrSnapShots--------------------------\n");
+print scalar localtime;
+print "\n";
+
+close STDOUT;
+close STDERR;
+
+exit $error_exit;

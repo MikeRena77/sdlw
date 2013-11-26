@@ -1,0 +1,5 @@
+sed -i "s/hardev2/hardev02/g" HRCRB_ALPHA_RELOAD.xml
+
+sed -i "s/HARDEV2/HARDEV02/g" HRCRB_ALPHA_RELOAD.xml
+
+sed -i "s/PublicBuild>y/PublicBuild>n/g" 

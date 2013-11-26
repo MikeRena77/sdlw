@@ -1,0 +1,1 @@
+del /F /S /Q /A:H \inetpub\hqws01_alpha\wsHRFacade\*.scc

@@ -1,0 +1,13 @@
+applbld.cmd
+applname.cmd
+basebld.cmd
+bldnotes.pl
+chckparm.pl
+dailybuild.pl
+finishappl.cmd
+fndshare.cmd
+promote.cmd
+shdbgBuild.pl
+
+GetServer.cmd
+GetServerName.pl

@@ -1,0 +1,294 @@
+/*****************************************************************************
+*
+*  NAME        :  $Workfile:   finishappl.cmd  $
+*                 $Revision:   1.0  $
+*                 $Date:   05 Aug 2002 09:23:54  $
+*
+*  DESCRIPTION :  Script to complete an application build and copy it up to the
+*                 network and movlabels.
+*
+*  MODIFICATION/REV HISTORY :
+*
+* $Log:   P:/vcs/cm/finishappl.cmdv  $
+*  
+*     Rev 1.1   19 March 2010 10:04:54   BLi
+*  Added projects for Buypass and Sunoco.
+*
+*     Rev 1.0   05 Aug 2002 09:23:54   CraigL
+*  Initial revision.
+*  
+*
+*****************************************************************************/
+
+ARG ApplDir BuildLabel ReleaseName AllocType Rest
+
+CALL RxFuncAdd 'SysFileDelete',   'RexxUtil', 'SysFileDelete'
+
+ScrDir = "S:\SCR\"
+PvcsDir = "S:\VCS"
+BuildDir = "BUILD\"
+ApplBuildDir = "S:\BUILD\"
+PromoteFileName = "PROMOTE.LST"
+PromoteLogFileName = "PRMTLST.LOG"
+GetProotLogFileName = "GETPROOT.LOG"
+NottipFileName = "Nottip.out"
+ExtractlFileName = "extractl.out"
+MovlabelFileName = "movlabel.out"
+OutputFileName = ""
+ScrFile = "SCRFILES.LST"
+ScrSubDir = "IN\"
+InputFileName = ""
+ApplLink = ""
+BaseLink = ""
+/* applbld log output file */
+outFile = ScrDir""BuildDir""ReleaseName"\applbld.log"    
+ReleaseDir = ApplBuildDir""ReleaseName
+
+/* get software development server name */
+PARSE VALUE GetServer() with ServerName
+
+ErrorMessage = ""
+
+/* check if first parameter is request for help */
+IF ReleaseName="" THEN DO
+   /* then this is a usage request */
+   ErrorMessage = ""
+   showUsage()
+END /* THEN usage request */
+
+
+ApplLink = substr( ApplDir, 4, 10 )
+
+ApplProjectName = ApplLink
+
+IF applLink = "NSTARTER" THEN
+DO
+   applLink = "NTSTART"
+END
+
+IF applLink = "NBP" THEN
+DO
+   applLink = "NTBP"
+END
+
+IF applLink = "NEQUIVA" THEN
+DO
+   applLink = "NTEQUIVA"
+END
+
+IF applLink = "NSHELL" THEN
+DO
+   applLink = "NTSHELL"
+END
+
+IF applLink = "NBUYPASS" THEN
+DO
+   applLink = "NBUYPASS"
+END
+
+IF applLink = "NSUN" THEN
+DO
+   applLink = "NSUN"
+END
+
+
+/* check network connections */
+/* s: drive */
+/* need to check for correct link to s: here */
+'net use s: /del'
+'net use s: \\'ServerName'\'ApplLink
+IF rc \= 0 THEN
+DO
+   ErrorMessage = "ERROR1: Unable to create network link to \\"ServerName"\"ApplLink
+   CALL err_beep
+   showUsage()
+END
+
+/* only now can we use the output file */
+CALL outputMsg "Starting application build for "ApplLink" at "time()
+CALL outputMsg "connected s: drive to \\"ServerName"\"ApplLink
+
+/* p: drive */
+CALL outputMsg "disconnect p: drive"
+'@net use p: /d'
+CALL outputMsg "connect p: drive to \\"ServerName"\NTNUC"
+'@net use p: \\'ServerName'\ntnuc 1>nul 2>nul'
+IF rc \= 0 THEN
+DO
+   ErrorMessage = "ERROR: Unable to create network link to \\"ServerName"\ntbase"
+   CALL err_beep
+   showUsage()
+END
+
+/* q: drive */
+CALL outputMsg "disconnect q: drive"
+BaseLink = "NTBASE"
+'@net use q: /d'
+CALL outputMsg "connect q: drive to \\"ServerName"\"BaseLink
+'@net use q: \\'ServerName'\'BaseLink '1>nul 2>nul'
+IF rc \= 0 THEN
+DO
+   ErrorMessage = "ERROR2: Unable to create network link to \\"ServerName"\"BaseLink
+   CALL err_beep
+   showUsage()
+END
+
+/* s: drive */
+/* need to check for correct link to s: here ??? */
+
+/* v: drive */
+/*CALL outputMsg "disconnect v: drive" */
+/*'@net use v: /d' */
+/*CALL outputMsg "connect v: drive to \\"ServerName"\"ReleaseName */
+/*'@net use v: \\'ServerName'\'ReleaseName '1>nul 2>nul' */
+/*IF rc \= 0 THEN */
+/*DO */
+/*   ErrorMessage = "ERROR3: Unable to create network link to \\"ServerName"\"ReleaseName */
+/*   CALL err_beep */
+/*  showUsage() */
+/* END */
+
+CALL outputMsg "network links ok"
+
+/* promote the new build to the network */
+CALL outputMsg "promote the new build to the network"
+rc = promote( ApplDir"," ReleaseDir )
+IF rc \= 0 THEN
+DO
+   CALL outputMsg "ERROR: promote failed with rc = " rc
+   CALL err_beep
+   EXIT 1
+END
+
+/* attach the correct label */
+CALL outputMsg "attach the correct label"
+ApplLink = substr( ApplDir, 4, 10 )
+OutputFileName = ScrDir""BuildDir""ReleaseName"\"MovlabelFileName
+rc = movlabel( BuildLabel"," ReleaseName"," ApplLink"," OutputFileName )
+IF rc \= 0 THEN
+DO
+   CALL outputMsg "ERROR: movlabel failed with rc = " rc
+   CALL err_beep
+   EXIT 1
+END
+
+/* run the nottip utility */
+CALL outputMsg "run the nottip utility"
+OutputFileName = ScrDir""BuildDir""ReleaseName"\"NottipFileName
+rc = nottip( PvcsDir"," BuildLabel"," OutputFileName )
+IF rc \= 0 THEN
+DO
+   CALL outputMsg "ERROR: nottip failed with rc = " rc
+   CALL err_beep
+   EXIT 1
+END
+
+CALL outputMsg "application build for "ApplLink" successfully completed at "time()
+
+EXIT  0
+/*=========================================================================*/
+
+showUsage: PROCEDURE EXPOSE ErrorMessage
+   '@cls'
+   SAY " "
+   SAY " "
+   CALL outputMsg ErrorMessage
+   SAY " "
+   SAY " "
+   SAY "FINISHAPPL ApplDir BuildLabel ReleaseName AllocType"
+   SAY " "
+   SAY " ApplDir: Directory location of the Application (e.g. D:\NSHELL)"
+   SAY " "
+   SAY " BuildLabel: e.g. SHELL21 BASE30 CHEVRON10"
+   SAY " "
+   SAY " ReleaseName: e.g. N0210AE, SH0220D, CH0200X"
+   SAY " "
+   SAY " AllocType:"
+   SAY "    SM_PRODUCTION - production SmartHeap"
+   SAY "    SM_DEBUG      - memory debug SmartHeap"
+   SAY "    SYMBOLS       - no SmartHeap, but with debug"
+   SAY " "
+EXIT 1
+/*=========================================================================*/
+
+IsDir: PROCEDURE
+  ARG dirPathname
+  /* If dirPathname is the pathname of a directory, return 1; otherwise 0. */
+  '@dir' dirPathname '1> NUL 2> NUL'
+RETURN rc == 0
+/*=========================================================================*/
+
+outputMsg: PROCEDURE EXPOSE outFile;
+  PARSE ARG msg
+  SAY msg
+  CALL lineout outFile, msg
+RETURN 0
+/*=========================================================================*/
+
+
+/* test functions */
+/*
+prmtlst: PROCEDURE
+   ARG arglist
+
+   SAY "running fake prmtbld function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+
+extractl: PROCEDURE
+   ARG arglist
+
+   SAY "running fake extractl function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+
+pvcs2bld: PROCEDURE
+   ARG arglist
+
+   SAY "running fake pvcs2bld function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+
+setupbld: PROCEDURE
+   ARG arglist
+
+   SAY "running fake setupbld function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+
+maklocal: PROCEDURE
+   ARG arglist
+
+   SAY "running fake maklocal function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+
+promote: PROCEDURE
+   ARG arglist
+
+   SAY "running fake promote function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+
+movlabel: PROCEDURE
+   ARG arglist
+
+   SAY "running fake movlabel function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+
+nottip: PROCEDURE
+   ARG arglist
+
+   SAY "running fake nottip function"
+   SAY "Arguments: "arglist
+
+RETURN 0
+*/

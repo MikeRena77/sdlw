@@ -1,0 +1,7 @@
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\cm -r -exc cmFilesDB.xml -wp -xml cmFilesDB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\cm\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+

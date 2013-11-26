@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SOCRATES</Machine>
+    <WindowsUser>Eric</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>DB4D14FCAFCD533F1E59E22A12CF3148FA00FF39B8060E6BF333955F3DDD9E2A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>5c993814-3d32-487d-8885-53f4d2377661_1.0.0.0_neutral__0b9t7erj4py54</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>5c993814-3d32-487d-8885-53f4d2377661_0b9t7erj4py54!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>5c993814-3d32-487d-8885-53f4d2377661</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Eric</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-18T01:50:27.663</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\bin\Debug\VSMObserverPatternDemo.exe">
+      <PackagePath>VSMObserverPatternDemo.exe</PackagePath>
+      <Modified>2013-07-18T01:50:27.259</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\bin\Debug\VSMObserverPatternDemo.pdb">
+      <PackagePath>VSMObserverPatternDemo.pdb</PackagePath>
+      <Modified>2013-07-18T01:50:27.245</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-07-17T21:59:32.417</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T23:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-07-18T00:07:41.822</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\eric\documents\visual studio 2012\Projects\VSMObserverPatternDemo\VSMObserverPatternDemo\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-07-17T23:53:30.349</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

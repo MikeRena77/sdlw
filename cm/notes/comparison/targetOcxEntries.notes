@@ -1,0 +1,821 @@
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{03FAF558-0AAE-11D2-AEF8-00C04F991AEA}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSReceiptView.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{03FAF558-0AAE-11D2-AEF8-00C04F991AEA}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSReceiptView.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{0540716A-0D3D-11D3-A4CE-00C04F739C5D}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQwerty.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{0540716A-0D3D-11D3-A4CE-00C04F739C5D}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQwerty.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{0678DF62-60ED-44D5-AC90-41E2D2673507}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSKeyboard.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{0678DF62-60ED-44D5-AC90-41E2D2673507}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSKeyboard.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{07953425-4648-11D1-9CDB-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxRP.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{07953425-4648-11D1-9CDB-0060975F7DD8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxRP.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{07953426-4648-11D1-9CDB-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxRP.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{086B9926-3F27-11D1-83DB-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\logocx.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{086B9926-3F27-11D1-83DB-0060972D0437}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\logocx.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{086B9927-3F27-11D1-83DB-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\logocx.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{0BCBCF71-3F30-11D1-9CD5-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WaynePercent.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{0BCBCF71-3F30-11D1-9CD5-0060975F7DD8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WaynePercent.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{102554F7-1430-11D1-A329-0020AFBEEA6C}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneSecLvlCombo.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{102554F7-1430-11D1-A329-0020AFBEEA6C}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneSecLvlCombo.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{11CA6155-59E4-11D1-83EA-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\kbdbase.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{11CA6155-59E4-11D1-83EA-0060972D0437}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\kbdbase.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{11CA6156-59E4-11D1-83EA-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\kbdbase.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{20C944B6-3138-11D2-AF35-00C04F991AEA}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSMessageArea.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{20C944B6-3138-11D2-AF35-00C04F991AEA}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSMessageArea.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{21619995-43D7-11D1-9CD6-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WTime.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{21619995-43D7-11D1-9CD6-0060975F7DD8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WTime.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{24422F78-4CAE-4D16-A1B4-480BEF03B0EB}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{2873C5D4-2A64-11D2-AF2D-00C04F991AEA}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSTaskBar.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{2873C5D4-2A64-11D2-AF2D-00C04F991AEA}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSTaskBar.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{29C2D093-3077-11D6-BDC2-00B0D053D44E}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQSRMenu.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{29C2D093-3077-11D6-BDC2-00B0D053D44E}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQSRMenu.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{3149AE00-F35A-11D2-A4B7-00C04F739C24}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\target\ocx\WayneTSApp.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{3149AE00-F35A-11D2-A4B7-00C04F739C24}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\target\ocx\WayneTSApp.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{32C82D05-4AC6-11D2-AF48-00C04F991AEA}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSPIW.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{32C82D05-4AC6-11D2-AF48-00C04F991AEA}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSPIW.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{3CCCCE06-9802-11D1-9D12-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WSalesLg.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{3CCCCE06-9802-11D1-9D12-0060975F7DD8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WSalesLg.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{3CCCCE07-9802-11D1-9D12-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WSalesLg.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{3FF26807-EBDF-49C3-8DE2-BE808D516800}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTaxList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{4BB40935-3995-11D1-861F-0020AF26D4B5}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxchs.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{4BB40935-3995-11D1-861F-0020AF26D4B5}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxchs.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{4BB40936-3995-11D1-861F-0020AF26D4B5}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxchs.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{4E6E96A2-24DE-11D2-AF2B-00C04F991AEA}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSHelpBrowser.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{4E6E96A2-24DE-11D2-AF2B-00C04F991AEA}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSHelpBrowser.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{5061752B-3A75-11D1-9CD2-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneCombo.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{5061752B-3A75-11D1-9CD2-0060975F7DD8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneCombo.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{52DC7E35-5869-11D1-83E9-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\prehhook.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{52DC7E35-5869-11D1-83E9-0060972D0437}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\prehhook.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{52DC7E36-5869-11D1-83E9-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\prehhook.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{59F45446-7E83-4064-8B88-07D1FB05D8B6}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{6004837E-3823-45EF-9C6D-6F5C541F266B}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{608FBEF5-3233-11D2-92ED-006008E2F0C8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\Ocxappl.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{608FBEF5-3233-11D2-92ED-006008E2F0C8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\Ocxappl.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{608FBEF6-3233-11D2-92ED-006008E2F0C8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\Ocxappl.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{656D1711-76DB-4AFF-9C54-4261571E0E5F}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSReceiptView.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{68A1F44A-4B34-11D1-9169-0020AFBEEAA5}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTaxList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{68A1F44A-4B34-11D1-9169-0020AFBEEAA5}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTaxList.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{6F923CA7-1F5E-11D2-AF1A-00C04F991AEA}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSPumpImages.dll
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{7A3DE194-1FEF-11D6-BD77-00B0D076A9B5}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQSRModifierPad.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{7A3DE194-1FEF-11D6-BD77-00B0D076A9B5}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQSRModifierPad.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{810BE9DD-B489-11D1-9361-0020AFBEEA8F}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneGlobalCommand.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{810BE9DD-B489-11D1-9361-0020AFBEEA8F}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneGlobalCommand.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{8BB532D9-3E8F-11D1-9CD5-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\CheckBox.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{8BB532D9-3E8F-11D1-9CD5-0060975F7DD8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\CheckBox.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{8C014758-A372-11D4-A52B-00C04F739C5D}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScratchPad.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{910BFE1B-18D5-11D1-A32A-0020AFBEEA6C}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\wayneamount.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{910BFE1B-18D5-11D1-A32A-0020AFBEEA6C}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\wayneamount.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{98BBEC99-14E0-11D5-A57D-00C04F7F2F11}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScratchPad.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{98BBEC99-14E0-11D5-A57D-00C04F7F2F11}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScratchPad.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{9DCDB7DF-56F6-11D2-893E-006097D340A8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{9DCDB7DF-56F6-11D2-893E-006097D340A8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{9DCDB87D-56F6-11D2-893E-006097D340A8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSCardView.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{9DCDB87D-56F6-11D2-893E-006097D340A8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSCardView.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{9DCDB8AA-56F6-11D2-893E-006097D340A8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScrollbar.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{9DCDB8AA-56F6-11D2-893E-006097D340A8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScrollbar.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{A16735E5-E81F-11D0-AD0A-00A024111406}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WaynePC.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{A16735E5-E81F-11D0-AD0A-00A024111406}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WaynePC.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{A16735E6-E81F-11D0-AD0A-00A024111406}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WaynePC.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{AD3F2A1B-17F8-11D1-AD2A-00A024111406}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxecr.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{AD3F2A1B-17F8-11D1-AD2A-00A024111406}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxecr.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{AD3F2A1C-17F8-11D1-AD2A-00A024111406}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxecr.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{AFFE01A4-EBDE-11D0-AD0C-00A024111406}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxkb.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{AFFE01A4-EBDE-11D0-AD0C-00A024111406}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxkb.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{AFFE01A5-EBDE-11D0-AD0C-00A024111406}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\ocxkb.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{B82A1206-43D5-11D1-9CD6-0060975F7DD8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\WTime.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{C083D1D0-4B34-11D1-9169-0020AFBEEAA5}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{C083D1D0-4B34-11D1-9169-0020AFBEEAA5}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{C2169F75-3F40-11D1-83DB-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\target\ocx\sysprog.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{C2169F75-3F40-11D1-83DB-0060972D0437}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\target\ocx\sysprog.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{C2169F76-3F40-11D1-83DB-0060972D0437}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\target\ocx\sysprog.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{CE1FA376-95B2-4680-A52D-F2F11D40EF70}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSTaskBar.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D5447592-3566-11D3-A4BF-00C04F739C5D}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneQnty.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D5447592-3566-11D3-A4BF-00C04F739C5D}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneQnty.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D54475A6-3566-11D3-A4BF-00C04F739C5D}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTextBox.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D54475A6-3566-11D3-A4BF-00C04F739C5D}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTextBox.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D66BFFAD-56EE-11D2-893E-006097D340A8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSButtonImages.dll
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D66C006B-56EE-11D2-893E-006097D340A8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D66C006B-56EE-11D2-893E-006097D340A8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D66C00EB-56EE-11D2-893E-006097D340A8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSFuelingPointView.OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D66C00EB-56EE-11D2-893E-006097D340A8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSFuelingPointView.OCX, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D66C0141-56EE-11D2-893E-006097D340A8}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSPumpFrame.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D66C0141-56EE-11D2-893E-006097D340A8}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSPumpFrame.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{E092F888-A398-11D5-A52C-00600840E5B2}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nchevron\TARGET\OCX\WaynePwd.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{E092F888-A398-11D5-A52C-00600840E5B2}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nchevron\TARGET\OCX\WaynePwd.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{E092F889-A398-11D5-A52C-00600840E5B2}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nchevron\TARGET\OCX\WaynePwd.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{F07EE1D6-912D-11D2-92F6-006008E2F094}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\ocxRPA.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{F07EE1D6-912D-11D2-92F6-006008E2F094}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\ocxRPA.ocx, 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{F07EE1D7-912D-11D2-92F6-006008E2F094}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\ocxRPA.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{F76FEA0F-4B13-11D1-9169-0020AFBEEAA5}\InprocServer32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{F76FEA0F-4B13-11D1-9169-0020AFBEEAA5}\ToolboxBitmap32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.ocx, 30000
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{00263161-6C4A-4FA1-9C89-417F7D6D6BF0}\6.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{00263161-6C4A-4FA1-9C89-417F7D6D6BF0}\6.3\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{02DC2342-DB40-4D66-862E-2FD2AFB04BF0}\3.9\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\target\ocx\sysprog.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{02DC2342-DB40-4D66-862E-2FD2AFB04BF0}\3.9\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{03FAF55A-0AAE-11D2-AEF8-00C04F991AEA}\5.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSReceiptView.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{03FAF55A-0AAE-11D2-AEF8-00C04F991AEA}\5.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{047B150C-D08F-4F4B-BC60-93BC55700ED5}\13.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\wayneamount.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{05407168-0D3D-11D3-A4CE-00C04F739C5D}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQwerty.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{05407168-0D3D-11D3-A4CE-00C04F739C5D}\1.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{07953422-4648-11D1-9CDB-0060975F7DD8}\1.5\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\ocxRP.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{086B9922-3F27-11D1-83DB-0060972D0437}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\logocx.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{0D07FFD0-07A4-11D1-A320-0020AFBEEA6C}\13.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\wayneamount.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{0D07FFD0-07A4-11D1-A320-0020AFBEEA6C}\13.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{0D8CC940-17E8-11D1-A329-0020AFBEEA6C}\d.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WaynePercent.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{0D8CC940-17E8-11D1-A329-0020AFBEEA6C}\d.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{10254F1E-1430-11D1-A329-0020AFBEEA6C}\c.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneSecLvlCombo.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{10254F1E-1430-11D1-A329-0020AFBEEA6C}\c.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{17281694-EE75-4D82-B7F7-D7AF9B7C9984}\1.b\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\Ocxappl.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{17281694-EE75-4D82-B7F7-D7AF9B7C9984}\1.b\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{20C944B8-3138-11D2-AF35-00C04F991AEA}\3.0\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSMessageArea.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{20C944B8-3138-11D2-AF35-00C04F991AEA}\3.0\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{2873C5D6-2A64-11D2-AF2D-00C04F991AEA}\3.b\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSTaskBar.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{2873C5D6-2A64-11D2-AF2D-00C04F991AEA}\3.b\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{29C2D08F-3077-11D6-BDC2-00B0D053D44E}\1.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQSRMenu.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{29C2D08F-3077-11D6-BDC2-00B0D053D44E}\1.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{29F95722-8587-4211-ACCB-39CFB462C155}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTaxList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{2E17AC72-3A8B-4235-A86F-D494000E7881}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\CheckBox.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{31232A09-B486-11D1-9361-0020AFBEEA8F}\2.4\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneGlobalCommand.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{31232A09-B486-11D1-9361-0020AFBEEA8F}\2.4\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3149ADFE-F35A-11D2-A4B7-00C04F739C24}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\target\ocx\WayneTSApp.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3149ADFE-F35A-11D2-A4B7-00C04F739C24}\1.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{32C82D07-4AC6-11D2-AF48-00C04F991AEA}\4.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSPIW.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{32C82D07-4AC6-11D2-AF48-00C04F991AEA}\4.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{33C1FF2E-EFA0-432F-B290-188D01D7468F}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{33C1FF2E-EFA0-432F-B290-188D01D7468F}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{33C9056C-A6F2-4AE8-A3AB-C34F55DB7ACD}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\logocx.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3463C7ED-587C-4ADE-B715-55903561FDEF}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\logocx.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{38EA9818-B44A-408B-BE00-BA567C54F4D4}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\WSalesLg.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{38EA9818-B44A-408B-BE00-BA567C54F4D4}\1.0\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3BFBE813-DDEF-4C90-8EC2-B5774E862B79}\3.9\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\target\ocx\sysprog.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3BFBE813-DDEF-4C90-8EC2-B5774E862B79}\3.9\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3CCCCE03-9802-11D1-9D12-0060975F7DD8}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WSalesLg.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3E563F39-C1C2-4F40-A4CE-FADE18D34311}\1.5\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\ocxRP.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{3E563F39-C1C2-4F40-A4CE-FADE18D34311}\1.5\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{486326E8-D31E-4238-A4FA-481F9867A0F7}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\ocxRPA.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{486326E8-D31E-4238-A4FA-481F9867A0F7}\1.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{4BB40932-3995-11D1-861F-0020AF26D4B5}\1.b\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\ocxchs.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{4C588AD2-DA77-4BAB-B841-B8F1BDB36D54}\d.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WaynePercent.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{4E6E96A8-24DE-11D2-AF2B-00C04F991AEA}\1.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSHelpBrowser.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{4E6E96A8-24DE-11D2-AF2B-00C04F991AEA}\1.3\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{4F33A513-8447-412E-A7A8-71F1A5A9F485}\1.1\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\WaynePwd.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{4F33A513-8447-412E-A7A8-71F1A5A9F485}\1.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{50CB3C82-1188-4D83-A6E2-82B10110F1BC}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{52DC7E32-5869-11D1-83E9-0060972D0437}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\prehhook.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{56B26569-793F-4503-B0A1-59575BF22D84}\3.9\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\target\ocx\sysprog.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{56B26569-793F-4503-B0A1-59575BF22D84}\3.9\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{58CFFC1B-9D6C-4F04-A14C-FE7DE55DCBDE}\2.4\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneGlobalCommand.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{58CFFC1B-9D6C-4F04-A14C-FE7DE55DCBDE}\2.4\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{608FBEF2-3233-11D2-92ED-006008E2F0C8}\1.b\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\TARGET\OCX\Ocxappl.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{614CFF88-4E89-4FE3-A616-0422AD214B0B}\5.24\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\ocxecr.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{614CFF88-4E89-4FE3-A616-0422AD214B0B}\5.24\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{68A1F44C-4B34-11D1-9169-0020AFBEEAA5}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTaxList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{68A1F44C-4B34-11D1-9169-0020AFBEEAA5}\1.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{6F923A0D-1F5E-11D2-AF1A-00C04F991AEA}\4.0\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSPumpImages.dll
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{6F923A0D-1F5E-11D2-AF1A-00C04F991AEA}\4.0\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{70CA0A59-1A67-11D2-8712-0060975F7DD8}\1.9\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\kbdbase.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{71B08B50-BE2B-425F-9451-B41F7DC4983C}\1.1\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\WTime.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{71B08B50-BE2B-425F-9451-B41F7DC4983C}\1.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{761E06E4-AD65-11D1-9D21-0060975F7DD8}\5.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTextBox.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{761E06E4-AD65-11D1-9D21-0060975F7DD8}\5.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{7A3DE192-1FEF-11D6-BD77-00B0D076A9B5}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQSRModifierPad.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{7A3DE192-1FEF-11D6-BD77-00B0D076A9B5}\1.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{801FD4B9-1F0A-11D1-9CB7-0060975F7DD8}\23.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneCombo.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{801FD4B9-1F0A-11D1-9CB7-0060975F7DD8}\23.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{81C7A2F9-767B-4E8D-9CF3-A0166352433E}\13.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\wayneamount.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{8532D450-A40F-48BC-87AE-E0AC97246460}\6.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{8532D450-A40F-48BC-87AE-E0AC97246460}\6.3\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{8BB532DB-3E8F-11D1-9CD5-0060975F7DD8}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\CheckBox.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{8BB532DB-3E8F-11D1-9CD5-0060975F7DD8}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{8D71EA19-0B06-4DF3-B68A-DAA72A946DA0}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneQnty.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{91775BC2-4AE1-11D1-9169-0020AFBEEAA5}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneQnty.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{91775BC2-4AE1-11D1-9169-0020AFBEEAA5}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9B96A328-C24B-442A-92A6-689E136EDCC3}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9CA3B070-9721-4A81-8733-F3A1DD57B3B6}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQwerty.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB743-56F6-11D2-893E-006097D340A8}\5.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScratchPad.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB743-56F6-11D2-893E-006097D340A8}\5.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB7E1-56F6-11D2-893E-006097D340A8}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB7E1-56F6-11D2-893E-006097D340A8}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB87F-56F6-11D2-893E-006097D340A8}\5.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSCardView.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB87F-56F6-11D2-893E-006097D340A8}\5.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB896-56F6-11D2-893E-006097D340A8}\b.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSKeyboard.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB896-56F6-11D2-893E-006097D340A8}\b.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB8AC-56F6-11D2-893E-006097D340A8}\1.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScrollbar.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9DCDB8AC-56F6-11D2-893E-006097D340A8}\1.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{9E073075-0112-4AEE-A5CA-A1F5864BA0E8}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{A16735E2-E81F-11D0-AD0A-00A024111406}\2.5\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WaynePC.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{A242D8C5-3C31-4E35-8B4A-6E14436A527B}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{AD3F2A18-17F8-11D1-AD2A-00A024111406}\5.24\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\ocxecr.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{AFFE01A1-EBDE-11D0-AD0C-00A024111406}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\ocxkb.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{B6DA847D-EDC6-49DC-BB30-1B9EC9019157}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{B6DA847D-EDC6-49DC-BB30-1B9EC9019157}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{B82A1203-43D5-11D1-9CD6-0060975F7DD8}\1.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WTime.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{BF06A917-C108-4AAA-9E0C-64AB4A6E5DBF}\5.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTextBox.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{BF06A917-C108-4AAA-9E0C-64AB4A6E5DBF}\5.2\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C083D1D2-4B34-11D1-9169-0020AFBEEAA5}\1.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C083D1D2-4B34-11D1-9169-0020AFBEEAA5}\1.3\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C1620EC9-B59D-47D3-B7EF-A47890F61FC3}\3.9\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\target\ocx\sysprog.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C1620EC9-B59D-47D3-B7EF-A47890F61FC3}\3.9\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C2169F72-3F40-11D1-83DB-0060972D0437}\3.9\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\sysprog.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C46CAE65-2C96-4536-A0B1-5917FBC46EC2}\23.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneCombo.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C786BBF6-2D00-4340-85AB-9C98C53026E7}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\logocx.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{C9752457-DCB7-4494-92C4-FCC993B2C5EA}\1.0\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\logocx.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{CE0CA080-F953-4B2E-8C58-784731B7031C}\6.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{CE0CA080-F953-4B2E-8C58-784731B7031C}\6.3\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66BFFB0-56EE-11D2-893E-006097D340A8}\2.0\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSButtonImages.dll
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66BFFB0-56EE-11D2-893E-006097D340A8}\2.0\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66C006D-56EE-11D2-893E-006097D340A8}\6.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66C006D-56EE-11D2-893E-006097D340A8}\6.3\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66C00ED-56EE-11D2-893E-006097D340A8}\e.4\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSFuelingPointView.OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66C00ED-56EE-11D2-893E-006097D340A8}\e.4\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66C0143-56EE-11D2-893E-006097D340A8}\7.5\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSPumpFrame.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{D66C0143-56EE-11D2-893E-006097D340A8}\7.5\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{DD32D6F9-DB3F-425A-8D6C-CAE7FEED71CC}\1.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScrollbar.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{DECA98EE-8D2F-42B4-81D4-2532A62EBBDA}\e.4\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSFuelingPointView.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E092F883-A398-11D5-A52C-00600840E5B2}\1.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\TARGET\OCX\WaynePwd.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E2D5F57B-9B1D-4DF4-8138-1A4BA3BB1638}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E2D5F57B-9B1D-4DF4-8138-1A4BA3BB1638}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E34FB1CB-20E9-4925-87FD-52E186223389}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E34FB1CB-20E9-4925-87FD-52E186223389}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E36DE328-1CF2-4F2D-AB32-2F3BE25EB605}\c.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneSecLvlCombo.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E5D1DD50-9E4D-4DC2-92B1-E267D947DEF7}\6.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E5D1DD50-9E4D-4DC2-92B1-E267D947DEF7}\6.3\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{E87B8D8D-8236-4DEF-90C8-A78A41CD32E3}\1.3\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{ECD918A6-9C24-47D1-823C-0BE1283CBCB5}\5.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScratchPad.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{ED4C6F8D-85B2-4B5B-BFCF-934716C44D5C}\2.5\0\win32
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\WaynePC.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{F07EE1D3-912D-11D2-92F6-006008E2F094}\1.2\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nchevron\TARGET\OCX\ocxRPA.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{F5AC9EB4-F028-4F9A-BDC6-3E0210F8D859}\13.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\wayneamount.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{F76FEA11-4B13-11D1-9169-0020AFBEEAA5}\2.1\0\win32
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.ocx
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{F76FEA11-4B13-11D1-9169-0020AFBEEAA5}\2.1\HELPDIR
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{05407168-0D3D-11D3-A4CE-00C04F739C5D}#1.2
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSQwerty.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{07953422-4648-11D1-9CDB-0060975F7DD8}#1.5
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\ocxRP.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{086B9922-3F27-11D1-83DB-0060972D0437}#1.0
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\TARGET\OCX\logocx.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{0D07FFD0-07A4-11D1-A320-0020AFBEEA6C}#19.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\wayneamount.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{0D8CC940-17E8-11D1-A329-0020AFBEEA6C}#13.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WaynePercent.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{10254F1E-1430-11D1-A329-0020AFBEEA6C}#12.2
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneSecLvlCombo.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{31232A09-B486-11D1-9361-0020AFBEEA8F}#2.4
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneGlobalCommand.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{3CCCCE03-9802-11D1-9D12-0060975F7DD8}#1.0
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\WSalesLg.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{608FBEF2-3233-11D2-92ED-006008E2F0C8}#1.11
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\Ocxappl.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{68A1F44C-4B34-11D1-9169-0020AFBEEAA5}#1.2
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTaxList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{761E06E4-AD65-11D1-9D21-0060975F7DD8}#5.2
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTextBox.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{801FD4B9-1F0A-11D1-9CB7-0060975F7DD8}#35.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneCombo.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{8BB532DB-3E8F-11D1-9CD5-0060975F7DD8}#2.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\CheckBox.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{91775BC2-4AE1-11D1-9169-0020AFBEEAA5}#2.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneQnty.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{9DCDB743-56F6-11D2-893E-006097D340A8}#5.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScratchPad.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{9DCDB7E1-56F6-11D2-893E-006097D340A8}#2.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTSNumKeypad.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{9DCDB8AC-56F6-11D2-893E-006097D340A8}#1.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSScrollbar.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{A16735E2-E81F-11D0-AD0A-00A024111406}#2.5
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\WaynePC.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{AD3F2A18-17F8-11D1-AD2A-00A024111406}#5.36
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\ocxecr.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{B82A1203-43D5-11D1-9CD6-0060975F7DD8}#1.1
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nbase\TARGET\OCX\WTime.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{C083D1D2-4B34-11D1-9169-0020AFBEEAA5}#1.3
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\WayneTenderList.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{C2169F72-3F40-11D1-83DB-0060972D0437}#3.9
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~1\Sources\nbase\target\ocx\sysprog.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{D66C006D-56EE-11D2-893E-006097D340A8}#6.3
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSGraphButton.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{D66C00ED-56EE-11D2-893E-006097D340A8}#14.4
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\target\ocx\WayneTSFuelingPointView.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{E092F883-A398-11D5-A52C-00600840E5B2}#1.1
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\WaynePwd.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{F07EE1D3-912D-11D2-92F6-006008E2F094}#1.2
+    (Default)    REG_SZ    d:\TFSBUI~1\Nucleus\CHEVRO~3\Sources\nchevron\TARGET\OCX\ocxRPA.oca
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Visual Basic\6.0\{F76FEA11-4B13-11D1-9169-0020AFBEEAA5}#2.1
+    (Default)    REG_SZ    d:\TFSBuild_Source\Nucleus\Chevron-Dev-Genitpi\Sources\nbase\TARGET\OCX\BitVectorList.oca
+
+End of search: 273 match(es) found.

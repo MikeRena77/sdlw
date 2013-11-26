@@ -1,0 +1,1963 @@
+SQL> (SELECT DISTINCT
+  2      B.ITEMOBJID,
+  3      I.ITEMNAME,
+  4      B.BRANCHOBJID,
+  5      B.PACKAGEOBJID
+  6  FROM
+  7      HRVSTUSER.HARBRANCH B,
+  8      HRVSTUSER.HARITEMS I,
+  9      HRVSTUSER.HARPACKAGE P
+ 10  WHERE
+ 11      B.ITEMOBJID=I.ITEMOBJID AND
+ 12      B.PACKAGEOBJID=P.PACKAGEOBJID AND
+ 13      P.PACKAGENAME = 'UpdatesFromPOPs_Devl'
+ 14      )
+ 15  UNION
+ 16  (SELECT DISTINCT
+ 17      II.ITEMOBJID,
+ 18  	II.ITEMNAME,
+ 19  	V.VERSIONOBJID,
+ 20  	V.PACKAGEOBJID
+ 21  FROM
+ 22      HRVSTUSER.HARITEMS II,
+ 23      HRVSTUSER.HARPACKAGE PP,
+ 24      HRVSTUSER.HARVERSIONS V
+ 25  WHERE
+ 26      II.ITEMOBJID=V.ITEMOBJID AND
+ 27  	V.PACKAGEOBJID=PP.PACKAGEOBJID AND
+ 28      PP.PACKAGENAME = 'OnHold'
+ 29      );
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    151205                                                                      
+Index.asp                                                                       
+       8586         4416                                                        
+                                                                                
+    151285                                                                      
+HRFACLN.asp                                                                     
+       8552         4416                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    151286                                                                      
+HRFACLN_child.asp                                                               
+       8554         4416                                                        
+                                                                                
+    151288                                                                      
+HRFACLN_main.asp                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+       8556         4416                                                        
+                                                                                
+    151289                                                                      
+HRFACLN_tree.asp                                                                
+       8557         4416                                                        
+                                                                                
+    151292                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+DataFilters.asp                                                                 
+       8478         4416                                                        
+                                                                                
+    151314                                                                      
+RS.asp                                                                          
+       8996         4416                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    151319                                                                      
+templates.asp                                                                   
+      10929         4416                                                        
+                                                                                
+    151440                                                                      
+hr2900pc_detailSCO.asp                                                          
+       9288         4416                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    152180                                                                      
+PGW_AdminAssocPGW_menu.asp                                                      
+       8813         4416                                                        
+                                                                                
+    152182                                                                      
+PGW_AdminMenu.asp                                                               
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+       8815         4416                                                        
+                                                                                
+    152215                                                                      
+PGW_ToDoListSCO.asp                                                             
+       8880         4416                                                        
+                                                                                
+    152637                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+slide0001.htm                                                                   
+      10677         4416                                                        
+                                                                                
+    152642                                                                      
+slide0002.htm                                                                   
+      10708         4416                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    152648                                                                      
+slide0003.htm                                                                   
+      10736         4416                                                        
+                                                                                
+    152653                                                                      
+slide0004.htm                                                                   
+      10773         4416                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    152657                                                                      
+slide0005.htm                                                                   
+      10805         4416                                                        
+                                                                                
+    152691                                                                      
+PGW_txtForm.asp                                                                 
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+       8922         4416                                                        
+                                                                                
+    152879                                                                      
+hr5790pc.asp                                                                    
+       9466         4416                                                        
+                                                                                
+    152882                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+hrFNLZpc.asp                                                                    
+       9596         4416                                                        
+                                                                                
+    152947                                                                      
+CAS_VAmenu.htm                                                                  
+       8457         4416                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    152961                                                                      
+hr5790pcJS.htm                                                                  
+       9467         4416                                                        
+                                                                                
+    153019                                                                      
+hrCASPool_rprtSCO.asp                                                           
+       9589         4416                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    153024                                                                      
+hrLOG_reportSCO.asp                                                             
+       9601         4416                                                        
+                                                                                
+    153040                                                                      
+hr5740pcSCO.asp                                                                 
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+       9430         4416                                                        
+                                                                                
+    153043                                                                      
+hr5760pcSCO.asp                                                                 
+       9444         4416                                                        
+                                                                                
+    153047                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+hr5790pcSCO.asp                                                                 
+       9468         4416                                                        
+                                                                                
+    153048                                                                      
+hrcomm_apprvlSCO.asp                                                            
+       9683         4416                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    153139                                                                      
+hrempname.asp                                                                   
+       9709         4416                                                        
+                                                                                
+    153141                                                                      
+hrempname_list.asp                                                              
+       9711         4416                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    153323                                                                      
+hrDateSelect.asp                                                                
+       9595         4416                                                        
+                                                                                
+    153343                                                                      
+redirect_hr2710pc.asp                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+      10459         4416                                                        
+                                                                                
+    153496                                                                      
+redirect_hrmn07pc.asp                                                           
+      10602         4416                                                        
+                                                                                
+    153559                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+hrmenu.css                                                                      
+       9771         4416                                                        
+                                                                                
+    153650                                                                      
+PR0105PC.asp                                                                    
+       8958         4416                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    153783                                                                      
+hr6861pc.asp                                                                    
+       9565         4416                                                        
+                                                                                
+    153923                                                                      
+WS_CommonINC.asp                                                                
+       9054         4416                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    153972                                                                      
+HR5221SCO.asp                                                                   
+       8523         4416                                                        
+                                                                                
+    153987                                                                      
+2-areas.cgi                                                                     
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595033         4425                                                        
+                                                                                
+    153988                                                                      
+2-areas.html                                                                    
+     595034         4425                                                        
+                                                                                
+    153989                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+aaTemp1.asp                                                                     
+     595069         4425                                                        
+                                                                                
+    153991                                                                      
+about.html                                                                      
+     595070         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    153996                                                                      
+app_detail.asp                                                                  
+     595071         4425                                                        
+                                                                                
+    153997                                                                      
+app_list.asp                                                                    
+     595072         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154000                                                                      
+b5.js                                                                           
+     595073         4425                                                        
+                                                                                
+    154002                                                                      
+BL_Corner.gif                                                                   
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595037         4425                                                        
+                                                                                
+    154003                                                                      
+blank.html                                                                      
+     595074         4425                                                        
+                                                                                
+    154004                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+BR_Corner.gif                                                                   
+     595038         4425                                                        
+                                                                                
+    154008                                                                      
+cell-delete.gif                                                                 
+     595075         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154009                                                                      
+cell-insert-after.gif                                                           
+     595076         4425                                                        
+                                                                                
+    154010                                                                      
+cell-insert-before.gif                                                          
+     595077         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154011                                                                      
+cell-merge.gif                                                                  
+     595078         4425                                                        
+                                                                                
+    154012                                                                      
+cell-prop.gif                                                                   
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595079         4425                                                        
+                                                                                
+    154013                                                                      
+cell-split.gif                                                                  
+     595080         4425                                                        
+                                                                                
+    154014                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+col-delete.gif                                                                  
+     595081         4425                                                        
+                                                                                
+    154015                                                                      
+col-insert-after.gif                                                            
+     595082         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154016                                                                      
+col-insert-before.gif                                                           
+     595083         4425                                                        
+                                                                                
+    154017                                                                      
+col-split.gif                                                                   
+     595084         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154018                                                                      
+commonDB2.asp                                                                   
+     595085         4425                                                        
+                                                                                
+    154019                                                                      
+context-menu.html                                                               
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595086         4425                                                        
+                                                                                
+    154021                                                                      
+context-menu.js                                                                 
+     595087         4425                                                        
+                                                                                
+    154022                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+core.html                                                                       
+     595088         4425                                                        
+                                                                                
+    154023                                                                      
+css.html                                                                        
+     595089         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154025                                                                      
+css.js                                                                          
+     595091         4425                                                        
+                                                                                
+    154026                                                                      
+custom.css                                                                      
+     595092         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154027                                                                      
+custom2.html                                                                    
+     595093         4425                                                        
+                                                                                
+    154029                                                                      
+cz.js                                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595096         4425                                                        
+                                                                                
+    154032                                                                      
+cz.js                                                                           
+     595094         4425                                                        
+                                                                                
+    154033                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+cz.js                                                                           
+     595095         4425                                                        
+                                                                                
+    154034                                                                      
+da.js                                                                           
+     595097         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154035                                                                      
+da.js                                                                           
+     595098         4425                                                        
+                                                                                
+    154036                                                                      
+da.js                                                                           
+     595099         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154037                                                                      
+de.js                                                                           
+     595100         4425                                                        
+                                                                                
+    154038                                                                      
+de.js                                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595101         4425                                                        
+                                                                                
+    154040                                                                      
+de.js                                                                           
+     595103         4425                                                        
+                                                                                
+    154041                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+de.js                                                                           
+     595102         4425                                                        
+                                                                                
+    154042                                                                      
+dialog.js                                                                       
+     595104         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154045                                                                      
+docprop.gif                                                                     
+     595105         4425                                                        
+                                                                                
+    154047                                                                      
+docprop.html                                                                    
+     595106         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154048                                                                      
+Drillthrough_v2.htc                                                             
+     595039         4425                                                        
+                                                                                
+    154050                                                                      
+ed_about.gif                                                                    
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595107         4425                                                        
+                                                                                
+    154051                                                                      
+ed_align_center.gif                                                             
+     595108         4425                                                        
+                                                                                
+    154052                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+ed_align_justify.gif                                                            
+     595109         4425                                                        
+                                                                                
+    154053                                                                      
+ed_align_left.gif                                                               
+     595110         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154054                                                                      
+ed_align_right.gif                                                              
+     595111         4425                                                        
+                                                                                
+    154055                                                                      
+ed_blank.gif                                                                    
+     595112         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154056                                                                      
+ed_charmap.gif                                                                  
+     595113         4425                                                        
+                                                                                
+    154057                                                                      
+ed_color_bg.gif                                                                 
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595114         4425                                                        
+                                                                                
+    154058                                                                      
+ed_color_fg.gif                                                                 
+     595115         4425                                                        
+                                                                                
+    154059                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+ed_copy.gif                                                                     
+     595116         4425                                                        
+                                                                                
+    154060                                                                      
+ed_custom.gif                                                                   
+     595117         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154061                                                                      
+ed_cut.gif                                                                      
+     595118         4425                                                        
+                                                                                
+    154062                                                                      
+ed_delete.gif                                                                   
+     595119         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154063                                                                      
+ed_format_bold.gif                                                              
+     595120         4425                                                        
+                                                                                
+    154064                                                                      
+ed_format_italic.gif                                                            
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595121         4425                                                        
+                                                                                
+    154065                                                                      
+ed_format_strike.gif                                                            
+     595122         4425                                                        
+                                                                                
+    154066                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+ed_format_sub.gif                                                               
+     595123         4425                                                        
+                                                                                
+    154067                                                                      
+ed_format_sup.gif                                                               
+     595124         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154068                                                                      
+ed_format_underline.gif                                                         
+     595125         4425                                                        
+                                                                                
+    154069                                                                      
+ed_help.gif                                                                     
+     595126         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154070                                                                      
+ed_hr.gif                                                                       
+     595127         4425                                                        
+                                                                                
+    154071                                                                      
+ed_html.gif                                                                     
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595128         4425                                                        
+                                                                                
+    154072                                                                      
+ed_image.gif                                                                    
+     595129         4425                                                        
+                                                                                
+    154073                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+ed_indent_less.gif                                                              
+     595130         4425                                                        
+                                                                                
+    154074                                                                      
+ed_indent_more.gif                                                              
+     595131         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154075                                                                      
+ed_left_to_right.gif                                                            
+     595132         4425                                                        
+                                                                                
+    154076                                                                      
+ed_link.gif                                                                     
+     595133         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154077                                                                      
+ed_list_bullet.gif                                                              
+     595134         4425                                                        
+                                                                                
+    154078                                                                      
+ed_list_num.gif                                                                 
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595135         4425                                                        
+                                                                                
+    154079                                                                      
+ed_paste.gif                                                                    
+     595136         4425                                                        
+                                                                                
+    154080                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+ed_redo.gif                                                                     
+     595137         4425                                                        
+                                                                                
+    154081                                                                      
+ed_right_to_left.gif                                                            
+     595138         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154082                                                                      
+ed_save.gif                                                                     
+     595139         4425                                                        
+                                                                                
+    154083                                                                      
+ed_show_border.gif                                                              
+     595140         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154084                                                                      
+ed_splitcel.gif                                                                 
+     595141         4425                                                        
+                                                                                
+    154085                                                                      
+ed_undo.gif                                                                     
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595142         4425                                                        
+                                                                                
+    154086                                                                      
+editor_help.html                                                                
+     595143         4425                                                        
+                                                                                
+    154087                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+ee.js                                                                           
+     595144         4425                                                        
+                                                                                
+    154088                                                                      
+el.js                                                                           
+     595145         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154089                                                                      
+el.js                                                                           
+     595147         4425                                                        
+                                                                                
+    154090                                                                      
+el.js                                                                           
+     595146         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154091                                                                      
+en.js                                                                           
+     595148         4425                                                        
+                                                                                
+    154092                                                                      
+en.js                                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595149         4425                                                        
+                                                                                
+    154094                                                                      
+en.js                                                                           
+     595150         4425                                                        
+                                                                                
+    154096                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+en.js                                                                           
+     595151         4425                                                        
+                                                                                
+    154097                                                                      
+en.js                                                                           
+     595152         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154098                                                                      
+en.js                                                                           
+     595153         4425                                                        
+                                                                                
+    154099                                                                      
+es.js                                                                           
+     595154         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154101                                                                      
+example.rss                                                                     
+     595155         4425                                                        
+                                                                                
+    154102                                                                      
+Excel_Export.asp                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595040         4425                                                        
+                                                                                
+    154103                                                                      
+fi.js                                                                           
+     595156         4425                                                        
+                                                                                
+    154104                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+fi.js                                                                           
+     595157         4425                                                        
+                                                                                
+    154105                                                                      
+footer.asp                                                                      
+     595158         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154106                                                                      
+fr.js                                                                           
+     595159         4425                                                        
+                                                                                
+    154107                                                                      
+full-page.html                                                                  
+     595160         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154108                                                                      
+full-page.js                                                                    
+     595161         4425                                                        
+                                                                                
+    154109                                                                      
+fullscreen.html                                                                 
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595162         4425                                                        
+                                                                                
+    154110                                                                      
+fullscreen_maximize.gif                                                         
+     595163         4425                                                        
+                                                                                
+    154111                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+fullscreen_minimize.gif                                                         
+     595164         4425                                                        
+                                                                                
+    154112                                                                      
+fully-loaded.html                                                               
+     595165         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154113                                                                      
+FunctionList.rss                                                                
+     595041         4425                                                        
+                                                                                
+    154114                                                                      
+gb.js                                                                           
+     595166         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154115                                                                      
+he.js                                                                           
+     595167         4425                                                        
+                                                                                
+    154116                                                                      
+HR5850XX.asp                                                                    
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595042         4425                                                        
+                                                                                
+    154117                                                                      
+hr5850xx_SCO.asp                                                                
+     595168         4425                                                        
+                                                                                
+    154120                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+hrCASPool_test_data.xml                                                         
+     595171         4425                                                        
+                                                                                
+    154121                                                                      
+hrmn07pc_old.asp                                                                
+     595172         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154122                                                                      
+hrmn07pc_test.asp                                                               
+     595173         4425                                                        
+                                                                                
+    154123                                                                      
+hrvacny_template.asp                                                            
+     595174         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154124                                                                      
+hrvacny_template_detail.asp                                                     
+     595175         4425                                                        
+                                                                                
+    154125                                                                      
+hrvacny_template_list.asp                                                       
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595176         4425                                                        
+                                                                                
+    154126                                                                      
+hrvacny_templt_excpts.asp                                                       
+     595177         4425                                                        
+                                                                                
+    154127                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+hrvacny_templt_excpts_detail.asp                                                
+     595178         4425                                                        
+                                                                                
+    154128                                                                      
+hrvacny_templt_excpts_list.asp                                                  
+     595179         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154129                                                                      
+htmlarea.css                                                                    
+     595180         4425                                                        
+                                                                                
+    154130                                                                      
+htmlarea.js                                                                     
+     595181         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154131                                                                      
+hu.js                                                                           
+     595182         4425                                                        
+                                                                                
+    154132                                                                      
+hu.js                                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595183         4425                                                        
+                                                                                
+    154133                                                                      
+hu.js                                                                           
+     595184         4425                                                        
+                                                                                
+    154134                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+image_library.asp                                                               
+     595185         4425                                                        
+                                                                                
+    154135                                                                      
+index.html                                                                      
+     595186         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154136                                                                      
+insert_image.html                                                               
+     595187         4425                                                        
+                                                                                
+    154137                                                                      
+insert_table.gif                                                                
+     595188         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154138                                                                      
+insert_table.html                                                               
+     595189         4425                                                        
+                                                                                
+    154139                                                                      
+it.js                                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595190         4425                                                        
+                                                                                
+    154140                                                                      
+it.js                                                                           
+     595191         4425                                                        
+                                                                                
+    154141                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+it.js                                                                           
+     595192         4425                                                        
+                                                                                
+    154142                                                                      
+ja-euc.js                                                                       
+     595193         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154143                                                                      
+ja-jis.js                                                                       
+     595194         4425                                                        
+                                                                                
+    154144                                                                      
+ja-sjis.js                                                                      
+     595195         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154145                                                                      
+ja-utf8.js                                                                      
+     595196         4425                                                        
+                                                                                
+    154146                                                                      
+link.html                                                                       
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595197         4425                                                        
+                                                                                
+    154147                                                                      
+logon.asp                                                                       
+     595198         4425                                                        
+                                                                                
+    154148                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+lt.js                                                                           
+     595199         4425                                                        
+                                                                                
+    154149                                                                      
+lv.js                                                                           
+     595200         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154150                                                                      
+Maint_Control_Panel.asp                                                         
+     595043         4425                                                        
+                                                                                
+    154151                                                                      
+Maint_Pay_Adjust_From.asp                                                       
+     595044         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154152                                                                      
+Maint_Pay_Adjust_To.asp                                                         
+     595045         4425                                                        
+                                                                                
+    154153                                                                      
+Maint_Pay_Adjust_Type.asp                                                       
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595046         4425                                                        
+                                                                                
+    154154                                                                      
+Maint_Pay_Adjust_Type_Seq.asp                                                   
+     595047         4425                                                        
+                                                                                
+    154155                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+Maint_Pay_Sys.asp                                                               
+     595048         4425                                                        
+                                                                                
+    154156                                                                      
+Maint_Pay_Sys_Seq.asp                                                           
+     595049         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154157                                                                      
+menu.asp                                                                        
+     595201         4425                                                        
+                                                                                
+    154158                                                                      
+menu.css                                                                        
+     595202         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154159                                                                      
+nb.js                                                                           
+     595203         4425                                                        
+                                                                                
+    154160                                                                      
+Net2Classic.asp                                                                 
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595050         4425                                                        
+                                                                                
+    154161                                                                      
+New_Hire.asp                                                                    
+     595052         4425                                                        
+                                                                                
+    154162                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+New_hire_detail.asp                                                             
+     595053         4425                                                        
+                                                                                
+    154163                                                                      
+New_hire_list.asp                                                               
+     595054         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154164                                                                      
+NewDetailedReport.asp                                                           
+     595051         4425                                                        
+                                                                                
+    154165                                                                      
+nl.js                                                                           
+     595205         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154166                                                                      
+nl.js                                                                           
+     595206         4425                                                        
+                                                                                
+    154167                                                                      
+nl.js                                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595204         4425                                                        
+                                                                                
+    154168                                                                      
+no.js                                                                           
+     595208         4425                                                        
+                                                                                
+    154169                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+no.js                                                                           
+     595207         4425                                                        
+                                                                                
+    154170                                                                      
+OLAP_TRAIN.asp                                                                  
+     595055         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154171                                                                      
+old_insert_image.html                                                           
+     595210         4425                                                        
+                                                                                
+    154172                                                                      
+old-fullscreen.html                                                             
+     595209         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154173                                                                      
+Pay_Adjustments.asp                                                             
+     595057         4425                                                        
+                                                                                
+    154175                                                                      
+Pay_Adjustments.css                                                             
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595058         4425                                                        
+                                                                                
+    154176                                                                      
+PGW_Stat_History.asp                                                            
+     595056         4425                                                        
+                                                                                
+    154177                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+pl.js                                                                           
+     595211         4425                                                        
+                                                                                
+    154178                                                                      
+popup.js                                                                        
+     595212         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154179                                                                      
+popupdiv.js                                                                     
+     595213         4425                                                        
+                                                                                
+    154180                                                                      
+popupwin.js                                                                     
+     595214         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154182                                                                      
+prod.jpg                                                                        
+     595215         4425                                                        
+                                                                                
+    154184                                                                      
+pt_br.js                                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595216         4425                                                        
+                                                                                
+    154185                                                                      
+readme-tech.html                                                                
+     595217         4425                                                        
+                                                                                
+    154186                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+redirect_page.asp                                                               
+     595218         4425                                                        
+                                                                                
+    154187                                                                      
+ro.js                                                                           
+     595221         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154188                                                                      
+ro.js                                                                           
+     595222         4425                                                        
+                                                                                
+    154189                                                                      
+ro.js                                                                           
+     595220         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154190                                                                      
+ro.js                                                                           
+     595219         4425                                                        
+                                                                                
+    154191                                                                      
+row-delete.gif                                                                  
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595223         4425                                                        
+                                                                                
+    154192                                                                      
+row-insert-above.gif                                                            
+     595225         4425                                                        
+                                                                                
+    154193                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+row-insert-under.gif                                                            
+     595226         4425                                                        
+                                                                                
+    154194                                                                      
+row-prop.gif                                                                    
+     595227         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154195                                                                      
+row-split.gif                                                                   
+     595228         4425                                                        
+                                                                                
+    154196                                                                      
+RSS.gif                                                                         
+     595060         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154197                                                                      
+rss_transform.xsl                                                               
+     595229         4425                                                        
+                                                                                
+    154198                                                                      
+ru.js                                                                           
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595230         4425                                                        
+                                                                                
+    154199                                                                      
+ScriptX.cab                                                                     
+     595061         4425                                                        
+                                                                                
+    154200                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+se.js                                                                           
+     595231         4425                                                        
+                                                                                
+    154201                                                                      
+select_color.html                                                               
+     595232         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154202                                                                      
+si.js                                                                           
+     595233         4425                                                        
+                                                                                
+    154204                                                                      
+sp_example.asp                                                                  
+     595234         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154206                                                                      
+spell-check.gif                                                                 
+     595239         4425                                                        
+                                                                                
+    154207                                                                      
+spell-checker.html                                                              
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595240         4425                                                        
+                                                                                
+    154208                                                                      
+spell-checker.js                                                                
+     595241         4425                                                        
+                                                                                
+    154209                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+spell-check-logic.cgi                                                           
+     595235         4425                                                        
+                                                                                
+    154210                                                                      
+spell-check-style.css                                                           
+     595236         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154211                                                                      
+spell-check-ui.html                                                             
+     595237         4425                                                        
+                                                                                
+    154212                                                                      
+spell-check-ui.js                                                               
+     595238         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154213                                                                      
+table-operations.html                                                           
+     595242         4425                                                        
+                                                                                
+    154214                                                                      
+table-operations.js                                                             
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+     595243         4425                                                        
+                                                                                
+    154215                                                                      
+table-prop.gif                                                                  
+     595244         4425                                                        
+                                                                                
+    154216                                                                      
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+test.cgi                                                                        
+     595245         4425                                                        
+                                                                                
+    154217                                                                      
+test.html                                                                       
+     595246         4425                                                        
+                                                                                
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+    154218                                                                      
+TL_Corner.gif                                                                   
+     595062         4425                                                        
+                                                                                
+    154219                                                                      
+TR_Corner.gif                                                                   
+     595063         4425                                                        
+
+ ITEMOBJID                                                                      
+----------                                                                      
+ITEMNAME                                                                        
+--------------------------------------------------------------------------------
+BRANCHOBJID PACKAGEOBJID                                                        
+----------- ------------                                                        
+                                                                                
+    154220                                                                      
+vn.js                                                                           
+     595247         4425                                                        
+                                                                                
+
+241 rows selected.
+
+SQL> SPOOL OFF

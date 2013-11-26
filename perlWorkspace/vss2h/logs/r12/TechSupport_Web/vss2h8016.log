@@ -1,0 +1,179 @@
+Starting VSS to Harvest conversion
+Start time: Tue Feb 22 14:45:32 2011
+Reading Configuration settings from vss2h.ini
+Conversion settings are:
+Need History = 1
+Time Zone = CST
+Keep Files = 0
+Need Repository = 0
+Take Snapshot Only = 0
+Take Snapshot = 0
+Number of HCI attempts is 1
+Keep log files is 1
+Time between HCI attempts is 5
+VSS = TechSupport_Web
+Harvest server = WINDOWS
+Harvest User = vsstoh
+Harvest password = abc1234
+Harvest Home Dir = C:\Program Files\CA\SCM
+VSS User = Vsstoh
+VSS password = abc1234
+VSS bin dir  = H:\Program Files\Microsoft Visual Studio\COMMON\VSS\win32
+ohost = HARVEST2_DEVDBS
+Oracle Connection = hrvstuser/har2vest@HARVEST2_DEVDBS
+SQL scripts location = c:\vss2h\logs\r12\TechSupport_Web
+Harvest Environment = Peer Review Camp
+Harvest View = Development
+Harvest State = Development
+Harvest Check In process = Check In New or Existing Items
+Harvest Package = DevBuddyPR-000001
+Harvest Viewpath = \TechSupport
+Working directory = C:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp
+Version = r12
+
+The creator id is 449
+Projectbase is TechSupport_Web
+Creating project listing file
+Subproject is ""
+The trimmed project is "TechSupport_Web"
+New ViewPath is "\TechSupport"
+hcrtpath -b "DEVSWA" -en "Peer Review Camp" -st "Development" -rp "\TechSupport" -usr "vsstoh" -pw "abc1234" -p "DevBuddyPR-000001" -cipn "Check In New or Existing Items" -oa "c:\vss2h\logs\r12\TechSupport_Web\fileNewPath8016.log" 
+hcrtpath -b "DEVSWA" -en "Peer Review Camp" -st "Development" -rp "\TechSupport" -usr "vsstoh" -pw "abc1234" -p "DevBuddyPR-000001" -cipn "Check In New or Existing Items" -oa "c:\vss2h\logs\r12\TechSupport_Web\fileNewPath8016.log" failed: 768 Bad file descriptor 
+ARE YOU SURE THIS IS R12?
+New working directory is "C:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp"
+New view path is "\TechSupport"
+New directory to create is "ASP"
+New directory to create is "Forms"
+New directory to create is "HTML"
+New directory to create is "images"
+New directory to create is "Properties"
+Processing history of file $/TechSupport_Web/CustomerSuppt.csproj
+The user who made the change is Andrewsmic
+Comment for version 1 of CustomerSuppt.csproj : DevBuddy2 Testing
+ss Get "$/TechSupport_Web/CustomerSuppt.csproj" "-GWRLC:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp" -V1 -I-Y "-Oc:\vss2h\logs\r12\TechSupport_Web\fileget8016.log"
+The test is on : 'C:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp\CustomerSuppt.csproj' 
+A: hci "CustomerSuppt.csproj" -b "DEVSWA" -en "Peer Review Camp" -st "Development" -p "DevBuddyPR-000001" -vp "\TechSupport" -pn "Check In New or Existing Items" -op pc -uk -de "DevBuddy2 Testing." -usr "vsstoh" -pw "abc1234" -oa "c:\vss2h\logs\r12\TechSupport_Web\filehci8016.log" 
+Number of HCI attempts is 1
+Number of HCI errors is 0
+reppath is \TechSupport
+The userobjid is 
+The versionobjid is 1741926
+sqlplus hrvstuser/har2vest@HARVEST2_DEVDBS @"c:\vss2h\logs\r12\TechSupport_Web\userlist8016.sql" -o "c:\vss2h\logs\r12\TechSupport_Web\userlist8016.log" 
+SQL*Plus: Release 10.1.0.2.0 - Production on Tue Feb 22 14:45:50 2011
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP and Data Mining options
+
+update harversions set creatorid = '', modifierid = '' where versionobjid = '1741926'
+                       *
+ERROR at line 1:
+ORA-01407: cannot update ("HRVSTUSER"."HARVERSIONS"."CREATORID") to NULL
+
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP and Data Mining options
+Logging: \TechSupport\CustomerSuppt.csproj;0
+B: hci "CustomerSuppt.csproj" -b "DEVSWA" -en "Peer Review Camp" -st "Development" -p "DevBuddyPR-000001" -vp "\TechSupport" -pn "Check In New or Existing Items" -op pc -ur -de "." -usr "vsstoh" -pw "abc1234" -oa "c:\vss2h\logs\r12\TechSupport_Web\filehci8016.log" 
+Number of HCI errors is 0
+Processing history of file $/TechSupport_Web/CustomerSuppt.csproj.vspscc
+The user who made the change is Andrewsmic
+Comment for version 1 of CustomerSuppt.csproj.vspscc : DevBuddy2 Testing
+ss Get "$/TechSupport_Web/CustomerSuppt.csproj.vspscc" "-GWRLC:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp" -V1 -I-Y "-Oc:\vss2h\logs\r12\TechSupport_Web\fileget8016.log"
+The test is on : 'C:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp\CustomerSuppt.csproj.vspscc' 
+A: hci "CustomerSuppt.csproj.vspscc" -b "DEVSWA" -en "Peer Review Camp" -st "Development" -p "DevBuddyPR-000001" -vp "\TechSupport" -pn "Check In New or Existing Items" -op pc -uk -de "DevBuddy2 Testing." -usr "vsstoh" -pw "abc1234" -oa "c:\vss2h\logs\r12\TechSupport_Web\filehci8016.log" 
+Number of HCI attempts is 1
+Number of HCI errors is 0
+reppath is \TechSupport
+The userobjid is 
+The versionobjid is 1741928
+sqlplus hrvstuser/har2vest@HARVEST2_DEVDBS @"c:\vss2h\logs\r12\TechSupport_Web\userlist8016.sql" -o "c:\vss2h\logs\r12\TechSupport_Web\userlist8016.log" 
+SQL*Plus: Release 10.1.0.2.0 - Production on Tue Feb 22 14:46:07 2011
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP and Data Mining options
+
+update harversions set creatorid = '', modifierid = '' where versionobjid = '1741928'
+                       *
+ERROR at line 1:
+ORA-01407: cannot update ("HRVSTUSER"."HARVERSIONS"."CREATORID") to NULL
+
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP and Data Mining options
+Logging: \TechSupport\CustomerSuppt.csproj.vspscc;0
+B: hci "CustomerSuppt.csproj.vspscc" -b "DEVSWA" -en "Peer Review Camp" -st "Development" -p "DevBuddyPR-000001" -vp "\TechSupport" -pn "Check In New or Existing Items" -op pc -ur -de "." -usr "vsstoh" -pw "abc1234" -oa "c:\vss2h\logs\r12\TechSupport_Web\filehci8016.log" 
+Number of HCI errors is 0
+Processing history of file $/TechSupport_Web/Default.aspx
+The user who made the change is Andrewsmic
+Comment for version 1 of Default.aspx : DevBuddy2 Testing
+ss Get "$/TechSupport_Web/Default.aspx" "-GWRLC:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp" -V1 -I-Y "-Oc:\vss2h\logs\r12\TechSupport_Web\fileget8016.log"
+The test is on : 'C:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp\Default.aspx' 
+A: hci "Default.aspx" -b "DEVSWA" -en "Peer Review Camp" -st "Development" -p "DevBuddyPR-000001" -vp "\TechSupport" -pn "Check In New or Existing Items" -op pc -uk -de "DevBuddy2 Testing." -usr "vsstoh" -pw "abc1234" -oa "c:\vss2h\logs\r12\TechSupport_Web\filehci8016.log" 
+Number of HCI attempts is 1
+Number of HCI errors is 0
+reppath is \TechSupport
+The userobjid is 
+The versionobjid is 1741930
+sqlplus hrvstuser/har2vest@HARVEST2_DEVDBS @"c:\vss2h\logs\r12\TechSupport_Web\userlist8016.sql" -o "c:\vss2h\logs\r12\TechSupport_Web\userlist8016.log" 
+SQL*Plus: Release 10.1.0.2.0 - Production on Tue Feb 22 14:46:24 2011
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP and Data Mining options
+
+update harversions set creatorid = '', modifierid = '' where versionobjid = '1741930'
+                       *
+ERROR at line 1:
+ORA-01407: cannot update ("HRVSTUSER"."HARVERSIONS"."CREATORID") to NULL
+
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP and Data Mining options
+Logging: \TechSupport\Default.aspx;0
+B: hci "Default.aspx" -b "DEVSWA" -en "Peer Review Camp" -st "Development" -p "DevBuddyPR-000001" -vp "\TechSupport" -pn "Check In New or Existing Items" -op pc -ur -de "." -usr "vsstoh" -pw "abc1234" -oa "c:\vss2h\logs\r12\TechSupport_Web\filehci8016.log" 
+Number of HCI errors is 0
+Processing history of file $/TechSupport_Web/Default.aspx.cs
+The user who made the change is Andrewsmic
+Comment for version 1 of Default.aspx.cs : DevBuddy2 Testing
+ss Get "$/TechSupport_Web/Default.aspx.cs" "-GWRLC:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp" -V1 -I-Y "-Oc:\vss2h\logs\r12\TechSupport_Web\fileget8016.log"
+The test is on : 'C:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp\Default.aspx.cs' 
+A: hci "Default.aspx.cs" -b "DEVSWA" -en "Peer Review Camp" -st "Development" -p "DevBuddyPR-000001" -vp "\TechSupport" -pn "Check In New or Existing Items" -op pc -uk -de "DevBuddy2 Testing." -usr "vsstoh" -pw "abc1234" -oa "c:\vss2h\logs\r12\TechSupport_Web\filehci8016.log" 
+Terminating on signal SIGINT(2)

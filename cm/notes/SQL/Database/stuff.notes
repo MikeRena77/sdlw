@@ -1,0 +1,112 @@
+Could not establish a connection to the database. 
+If you have not yet created the SQL Server database, exit the Web Site Administration tool, use the aspnet_regsql command-line utility to create and configure the database, and then return to this tool to set the provider. 
+
+Just launch aspnet_regsql and it will raise an asp.net DB wizard
+
+C:\Inetpub\wwwroot\SCMAdmin\App_Data>aspnet_regsql /?
+Administrative utility to install and uninstall ASP.NET features on a SQL server.
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+
+                                                 -- GENERAL OPTIONS --
+
+-?                         Display this help text.
+
+-W                         Wizard mode. (Default if no other parameters are specified.)
+
+
+                                              -- SQL CONNECTION OPTIONS --
+
+-S <server>                SQL Server instance (SQL Server 7.0 and above) to work with.
+
+-U <login id>              SQL Server user name to authenticate with; requires -P option.
+
+-P <password>              SQL Server password to authenticate with; requires -U option.
+
+-E                         Authenticate with current Windows credentials.
+
+-C <connection string>     Connection string. Instead of specifying a user name, password, and server name, specify a
+                           SQL Server connection string. The string must not contain a database name unless otherwise
+                           specified.
+
+-sqlexportonly <filename>  Generate the SQL script file for adding or removing the specified features and do not carry
+                           out the actual operation. Can be used with the following options: -A, -R, -ssadd, and
+                           -ssremove.
+
+
+                                           -- APPLICATION SERVICES OPTIONS --
+
+-A all|m|r|p|c|w           Add support for a feature. Multiple values can be specified together. For example:
+
+                               -A mp
+                               -A m -A p
+
+                           all: All features
+                           m: Membership
+                           r: Role manager
+                           p: Profiles
+                           c: Personalization
+                           w: SQL Web event provider
+
+-R all|m|r|p|c|w           Remove support for a feature. Multiple values can be specified together. For example:
+
+                               -R mp
+                               -R m -R p
+
+                           all : All features plus all common tables and stored procedures shared by the features
+                           m: Membership
+                           r: Role manager
+                           p: Profiles
+                           c: Personalization
+                           w: SQL Web event provider
+
+-d <database>              Database name for use with application services. If no database name is specified, the
+                           default database "aspnetdb" is used.
+
+-Q                         Quiet mode; do not display confirmation to remove a feature.
+
+
+
+                               -- SQL CACHE DEPENDENCY OPTIONS (FOR SQL 7.0 AND 2000) --
+
+-d <database>              Database name for use with SQL cache dependency in SQL 7.0 and SQL 2000. The database can
+                           optionally be specified using the connection string with the -C option instead. (Required)
+
+-ed                        Enable a database for SQL cache dependency.
+
+-dd                        Disable a database for SQL cache dependency.
+
+-et                        Enable a table for SQL cache dependency. Requires -t option.
+
+-dt                        Disable a table for SQL cache dependency. Requires -t option.
+
+-t <table>                 Name of the table to enable or disable for SQL cache dependency. Requires -et or -dt option.
+
+-lt                        List all tables enabled for SQL cache dependency.
+
+
+                                              -- SESSION STATE OPTIONS --
+
+-ssadd                     Add support for SQLServer mode session state.
+
+-ssremove                  Remove support for SQLServer mode session state.
+
+-sstype t|p|c              Type of session state support:
+
+                           t: temporary. Session state data is stored in the "tempdb" database. Stored procedures for
+                           managing session are installed in the "ASPState" database. Data is not persisted if you
+                           restart SQL. (Default)
+
+                           p: persisted. Both session state data and the stored procedures are stored in the "ASPState"
+                           database.
+
+                           c: custom. Both session state data and the stored procedures are stored in a custom
+                           database. The database name must be specified.
+
+-d <database>              The name of the custom database to use if -sstype is "c".
+
+
+
+
+aspnet_regsql -S G9LHQH1\SQLEXPRESS -E -d aspnetdb -A all

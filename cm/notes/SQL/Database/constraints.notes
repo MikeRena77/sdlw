@@ -1,0 +1,94 @@
+OWNER  CONSTRAINT_NAME C TABLE_NAME SEARCH_CONDITION R_OWNER R_CONSTRAINT_NAME DELETE_RU STATUS DEFERRABLE  DEFERRED  VALIDATED  GENERATED      BAD RELY LAST_CHAN
+INDEX_OWNER                    INDEX_NAME                     INVALID
+VIEW_RELATED
+
+
+
+
+SQL> select constraint_name, generated from user_constraints where index_owner='
+HRVSTUSER';
+
+CONSTRAINT_NAME                GENERATED
+------------------------------ --------------
+UNQ_FORMTABLENAME              USER NAME
+SYS_C008067                    GENERATED NAME
+SYS_C004887                    USER NAME
+SYS_C004876                    USER NAME
+SYS_C004866                    USER NAME
+SYS_C004856                    USER NAME
+SYS_C004850                    USER NAME
+SYS_C004849                    USER NAME
+SYS_C004846                    USER NAME
+SYS_C004819                    USER NAME
+SYS_C004806                    USER NAME
+SYS_C004798                    USER NAME
+SYS_C004765                    USER NAME
+SYS_C004758                    USER NAME
+SYS_C004757                    USER NAME
+SYS_C004744                    USER NAME
+SYS_C004743                    USER NAME
+SYS_C004741                    USER NAME
+SYS_C004700                    USER NAME
+SYS_C004686                    USER NAME
+SYS_C004680                    USER NAME
+SYS_C004669                    USER NAME
+SYS_C004659                    USER NAME
+SYS_C004652                    USER NAME
+SYS_C004645                    USER NAME
+SYS_C004618                    USER NAME
+SYS_C004599                    USER NAME
+SYS_C004588                    USER NAME
+SYS_C004556                    USER NAME
+SYS_C004537                    USER NAME
+SYS_C004525                    USER NAME
+SYS_C004518                    USER NAME
+SYS_C004517                    USER NAME
+SYS_C004508                    USER NAME
+SYS_C004498                    USER NAME
+SYS_C004496                    USER NAME
+SYS_C004488                    USER NAME
+SYS_C004487                    USER NAME
+SYS_C004435                    USER NAME
+SYS_C0024138                   GENERATED NAME
+HARVIEW_PK                     USER NAME
+HARVERSIONS_PK                 USER NAME
+HARVERSIONINVIEW_PK            USER NAME
+HARVERSIONDELTA_PK             USER NAME
+HARVERSIONDATA_PK              USER NAME
+HARUSER_PK                     USER NAME
+HARUSERDATA_PK                 USER NAME
+HARSWITCHPKGPROC_PK            USER NAME
+HARSTATEPROCESS_PK             USER NAME
+HARSTATEPROCESSACCESS_PK       USER NAME
+HARSTATEACCESS_PK              USER NAME
+HARREPOSITORY_PK               USER NAME
+HARREPINVIEW_PK                USER NAME
+HARREPACCESS_PK                USER NAME
+HARRENAMEITEMPROC_PK           USER NAME
+HARPKGSINCMEW_PK               USER NAME
+HARPATHFULLNAME_PK             USER NAME
+HARPASSWORDHISTORY_PK          USER NAME
+HARPACKAGESTATUS_PK            USER NAME
+HARPACKAGENAMEGEN_PK           USER NAME
+HARPACKAGEGROUP_PK             USER NAME
+HAROBJECTSEQUENCEID_PK         USER NAME
+HARMR_PK                       USER NAME
+HARITEMS_PK                    USER NAME
+HARITEMRELATIONSHIP_PK         USER NAME
+HARITEMACCESS_PK               USER NAME
+HARHARVEST_PK                  USER NAME
+HARFORM_PK                     USER NAME
+HARFORMTYPEACCESS_PK           USER NAME
+HARFORMATTACHMENT_PK           USER NAME
+HARFILEEXTENSION_PK            USER NAME
+HAREXTERNASSOC_PK              USER NAME
+HARENVIRONMENT_PK              USER NAME
+HARENVACCESS_PK                USER NAME
+HARCHECKINPROC_PK              USER NAME
+HARBRANCH_PK                   USER NAME
+HARASSOCPKG_PK                 USER NAME
+HARAPPROVEHIST_PK              USER NAME
+HARALLUSERS_PK                 USER NAME
+HARALLCHILDRENPATH_PK          USER NAME
+
+80 rows selected.

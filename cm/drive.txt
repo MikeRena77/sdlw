@@ -1,0 +1,399 @@
+File accptscr.cmd:
+$origscrpath = "$drive\\scr\\in";
+$submitpath = "$drive\\scr\\submit\\$label";
+$acceptpath = "$drive\\scr\\accept\\$label";
+File applbld.cmd:
+   Do parameter check before disconnecting/connecting S: drive.  Output messages
+   will be send to screen only until S: drive is connected correctly.
+   Moved connection of s: drive to beginning of script.
+   No longer disconnect/connect the s: drive.
+/* s: drive */
+CALL outputMsg "connected s: drive to \\"ServerName"\"ApplLink
+/* p: drive */
+CALL outputMsg "disconnect p: drive"
+CALL outputMsg "connect p: drive to \\"ServerName"\NTNUC"
+/* q: drive */
+CALL outputMsg "disconnect q: drive"
+CALL outputMsg "connect q: drive to \\"ServerName"\"BaseLink
+/* s: drive */
+/* v: drive */
+/*CALL outputMsg "disconnect v: drive"*/
+/*CALL outputMsg "connect v: drive to \\"ServerName"\"ReleaseName */
+File applbld.cmd.old:
+   Do parameter check before disconnecting/connecting S: drive.  Output messages
+   will be send to screen only until S: drive is connected correctly.
+   Moved connection of s: drive to beginning of script.
+   No longer disconnect/connect the s: drive.
+/* s: drive */
+CALL outputMsg "connected s: drive to \\"ServerName"\"ApplLink
+/* p: drive */
+CALL outputMsg "disconnect p: drive"
+CALL outputMsg "connect p: drive to \\"ServerName"\NTNUC"
+/* q: drive */
+CALL outputMsg "disconnect q: drive"
+CALL outputMsg "connect q: drive to \\"ServerName"\"BaseLink
+/* s: drive */
+/* v: drive */
+CALL outputMsg "disconnect v: drive"
+CALL outputMsg "connect v: drive to \\"ServerName"\"ReleaseName
+File applname.cmd:
+   SAY "        APPLNAME(<driveLetter>:)"
+   SAY "If the argument is a drive letter (e.g., Q: or S:) linked to a share name"
+       /* case of drive letter */
+             /* then we find the linked drive letter, is it an applName */
+       END /* DO all linked drive letters */
+       /* If we reach here, the drive letter wasn't found */
+  END /* case of drive letter */
+File basebld.cmd:
+   Corrected link to q: drive.
+   Mocved disconnect/connect of Q: drive after parameter check.
+   Moved connection of q:\drive to the beginning of the script.
+   Removed disconnect/connect of q: drive.
+/* q: drive */
+CALL outputMsg "connected q: drive to \\"ServerName"\NTBASE"
+/* p: drive */
+CALL outputMsg "disconnect p: drive"
+CALL outputMsg "connect p: drive to \\"ServerName"\NTNUC"
+/* t: drive */
+/*CALL outputMsg "disconnect t: drive" */
+/* CALL outputMsg "connect t: drive to \\"ServerName"\"ReleaseName */
+File basebld.cmd.old:
+   Corrected link to q: drive.
+   Mocved disconnect/connect of Q: drive after parameter check.
+   Moved connection of q:\drive to the beginning of the script.
+   Removed disconnect/connect of q: drive.
+/* q: drive */
+CALL outputMsg "connected q: drive to \\"ServerName"\NTBASE"
+/* p: drive */
+CALL outputMsg "disconnect p: drive"
+CALL outputMsg "connect p: drive to \\"ServerName"\NTNUC"
+/* t: drive */
+CALL outputMsg "disconnect t: drive"
+CALL outputMsg "connect t: drive to \\"ServerName"\"ReleaseName
+File bldnotes.pl:
+#  the \\drive\scr\build\bldname directory
+$bldpath = "$drive\\scr\\build\\$bldname";
+$realbldpath = "$drive\\build\\$bldname";
+File bldsmry.pl:
+$releasefile = "$drive\\build\\$bldname\\release.num";
+File bldutils.pl:
+#*  added shares, drives, PEs to lookup tables (dailybuild.pl needs them)
+$projectDrives{"NBASE"} = "Q:";
+$projectDrives{"NSTARTER"} = "S:";
+$projectDrives{"NCHEVRON"} = "S:";
+$projectDrives{"NTEXACO"} = "S:";
+$projectDrives{"NMOBIL"} = "S:";
+$projectDrives{"NBP"} = "S:";
+$projectDrives{"NSUN"} = "S:";
+$projectDrives{"NCITGO"} = "S:";
+$projectDrives{"NCANADA"} = "S:";
+$projectDrives{"NADS"} = "S:";
+$projectDrives{"NEQUIVA"} = "S:";
+$projectDrives{"NSHELL"} = "S:";
+$projectDrives{"NBPAMOCO"} = "S:";
+$projectDrives{"NBUYPASS"} = "S:";
+sub getProjectDrive
+   local (*driveLetter, $projectName) = @_;
+   #assign the drive letter
+   if ( /^[A-Z]\:$/ ) {$driveLetter = $_;}
+   elsif ( /NBASE/ ) { $driveLetter = 'Q:'; }
+   else { $driveLetter = 'S:'; }
+#sub getBuildDrive
+#   local (*driveLetter, $projectName) = @_;
+#   #assign the drive letter
+#   if ( /^[A-Z]\:$/ ) {$driveLetter = $_;}
+#   elsif ( /NBASE/ ) { $driveLetter = 'T:'; }
+#   else { $driveLetter = 'V:'; }
+sub getDriveMapping
+   local (*driveMapping, $driveLetter) = @_;
+   local ($nuStatus, $nuDrive);
+   $driveMapping = "";
+   @driveLines = grep /$driveLetter/, `net use`;
+   if ($#driveLines >= 0)
+     ($nuStatus, $nuDrive, $driveMapping) = split ' ', "\U@driveLines[0]";
+sub getDriveLetter
+   local (*driveLetter, $projectName) = @_;
+   #assign the drive letter
+   if ( /^[A-Z]\:$/ ) {$driveLetter = $_;}
+   elsif ( /NBASE/ ) { $driveLetter = 'Q:'; }
+   else { $driveLetter = 'S:'; }
+File bldutils.pl.old:
+#*  added shares, drives, PEs to lookup tables (dailybuild.pl needs them)
+$projectDrives{"NBASE"} = "Q:";
+$projectDrives{"NSTARTER"} = "S:";
+$projectDrives{"NCHEVRON"} = "S:";
+$projectDrives{"NTEXACO"} = "S:";
+$projectDrives{"NMOBIL"} = "S:";
+$projectDrives{"NBP"} = "S:";
+$projectDrives{"NSUN"} = "S:";
+$projectDrives{"NCITGO"} = "S:";
+$projectDrives{"NCANADA"} = "S:";
+$projectDrives{"NADS"} = "S:";
+$projectDrives{"NEQUIVA"} = "S:";
+$projectDrives{"NSHELL"} = "S:";
+$projectDrives{"NBPAMOCO"} = "S:";
+sub getProjectDrive
+   local (*driveLetter, $projectName) = @_;
+   #assign the drive letter
+   if ( /^[A-Z]\:$/ ) {$driveLetter = $_;}
+   elsif ( /NBASE/ ) { $driveLetter = 'Q:'; }
+   else { $driveLetter = 'S:'; }
+sub getBuildDrive
+   local (*driveLetter, $projectName) = @_;
+   #assign the drive letter
+   if ( /^[A-Z]\:$/ ) {$driveLetter = $_;}
+   elsif ( /NBASE/ ) { $driveLetter = 'T:'; }
+   else { $driveLetter = 'V:'; }
+sub getDriveMapping
+   local (*driveMapping, $driveLetter) = @_;
+   local ($nuStatus, $nuDrive);
+   $driveMapping = "";
+   @driveLines = grep /$driveLetter/, `net use`;
+   if ($#driveLines >= 0)
+     ($nuStatus, $nuDrive, $driveMapping) = split ' ', "\U@driveLines[0]";
+sub getDriveLetter
+   local (*driveLetter, $projectName) = @_;
+   #assign the drive letter
+   if ( /^[A-Z]\:$/ ) {$driveLetter = $_;}
+   elsif ( /NBASE/ ) { $driveLetter = 'Q:'; }
+   else { $driveLetter = 'S:'; }
+File brnchtip.pl:
+Usage: brnchtip <next-label> <project|drive> <archive file>
+if ( /^[A-Z]\:$/ ) {$driveLetter = $_;}
+elsif ( /NBASE/ )  { $driveLetter = 'Q:'; }
+elsif (/^N[A-Z]*$/) { $driveLetter = 'S:'; }
+#if project/drive is specified then create full archive name
+if ($driveLetter)
+  $archiveName = "$driveLetter\\vcs\\$fileName";
+#if the project/drive wasn't specified, use the 2nd arg as the archive name
+File chckparm.pl:
+#* a drive letter S:
+      $drive = "@drlist[$count]";
+      # is $drive set to correct $project
+      foreach $usline (`net use $drive`) {
+         die "$drive is not set to \\\\$ServerName\\@sharenamelist[$count]\n";
+File chkspace.pl:
+#  this script will get the available space on a network drive
+$listdir = "$drive\\";
+@a = `dir $listdir`;   # do a directory listing on the drive
+File CPCHNGS.PL:
+$scrbldpath = "$drive\\scr\\build\\$bldname";
+$realbldpath = "$drive\\build\\$bldname";
+File dailybuild.pl:
+   local ($projectPE, $projectShare, $projectDrive, 
+   $projectDrive = $projectDrives{$projectName};
+   &createSCRFilesList($projectDrive, $projectRelease, 
+        "$projectDrive\\VCS, D:\\${projectPrefix}_xtrtl.log");
+   &promoteFiles("d:\\$projectName", "$projectDrive\\vcs", 
+   local ($projectPE, $projectShare, $projectDrive, $isApplProject);
+   $projectDrive = $projectDrives{$projectName};
+   local ($driveLetter, $shareName, $projectPE) = @_;
+   &executeCmd("net use /d $driveLetter");
+   &executeCmd("net use $driveLetter $shareName");
+   open(NETUSE_OUT, "net use $driveLetter|");
+      &sendMsg($projectPE, "$driveLetter $shareName NOT CONNECTED");
+   local ($drive, $release, $scrfile) = @_;
+   open(DIROUTPUT, "dir /b $drive\\scr\\submit\\$release|");
+         print SCRFILES "$drive\\scr\\in\\$_";
+File delbuild.cmd:
+     SAY "be an applname (e.g., NBase or NShell), a drive letter (e.g., P: =>"
+drive_letter = ""
+   PARSE VALUE (findpvcs(pvcsID)) WITH archive drive_letter
+File endbld.cmd:
+   SAY " <project> identifies which drive will be used for linking to a"
+File extractl.cmd:
+    Integrated new feature of proot.  Passing a "-V<pvcs_drive>" will
+   Added call to findpvcs routine to determine PVCS archive drive.
+   SAY "be an applname (e.g., NBase or NShell), a drive letter (e.g., P: =>"
+drive_letter = "" /* if non-empty, then it's a temporary drive letter */
+PARSE VALUE (findpvcs(pvcsID, outFile)) WITH pvcs_Root drive_letter
+   pvcs_drive = SUBSTR(pvcs_root, 1, 2)
+   CALL proot "-V"pvcs_drive ROOT
+File findlink.cmd:
+   Changed to order of search for a free drive letter.
+   SAY "If <shareName> is not already linked, then find an available drive letter,"
+   SAY "if the line to driveLetter was established by this script and false otherwise."
+   SAY "driveLetter."
+   SAY "The second word is driveLetter that was found to already be linked to"
+   SAY "no drive was found already linked an no drive COULD be linked, then the second"
+   EXIT "0"  /* isNewLink = 0, driveLetter = "" */
+      /* then we've found a link to shareName, so return the drive */
+      drive = NETUSE_locals.i
+      EXIT "0" drive /* isNewLink = 0, driveLetter = NETUSE_locals.i */
+/* shareName not already links, so find unused drive letter and link it. */
+/* Search drive letters most likely to be free first.                    */
+driveLetters = "H: I: W: X: Y: N: T: V: Q: S:"
+DO WHILE driveLetters \= ""
+   PARSE VAR driveLetters drive driveLetters
+   '@net use' drive shareName '1> NUL 2> NUL'
+      /* then we've found an unused drive, so return it */
+      EXIT "1" drive  /* isNewLink = 1, driveLetter = drive */
+END /* WHILE drive letters */
+EXIT "0"  /* isNewLink = 0, driveLetter = "" */
+File FINDPVCS.CMD:
+   Corrected reporting of whether the drive letter needs to be deleted
+   SAY "and a second string which, if non-empty, is a temporary drive letter"
+   SAY "    * If <pvcsID> is a drive letter, return '<pvcsID>\VCS'."
+   SAY "    * If <pvcsID> contains a drive letter and a following pathname,"
+   SAY "    * If <pvcsID> does NOT contain a drive letter, is longer than one"
+   /* then drive letter, so return \VCS */
+   /* then drive letter with pathname, so return as is */
+   drive     = ""    /* drive letter for accessing applName  */
+   isNewLink = 0     /* true if drive is only a temporary link */
+   PARSE VALUE findLink(pvcsID, outFile) WITH isNewLink drive
+   IF drive == "" THEN  EXIT "" /* findLink() printed error message */
+      /* then drive is a temporary link that must be deleted */
+      CALL validate_and_exit drive"\VCS" drive
+      /* else drive is an existing link */
+      CALL validate_and_exit drive"\VCS" ""
+  ARG root drive_letter
+     EXIT root drive_letter
+File finishappl.cmd:
+/* s: drive */
+CALL outputMsg "connected s: drive to \\"ServerName"\"ApplLink
+/* p: drive */
+CALL outputMsg "disconnect p: drive"
+CALL outputMsg "connect p: drive to \\"ServerName"\NTNUC"
+/* q: drive */
+CALL outputMsg "disconnect q: drive"
+CALL outputMsg "connect q: drive to \\"ServerName"\"BaseLink
+/* s: drive */
+/* v: drive */
+/*CALL outputMsg "disconnect v: drive" */
+/*CALL outputMsg "connect v: drive to \\"ServerName"\"ReleaseName */
+File finishappl.cmd.old:
+/* s: drive */
+CALL outputMsg "connected s: drive to \\"ServerName"\"ApplLink
+/* p: drive */
+CALL outputMsg "disconnect p: drive"
+CALL outputMsg "connect p: drive to \\"ServerName"\NTNUC"
+/* q: drive */
+CALL outputMsg "disconnect q: drive"
+CALL outputMsg "connect q: drive to \\"ServerName"\"BaseLink
+/* s: drive */
+/* v: drive */
+CALL outputMsg "disconnect v: drive"
+CALL outputMsg "connect v: drive to \\"ServerName"\"ReleaseName
+File getproot.pl:
+&getProjectDrive(*drive, $project);
+$vcsRoot = "$drive\\VCS";
+print "  logfile: $logFile\n  drive: $drive\n  vcsRoot: $vcsRoot\n\n";
+print LOG_FILE "  logfile: $logFile\n  drive: $drive\n  vcsRoot: $vcsRoot\n\n";
+File ISDIR.CMD:
+   Change to recognize the root of an drive letter that exists as being
+File makspace.bat:
+echo " This utility will scan all build directories on a drive looking"
+echo " <project> identifies which drive will be used for linking to a"
+File makspace.pl:
+#$releasefile = "$drive\\build\\$bldname\\release.num";
+$blddir = "$drive\\build";
+File movlabel.cmd:
+drive_letter = ""
+drive_letter = ""                      /* temporary drive letter, if any    */
+PARSE VALUE (findpvcs(applName, outFile)) WITH pvcsRoot drive_letter
+IF drive_letter \= "" THEN
+   /* then we have a temporary drive letter to unlink */
+   '@net use' drive_letter '/D'
+ERROR_EXIT: PROCEDURE EXPOSE outFile drive_letter;
+   IF drive_letter \= "" THEN
+      /* then we have a temporary drive letter to unlink */
+      '@net use' drive_letter '/D 1> NUL'
+File mrgcopy.cmd:
+        PARSE VAR destFile drive_dir_file'.'ext
+        backupName   = drive_dir_file'.'ext
+   /* begins with a drive letter and return it.                          */
+      /* then this is a root directory on current drive, so prepend drive */
+      root =filespec("DRIVE", directory())||root
+      /* then does not have a drive letter, so must be relative */
+File p2bld.cmd:
+   name for use by the CD command, also include the drive letter of the
+   work only if the current working directory was on the same drive as the
+drive            = ""                /* temporary drive, if any, for archive  */
+PARSE VALUE findpvcs(applName) WITH archive drive
+   CALL check_drive drive
+      newDir        = filespec('Drive', touchFile) || filespec('Path', touchFile)
+CALL check_drive drive
+                                tmpFile PROMOTE_LST drive;
+GET_FILES: PROCEDURE EXPOSE outFile labelListFile labelChkFile pvcsBin drive;
+ATTACH_LABELS: PROCEDURE EXPOSE outFile labelChkFile pvcsBin drive;
+VERIFY_LABELS: PROCEDURE EXPOSE outFile archiveLength pvcsBin drive,
+UPDATERELEASENUM: PROCEDURE EXPOSE version archive tmpFile pvcsBin outFile drive;
+ERROR_EXIT: PROCEDURE EXPOSE outFile drive;
+   CALL check_drive drive
+CHECK_DRIVE: PROCEDURE;
+   ARG DRIVE
+   IF DRIVE \= "" THEN
+      /* then we have a temporary drive letter to delete */
+      '@net use' drive '/D 1> NUL'
+File prepbld.cmd:
+   print " <project> identifies which drive will be used for linking to a\n";
+File prepscr.cmd:
+$scrpath = "$drive\\scr\\in";
+$acceptpath = "$drive\\scr\\accept\\$label";
+$preppath = "$drive\\scr\\build\\$bldname";
+File prmtlst.pl:
+&getProjectDrive(*drive, $project);
+$vcsRoot = "$drive\\VCS\\";
+File PRMTSIM.PL:
+&getProjectDrive(*drive, $project);
+$vcsRoot = "$drive\\VCS\\";
+File promote.cmd:
+PARSE VALUE findlink(applName(version)) WITH isNewLink driveLetter
+IF driveLetter == "" THEN DO
+END /* THEN no drive letter */
+   THEN CALL log "Using temporary link" driveLetter"."
+   ELSE CALL log "Using existing link" driveLetter"."
+zipFile = driveLetter'\MAPFILES\'version'.ZIP'
+tmpZipFile = driveLetter'\MAPFILES\MAPFILES.ZIP'
+   /* then driveLetter was temporary, so unlink it now */
+   '@net use' driveLetter '/D'
+   CALL log "Temporary drive letter" driveLetter "unlinked."
+   /* begins with a drive letter and return it.                          */
+      /* then this is a root directory on current drive, so prepend drive */
+      root =filespec("DRIVE", directory())||root
+      /* then does not have a drive letter, so must be relative */
+File promote.sem:
+PARSE VALUE findlink(applName(version)) WITH isNewLink driveLetter
+IF driveLetter == "" THEN DO
+END /* THEN no drive letter */
+   THEN CALL log "Using temporary link" driveLetter"."
+   ELSE CALL log "Using existing link" driveLetter"."
+zipFile = driveLetter'\MAPFILES\'version'.ZIP'
+tmpZipFile = driveLetter'\MAPFILES\MAPFILES.ZIP'
+   /* then driveLetter was temporary, so unlink it now */
+   '@net use' driveLetter '/D'
+   CALL log "Temporary drive letter" driveLetter "unlinked."
+   /* begins with a drive letter and return it.                          */
+      /* then this is a root directory on current drive, so prepend drive */
+      root =filespec("DRIVE", directory())||root
+      /* then does not have a drive letter, so must be relative */
+File rlsebld.pl:
+ <project> identifies which drive will be used for linking to a
+&getProjectDrive(*drive, $project);
+$templatePath = "$drive\\SWSN\\$templateFile";
+File rlsebld.pl.cpy:
+ <project> identifies which drive will be used for linking to a
+&getProjectDrive(*drive, $project);
+$templatePath = "$drive\\SWSN\\$templateFile";
+File rlsebldxp.pl:
+ <project> identifies which drive will be used for linking to a
+&getProjectDrive(*drive, $project);
+$templatePath = "$drive\\SWSN\\$templateFile";
+File sbmitscr.pl:
+$scrpath = "$drive\\scr\\in";
+$submitpath = "$drive\\scr\\submit\\$label";
+File scrparts.pl:
+&getProjectDrive(*drive, $project);
+$outputFile = "$drive\\scr\\build\\$buildLabel\\$ARGV[5]";
+$scrListFile = "$drive\\scr\\build\\$buildLabel\\scrfiles.lst";
+File shdbgbuild.pl:
+   local ($driveLetter, $shareName) = @_;
+   &executeCmd("net use /d $driveLetter");
+   &executeCmd("net use $driveLetter $shareName");
+   open(NETUSE_OUT, "net use $driveLetter|");
+      &sendMsg($basePE, "$driveLetter $shareName NOT CONNECTED");
+   local ($drive, $release, $scrfile) = @_;
+   open(DIROUTPUT, "dir /b $drive\\scr\\submit\\$release|");
+         print SCRFILES "$drive\\scr\\in\\$_";
+File warn.pl:
+$listdir = "$drive\\";

@@ -1,0 +1,247 @@
+SQL> SELECT OWNER,TABLE_NAME FROM DBA_TABLES where owner = 'HRVSTUSER' ;
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARAPPROVEHIST                                   
+HRVSTUSER                      HARALLCHILDRENPATH                               
+HRVSTUSER                      HARALLUSERS                                      
+HRVSTUSER                      HARAPPROVE                                       
+HRVSTUSER                      HARAPPROVELIST                                   
+HRVSTUSER                      HARASSOCPKG                                      
+HRVSTUSER                      HARBRANCH                                        
+HRVSTUSER                      HARCHECKINPROC                                   
+HRVSTUSER                      HARCHECKOUTPROC                                  
+HRVSTUSER                      HARCOMMENT                                       
+HRVSTUSER                      HARCONMRGPROC                                    
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARCONVERSIONLOG                                 
+HRVSTUSER                      HARCRPKGPROC                                     
+HRVSTUSER                      HARCRSENVMRGPROC                                 
+HRVSTUSER                      HARDEFECT                                        
+HRVSTUSER                      HARDELVERSPROC                                   
+HRVSTUSER                      HARDEMOTEPROC                                    
+HRVSTUSER                      HARENVIRONMENT                                   
+HRVSTUSER                      HARENVIRONMENTACCESS                             
+HRVSTUSER                      HARESD                                           
+HRVSTUSER                      HAREXTERNASSOC                                   
+HRVSTUSER                      HARFILEEXTENSION                                 
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARFORM                                          
+HRVSTUSER                      HARFORMATTACHMENT                                
+HRVSTUSER                      HARFORMHISTORY                                   
+HRVSTUSER                      HARFORMTYPE                                      
+HRVSTUSER                      HARFORMTYPEACCESS                                
+HRVSTUSER                      HARFORMTYPEDEFS                                  
+HRVSTUSER                      HARHARVEST                                       
+HRVSTUSER                      HARINTMRGPROC                                    
+HRVSTUSER                      HARITEMACCESS                                    
+HRVSTUSER                      HARITEMRELATIONSHIP                              
+HRVSTUSER                      HARITEMS                                         
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARLINKEDPROCESS                                 
+HRVSTUSER                      HARLISTDIFFPROC                                  
+HRVSTUSER                      HARLISTVERSPROC                                  
+HRVSTUSER                      HARMOVEPKGPROC                                   
+HRVSTUSER                      HARMR                                            
+HRVSTUSER                      HARNOTIFY                                        
+HRVSTUSER                      HARNOTIFYLIST                                    
+HRVSTUSER                      HAROBJECTSEQUENCEID                              
+HRVSTUSER                      HARPAC                                           
+HRVSTUSER                      HARPACKAGE                                       
+HRVSTUSER                      HARPACKAGEGROUP                                  
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARPACKAGENAMEGEN                                
+HRVSTUSER                      HARPASSWORDHISTORY                               
+HRVSTUSER                      HARPASSWORDPOLICY                                
+HRVSTUSER                      HARPATHFULLNAME                                  
+HRVSTUSER                      HARPKGHISTORY                                    
+HRVSTUSER                      HARPKGSINPKGGRP                                  
+HRVSTUSER                      HARPMSTATUS                                      
+HRVSTUSER                      HARPROBLEMREPORT                                 
+HRVSTUSER                      HARPROMOTEPROC                                   
+HRVSTUSER                      HARQANDA                                         
+HRVSTUSER                      HARRECEIVEUPDATES                                
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARREMITEMPROC                                   
+HRVSTUSER                      HARRENAMEITEMPROC                                
+HRVSTUSER                      HARREPINVIEW                                     
+HRVSTUSER                      HARREPOSITORY                                    
+HRVSTUSER                      HARREPOSITORYACCESS                              
+HRVSTUSER                      HARSENDUPDATES                                   
+HRVSTUSER                      HARSITE                                          
+HRVSTUSER                      HARSNAPVIEWPROC                                  
+HRVSTUSER                      HARSTATE                                         
+HRVSTUSER                      HARSTATEACCESS                                   
+HRVSTUSER                      HARSTATEPROCESS                                  
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARSTATEPROCESSACCESS                            
+HRVSTUSER                      HARSWITCHPKGPROC                                 
+HRVSTUSER                      HARSYNC                                          
+HRVSTUSER                      HARSYNCCONFIG                                    
+HRVSTUSER                      HARSYNCFULLPATH                                  
+HRVSTUSER                      HARTABLEINFO                                     
+HRVSTUSER                      HARTESTINGINFO                                   
+HRVSTUSER                      HARUDP                                           
+HRVSTUSER                      HARUSER                                          
+HRVSTUSER                      HARUSERCONTACT                                   
+HRVSTUSER                      HARUSERDATA                                      
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARUSERGROUP                                     
+HRVSTUSER                      HARUSERSINGROUP                                  
+HRVSTUSER                      HARVERSIONDATA                                   
+HRVSTUSER                      HARVERSIONDELTA                                  
+HRVSTUSER                      HARVERSIONINVIEW                                 
+HRVSTUSER                      HARVERSIONS                                      
+HRVSTUSER                      HARVIEW                                          
+HRVSTUSER                      WORKBENCH_PROVIDER                               
+HRVSTUSER                      PROVIDER_USER                                    
+HRVSTUSER                      HARITEMIDTEMP                                    
+HRVSTUSER                      HARPROMOTETEMP                                   
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      EUL5_ACCESS_PRIVS                                
+HRVSTUSER                      EUL5_APP_PARAMS                                  
+HRVSTUSER                      EUL5_ASMP_CONS                                   
+HRVSTUSER                      EUL5_ASMP_LOGS                                   
+HRVSTUSER                      EUL5_ASM_POLICIES                                
+HRVSTUSER                      EUL5_BAS                                         
+HRVSTUSER                      EUL5_BATCH_PARAMS                                
+HRVSTUSER                      EUL5_BATCH_QUERIES                               
+HRVSTUSER                      EUL5_BATCH_REPORTS                               
+HRVSTUSER                      EUL5_BATCH_SHEETS                                
+HRVSTUSER                      EUL5_BA_OBJ_LINKS                                
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      EUL5_BQ_DEPS                                     
+HRVSTUSER                      EUL5_BQ_TABLES                                   
+HRVSTUSER                      EUL5_BR_RUNS                                     
+HRVSTUSER                      EUL5_DBH_NODES                                   
+HRVSTUSER                      EUL5_DOCUMENTS                                   
+HRVSTUSER                      EUL5_DOMAINS                                     
+HRVSTUSER                      EUL5_ELEM_XREFS                                  
+HRVSTUSER                      EUL5_EUL_USERS                                   
+HRVSTUSER                      EUL5_EXPRESSIONS                                 
+HRVSTUSER                      EUL5_EXP_DEPS                                    
+HRVSTUSER                      EUL5_FREQ_UNITS                                  
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      EUL5_FUNCTIONS                                   
+HRVSTUSER                      EUL5_FUN_ARGUMENTS                               
+HRVSTUSER                      EUL5_FUN_CTGS                                    
+HRVSTUSER                      EUL5_FUN_FC_LINKS                                
+HRVSTUSER                      EUL5_GATEWAYS                                    
+HRVSTUSER                      EUL5_HIERARCHIES                                 
+HRVSTUSER                      EUL5_HI_NODES                                    
+HRVSTUSER                      EUL5_HI_SEGMENTS                                 
+HRVSTUSER                      EUL5_IG_EXP_LINKS                                
+HRVSTUSER                      EUL5_IHS_FK_LINKS                                
+HRVSTUSER                      EUL5_KEY_CONS                                    
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      EUL5_OBJS                                        
+HRVSTUSER                      EUL5_OBJ_DEPS                                    
+HRVSTUSER                      EUL5_OBJ_JOIN_USGS                               
+HRVSTUSER                      EUL5_PLAN_TABLE                                  
+HRVSTUSER                      EUL5_QPP_STATS                                   
+HRVSTUSER                      EUL5_SEGMENTS                                    
+HRVSTUSER                      EUL5_SEQUENCES                                   
+HRVSTUSER                      EUL5_SQ_CRRLTNS                                  
+HRVSTUSER                      EUL5_SUB_QUERIES                                 
+HRVSTUSER                      EUL5_SUMMARY_OBJS                                
+HRVSTUSER                      EUL5_SUMO_EXP_USGS                               
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      EUL5_SUM_BITMAPS                                 
+HRVSTUSER                      EUL5_SUM_RFSH_SETS                               
+HRVSTUSER                      EUL5_VERSIONS                                    
+HRVSTUSER                      CMPALLCLASSES                                    
+HRVSTUSER                      RESERVATION_STORE                                
+HRVSTUSER                      SYS_IOT_OVER_30024                               
+HRVSTUSER                      OWB_ERROR_LOG_TABLE                              
+HRVSTUSER                      CLASSIFICATION_STORE                             
+HRVSTUSER                      SYS_IOT_OVER_30028                               
+HRVSTUSER                      CMPALLFOLDERFCONAMES                             
+HRVSTUSER                      OWB_UTIL_CONFIGPARAMS                            
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      OWB_UTIL_CONFIGGROUPS                            
+HRVSTUSER                      UOIDMAPPING                                      
+HRVSTUSER                      VBZ$CHANGE_PLANS                                 
+HRVSTUSER                      VBZ$COMPARISONS                                  
+HRVSTUSER                      VBZ$COMPARISON_RESULTS                           
+HRVSTUSER                      VBZ$DB_OBJ_NAMES                                 
+HRVSTUSER                      VBZ$DESTINATIONS                                 
+HRVSTUSER                      VBZ$DIRECTIVES                                   
+HRVSTUSER                      VBZ$EDITED_SCRIPTS                               
+HRVSTUSER                      VBZ$EXEMPLARS                                    
+HRVSTUSER                      VBZ$EX_UPDATES                                   
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      VBZ$HISTORY                                      
+HRVSTUSER                      VBZ$IMPACT_LOG                                   
+HRVSTUSER                      VBZ$OBJECT_GRANTS                                
+HRVSTUSER                      VBZ$OUTPUT_LOG                                   
+HRVSTUSER                      VBZ$ROLE_GRANTS                                  
+HRVSTUSER                      VBZ$SCHEMAMAPS                                   
+HRVSTUSER                      VBZ$SCRIPTS                                      
+HRVSTUSER                      VBZ$SYS_PRIV_GRANTS                              
+HRVSTUSER                      VBZ$VERSION                                      
+HRVSTUSER                      OWB_COMPPARAM_MV                                 
+HRVSTUSER                      LIA_XML_TABLE                                    
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      HARMOTETEMP                                      
+HRVSTUSER                      VCTEMP1                                          
+HRVSTUSER                      VCTEMP2                                          
+HRVSTUSER                      RECURSIVE                                        
+HRVSTUSER                      HARITEMTEMP                                      
+HRVSTUSER                      TEMPAPPROVEHIST                                  
+HRVSTUSER                      TEMPAPPROVELIST                                  
+HRVSTUSER                      HARPKGSINCMEW                                    
+HRVSTUSER                      HARPACKAGESTATUS                                 
+HRVSTUSER                      MIGRATIONREQUEST                                 
+HRVSTUSER                      ENTERPRISE_PACKAGE_STATUS                        
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      COUNTER                                          
+HRVSTUSER                      ECCM_CONFIGURATION                               
+HRVSTUSER                      ECCM_USER                                        
+HRVSTUSER                      ENTERPRISE_PACKAGE                               
+HRVSTUSER                      ENTERPRISE_PACKAGE_HISTORY                       
+HRVSTUSER                      ECCM_LOG                                         
+HRVSTUSER                      ECCM_ACTIONLOG                                   
+HRVSTUSER                      ENTERPRISE_PACKAGE_SUBPACKAGE                    
+HRVSTUSER                      HARVEST_SUBPACKAGE_ACTIONS                       
+HRVSTUSER                      WORKBENCH_PRODUCT                                
+HRVSTUSER                      SETTINGS                                         
+
+OWNER                          TABLE_NAME                                       
+------------------------------ ------------------------------                   
+HRVSTUSER                      USER_PREFERENCES                                 
+
+188 rows selected.
+
+SQL> spool off

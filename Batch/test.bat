@@ -1,0 +1,2 @@
+touch test
+IF NOT ERRORLEVEL 0 echo "FAILED: %ERRORLEVEL%"

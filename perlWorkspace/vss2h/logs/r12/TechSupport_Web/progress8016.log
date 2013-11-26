@@ -1,0 +1,10 @@
+GET: \CustomerSuppt.csproj;1
+INIT PUT 0
+PUT: \TechSupport\CustomerSuppt.csproj;0
+GET: \TechSupport\CustomerSuppt.csproj.vspscc;1
+INIT PUT 0
+PUT: \TechSupport\CustomerSuppt.csproj.vspscc;0
+GET: \TechSupport\Default.aspx;1
+INIT PUT 0
+PUT: \TechSupport\Default.aspx;0
+GET: \TechSupport\Default.aspx.cs;1

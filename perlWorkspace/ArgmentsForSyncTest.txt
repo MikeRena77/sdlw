@@ -1,0 +1,1 @@
+E:\perl\bin\perl.exe -S synctest.pl -b "[broker]" -pr "[project]" -s "[state]" -v "\RBC Repository"  -d "E:\Temp"  -usr "[user]" -pw "[password]"

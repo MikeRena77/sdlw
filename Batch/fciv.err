@@ -1,0 +1,7 @@
+********************************************************************************
+Command Line: filechecksumintegrityverifier -add *.* -r 
+
+*.*\*
+	Error msg  : The filename, directory name, or volume label syntax is incorrect.
+	Error code : 7b
+

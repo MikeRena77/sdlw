@@ -1,0 +1,103 @@
+When running and opening Windows Explorer, Windows Explorer will automatically display and show the content of a folder, by default is typically My Documents in Windows XP and Windows Server, Documents in Windows Vista and Libraries in Windows 7. User can easily change the default folder that Windows Explorer goes to upon running, by knowing the correct CLSID of the folder or special object.
+
+Windows Explorer, or rather Explorer.exe or only Explorer, is the Windows Shell program which accepts command-line parameters or switches to pass to it in order to assert certain result of execution. As such, Windows Vista, Windows 7, Windows XP, Windows NT 4, Windows Server 2000, Windows Server 2003 and Windows 2008 users can use the command-link switch to start Windows Explorer which shows a different object or folder, such as Computer, Documents, Control Panel, and etc.
+
+Note that some of these special system folders and objects are already available in Start Menu, which is one of the graphic user interface (GUI) parts of the Explorer. For example, in Windows Vista, user can direct access to user folder, Computer, Documents, Pictures, Music, Control Panel and etc right from the Start Menu. The following commands which call specific CLSID namespace of the object or folder is used to change the behavior of Windows Explorer upon running, and can be set in the properties of Windows Explorer shortcut or issue the command directly in Command Prompt.
+
+My Libraries
+%SystemRoot%\explorer.exe /E,::{031E4825-7B94-4dc3-B131-E946B44C8DD5}
+
+My Computer
+%SystemRoot%\explorer.exe /E,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+
+My Documents
+%SystemRoot%\explorer.exe /N,::{450D8FBA-AD25-11D0-98A8-0800361B1103}
+{59031A47-3F72-44A7-89C5-5595FE6B30EE}
+{871C5380-42A0-1069-A2EA-08002B30309D}
+{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}
+
+Recycle Bin
+%SystemRoot%\explorer.exe /N,::{645FF040-5081-101B-9F08-00AA002F954E}
+
+Network Neighborhood
+%SystemRoot%\explorer.exe /N,::{208D2C60-3AEA-1069-A2D7-08002B30309D}
+
+Default Web Browser or Navigator (IE, Firefox, Safari, Google Chrome)
+%SystemRoot%\explorer.exe /N,::{871C5380-42A0-1069-A2EA-08002B30309D}
+
+Computer Search Results Folder
+%SystemRoot%\explorer.exe /N,::{1F4DE370-D627-11D1-BA4F-00A0C91EEDBA}
+
+Network Search Results Folder
+%SystemRoot%\explorer.exe /N,::{E17D4FC0-5564-11D1-83F2-00A0C90DC849}
+
+Web Folders
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{BDEADF00-C265-11D0-BCED-00A0C90AB50F}
+
+Control Panel
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}
+
+Printers and Faxes
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}\::{2227A280-3AEA-1069-A2DE-08002B30309D}
+
+Scanners and Cameras
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}\::{E211B736-43FD-11D1-9EFB-0000F8757FCD}
+
+Fonts
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}\::{D20EA4E1-3957-11d2-A40B-0C5020524152}
+
+Network Connections or My Network Place
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}\::{7007ACC7-3202-11D1-AAD2-00805FC1270E}
+
+Administrative Tools
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}\::{D20EA4E1-3957-11d2-A40B-0C5020524153}
+
+Tasks Scheduler
+%SystemRoot%\explorer.exe /N,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{21EC2020-3AEA-1069-A2DD-08002B30309D}\::{D6277990-4C6A-11CF-8D87-00AA0060F5BF}
+
+It’s also possible to directly specify the folder or directory for Windows Explorer to show and display when ran, using the same trick to change and set Windows Explorer default folder.
+
+Explorer.exe Command Line Syntax
+
+%SystemRoot%\explorer.exe [/n][/e][,/root],X,[[/Select],Y]
+
+X specifies the object, and optionally with sub-object Y. /e switch shows the left Windows Explorer tree view navigation pane together with the right pane in list view, while /n hides the left navigation pane. When the /root parameter is present, Explorer.eee will explore the root object (X) and objects belonging to X. On the other hand, when the /root switch is not present, Explorer.exe explores the object X, its children, and other Explorer objects as well. /Select switch puts the focus on a file or folder.
+
+For example:
+
+%SystemRoot%\explorer.exe /N,%WinDir%\System32,/Select,%WinDir%\System32\Ping.exe
+
+Command above will explore the \Windows\System32 folder and put the focus on the ping.exe program.
+
+Tip: Normally, there is no need to specify full path to explorer.exe, which is stored in the Windows folder, obtainable through the environment variable WinDir, as the path already been defined in PATH environment variable, and will be search through accordingly. As such, Explorer will suffice to run the Windows Explorer shell.
+
+in question regarding Libraries
+::{896664F7-12E1-490f-8782-C0835AFD98FC}
+::{A302545D-DEFF-464b-ABE8-61C8648D939B}
+::{031E4825-7B94-4dc3-B131-E946B44C8DD5}
+
+Opened Pictures
+	::{031E4825-7B94-4dc3-B131-E946B44C8DD5}\{A990AE9F-A03B-4e80-94BC-9912D7504104}
+
+Opened Music
+	::{031E4825-7B94-4dc3-B131-E946B44C8DD5}\{2112AB0A-C86A-4ffe-A368-0DE96E47012E}
+
+Opened Videos
+	::{031E4825-7B94-4dc3-B131-E946B44C8DD5}\{491E922F-5643-4af4-A7EB-4E7A138D8174}
+
+Opened Documents
+::{031E4825-7B94-4dc3-B131-E946B44C8DD5}\{7b0db17d-9cd2-4a93-9733-46cc89022e7c}
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{031E4825-7B94-4dc3-B131-E946B44C8DD5}
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{031E4825-7B94-4dc3-B131-E946B44C8DD5}
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{7b0db17d-9cd2-4a93-9733-46cc89022e7c}
+    ParsingName    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{A302545D-DEFF-464b-ABE8-61C8648D939B}
+    ParsingName    REG_SZ    ::{031E4825-7B94-4dc3-B131-E946B44C8DD5}
+

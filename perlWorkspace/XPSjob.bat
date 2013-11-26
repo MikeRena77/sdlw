@@ -1,0 +1,1 @@
+ftp -s:CPUTFTP.txt cput.aafes.com

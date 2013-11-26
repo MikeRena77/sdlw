@@ -1,0 +1,70 @@
+set_check.pl - SetCheck UDP - David Cavanaugh - PLATINUM technology ALS PSG consultant
+
+A CCC/Harvest UDP to check for package set upon promote
+
+Requirements:
+
+CCC/Harvest 3.0 or better, NT server with perl interpreter.
+
+What it does:
+
+This UDP prevents pacakge sets from being promoted without their set members.
+
+The set philosophy is that you can promote a package forward if you are promoting all 
+of the packages contained within the set that the package belongs to.  A package cannot 
+promote ahead of any of its set.  A package can however catch up to a set if it had been
+demoted back.  In other words, sets bind packages together upon promote, but not upon 
+demote. A package set is similar to a package group. However, a package set doesn't
+require an administrator to create it. Also a package can only belong to a single set.
+
+Set_check.pl looks to see if [package] and [package]-1 exist in the current state. 
+Set_check1.pl looks to see if [package], [package]-1, and [package]-2 exist in the current
+state.
+
+
+How it works:
+
+From the Workbench, the user executes this UDP process, first selecting a Package or a 
+list of Packages from the ones available in a State. The UDP is either a shell script 
+on UNIX or a Perl script on NT that gets passed the environment name, state name, and 
+package name(s).  The scripts checks the set of the selected packages. If any package 
+set rules are violated, details are displayed and the UDP causes the promote process 
+to halt.
+
+
+Usage:  
+
+Modify the set_check.sh or set_check.pl file, specifying on the $username and $userpass 
+lines the user name and password of your read-only CCC/Harvest Oracle database user.
+(HARREP/HARVEST is the default)
+Also specify on the $husername and $huserpass the user name and password of the Harvest
+account to be used by hcp command.
+
+Put set_check.sh, making sure it is executable, in $HARVESTHOME/bin on your UNIX server.
+OR,
+Put eset_check.pl in %HARVESTHOME%\bin on your NT server.
+
+In CCC/Harvest, set up a UDP process with the following 
+program line:
+
+UNIX:
+set_check.sh [environment] [state] [package]
+NT Harvest 3.x
+perl.exe set_check.pl " [environment] " " [state] " " [package] " 
+NT Harvest 4.x
+perl.exe set_check.pl  "[environment]"   "[state]"   "[package]"  
+
+Note that the spaces are required around the bracketed variables, but within the quotes
+this allows the system variables to be translated by harvest, yet allows values with
+spaces to be interpreted by perl as one arg rather than a list.  The extra space at the
+beginning and the extra space at the end are removed.
+
+This UDP assumes that a "Promote" package promote process exists in the source 
+environment/state.
+
+Limitations:  
+
+If you have an NT server, then the package names may not contain any whitespace.  
+Unfortunately, a PC-based UDP has no way of distinguishing a space within a parameter 
+from a space that separates one parameter from the next.  
+

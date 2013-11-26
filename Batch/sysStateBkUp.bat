@@ -1,0 +1,1 @@
+ntbackup backup systemstate /J "Backup Job 1" /F "C:\compare\2s5jy51\backup_%DATE:~10,4%-%DATE:~4,2%-%DATE:~7,2%-%TIME:~0,2%_%TIME:~3,2%_%TIME:~6,2%.bkf"

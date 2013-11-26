@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment]
+"HARVESTHOME"="C:\\Program Files\\CA\\SCM"
+"LOCALHARVESTHOME"="C:\\Program Files\\CA\\SCM"
+"Path"="C:\\PROGRA~1\\CA\\SC\\etpki\\lib;C:\\Program Files\\openmake;C:\\Program Files\\openmake\\client\\bin;C:\\Perl\\site\\bin;C:\\Perl\\bin;C:\\Program Files\\Java\\jre1.5.0_15\\bin;C:\\Program Files\\Java\\jdk1.5.0_13\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\Program Files\\CA\\AllFusion CM Enterprise Workbench\\bin;C:\\Program Files\\CA\\SharedComponents\\PEC\\bin;C:\\oracle\\product\\10.1.0\\db_1\\bin;C:\\CA_APPSW;C:\\oracle\\product\\10.1.0\\db_1\\jre\\1.4.2\\bin\\client;C:\\oracle\\product\\10.1.0\\db_1\\jre\\1.4.2\\bin;C:\\Program Files\\Dell\\OpenManage\\oma\\bin;C:\\Program Files\\Dell\\OpenManage\\LU\\bin;C:\\Program Files\\Dell\\OpenManage\\oldiags\\bin;C:\\Program Files\\Dell\\OpenManage\\Array Manager;C:\\Program Files\\CA\\SharedComponents\\Jre\\1.4.2_04\\bin\\client;C:\\PROGRA~1\\CA\\SHARED~1\\ODBC\\bin;C:\\PROGRA~1\\CA\\SHARED~1\\ODBC\\lib;\\Program Files\\Windows Resource Kits\\Tools\\;C:\\Program Files\\Windows Imaging\\;C:\\Program Files\\CA\\Cryptography\\;C:\\Program Files\\CA\\SCM"

@@ -1,0 +1,7 @@
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\tfsWorking -r -exc tfsFilesDB.xml -wp -xml tfsFilesDB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\tfsworking\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+

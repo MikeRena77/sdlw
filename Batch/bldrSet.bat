@@ -1,0 +1,11 @@
+DEVMGR_SHOW_NONPRESENT_DEVICES=1
+FTP_PASSIVE=1
+LIBPATH=C:\WINDOWS\Microsoft.NET\Framework\v3.5;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;C:\Program Files\Microsoft SDKs\Windows\v6.0A\Lib;C:\Program Files\Microsoft Visual Studio 9.0\VC\ATLMFC\LIB;C:\Program Files\Microsoft Visual Studio 9.0\VC\LIB;c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319;c:\WINDOWS\Microsoft.NET\Framework64\v3.5;c:\WINDOWS\Microsoft.NET\Framework\v4.0.30319;c:\WINDOWS\Microsoft.NET\Framework\v3.5;c:\Program Files\Microsoft Visual Studio 10.0\VC\LIB\amd64;c:\Program Files\Microsoft Visual Studio 10.0\VC\ATLMFC\LIB\amd64;C:\Program Files\Common Files\Microsoft Shared\DAO\;
+MSDevDir=C:\Program Files\Microsoft Visual Studio\Common\MSDev98
+Path=C:\Program Files\Windows Resource Kits\Tools\;.;C:\Program Files\perl5\bin;c:\Windows\system32;c:\windows;c:\windows\System32\wbem;\\wdswdevl\ntnuc\pnutil\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft Visual Studio\vb98\;C:\Program Files\Common Files\Microsoft Shared\DAO\;C:\strawberry\c\bin;C:\Program Files\Windows Imaging\;P:\CM;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\ActivIdentity\ActivClient\
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.PSC1
+SQLDATA_PATH=c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data
+TERM=dumb
+THIS_IPT=1
+UATDATA=C:\WINDOWS\system32\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+VDISK=c:\vdisk

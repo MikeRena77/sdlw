@@ -1,0 +1,2 @@
+hco -b DEVSWA -en "HarvestAdmin" -st "Development" -vp "\wwwroot" -br -prompt -s "*.*" -ced -op pc -o deploy.txt
+hci *.* -b HARDEV1 -en name -st name -p name -vp path -pn name -ur -d -de "Reload from DEVDBS to HARDEV1" -s "*.*" -op pc -if ne -prompt –oa hardev1.reload

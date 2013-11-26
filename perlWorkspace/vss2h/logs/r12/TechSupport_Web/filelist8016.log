@@ -1,0 +1,41 @@
+$/TechSupport_Web:
+$ASP
+$Forms
+$HTML
+$images
+$Properties
+CustomerSuppt.csproj
+CustomerSuppt.csproj.vspscc
+Default.aspx
+Default.aspx.cs
+Default.aspx.designer.cs
+global.asa
+Testpage.asp
+Web.config
+
+$/TechSupport_Web/ASP:
+Inventory.asp
+Library.asp
+PC Setup.asp
+Security.asp
+Welcome.asp
+
+$/TechSupport_Web/Forms:
+SecurityREQ.doc
+
+$/TechSupport_Web/HTML:
+$Main.html
+
+$/TechSupport_Web/HTML/Main.html:
+No items found under $/TechSupport_Web/HTML/Main.html
+
+$/TechSupport_Web/images:
+AAFES Logo.gif
+Eagle Tear.jpg
+shuttle with flag.jpg
+wtc-lights.jpg
+
+$/TechSupport_Web/Properties:
+No items found under $/TechSupport_Web/Properties
+
+24 item(s)

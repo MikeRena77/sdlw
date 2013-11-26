@@ -1,0 +1,2777 @@
+SQL> select versionindicator from hartableinfo;
+
+VERSIONINDICATOR                                                                
+----------------                                                                
+           70000                                                                
+
+SQL> desc HARAPPROVEHIST
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PACKAGEOBJID                              NOT NULL NUMBER(38)
+ ENVOBJID                                  NOT NULL NUMBER(38)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ USROBJID                                  NOT NULL NUMBER(38)
+ EXECDTIME                                 NOT NULL DATE
+ ACTION                                    NOT NULL VARCHAR2(128)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARALLCHILDRENPATH
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                 NOT NULL NUMBER
+ CHILDITEMID                               NOT NULL NUMBER
+
+SQL> desc HARALLUSERS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USROBJID                                  NOT NULL NUMBER
+ USERNAME                                  NOT NULL CHAR(32)
+ LOGINDATE                                          DATE
+ LASTLOGIN                                          DATE
+ LOGGEDIN                                  NOT NULL CHAR(1)
+ REALNAME                                           CHAR(128)
+ PHONENUMBER                                        CHAR(32)
+ EXTENSION                                          CHAR(8)
+ FAXNUMBER                                          CHAR(32)
+ ENCRYPTPSSWD                                       CHAR(32)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ EMAIL                                              VARCHAR2(128)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARAPPROVE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARAPPROVELIST
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ ISGROUP                                   NOT NULL CHAR(1)
+ USROBJID                                           NUMBER(38)
+ USRGRPOBJID                                        NUMBER(38)
+
+SQL> desc HARASSOCPKG
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ ASSOCPKGID                                NOT NULL NUMBER(38)
+
+SQL> desc HARBRANCH
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BRANCHOBJID                               NOT NULL NUMBER
+ PACKAGEOBJID                              NOT NULL NUMBER
+ ITEMOBJID                                 NOT NULL NUMBER
+ ISMERGED                                  NOT NULL NUMBER
+
+SQL> desc HARCHECKINPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER
+ ITEMOPTION                                NOT NULL NUMBER
+ PATHOPTION                                NOT NULL NUMBER
+ ITEMNEWER                                 NOT NULL CHAR(1)
+ MODEOPTION                                NOT NULL NUMBER
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ VIEWPATH                                           VARCHAR2(255)
+ CLIENTDIR                                          VARCHAR2(255)
+ DESCRIPTION                                        VARCHAR2(2000)
+ NOTE                                               VARCHAR2(2000)
+ NEWOREXISTINGITEM                         NOT NULL CHAR(1)
+ NEWITEMONLY                               NOT NULL CHAR(1)
+ EXISTINGITEMONLY                          NOT NULL CHAR(1)
+ DELETEAFTERCI                             NOT NULL CHAR(1)
+ OWNERONLY                                 NOT NULL CHAR(1)
+ FORCECOMMENT                              NOT NULL CHAR(1)
+
+SQL> desc HARCHECKOUTPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ PATHOPTION                                NOT NULL NUMBER(38)
+ REPLACEFILE                               NOT NULL CHAR(1)
+ ITEMNEWER                                 NOT NULL CHAR(1)
+ UPDMODE                                   NOT NULL CHAR(1)
+ CONCURUPDMODE                             NOT NULL CHAR(1)
+ BROWSEMODE                                NOT NULL CHAR(1)
+ RESERVEMODE                               NOT NULL CHAR(1)
+ SYNCMODE                                  NOT NULL CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ CLIENTDIR                                          VARCHAR2(255)
+ VIEWPATH                                           VARCHAR2(255)
+ NOTE                                               VARCHAR2(2000)
+ SHAREDWORKINGDIR                          NOT NULL CHAR(1)
+ USECHECKINTIMESTAMP                                CHAR(1)
+
+SQL> desc HARCOMMENT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ COMMENTDATE                                        DATE
+ COMMENTEDBY                                        CHAR(44)
+ COMMENTKEYWORD                                     VARCHAR2(66)
+ COMMENTS                                           VARCHAR2(2000)
+
+SQL> desc HARCONMRGPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+ MERGERULE                                 NOT NULL CHAR(1)
+
+SQL> desc HARCONVERSIONLOG
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ TABLENAME                                 NOT NULL VARCHAR2(64)
+ LASTOBJID                                          NUMBER
+
+SQL> desc HARCRPKGPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ DEFAULTPKGFORMNAME                                 CHAR(128)
+ CREATEASSOCFORM                           NOT NULL CHAR(1)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ INITIALSTATEID                            NOT NULL NUMBER(38)
+ FORMTYPEOBJID                                      NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+ DISABLENAMECHANGE                         NOT NULL CHAR(1)
+
+SQL> desc HARCRSENVMRGPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ PLACEMENT                                 NOT NULL CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+ MERGERULE                                 NOT NULL CHAR(1)
+
+SQL> desc HARDEFECT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ DTAPPLICATION                                      VARCHAR2(66)
+ DTCATEGORY                                         CHAR(12)
+ DTCOMPONENT                                        VARCHAR2(66)
+ DTCONFIRMEDBY                                      VARCHAR2(66)
+ DTCONFIRMEDOS                                      CHAR(32)
+ DTCONFIRMEDVERSION                                 CHAR(32)
+ DTDATECLOSED                                       DATE
+ DTDATECONFIRMED                                    DATE
+ DTDATEREPORTED                                     DATE
+ DTDEFECTKEY                                        CHAR(19)
+ DTDESCRIPTION                                      VARCHAR2(2000)
+ DTDEVELOPER                                        CHAR(32)
+ DTDOCIMPACT                                        CHAR(12)
+ DTDOCUMENT                                         VARCHAR2(130)
+ DTFIXBY                                            DATE
+ DTIMPACT                                           CHAR(9)
+ DTINVESTIGATOR                                     CHAR(32)
+ DTINVESTNOTES                                      VARCHAR2(2000)
+ DTKEYWORD                                          VARCHAR2(66)
+ DTLIKELIHOOD                                       CHAR(9)
+ DTMILESTONE                                        CHAR(12)
+ DTORIGIN                                           CHAR(8)
+ DTOTHERCATEGORY                                    CHAR(30)
+ DTPRIORITY                                         CHAR(10)
+ DTRECOMMEND                                        VARCHAR2(77)
+ DTRELEASENUM                                       CHAR(32)
+ DTREPORTEDBY                                       VARCHAR2(66)
+ DTREPORTEDOS                                       CHAR(32)
+ DTRESOLUTION                                       VARCHAR2(2000)
+ DTREVISIONNUM                                      CHAR(32)
+ DTSEVERITY                                         CHAR(21)
+ DTTESTCASES                                        VARCHAR2(2000)
+ DTTESTER                                           CHAR(32)
+ DTTESTRESULTS                                      VARCHAR2(2000)
+ DTUNITTEST                                         VARCHAR2(2000)
+
+SQL> desc HARDELVERSPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARDEMOTEPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ TOSTATEID                                 NOT NULL NUMBER(38)
+ DEMOTECHGS                                NOT NULL CHAR(1)
+ CARRYCHGS                                 NOT NULL CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+ ENFORCEBIND                               NOT NULL CHAR(1)
+ CHECKDEPENDENCIES                         NOT NULL CHAR(1)
+
+SQL> desc HARENVIRONMENT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ENVOBJID                                  NOT NULL NUMBER
+ ENVIRONMENTNAME                           NOT NULL VARCHAR2(128)
+ ENVISACTIVE                               NOT NULL CHAR(1)
+ BASELINEVIEWID                            NOT NULL NUMBER
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ NOTE                                               VARCHAR2(2000)
+ ISARCHIVE                                 NOT NULL CHAR(1)
+ ARCHIVEBY                                 NOT NULL NUMBER(38)
+ ARCHIVEMACHINE                                     CHAR(256)
+ ARCHIVEFILE                                        CHAR(256)
+ ARCHIVETIME                                        DATE
+
+SQL> desc HARENVIRONMENTACCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ENVOBJID                                  NOT NULL NUMBER
+ USRGRPOBJID                               NOT NULL NUMBER
+ SECUREACCESS                              NOT NULL CHAR(1)
+ UPDATEACCESS                              NOT NULL CHAR(1)
+ VIEWACCESS                                NOT NULL CHAR(1)
+ EXECUTEACCESS                             NOT NULL CHAR(1)
+
+SQL> desc HARESD
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ ESDBACKOUTPLAN                                     VARCHAR2(2000)
+ ESDCERTIFICATIONRESULTS                            VARCHAR2(2000)
+ ESDDEPLOYMENTPLAN                                  VARCHAR2(2000)
+ ESDDESCRIPTION                                     VARCHAR2(2000)
+ ESDHWDEPENDENCYNOTES                               VARCHAR2(2000)
+ ESDID                                              CHAR(40)
+ ESDIMPACTNOTES                                     VARCHAR2(2000)
+ ESDIMPLEMENTATIONDATE                              DATE
+ ESDINITIATOR                                       CHAR(30)
+ ESDINVESTIGATOR                                    CHAR(30)
+ ESDPLANNEDBY                                       CHAR(30)
+ ESDPRIORITY                                        CHAR(10)
+ ESDREJECTEDBY                                      CHAR(30)
+ ESDREJECTNOTES                                     VARCHAR2(2000)
+ ESDREQUESTDATE                                     DATE
+ ESDREQUIREDSPACE                                   CHAR(40)
+ ESDREVIEWEDBY                                      CHAR(30)
+ ESDREVIEWNOTES                                     VARCHAR2(2000)
+ ESDRISKLEVEL                                       CHAR(10)
+ ESDSCOPE                                           VARCHAR2(2000)
+ ESDSCRIPTNOTES                                     VARCHAR2(2000)
+ ESDSWDEPENDENCYNOTES                               VARCHAR2(2000)
+ ESDTESTEDBY                                        CHAR(30)
+ ESDTESTPLAN                                        VARCHAR2(2000)
+ ESDTRAININGPLAN                                    VARCHAR2(2000)
+ ESDTYPE                                            VARCHAR2(52)
+
+SQL> desc HAREXTERNASSOC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PACKAGEOBJID                              NOT NULL NUMBER
+ USROBJID                                  NOT NULL NUMBER
+ EXTERNALID                                NOT NULL NUMBER
+ RESTRICT                                  NOT NULL NUMBER
+
+SQL> desc HARFILEEXTENSION
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REPOSITOBJID                              NOT NULL NUMBER(38)
+ FILEEXTENSION                             NOT NULL CHAR(64)
+
+SQL> desc HARFORM
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER
+ FORMTYPEOBJID                             NOT NULL NUMBER
+ FORMNAME                                  NOT NULL VARCHAR2(128)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+
+SQL> desc HARFORMATTACHMENT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ATTACHMENTOBJID                           NOT NULL NUMBER
+ ATTACHMENTNAME                            NOT NULL VARCHAR2(512)
+ ATTACHMENTTYPE                            NOT NULL NUMBER
+ FORMOBJID                                 NOT NULL NUMBER
+ CREATORID                                 NOT NULL NUMBER
+ CREATIONTIME                              NOT NULL DATE
+ FILESIZE                                  NOT NULL NUMBER
+ FILEDATA                                           BLOB
+ FILECOMPRESSED                            NOT NULL CHAR(1)
+
+SQL> desc HARFORMHISTORY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ USROBJID                                  NOT NULL NUMBER(38)
+ EXECDTIME                                 NOT NULL DATE
+ ACTION                                    NOT NULL VARCHAR2(128)
+
+SQL> desc HARFORMTYPE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMTYPEOBJID                             NOT NULL NUMBER(38)
+ FORMTABLENAME                             NOT NULL CHAR(32)
+ FORMTYPENAME                              NOT NULL VARCHAR2(128)
+
+SQL> desc HARFORMTYPEACCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMTYPEOBJID                             NOT NULL NUMBER
+ USRGRPOBJID                               NOT NULL NUMBER
+ SECUREACCESS                              NOT NULL CHAR(1)
+ UPDATEACCESS                              NOT NULL CHAR(1)
+ VIEWACCESS                                NOT NULL CHAR(1)
+
+SQL> desc HARFORMTYPEDEFS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ATTRID                                    NOT NULL NUMBER(38)
+ FORMTYPEOBJID                             NOT NULL NUMBER(38)
+ COLUMNNAME                                NOT NULL CHAR(32)
+ COLUMNTYPE                                NOT NULL CHAR(8)
+ COLUMNSIZE                                NOT NULL NUMBER(38)
+ DEFAULTINTVALUE                                    NUMBER(38)
+ DEFAULTCHARVALUE                                   VARCHAR2(255)
+ LABEL                                              VARCHAR2(128)
+
+SQL> desc HARHARVEST
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USRGRPOBJID                               NOT NULL NUMBER
+ SECUREHARVEST                             NOT NULL CHAR(1)
+ ADMINUSER                                 NOT NULL CHAR(1)
+ VIEWUSER                                  NOT NULL CHAR(1)
+ ADMINENVIRONMENT                          NOT NULL CHAR(1)
+ VIEWENVIRONMENT                           NOT NULL CHAR(1)
+ ADMINREPOSITORY                           NOT NULL CHAR(1)
+ VIEWREPOSITORY                            NOT NULL CHAR(1)
+ ADMINFORMTYPE                             NOT NULL CHAR(1)
+ VIEWFORMTYPE                              NOT NULL CHAR(1)
+
+SQL> desc HARINTMRGPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+ MERGEWAY                                  NOT NULL NUMBER
+
+SQL> desc HARITEMACCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                 NOT NULL NUMBER
+ USRGRPOBJID                               NOT NULL NUMBER
+ VIEWACCESS                                NOT NULL CHAR(1)
+
+SQL> desc HARITEMRELATIONSHIP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                 NOT NULL NUMBER
+ REFITEMID                                 NOT NULL NUMBER
+ RELATIONSHIP                              NOT NULL CHAR(10)
+ VERSIONOBJID                              NOT NULL NUMBER
+
+SQL> desc HARITEMS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                 NOT NULL NUMBER
+ ITEMNAME                                  NOT NULL VARCHAR2(256)
+ ITEMTYPE                                  NOT NULL NUMBER
+ PARENTOBJID                               NOT NULL NUMBER
+ REPOSITOBJID                              NOT NULL NUMBER
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ ITEMNAMEUPPER                             NOT NULL VARCHAR2(256)
+
+SQL> desc HARLINKEDPROCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATEOBJID                                NOT NULL NUMBER(38)
+ PARENTPROCOBJID                           NOT NULL NUMBER(38)
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSORDER                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ PROCESSTYPE                               NOT NULL CHAR(32)
+ PROCESSPRELINK                            NOT NULL CHAR(1)
+
+SQL> desc HARLISTDIFFPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARLISTVERSPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CHANGEDESCRIPTION                                  CHAR(1)
+ ACTUALCHANGES                                      CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ TOVIEWPATH                                         VARCHAR2(255)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARMOVEPKGPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ INCLUDEPKGHISTORY                         NOT NULL CHAR(1)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ TOENVIRONMENTID                           NOT NULL NUMBER(38)
+ TOSTATEID                                 NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARMR
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ MRDATEREPORTED                                     DATE
+ MRREPORTEDBY                                       CHAR(44)
+ MRCATEGORY                                         CHAR(12)
+ MROTHERCATEGORY                                    CHAR(30)
+ MRAPPLICATION                                      VARCHAR2(66)
+ MRRELEASENUM                                       CHAR(32)
+ MRHARDWARE                                         VARCHAR2(66)
+ MROPERATINGSYS                                     CHAR(32)
+ MRDOCUMENT                                         VARCHAR2(130)
+ MRREVISIONNUM                                      CHAR(32)
+ MRDESCRIPT                                         VARCHAR2(2000)
+ MRKEYWORD                                          VARCHAR2(66)
+ MRSEVERITY                                         CHAR(32)
+ MRINVESTNOTES                                      VARCHAR2(2000)
+ MRINVESTIGATOR                                     CHAR(32)
+ MRRECOMMEND                                        VARCHAR2(76)
+ MRRESOLUTION                                       VARCHAR2(2000)
+ MRUNITTEST                                         VARCHAR2(2000)
+ MRDEVELOPER                                        CHAR(32)
+ MRTESTRESULTS                                      VARCHAR2(2000)
+ MRTESTER                                           CHAR(32)
+
+SQL> desc HARNOTIFY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ PARENTPROCOBJID                                    NUMBER(38)
+ STATEOBJID                                         NUMBER(38)
+ OUTPUTTARGET                              NOT NULL CHAR(8)
+ ONERRORACTION                             NOT NULL CHAR(8)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ MAILFACILITY                              NOT NULL VARCHAR2(255)
+ MESSAGE                                            VARCHAR2(2000)
+ NOTE                                               VARCHAR2(2000)
+ SUBJECT                                            VARCHAR2(1000)
+
+SQL> desc HARNOTIFYLIST
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PARENTPROCOBJID                                    NUMBER(38)
+ STATEOBJID                                         NUMBER(38)
+ ISGROUP                                   NOT NULL CHAR(1)
+ USROBJID                                           NUMBER(38)
+ USRGRPOBJID                                        NUMBER(38)
+
+SQL> desc HAROBJECTSEQUENCEID
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ HARTABLENAME                              NOT NULL VARCHAR2(64)
+ HARSEQUENCEID                             NOT NULL VARCHAR2(64)
+
+SQL> desc HARPAC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ PACBACKOUTPLAN                                     VARCHAR2(2000)
+ PACDATEREPORTED                                    DATE
+ PACDESCRIPTION                                     VARCHAR2(2000)
+ PACID                                              CHAR(40)
+ PACIMPACTNOTES                                     VARCHAR2(2000)
+ PACIMPLEMENTATIONDATE                              DATE
+ PACIMPLEMENTATIONPLAN                              VARCHAR2(2000)
+ PACINITIATOR                                       CHAR(30)
+ PACINVESTIGATOR                                    CHAR(30)
+ PACOWNER                                           CHAR(30)
+ PACPLANNEDBY                                       CHAR(30)
+ PACPRIORITY                                        CHAR(10)
+ PACREJECTEDBY                                      CHAR(30)
+ PACREJECTNOTES                                     VARCHAR2(2000)
+ PACREVIEWEDBY                                      CHAR(30)
+ PACREVIEWNOTES                                     VARCHAR2(2000)
+ PACRISKLEVEL                                       CHAR(10)
+ PACSCOPE                                           VARCHAR2(2000)
+ PACTESTEDBY                                        CHAR(30)
+ PACTESTPLAN                                        VARCHAR2(2000)
+ PACTESTRESULTS                                     VARCHAR2(2000)
+ PACTRAININGPLAN                                    VARCHAR2(2000)
+ PACTYPE                                            VARCHAR2(52)
+
+SQL> desc HARPACKAGE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PACKAGEOBJID                              NOT NULL NUMBER(38)
+ PACKAGENAME                               NOT NULL VARCHAR2(128)
+ ENVOBJID                                  NOT NULL NUMBER(38)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ VIEWOBJID                                 NOT NULL NUMBER(38)
+ APPROVED                                  NOT NULL CHAR(1)
+ STATUS                                    NOT NULL CHAR(32)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ PACKAGEDES                                         VARCHAR2(255)
+ NOTE                                               VARCHAR2(2000)
+ PRIORITY                                  NOT NULL NUMBER
+ ASSIGNEEID                                NOT NULL NUMBER
+ STATEENTRYTIME                            NOT NULL DATE
+
+SQL> desc HARPACKAGEGROUP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PKGGRPOBJID                               NOT NULL NUMBER
+ PKGGRPNAME                                NOT NULL CHAR(128)
+ ENVOBJID                                  NOT NULL NUMBER
+ BIND                                      NOT NULL CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARPACKAGENAMEGEN
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAMEFORMAT                                NOT NULL VARCHAR2(128)
+ NAMECOUNTER                               NOT NULL NUMBER
+
+SQL> desc HARPASSWORDHISTORY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USROBJID                                  NOT NULL NUMBER
+ PREVPSSWDS                                NOT NULL BLOB
+
+SQL> desc HARPASSWORDPOLICY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ MAXAGE                                    NOT NULL NUMBER
+ MINAGE                                    NOT NULL NUMBER
+ MINLEN                                    NOT NULL NUMBER
+ REUSERULE                                 NOT NULL NUMBER
+ MAXFAILURES                               NOT NULL NUMBER
+ ALLOWUSRCHGEXP                            NOT NULL CHAR(1)
+ WARNINGAGE                                NOT NULL NUMBER
+ CHREPETITION                              NOT NULL NUMBER
+ MINNUMERIC                                NOT NULL NUMBER
+ LOWERCASE                                 NOT NULL NUMBER
+ UPPERCASE                                 NOT NULL NUMBER
+ NONALPHANUM                               NOT NULL NUMBER
+ ALLOWUSERNAME                             NOT NULL CHAR(1)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+
+SQL> desc HARPATHFULLNAME
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                 NOT NULL NUMBER
+ PATHFULLNAME                              NOT NULL VARCHAR2(1024)
+ PATHFULLNAMEUPPER                         NOT NULL VARCHAR2(1024)
+
+SQL> desc HARPKGHISTORY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PACKAGEOBJID                              NOT NULL NUMBER(38)
+ STATENAME                                 NOT NULL VARCHAR2(128)
+ ENVIRONMENTNAME                           NOT NULL VARCHAR2(128)
+ EXECDTIME                                 NOT NULL DATE
+ USROBJID                                  NOT NULL NUMBER(38)
+ ACTION                                    NOT NULL VARCHAR2(128)
+
+SQL> desc HARPKGSINPKGGRP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PACKAGEOBJID                              NOT NULL NUMBER(38)
+ PKGGRPOBJID                               NOT NULL NUMBER(38)
+
+SQL> desc HARPMSTATUS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PMSTATUSINDEX                             NOT NULL NUMBER(38)
+ PMSTATUSNAME                              NOT NULL CHAR(128)
+
+SQL> desc HARPROBLEMREPORT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ DATEREPORTED                                       DATE
+ OPERATINGSYSTEM                                    CHAR(32)
+ RELEASENUM                                         CHAR(32)
+ REVISIONNUM                                        CHAR(32)
+ SEVERITY                                           CHAR(32)
+ APPLICATION                                        VARCHAR2(66)
+ CATEGORY                                           VARCHAR2(66)
+ HARDWARE                                           VARCHAR2(66)
+ KEYWORD                                            VARCHAR2(66)
+ REPORTEDBY                                         VARCHAR2(66)
+ DOCUMENT                                           VARCHAR2(130)
+ PROBLEMDESCR                                       VARCHAR2(2000)
+
+SQL> desc HARPROMOTEPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ TOSTATEID                                 NOT NULL NUMBER(38)
+ UPDPRIORSTATES                            NOT NULL CHAR(1)
+ MERGEDPKGSONLY                            NOT NULL CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+ CHECKDEPENDENCIES                         NOT NULL CHAR(1)
+ FROMSTATEID                               NOT NULL NUMBER
+ ENFORCEBIND                               NOT NULL CHAR(1)
+
+SQL> desc HARQANDA
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ ANSWEREDBY                                         CHAR(44)
+ SUBMITTEDBY                                        CHAR(44)
+ QUESDATE                                           DATE
+ ANSDATE                                            DATE
+ QUESKEYWORD                                        VARCHAR2(66)
+ ANSWER                                             VARCHAR2(2000)
+ QUESTION                                           VARCHAR2(2000)
+
+SQL> desc HARRECEIVEUPDATES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SYNCOBJID                                          NUMBER
+ CONFIGOBJID                                        NUMBER
+ VERSIONOBJID                                       NUMBER
+ ORIG_VERSIONOBJID                                  NUMBER
+ ITEMFULLNAME                                       VARCHAR2(512)
+ CHECKINTIME                                        DATE
+ VERSIONSTATUS                                      CHAR(1)
+
+SQL> desc HARREMITEMPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARRENAMEITEMPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARREPINVIEW
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VIEWOBJID                                 NOT NULL NUMBER
+ REPOSITOBJID                              NOT NULL NUMBER
+ READONLY                                  NOT NULL NUMBER
+ REPFROMVIEWID                             NOT NULL NUMBER
+
+SQL> desc HARREPOSITORY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REPOSITOBJID                              NOT NULL NUMBER
+ REPOSITNAME                               NOT NULL CHAR(128)
+ ROOTPATHID                                NOT NULL NUMBER
+ REPONLINE                                          CHAR(8)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ INITIALVIEWID                             NOT NULL NUMBER
+ HOSTNODE                                           VARCHAR2(32)
+ HOSTINSTANCE                              NOT NULL VARCHAR2(32)
+ NOTE                                               VARCHAR2(2000)
+ EXTENSIONOPTION                           NOT NULL NUMBER
+ COMPFILE                                  NOT NULL CHAR(1)
+ NOTCOMPEXT                                         VARCHAR2(1000)
+ MVSMAPPING                                NOT NULL CHAR(1)
+
+SQL> desc HARREPOSITORYACCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REPOSITOBJID                              NOT NULL NUMBER
+ USRGRPOBJID                               NOT NULL NUMBER
+ SECUREACCESS                              NOT NULL CHAR(1)
+ UPDATEACCESS                              NOT NULL CHAR(1)
+ VIEWACCESS                                NOT NULL CHAR(1)
+
+SQL> desc HARSENDUPDATES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CONFIGOBJID                                        NUMBER
+ VERSIONOBJID                                       NUMBER
+ SYNCDATE                                           DATE
+
+SQL> desc HARSITE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SITEOBJID                                 NOT NULL NUMBER
+ SITENAME                                           CHAR(24)
+ LOCAL                                              CHAR(1)
+ HOSTNAME                                           CHAR(30)
+ IMPORTDIR                                          VARCHAR2(256)
+ FTPDIR                                             VARCHAR2(256)
+
+SQL> desc HARSNAPVIEWPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARSTATE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATEOBJID                                NOT NULL NUMBER(38)
+ STATENAME                                 NOT NULL VARCHAR2(128)
+ ENVOBJID                                  NOT NULL NUMBER(38)
+ STATEORDER                                NOT NULL NUMBER(38)
+ VIEWOBJID                                 NOT NULL NUMBER(38)
+ SNAPSHOT                                  NOT NULL CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+ LOCATIONX                                 NOT NULL NUMBER(38)
+ LOCATIONY                                 NOT NULL NUMBER(38)
+ PMSTATUSINDEX                             NOT NULL NUMBER(38)
+
+SQL> desc HARSTATEACCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATEOBJID                                NOT NULL NUMBER
+ USRGRPOBJID                               NOT NULL NUMBER
+ UPDATEACCESS                              NOT NULL CHAR(1)
+ UPDATEPKGACCESS                           NOT NULL CHAR(1)
+
+SQL> desc HARSTATEPROCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATEOBJID                                NOT NULL NUMBER
+ PROCESSOBJID                              NOT NULL NUMBER
+ PROCESSNAME                               NOT NULL CHAR(128)
+ PROCESSTYPE                               NOT NULL CHAR(32)
+ PROCESSORDER                              NOT NULL NUMBER
+ POSTCOUNT                                 NOT NULL NUMBER
+ PRECOUNT                                  NOT NULL NUMBER
+
+SQL> desc HARSTATEPROCESSACCESS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATEOBJID                                NOT NULL NUMBER
+ PROCESSOBJID                              NOT NULL NUMBER
+ USRGRPOBJID                               NOT NULL NUMBER
+ EXECUTEACCESS                             NOT NULL CHAR(1)
+
+SQL> desc HARSWITCHPKGPROC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ STATEOBJID                                NOT NULL NUMBER(38)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARSYNC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SYNCOBJID                                 NOT NULL NUMBER
+ PACKAGEOBJID                                       NUMBER
+ CONFIGOBJID                                        NUMBER
+ SYNCTIME                                           DATE
+
+SQL> desc HARSYNCCONFIG
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CONFIGOBJID                               NOT NULL NUMBER
+ SITEOBJID                                          NUMBER
+ ENVOBJID                                           NUMBER
+ STATEOBJID                                         NUMBER
+ VIEWPATHOBJID                                      NUMBER
+ REMOTEENV                                          CHAR(44)
+ REMOTESTATE                                        CHAR(44)
+ REMOTEVIEWPATH                                     VARCHAR2(300)
+ CHECKOUT_BR_ID                                     NUMBER
+ CHECKOUT_UP_ID                                     NUMBER
+ CHECKIN_ID                                         NUMBER
+ CRPKG_ID                                           NUMBER
+ REMITEM_ID                                         NUMBER
+ PKGNAME                                            CHAR(25)
+
+SQL> desc HARSYNCFULLPATH
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PATHOBJID                                 NOT NULL NUMBER(38)
+ HOSTPATH                                           VARCHAR2(255)
+
+SQL> desc HARTABLEINFO
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VERSIONINDICATOR                          NOT NULL NUMBER(38)
+ CASESENSLOGIN                             NOT NULL CHAR(1)
+ DATABASEID                                NOT NULL NUMBER(38)
+ AUTHENTICATEUSER                          NOT NULL CHAR(1)
+ SYSVARPW                                  NOT NULL CHAR(1)
+
+SQL> desc HARTESTINGINFO
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ DEVDATE                                            DATE
+ TESTDATE                                           DATE
+ DEVELOPER                                          CHAR(44)
+ TESTER                                             CHAR(44)
+ DEVCOMMENTS                                        VARCHAR2(2000)
+ TESTCOMMENTS                                       VARCHAR2(2000)
+ TESTCASES                                          VARCHAR2(2000)
+ TESTRESULTS                                        VARCHAR2(2000)
+
+SQL> desc HARUDP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROCESSOBJID                              NOT NULL NUMBER(38)
+ PROCESSNAME                               NOT NULL CHAR(128)
+ PARENTPROCOBJID                                    NUMBER(38)
+ STATEOBJID                                         NUMBER(38)
+ OUTPUTTARGET                              NOT NULL CHAR(8)
+ ONERRORACTION                             NOT NULL CHAR(8)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ DESCRIPTION                                        VARCHAR2(255)
+ PROGRAMNAME                                        VARCHAR2(255)
+ INPUTPARM                                          VARCHAR2(2000)
+ NOTE                                               VARCHAR2(2000)
+ SECUREUDPINPUT                            NOT NULL CHAR(1)
+ UDPTYPE                                   NOT NULL CHAR(8)
+
+SQL> desc HARUSER
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USROBJID                                  NOT NULL NUMBER
+ USERNAME                                  NOT NULL CHAR(32)
+ LOGINDATE                                          DATE
+ LASTLOGIN                                          DATE
+ LOGGEDIN                                  NOT NULL CHAR(1)
+ REALNAME                                           CHAR(128)
+ PHONENUMBER                                        CHAR(32)
+ EXTENSION                                          CHAR(8)
+ FAXNUMBER                                          CHAR(32)
+ ENCRYPTPSSWD                                       CHAR(32)
+ PASSWDATTRS                               NOT NULL NUMBER
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ EMAIL                                              VARCHAR2(128)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARUSERCONTACT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ CONTACTEXTENSION                                   CHAR(12)
+ ZIP                                                CHAR(12)
+ CONTACTPHONE                                       CHAR(32)
+ STATE                                              CHAR(32)
+ CITY                                               VARCHAR2(66)
+ CONTACTFAX                                         VARCHAR2(66)
+ CONTACTNAME                                        VARCHAR2(66)
+ CONTACTTITLE                                       VARCHAR2(66)
+ COUNTRY                                            VARCHAR2(66)
+ POSITION                                           VARCHAR2(66)
+ MAILSTOP                                           VARCHAR2(130)
+ ORGANIZATION                                       VARCHAR2(130)
+ ADDRESS                                            VARCHAR2(257)
+
+SQL> desc HARUSERDATA
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USROBJID                                  NOT NULL NUMBER
+ ENCRYPTPSSWD                                       BLOB
+ MAXAGE                                    NOT NULL NUMBER
+ FAILURES                                  NOT NULL NUMBER
+ PSSWDTIME                                 NOT NULL DATE
+
+SQL> desc HARUSERGROUP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USRGRPOBJID                               NOT NULL NUMBER(38)
+ USERGROUPNAME                             NOT NULL CHAR(128)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER(38)
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER(38)
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc HARUSERSINGROUP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USROBJID                                  NOT NULL NUMBER(38)
+ USRGRPOBJID                               NOT NULL NUMBER(38)
+
+SQL> desc HARVERSIONDATA
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VERSIONDATAOBJID                          NOT NULL NUMBER
+ REFCOUNTER                                NOT NULL NUMBER
+ DATASIZE                                  NOT NULL NUMBER
+ COMPRESSED                                NOT NULL CHAR(1)
+ COMPDATASIZE                              NOT NULL NUMBER
+ FILEACCESS                                         CHAR(9)
+ MODIFYTIME                                         DATE
+ CREATETIME                                         DATE
+ DCB                                                VARCHAR2(256)
+ TEXTFILE                                  NOT NULL NUMBER
+ ITEMOBJID                                 NOT NULL NUMBER
+ VERSIONDATA                                        BLOB
+
+SQL> desc HARVERSIONDELTA
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CHILDVERSIONDATAID                        NOT NULL NUMBER
+ PARENTVERSIONDATAID                       NOT NULL NUMBER
+ DELTASIZE                                 NOT NULL NUMBER
+ VERSIONDELTA                                       BLOB
+
+SQL> desc HARVERSIONINVIEW
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VIEWOBJID                                 NOT NULL NUMBER
+ VERSIONOBJID                              NOT NULL NUMBER
+
+SQL> desc HARVERSIONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VERSIONOBJID                              NOT NULL NUMBER
+ ITEMOBJID                                 NOT NULL NUMBER
+ PACKAGEOBJID                              NOT NULL NUMBER
+ PARENTVERSIONID                           NOT NULL NUMBER
+ MERGEDVERSIONID                           NOT NULL NUMBER
+ INBRANCH                                  NOT NULL NUMBER
+ MAPPEDVERSION                                      CHAR(16)
+ VERSIONSTATUS                                      CHAR(1)
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ DESCRIPTION                                        VARCHAR2(2000)
+ VERSIONDATAOBJID                          NOT NULL NUMBER
+ CLIENTMACHINE                                      VARCHAR2(50)
+ CLIENTPATH                                         VARCHAR2(1024)
+ ANCESTORVERSIONID                         NOT NULL NUMBER
+
+SQL> desc HARVIEW
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VIEWOBJID                                 NOT NULL NUMBER
+ VIEWNAME                                  NOT NULL CHAR(128)
+ VIEWTYPE                                  NOT NULL CHAR(16)
+ ENVOBJID                                  NOT NULL NUMBER
+ CANVIEWEXTERNALLY                         NOT NULL CHAR(1)
+ BASELINEVIEWID                            NOT NULL NUMBER
+ CREATIONTIME                              NOT NULL DATE
+ CREATORID                                 NOT NULL NUMBER
+ MODIFIEDTIME                              NOT NULL DATE
+ MODIFIERID                                NOT NULL NUMBER
+ SNAPSHOTTIME                                       DATE
+ NOTE                                               VARCHAR2(2000)
+
+SQL> desc WORKBENCH_PROVIDER
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROVIDER_NAME                             NOT NULL VARCHAR2(20)
+ PRODUCT_CODE                              NOT NULL NUMBER(38)
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> desc PROVIDER_USER
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USERID                                    NOT NULL NUMBER(38)
+ PROVIDER_NAME                             NOT NULL VARCHAR2(20)
+ PRODUCT_CODE                              NOT NULL NUMBER(38)
+ USERNAME                                  NOT NULL VARCHAR2(40)
+ PASSWORD                                           VARCHAR2(64)
+ DATETIME_UPDATED                          NOT NULL DATE
+ PROVIDER_NUMBER                           NOT NULL NUMBER(38)
+
+SQL> desc HARITEMIDTEMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                          NUMBER
+
+SQL> desc HARPROMOTETEMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                          NUMBER
+ VERSIONOBJID                                       NUMBER
+
+SQL> desc EUL5_ACCESS_PRIVS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ AP_ID                                     NOT NULL NUMBER(10)
+ AP_TYPE                                   NOT NULL VARCHAR2(10)
+ AP_EU_ID                                  NOT NULL NUMBER(10)
+ AP_PRIV_LEVEL                             NOT NULL NUMBER(2)
+ GP_APP_ID                                          NUMBER(10)
+ GBA_BA_ID                                          NUMBER(10)
+ GD_DOC_ID                                          NUMBER(10)
+ AP_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ AP_CREATED_BY                             NOT NULL VARCHAR2(64)
+ AP_CREATED_DATE                           NOT NULL DATE
+ AP_UPDATED_BY                                      VARCHAR2(64)
+ AP_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_APP_PARAMS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ APP_ID                                    NOT NULL NUMBER(10)
+ APP_TYPE                                  NOT NULL VARCHAR2(10)
+ APP_NAME_MN                               NOT NULL NUMBER(10)
+ APP_DESCRIPTION_MN                        NOT NULL NUMBER(10)
+ SP_DEFAULT_VALUE                                   VARCHAR2(240)
+ SP_VALUE                                           VARCHAR2(240)
+ APP_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ APP_CREATED_BY                            NOT NULL VARCHAR2(64)
+ APP_CREATED_DATE                          NOT NULL DATE
+ APP_UPDATED_BY                                     VARCHAR2(64)
+ APP_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_ASMP_CONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ APC_ID                                    NOT NULL NUMBER(10)
+ APC_TYPE                                  NOT NULL VARCHAR2(10)
+ APC_CONS_TYPE                             NOT NULL NUMBER(2)
+ APC_ASMP_ID                               NOT NULL NUMBER(10)
+ AOC_OBJ_ID                                         NUMBER(10)
+ ASOC_SUMO_ID                                       NUMBER(10)
+ AUC_EU_ID                                          NUMBER(10)
+ APC_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ APC_CREATED_BY                            NOT NULL VARCHAR2(64)
+ APC_CREATED_DATE                          NOT NULL DATE
+ APC_UPDATED_BY                                     VARCHAR2(64)
+ APC_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_ASMP_LOGS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ APL_ID                                    NOT NULL NUMBER(10)
+ APL_TIMESTAMP                             NOT NULL DATE
+ APL_EVENT_TYPE                            NOT NULL NUMBER(2)
+ APL_ASMP_ID                               NOT NULL NUMBER(10)
+ APL_SUMO_ID                                        NUMBER(10)
+ APL_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ APL_CREATED_BY                            NOT NULL VARCHAR2(64)
+ APL_CREATED_DATE                          NOT NULL DATE
+ APL_UPDATED_BY                                     VARCHAR2(64)
+ APL_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_ASM_POLICIES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ASMP_ID                                   NOT NULL NUMBER(10)
+ ASMP_NAME                                 NOT NULL VARCHAR2(100)
+ ASMP_DEVELOPER_KEY                        NOT NULL VARCHAR2(100)
+ ASMP_DESCRIPTION                                   VARCHAR2(240)
+ ASMP_USER_PROP1                                    VARCHAR2(100)
+ ASMP_USER_PROP2                                    VARCHAR2(100)
+ ASMP_ELEMENT_STATE                        NOT NULL NUMBER(10)
+ ASMP_CREATED_BY                           NOT NULL VARCHAR2(64)
+ ASMP_CREATED_DATE                         NOT NULL DATE
+ ASMP_UPDATED_BY                                    VARCHAR2(64)
+ ASMP_UPDATED_DATE                                  DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BAS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BA_ID                                     NOT NULL NUMBER(10)
+ BA_NAME                                   NOT NULL VARCHAR2(100)
+ BA_DEVELOPER_KEY                          NOT NULL VARCHAR2(100)
+ BA_DESCRIPTION                                     VARCHAR2(240)
+ BA_EXT_NAME                                        VARCHAR2(64)
+ BA_USER_PROP1                                      VARCHAR2(100)
+ BA_USER_PROP2                                      VARCHAR2(100)
+ BA_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ BA_CREATED_BY                             NOT NULL VARCHAR2(64)
+ BA_CREATED_DATE                           NOT NULL DATE
+ BA_UPDATED_BY                                      VARCHAR2(64)
+ BA_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BATCH_PARAMS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BP_ID                                     NOT NULL NUMBER(10)
+ BP_NAME                                   NOT NULL VARCHAR2(100)
+ BP_VALUE1                                 NOT NULL VARCHAR2(250)
+ BP_VALUE2                                          VARCHAR2(250)
+ BP_VALUE3                                          VARCHAR2(250)
+ BP_VALUE4                                          VARCHAR2(250)
+ BP_VALUE5                                          VARCHAR2(250)
+ BP_VALUE6                                          VARCHAR2(250)
+ BP_BS_ID                                  NOT NULL NUMBER(10)
+ BP_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ BP_CREATED_BY                             NOT NULL VARCHAR2(64)
+ BP_CREATED_DATE                           NOT NULL DATE
+ BP_UPDATED_BY                                      VARCHAR2(64)
+ BP_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BATCH_QUERIES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BQ_ID                                     NOT NULL NUMBER(10)
+ BQ_BS_ID                                  NOT NULL NUMBER(10)
+ BQ_QUERY_ID                               NOT NULL VARCHAR2(240)
+ BQ_RESULT_SQL_1                                    VARCHAR2(250)
+ BQ_RESULT_SQL_2                                    VARCHAR2(250)
+ BQ_RESULT_SQL_3                                    VARCHAR2(250)
+ BQ_RESULT_SQL_4                                    VARCHAR2(250)
+ BQ_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ BQ_CREATED_BY                             NOT NULL VARCHAR2(64)
+ BQ_CREATED_DATE                           NOT NULL DATE
+ BQ_UPDATED_BY                                      VARCHAR2(64)
+ BQ_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BATCH_REPORTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BR_ID                                     NOT NULL NUMBER(10)
+ BR_NAME                                   NOT NULL VARCHAR2(100)
+ BR_WORKBOOK_NAME                          NOT NULL VARCHAR2(240)
+ BR_DESCRIPTION                                     VARCHAR2(240)
+ BR_NEXT_RUN_DATE                                   DATE
+ BR_JOB_ID                                          NUMBER(22)
+ BR_EXPIRY                                          NUMBER(22)
+ BR_COMPLETION_DATE                                 DATE
+ BR_NUM_FREQ_UNITS                                  NUMBER(22)
+ BR_EU_ID                                  NOT NULL NUMBER(10)
+ BR_RFU_ID                                 NOT NULL NUMBER(10)
+ BR_AUTO_REFRESH                           NOT NULL NUMBER(1)
+ BR_REPORT_SCHEMA                          NOT NULL VARCHAR2(64)
+ BR_OVERWRITE_RSLTS                                 NUMBER(1)
+ BR_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ BR_CREATED_BY                             NOT NULL VARCHAR2(64)
+ BR_CREATED_DATE                           NOT NULL DATE
+ BR_UPDATED_BY                                      VARCHAR2(64)
+ BR_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BATCH_SHEETS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BS_ID                                     NOT NULL NUMBER(10)
+ BS_BR_ID                                  NOT NULL NUMBER(10)
+ BS_SHEET_NAME                             NOT NULL VARCHAR2(240)
+ BS_SHEET_ID                               NOT NULL VARCHAR2(240)
+ BS_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ BS_CREATED_BY                             NOT NULL VARCHAR2(64)
+ BS_CREATED_DATE                           NOT NULL DATE
+ BS_UPDATED_BY                                      VARCHAR2(64)
+ BS_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BA_OBJ_LINKS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BOL_ID                                    NOT NULL NUMBER(10)
+ BOL_BA_ID                                 NOT NULL NUMBER(10)
+ BOL_OBJ_ID                                NOT NULL NUMBER(10)
+ BOL_SEQUENCE                                       NUMBER(22)
+ BOL_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ BOL_CREATED_BY                            NOT NULL VARCHAR2(64)
+ BOL_CREATED_DATE                          NOT NULL DATE
+ BOL_UPDATED_BY                                     VARCHAR2(64)
+ BOL_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BQ_DEPS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BQD_ID                                    NOT NULL NUMBER(10)
+ BQD_TYPE                                  NOT NULL VARCHAR2(10)
+ BQD_BQ_ID                                 NOT NULL NUMBER(10)
+ BFILD_FIL_ID                                       NUMBER(10)
+ BID_IT_ID                                          NUMBER(10)
+ BFUND_FUN_ID                                       NUMBER(10)
+ BQD_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ BQD_CREATED_BY                            NOT NULL VARCHAR2(64)
+ BQD_CREATED_DATE                          NOT NULL DATE
+ BQD_UPDATED_BY                                     VARCHAR2(64)
+ BQD_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BQ_TABLES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BQT_ID                                    NOT NULL NUMBER(10)
+ BQT_BQ_ID                                 NOT NULL NUMBER(10)
+ BQT_BRR_ID                                NOT NULL NUMBER(10)
+ BQT_TABLE_NAME                            NOT NULL VARCHAR2(64)
+ BQT_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ BQT_CREATED_BY                            NOT NULL VARCHAR2(64)
+ BQT_CREATED_DATE                          NOT NULL DATE
+ BQT_UPDATED_BY                                     VARCHAR2(64)
+ BQT_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_BR_RUNS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BRR_ID                                    NOT NULL NUMBER(10)
+ BRR_BR_ID                                 NOT NULL NUMBER(10)
+ BRR_RUN_NUMBER                            NOT NULL NUMBER(22)
+ BRR_STATE                                 NOT NULL NUMBER(2)
+ BRR_RUN_DATE                                       DATE
+ BRR_SVR_ERR_CODE                                   NUMBER
+ BRR_SVR_ERR_TEXT                                   VARCHAR2(240)
+ BRR_ACT_ELAP_TIME                                  NUMBER
+ BRR_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ BRR_CREATED_BY                            NOT NULL VARCHAR2(64)
+ BRR_CREATED_DATE                          NOT NULL DATE
+ BRR_UPDATED_BY                                     VARCHAR2(64)
+ BRR_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_DBH_NODES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DHN_ID                                    NOT NULL NUMBER(10)
+ DHN_NAME                                  NOT NULL VARCHAR2(100)
+ DHN_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ DHN_DESCRIPTION                                    VARCHAR2(240)
+ DHN_DATA_FMT_MSK                          NOT NULL VARCHAR2(100)
+ DHN_DISP_FMT_MSK                          NOT NULL VARCHAR2(100)
+ DHN_HI_ID                                 NOT NULL NUMBER(10)
+ DHN_USER_PROP2                                     VARCHAR2(100)
+ DHN_USER_PROP1                                     VARCHAR2(100)
+ DHN_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ DHN_CREATED_BY                            NOT NULL VARCHAR2(64)
+ DHN_CREATED_DATE                          NOT NULL DATE
+ DHN_UPDATED_BY                                     VARCHAR2(64)
+ DHN_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_DOCUMENTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DOC_ID                                    NOT NULL NUMBER(10)
+ DOC_NAME                                  NOT NULL VARCHAR2(100)
+ DOC_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ DOC_DESCRIPTION                                    VARCHAR2(240)
+ DOC_EU_ID                                 NOT NULL NUMBER(10)
+ DOC_LENGTH                                NOT NULL NUMBER(22)
+ DOC_BATCH                                 NOT NULL NUMBER(1)
+ DOC_CONTENT_TYPE                          NOT NULL VARCHAR2(100)
+ DOC_DOCUMENT                                       LONG RAW
+ DOC_USER_PROP2                                     VARCHAR2(100)
+ DOC_USER_PROP1                                     VARCHAR2(100)
+ DOC_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ DOC_CREATED_BY                            NOT NULL VARCHAR2(64)
+ DOC_CREATED_DATE                          NOT NULL DATE
+ DOC_UPDATED_BY                                     VARCHAR2(64)
+ DOC_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_DOMAINS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DOM_ID                                    NOT NULL NUMBER(10)
+ DOM_NAME                                  NOT NULL VARCHAR2(100)
+ DOM_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ DOM_DESCRIPTION                                    VARCHAR2(240)
+ DOM_DATA_TYPE                             NOT NULL NUMBER(2)
+ DOM_LOGICAL_ITEM                          NOT NULL NUMBER(1)
+ DOM_SYS_GENERATED                         NOT NULL NUMBER(1)
+ DOM_CARDINALITY                                    NUMBER(22)
+ DOM_LAST_EXEC_TIME                                 NUMBER(22)
+ DOM_CACHED                                NOT NULL NUMBER(1)
+ DOM_IT_ID_LOV                                      NUMBER(10)
+ DOM_IT_ID_RANK                                     NUMBER(10)
+ DOM_ARRAY_FETCH_SZ                                 NUMBER(22)
+ DOM_FTCH_IMMEDIATE                                 NUMBER(1)
+ DOM_SHOW_NAVIGATOR                                 NUMBER(1)
+ DOM_DIST_ORD_BY                                    NUMBER(1)
+ DOM_USER_PROP2                                     VARCHAR2(100)
+ DOM_USER_PROP1                                     VARCHAR2(100)
+ DOM_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ DOM_CREATED_BY                            NOT NULL VARCHAR2(64)
+ DOM_CREATED_DATE                          NOT NULL DATE
+ DOM_UPDATED_BY                                     VARCHAR2(64)
+ DOM_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_ELEM_XREFS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EX_ID                                     NOT NULL NUMBER(10)
+ EX_TYPE                                   NOT NULL NUMBER(2)
+ EX_FROM_ID                                NOT NULL VARCHAR2(100)
+ EX_FROM_TYPE                              NOT NULL VARCHAR2(10)
+ EX_TO_ID                                  NOT NULL NUMBER(10)
+ EX_TO_TYPE                                         VARCHAR2(100)
+ EX_TO_NAME                                         VARCHAR2(100)
+ EX_TO_DEVKEY                                       VARCHAR2(100)
+ EX_TO_PAR_NAME                                     VARCHAR2(100)
+ EX_TO_PAR_DEVKEY                                   VARCHAR2(100)
+ EX_STATE                                           NUMBER(22)
+
+SQL> desc EUL5_EUL_USERS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EU_ID                                     NOT NULL NUMBER(10)
+ EU_USERNAME                               NOT NULL VARCHAR2(64)
+ EU_SECURITY_MODEL                         NOT NULL NUMBER(2)
+ EU_USE_PUB_PRIVS                          NOT NULL NUMBER(1)
+ EU_QUERY_TIME_LMT                                  NUMBER(22)
+ EU_QUERY_EST_LMT                                   NUMBER(22)
+ EU_ROW_FETCH_LMT                                   NUMBER(22)
+ EU_ROLE_FLAG                              NOT NULL NUMBER(1)
+ EU_BATCH_JOBS_LMT                                  NUMBER(22)
+ EU_BATCH_WND_START                                 DATE
+ EU_BATCH_WND_END                                   DATE
+ EU_BATCH_QTIME_LMT                                 NUMBER(22)
+ EU_BATCH_EXPIRY                                    NUMBER(22)
+ EU_BATCH_CMT_SZ                                    NUMBER(22)
+ EU_BATCH_REP_USER                                  VARCHAR2(64)
+ EU_LAST_BATCH_ACC                                  DATE
+ EU_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ EU_CREATED_BY                             NOT NULL VARCHAR2(64)
+ EU_CREATED_DATE                           NOT NULL DATE
+ EU_UPDATED_BY                                      VARCHAR2(64)
+ EU_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_EXPRESSIONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EXP_ID                                    NOT NULL NUMBER(10)
+ EXP_TYPE                                  NOT NULL VARCHAR2(10)
+ EXP_NAME                                  NOT NULL VARCHAR2(100)
+ EXP_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ EXP_DESCRIPTION                                    VARCHAR2(240)
+ EXP_FORMULA1                                       VARCHAR2(250)
+ EXP_DATA_TYPE                             NOT NULL NUMBER(2)
+ EXP_SEQUENCE                                       NUMBER(22)
+ IT_DOM_ID                                          NUMBER(10)
+ IT_OBJ_ID                                          NUMBER(10)
+ IT_DOC_ID                                          NUMBER(10)
+ IT_FORMAT_MASK                                     VARCHAR2(100)
+ IT_MAX_DATA_WIDTH                                  NUMBER
+ IT_MAX_DISP_WIDTH                                  NUMBER
+ IT_ALIGNMENT                                       NUMBER(2)
+ IT_WORD_WRAP                                       NUMBER(1)
+ IT_DISP_NULL_VAL                                   VARCHAR2(100)
+ IT_FUN_ID                                          NUMBER(10)
+ IT_HEADING                                         VARCHAR2(240)
+ IT_HIDDEN                                          NUMBER(1)
+ IT_PLACEMENT                                       NUMBER(2)
+ IT_USER_DEF_FMT                                    VARCHAR2(100)
+ IT_CASE_STORAGE                                    NUMBER(2)
+ IT_CASE_DISPLAY                                    NUMBER(2)
+ IT_EXT_COLUMN                                      VARCHAR2(64)
+ CI_IT_ID                                           NUMBER(10)
+ CI_RUNTIME_ITEM                                    NUMBER(1)
+ PAR_MULTIPLE_VALS                                  NUMBER(1)
+ CO_NULLABLE                                        NUMBER(1)
+ P_CASE_SENSITIVE                                   NUMBER(1)
+ JP_KEY_ID                                          NUMBER(10)
+ FIL_OBJ_ID                                         NUMBER(10)
+ FIL_DOC_ID                                         NUMBER(10)
+ FIL_RUNTIME_FILTER                                 NUMBER(1)
+ FIL_APP_TYPE                                       NUMBER(2)
+ FIL_EXT_FILTER                                     VARCHAR2(64)
+ EXP_USER_PROP2                                     VARCHAR2(100)
+ EXP_USER_PROP1                                     VARCHAR2(100)
+ EXP_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ EXP_CREATED_BY                            NOT NULL VARCHAR2(64)
+ EXP_CREATED_DATE                          NOT NULL DATE
+ EXP_UPDATED_BY                                     VARCHAR2(64)
+ EXP_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_EXP_DEPS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ED_ID                                     NOT NULL NUMBER(10)
+ ED_TYPE                                   NOT NULL VARCHAR2(10)
+ PD_P_ID                                            NUMBER(10)
+ PED_EXP_ID                                         NUMBER(10)
+ PFD_FUN_ID                                         NUMBER(10)
+ PSD_SQ_ID                                          NUMBER(10)
+ CD_EXP_ID                                          NUMBER(10)
+ CFD_FUN_ID                                         NUMBER(10)
+ CID_EXP_ID                                         NUMBER(10)
+ ED_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ ED_CREATED_BY                             NOT NULL VARCHAR2(64)
+ ED_CREATED_DATE                           NOT NULL DATE
+ ED_UPDATED_BY                                      VARCHAR2(64)
+ ED_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_FREQ_UNITS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ RFU_ID                                    NOT NULL NUMBER(10)
+ RFU_NAME_MN                               NOT NULL NUMBER(10)
+ RFU_SQL_EXPRESSION                        NOT NULL VARCHAR2(240)
+ RFU_SEQUENCE                                       NUMBER(22)
+ RFU_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ RFU_CREATED_BY                            NOT NULL VARCHAR2(64)
+ RFU_CREATED_DATE                          NOT NULL DATE
+ RFU_UPDATED_BY                                     VARCHAR2(64)
+ RFU_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_FUNCTIONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FUN_ID                                    NOT NULL NUMBER(10)
+ FUN_NAME                                  NOT NULL VARCHAR2(100)
+ FUN_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ FUN_DESCRIPTION_S                                  VARCHAR2(240)
+ FUN_DESCRIPTION_MN                                 NUMBER(10)
+ FUN_FUNCTION_TYPE                         NOT NULL NUMBER(2)
+ FUN_HIDDEN                                NOT NULL NUMBER(1)
+ FUN_DATA_TYPE                             NOT NULL NUMBER(2)
+ FUN_AVAILABLE                             NOT NULL NUMBER(1)
+ FUN_MAXIMUM_ARGS                                   NUMBER(22)
+ FUN_MINIMUM_ARGS                          NOT NULL NUMBER(22)
+ FUN_BUILT_IN                              NOT NULL NUMBER(1)
+ FUN_EXT_NAME                              NOT NULL VARCHAR2(64)
+ FUN_EXT_PACKAGE                                    VARCHAR2(64)
+ FUN_EXT_OWNER                                      VARCHAR2(64)
+ FUN_EXT_DB_LINK                                    VARCHAR2(64)
+ FUN_USER_PROP2                                     VARCHAR2(100)
+ FUN_USER_PROP1                                     VARCHAR2(100)
+ FUN_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ FUN_CREATED_BY                            NOT NULL VARCHAR2(64)
+ FUN_CREATED_DATE                          NOT NULL DATE
+ FUN_UPDATED_BY                                     VARCHAR2(64)
+ FUN_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_FUN_ARGUMENTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FA_ID                                     NOT NULL NUMBER(10)
+ FA_NAME_S                                          VARCHAR2(100)
+ FA_NAME_MN                                         NUMBER(10)
+ FA_DEVELOPER_KEY                          NOT NULL VARCHAR2(100)
+ FA_DESCRIPTION_S                                   VARCHAR2(240)
+ FA_DESCRIPTION_MN                                  NUMBER(10)
+ FA_DATA_TYPE                              NOT NULL NUMBER(2)
+ FA_OPTIONAL                               NOT NULL NUMBER(1)
+ FA_POSITION                               NOT NULL NUMBER(22)
+ FA_FUN_ID                                 NOT NULL NUMBER(10)
+ FA_USER_PROP2                                      VARCHAR2(100)
+ FA_USER_PROP1                                      VARCHAR2(100)
+ FA_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ FA_CREATED_BY                             NOT NULL VARCHAR2(64)
+ FA_CREATED_DATE                           NOT NULL DATE
+ FA_UPDATED_BY                                      VARCHAR2(64)
+ FA_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_FUN_CTGS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FC_ID                                     NOT NULL NUMBER(10)
+ FC_NAME_S                                          VARCHAR2(100)
+ FC_NAME_MN                                         NUMBER(10)
+ FC_DEVELOPER_KEY                          NOT NULL VARCHAR2(100)
+ FC_DESCRIPTION_S                                   VARCHAR2(240)
+ FC_DESCRIPTION_MN                                  NUMBER(10)
+ FC_USER_PROP2                                      VARCHAR2(100)
+ FC_USER_PROP1                                      VARCHAR2(100)
+ FC_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ FC_CREATED_BY                             NOT NULL VARCHAR2(64)
+ FC_CREATED_DATE                           NOT NULL DATE
+ FC_UPDATED_BY                                      VARCHAR2(64)
+ FC_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_FUN_FC_LINKS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FFL_ID                                    NOT NULL NUMBER(10)
+ FFL_FUN_ID                                NOT NULL NUMBER(10)
+ FFL_FC_ID                                 NOT NULL NUMBER(10)
+ FFL_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ FFL_CREATED_BY                            NOT NULL VARCHAR2(64)
+ FFL_CREATED_DATE                          NOT NULL DATE
+ FFL_UPDATED_BY                                     VARCHAR2(64)
+ FFL_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_GATEWAYS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ GW_ID                                     NOT NULL NUMBER(10)
+ GW_TYPE                                   NOT NULL VARCHAR2(10)
+ GW_GATEWAY_NAME                           NOT NULL VARCHAR2(100)
+ GW_PRODUCT_NAME                           NOT NULL VARCHAR2(100)
+ GW_DESCRIPTION                                     VARCHAR2(240)
+ EGW_VERSION                                        VARCHAR2(30)
+ EGW_DATABASE_LINK                                  VARCHAR2(64)
+ EGW_SCHEMA                                         VARCHAR2(64)
+ EGW_SQL_PARADIGM                                   VARCHAR2(10)
+ GW_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ GW_CREATED_BY                             NOT NULL VARCHAR2(64)
+ GW_CREATED_DATE                           NOT NULL DATE
+ GW_UPDATED_BY                                      VARCHAR2(64)
+ GW_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_HIERARCHIES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ HI_ID                                     NOT NULL NUMBER(10)
+ HI_TYPE                                   NOT NULL VARCHAR2(10)
+ HI_NAME                                   NOT NULL VARCHAR2(100)
+ HI_DEVELOPER_KEY                          NOT NULL VARCHAR2(100)
+ HI_DESCRIPTION                                     VARCHAR2(240)
+ HI_SYS_GENERATED                          NOT NULL NUMBER(1)
+ HI_EXT_HIERARCHY                                   VARCHAR2(64)
+ DBH_DEFAULT                                        NUMBER(1)
+ IBH_DBH_ID                                         NUMBER(10)
+ HI_USER_PROP2                                      VARCHAR2(100)
+ HI_USER_PROP1                                      VARCHAR2(100)
+ HI_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ HI_CREATED_BY                             NOT NULL VARCHAR2(64)
+ HI_CREATED_DATE                           NOT NULL DATE
+ HI_UPDATED_BY                                      VARCHAR2(64)
+ HI_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_HI_NODES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ HN_ID                                     NOT NULL NUMBER(10)
+ HN_NAME                                   NOT NULL VARCHAR2(100)
+ HN_DEVELOPER_KEY                          NOT NULL VARCHAR2(100)
+ HN_DESCRIPTION                                     VARCHAR2(240)
+ HN_HI_ID                                  NOT NULL NUMBER(10)
+ HN_EXT_NODE                                        VARCHAR2(64)
+ HN_USER_PROP2                                      VARCHAR2(100)
+ HN_USER_PROP1                                      VARCHAR2(100)
+ HN_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ HN_CREATED_BY                             NOT NULL VARCHAR2(64)
+ HN_CREATED_DATE                           NOT NULL DATE
+ HN_UPDATED_BY                                      VARCHAR2(64)
+ HN_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_HI_SEGMENTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ HS_ID                                     NOT NULL NUMBER(10)
+ HS_TYPE                                   NOT NULL VARCHAR2(10)
+ DHS_HI_ID                                          NUMBER(10)
+ DHS_DHN_ID_CHILD                                   NUMBER(10)
+ DHS_DHN_ID_PARENT                                  NUMBER(10)
+ IHS_HN_ID_CHILD                                    NUMBER(10)
+ IHS_HN_ID_PARENT                                   NUMBER(10)
+ IHS_HI_ID                                          NUMBER(10)
+ HS_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ HS_CREATED_BY                             NOT NULL VARCHAR2(64)
+ HS_CREATED_DATE                           NOT NULL DATE
+ HS_UPDATED_BY                                      VARCHAR2(64)
+ HS_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_IG_EXP_LINKS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IEL_ID                                    NOT NULL NUMBER(10)
+ IEL_TYPE                                  NOT NULL VARCHAR2(10)
+ HIL_EXP_ID                                         NUMBER(10)
+ HIL_HN_ID                                          NUMBER(10)
+ KIL_EXP_ID                                         NUMBER(10)
+ KIL_KEY_ID                                         NUMBER(10)
+ KIL_SEQUENCE                                       NUMBER(22)
+ IEL_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ IEL_CREATED_BY                            NOT NULL VARCHAR2(64)
+ IEL_CREATED_DATE                          NOT NULL DATE
+ IEL_UPDATED_BY                                     VARCHAR2(64)
+ IEL_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_IHS_FK_LINKS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IFL_ID                                    NOT NULL NUMBER(10)
+ IFL_IHS_ID                                NOT NULL NUMBER(10)
+ IFL_KEY_ID                                NOT NULL NUMBER(10)
+ IFL_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ IFL_CREATED_BY                            NOT NULL VARCHAR2(64)
+ IFL_CREATED_DATE                          NOT NULL DATE
+ IFL_UPDATED_BY                                     VARCHAR2(64)
+ IFL_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_KEY_CONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ KEY_ID                                    NOT NULL NUMBER(10)
+ KEY_TYPE                                  NOT NULL VARCHAR2(10)
+ KEY_NAME                                  NOT NULL VARCHAR2(100)
+ KEY_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ KEY_DESCRIPTION                                    VARCHAR2(240)
+ KEY_EXT_KEY                                        VARCHAR2(64)
+ KEY_OBJ_ID                                NOT NULL NUMBER(10)
+ UK_PRIMARY                                         NUMBER(1)
+ FK_KEY_ID_REMOTE                                   NUMBER(10)
+ FK_OBJ_ID_REMOTE                                   NUMBER(10)
+ FK_ONE_TO_ONE                                      NUMBER(1)
+ FK_MSTR_NO_DETAIL                                  NUMBER(1)
+ FK_DTL_NO_MASTER                                   NUMBER(1)
+ FK_MANDATORY                                       NUMBER(1)
+ KEY_USER_PROP2                                     VARCHAR2(100)
+ KEY_USER_PROP1                                     VARCHAR2(100)
+ KEY_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ KEY_CREATED_BY                            NOT NULL VARCHAR2(64)
+ KEY_CREATED_DATE                          NOT NULL DATE
+ KEY_UPDATED_BY                                     VARCHAR2(64)
+ KEY_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_OBJS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OBJ_ID                                    NOT NULL NUMBER(10)
+ OBJ_TYPE                                  NOT NULL VARCHAR2(10)
+ OBJ_NAME                                  NOT NULL VARCHAR2(100)
+ OBJ_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ OBJ_DESCRIPTION                                    VARCHAR2(240)
+ OBJ_BA_ID                                          NUMBER(10)
+ OBJ_HIDDEN                                NOT NULL NUMBER(1)
+ OBJ_DISTINCT_FLAG                         NOT NULL NUMBER(1)
+ OBJ_NDETERMINISTIC                        NOT NULL NUMBER(1)
+ OBJ_CBO_HINT                                       VARCHAR2(100)
+ OBJ_EXT_OBJECT                                     VARCHAR2(64)
+ OBJ_EXT_OWNER                                      VARCHAR2(64)
+ OBJ_EXT_DB_LINK                                    VARCHAR2(64)
+ OBJ_OBJECT_SQL1                                    VARCHAR2(250)
+ OBJ_OBJECT_SQL2                                    VARCHAR2(250)
+ OBJ_OBJECT_SQL3                                    VARCHAR2(250)
+ SOBJ_EXT_TABLE                                     VARCHAR2(64)
+ OBJ_USER_PROP2                                     VARCHAR2(100)
+ OBJ_USER_PROP1                                     VARCHAR2(100)
+ OBJ_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ OBJ_CREATED_BY                            NOT NULL VARCHAR2(64)
+ OBJ_CREATED_DATE                          NOT NULL DATE
+ OBJ_UPDATED_BY                                     VARCHAR2(64)
+ OBJ_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_OBJ_DEPS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OD_ID                                     NOT NULL NUMBER(10)
+ OD_OBJ_ID_FROM                            NOT NULL NUMBER(10)
+ OD_OBJ_ID_TO                              NOT NULL NUMBER(10)
+ OD_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ OD_CREATED_BY                             NOT NULL VARCHAR2(64)
+ OD_CREATED_DATE                           NOT NULL DATE
+ OD_UPDATED_BY                                      VARCHAR2(64)
+ OD_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_OBJ_JOIN_USGS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OJU_ID                                    NOT NULL NUMBER(10)
+ OJU_OBJ_ID                                         NUMBER(10)
+ OJU_JOIN_MODIFIED                         NOT NULL NUMBER(1)
+ OJU_KEY_ID                                NOT NULL NUMBER(10)
+ OJU_SUMO_ID                                        NUMBER(10)
+ OJU_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ OJU_CREATED_BY                            NOT NULL VARCHAR2(64)
+ OJU_CREATED_DATE                          NOT NULL DATE
+ OJU_UPDATED_BY                                     VARCHAR2(64)
+ OJU_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_PLAN_TABLE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STATEMENT_ID                                       VARCHAR2(30)
+ TIMESTAMP                                          DATE
+ REMARKS                                            VARCHAR2(80)
+ OPERATION                                          VARCHAR2(30)
+ OPTIONS                                            VARCHAR2(30)
+ OBJECT_NODE                                        VARCHAR2(128)
+ OBJECT_OWNER                                       VARCHAR2(30)
+ OBJECT_NAME                                        VARCHAR2(30)
+ OBJECT_INSTANCE                                    NUMBER
+ OBJECT_TYPE                                        VARCHAR2(30)
+ OPTIMIZER                                          VARCHAR2(255)
+ SEARCH_COLUMNS                                     NUMBER(38)
+ ID                                                 NUMBER
+ PARENT_ID                                          NUMBER
+ POSITION                                           NUMBER
+ COST                                               NUMBER
+ CARDINALITY                                        NUMBER
+ BYTES                                              NUMBER
+ OTHER_TAG                                          VARCHAR2(255)
+ PARTITION_START                                    VARCHAR2(255)
+ PARTITION_STOP                                     VARCHAR2(255)
+ PARTITION_ID                                       NUMBER
+ OTHER                                              LONG
+ DISTRIBUTION                                       VARCHAR2(30)
+
+SQL> desc EUL5_QPP_STATS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ QS_ID                                     NOT NULL NUMBER(10)
+ QS_COST                                            NUMBER
+ QS_ACT_CPU_TIME                                    NUMBER
+ QS_ACT_ELAP_TIME                          NOT NULL NUMBER
+ QS_EST_ELAP_TIME                          NOT NULL NUMBER
+ QS_OBJECT_USE_KEY                         NOT NULL VARCHAR2(240)
+ QS_SUMMARY_FIT                                     NUMBER(2)
+ QS_STATE                                           NUMBER(1)
+ QS_NUM_ROWS                                        NUMBER(10)
+ QS_DOC_OWNER                                       VARCHAR2(64)
+ QS_DOC_NAME                                        VARCHAR2(100)
+ QS_DOC_DETAILS                                     VARCHAR2(240)
+ QS_SDO_ID                                          NUMBER(10)
+ QS_DBMP0                                           RAW(250)
+ QS_DBMP1                                           RAW(250)
+ QS_DBMP2                                           RAW(250)
+ QS_DBMP3                                           RAW(250)
+ QS_DBMP4                                           RAW(250)
+ QS_DBMP5                                           RAW(250)
+ QS_DBMP6                                           RAW(250)
+ QS_DBMP7                                           RAW(250)
+ QS_MBMP0                                           RAW(250)
+ QS_MBMP1                                           RAW(250)
+ QS_MBMP2                                           RAW(250)
+ QS_MBMP3                                           RAW(250)
+ QS_MBMP4                                           RAW(250)
+ QS_MBMP5                                           RAW(250)
+ QS_MBMP6                                           RAW(250)
+ QS_MBMP7                                           RAW(250)
+ QS_JBMP0                                           RAW(250)
+ QS_JBMP1                                           RAW(250)
+ QS_JBMP2                                           RAW(250)
+ QS_JBMP3                                           RAW(250)
+ QS_JBMP4                                           RAW(250)
+ QS_JBMP5                                           RAW(250)
+ QS_JBMP6                                           RAW(250)
+ QS_JBMP7                                           RAW(250)
+ QS_FBMP0                                           RAW(250)
+ QS_FBMP1                                           RAW(250)
+ QS_FBMP2                                           RAW(250)
+ QS_FBMP3                                           RAW(250)
+ QS_FBMP4                                           RAW(250)
+ QS_FBMP5                                           RAW(250)
+ QS_FBMP6                                           RAW(250)
+ QS_FBMP7                                           RAW(250)
+ QS_CREATED_BY                             NOT NULL VARCHAR2(64)
+ QS_CREATED_DATE                           NOT NULL DATE
+
+SQL> desc EUL5_SEGMENTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SEG_ID                                    NOT NULL NUMBER(10)
+ SEG_SEG_TYPE                              NOT NULL NUMBER(1)
+ SEG_SEQUENCE                              NOT NULL NUMBER(22)
+ SEG_OBJ_ID                                         NUMBER(10)
+ SEG_SUMO_ID                                        NUMBER(10)
+ SEG_CUO_ID                                         NUMBER(10)
+ SEG_BQ_ID                                          NUMBER(10)
+ SEG_EXP_ID                                         NUMBER(10)
+ SEG_SMS_ID                                         NUMBER(10)
+ SEG_EL_ID                                          NUMBER(10)
+ SEG_CHUNK1                                         VARCHAR2(250)
+ SEG_CHUNK2                                         VARCHAR2(250)
+ SEG_CHUNK3                                         VARCHAR2(250)
+ SEG_CHUNK4                                         VARCHAR2(250)
+ SEG_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ SEG_CREATED_BY                            NOT NULL VARCHAR2(64)
+ SEG_CREATED_DATE                          NOT NULL DATE
+ SEG_UPDATED_BY                                     VARCHAR2(64)
+ SEG_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_SEQUENCES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SEQ_ID                                    NOT NULL NUMBER(10)
+ SEQ_NAME                                  NOT NULL VARCHAR2(100)
+ SEQ_NEXTVAL                               NOT NULL NUMBER(22)
+
+SQL> desc EUL5_SQ_CRRLTNS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SQC_ID                                    NOT NULL NUMBER(10)
+ SQC_SQ_ID                                 NOT NULL NUMBER(10)
+ SQC_IT_INNER_ID                           NOT NULL NUMBER(10)
+ SQC_IT_OUTER_ID                           NOT NULL NUMBER(10)
+ SQC_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ SQC_CREATED_BY                            NOT NULL VARCHAR2(64)
+ SQC_CREATED_DATE                          NOT NULL DATE
+ SQC_UPDATED_BY                                     VARCHAR2(64)
+ SQC_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_SUB_QUERIES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SQ_ID                                     NOT NULL NUMBER(10)
+ SQ_NAME                                   NOT NULL VARCHAR2(100)
+ SQ_DEVELOPER_KEY                          NOT NULL VARCHAR2(100)
+ SQ_DESCRIPTION                                     VARCHAR2(240)
+ SQ_OBJ_ID                                 NOT NULL NUMBER(10)
+ SQ_IT_ID                                  NOT NULL NUMBER(10)
+ SQ_FIL_ID                                 NOT NULL NUMBER(10)
+ SQ_USER_PROP2                                      VARCHAR2(100)
+ SQ_USER_PROP1                                      VARCHAR2(100)
+ SQ_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ SQ_CREATED_BY                             NOT NULL VARCHAR2(64)
+ SQ_CREATED_DATE                           NOT NULL DATE
+ SQ_UPDATED_BY                                      VARCHAR2(64)
+ SQ_UPDATED_DATE                                    DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_SUMMARY_OBJS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SUMO_ID                                   NOT NULL NUMBER(10)
+ SUMO_TYPE                                 NOT NULL VARCHAR2(10)
+ SUMO_INTERNAL                             NOT NULL NUMBER(1)
+ SUMO_ITEM_DELETED                         NOT NULL NUMBER(1)
+ SUMO_ITEM_MODIFIED                        NOT NULL NUMBER(1)
+ SUMO_JOIN_STATE                           NOT NULL NUMBER(1)
+ SUMO_VALIDITY                             NOT NULL NUMBER(1)
+ SUMO_EXT_OBJECT                                    VARCHAR2(64)
+ SUMO_EXT_OWNER                                     VARCHAR2(64)
+ SUMO_EXT_DB_LINK                                   VARCHAR2(64)
+ SUMO_ASMP_ID                                       NUMBER(10)
+ SUMO_ACTIVE                               NOT NULL NUMBER(1)
+ SBO_SRS_ID                                         NUMBER(10)
+ SBO_MAX_ITEM_COMB                                  NUMBER(22)
+ SDO_SBO_ID                                         NUMBER(10)
+ SDO_NUM_JOINS                                      NUMBER(22)
+ SDO_NUM_USGS                                       NUMBER(22)
+ SDO_NUM_AXIS_ITEMS                                 NUMBER(22)
+ SDO_NUM_ROWS                                       NUMBER(22)
+ SDO_BITMAP_POS                                     NUMBER(22)
+ SDO_OBJECT_SQL1                                    VARCHAR2(250)
+ SDO_OBJECT_SQL2                                    VARCHAR2(250)
+ SDO_OBJECT_SQL3                                    VARCHAR2(250)
+ SDO_LAST_REFRESH                                   DATE
+ SDO_TABLE_NAME                                     VARCHAR2(64)
+ SDO_TABLE_OWNER                                    VARCHAR2(64)
+ SDO_DATABASE_LINK                                  VARCHAR2(64)
+ MSDO_SVR_ERR_CODE                                  NUMBER(22)
+ MSDO_SVR_ERR_TEXT                                  VARCHAR2(240)
+ MSDO_REFRESH_REQD                                  NUMBER(1)
+ EMS_COMMIT_SIZE                                    NUMBER(22)
+ EMS_STATE                                          NUMBER(2)
+ SUMO_ELEMENT_STATE                        NOT NULL NUMBER(10)
+ SUMO_CREATED_BY                           NOT NULL VARCHAR2(64)
+ SUMO_CREATED_DATE                         NOT NULL DATE
+ SUMO_UPDATED_BY                                    VARCHAR2(64)
+ SUMO_UPDATED_DATE                                  DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_SUMO_EXP_USGS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SEU_ID                                    NOT NULL NUMBER(10)
+ SEU_TYPE                                  NOT NULL VARCHAR2(10)
+ SEU_SUMO_ID                               NOT NULL NUMBER(10)
+ SEU_EXT_COLUMN                                     VARCHAR2(64)
+ SEU_VISIBLE                               NOT NULL NUMBER(1)
+ SIU_EXP_ID                                         NUMBER(10)
+ SIU_ITEM_MODIFIED                                  NUMBER(1)
+ SMIU_FUN_ID                                        NUMBER(10)
+ SFU_FUN_ID                                         NUMBER(10)
+ SEU_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ SEU_CREATED_BY                            NOT NULL VARCHAR2(64)
+ SEU_CREATED_DATE                          NOT NULL DATE
+ SEU_UPDATED_BY                                     VARCHAR2(64)
+ SEU_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_SUM_BITMAPS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SB_ID                                     NOT NULL NUMBER(10)
+ SB_BITMAP                                 NOT NULL RAW(250)
+ SB_SEQUENCE                               NOT NULL NUMBER(22)
+ SB_EXP_ID                                          NUMBER(10)
+ SB_KEY_ID                                          NUMBER(10)
+ SB_FUN_ID                                          NUMBER(10)
+ SB_ELEMENT_STATE                          NOT NULL NUMBER(10)
+ SB_CREATED_BY                             NOT NULL VARCHAR2(64)
+ SB_CREATED_DATE                           NOT NULL DATE
+ SB_UPDATED_DATE                                    DATE
+ SB_UPDATED_BY                                      VARCHAR2(64)
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_SUM_RFSH_SETS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SRS_ID                                    NOT NULL NUMBER(10)
+ SRS_NAME                                  NOT NULL VARCHAR2(100)
+ SRS_DEVELOPER_KEY                         NOT NULL VARCHAR2(100)
+ SRS_DESCRIPTION                                    VARCHAR2(240)
+ SRS_STATE                                 NOT NULL NUMBER(2)
+ SRS_ONLINE                                NOT NULL NUMBER(1)
+ SRS_AUTO_REFRESH                          NOT NULL NUMBER(1)
+ SRS_LAST_REFRESH                                   DATE
+ SRS_NEXT_REFRESH                                   DATE
+ SRS_JOB_ID                                         NUMBER(22)
+ SRS_EU_ID                                 NOT NULL NUMBER(10)
+ SRS_NUM_FREQ_UNITS                                 NUMBER(22)
+ SRS_RFU_ID                                         NUMBER(10)
+ SRS_REFRESH_COUNT                                  NUMBER(22)
+ SRS_USER_PROP2                                     VARCHAR2(100)
+ SRS_USER_PROP1                                     VARCHAR2(100)
+ SRS_ELEMENT_STATE                         NOT NULL NUMBER(10)
+ SRS_CREATED_BY                            NOT NULL VARCHAR2(64)
+ SRS_CREATED_DATE                          NOT NULL DATE
+ SRS_UPDATED_BY                                     VARCHAR2(64)
+ SRS_UPDATED_DATE                                   DATE
+ NOTM                                               NUMBER(10)
+
+SQL> desc EUL5_VERSIONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ VER_NAME                                           VARCHAR2(100)
+ VER_DESCRIPTION                                    VARCHAR2(240)
+ VER_RELEASE                               NOT NULL VARCHAR2(30)
+ VER_MIN_CODE_VER                          NOT NULL VARCHAR2(30)
+ VER_EUL_TIMESTAMP                         NOT NULL VARCHAR2(30)
+ VER_SA                                             NUMBER(22)
+
+SQL> desc CMPALLCLASSES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DELETIONPARENT                                     NUMBER(9)
+ B_1                                                CHAR(1)
+ B_2                                                CHAR(1)
+ B_3                                                CHAR(1)
+ B_4                                                CHAR(1)
+ B_5                                                CHAR(1)
+ B_6                                                CHAR(1)
+ B_7                                                CHAR(1)
+ B_8                                                CHAR(1)
+ B_9                                                CHAR(1)
+ B_10                                               CHAR(1)
+ B_11                                               CHAR(1)
+ B_12                                               CHAR(1)
+ B_13                                               CHAR(1)
+ B_14                                               CHAR(1)
+ B_15                                               CHAR(1)
+ B_16                                               CHAR(1)
+ B_17                                               CHAR(1)
+ B_18                                               CHAR(1)
+ B_19                                               CHAR(1)
+ B_20                                               CHAR(1)
+ B_21                                               CHAR(1)
+ B_22                                               CHAR(1)
+ I_1                                                NUMBER(9)
+ I_2                                       NOT NULL NUMBER(9)
+ I_3                                                NUMBER(9)
+ I_4                                                NUMBER(9)
+ I_5                                                NUMBER(9)
+ I_6                                                NUMBER(9)
+ I_7                                                NUMBER(9)
+ I_8                                                NUMBER(9)
+ I_9                                                NUMBER(9)
+ I_10                                               NUMBER(9)
+ I_11                                               NUMBER(9)
+ I_12                                               NUMBER(9)
+ I_13                                               NUMBER(9)
+ I_14                                               NUMBER(9)
+ I_15                                               NUMBER(9)
+ F_1                                                NUMBER(9)
+ F_2                                                NUMBER(9)
+ S1_1                                               VARCHAR2(40)
+ S1_2                                               VARCHAR2(2000)
+ S1_3                                               VARCHAR2(40)
+ S1_4                                               VARCHAR2(40)
+ S1_5                                               VARCHAR2(40)
+ S1_6                                               VARCHAR2(40)
+ S1_7                                               VARCHAR2(40)
+ S1_8                                               VARCHAR2(40)
+ S1_9                                               VARCHAR2(40)
+ S1_10                                              VARCHAR2(40)
+ S1_11                                              VARCHAR2(40)
+ S1_12                                              VARCHAR2(40)
+ S1_13                                              VARCHAR2(40)
+ S1_14                                              VARCHAR2(40)
+ S1_15                                              VARCHAR2(40)
+ S1_16                                              VARCHAR2(40)
+ S1_17                                              VARCHAR2(40)
+ S1_18                                              VARCHAR2(40)
+ S1_19                                              VARCHAR2(40)
+ S1_20                                              VARCHAR2(40)
+ S1_21                                              VARCHAR2(40)
+ S1_22                                              VARCHAR2(40)
+ S1_23                                              VARCHAR2(40)
+ S2_1                                      NOT NULL VARCHAR2(255)
+ S2_2                                               VARCHAR2(255)
+ S2_3                                               VARCHAR2(255)
+ S2_4                                               VARCHAR2(255)
+ S2_5                                               VARCHAR2(255)
+ S2_6                                               VARCHAR2(255)
+ S2_7                                               VARCHAR2(255)
+ S2_8                                               VARCHAR2(255)
+ S2_9                                               VARCHAR2(255)
+ S2_10                                              VARCHAR2(255)
+ S2_11                                              VARCHAR2(255)
+ S2_12                                              VARCHAR2(255)
+ S2_13                                              VARCHAR2(255)
+ S2_14                                              VARCHAR2(255)
+ S2_15                                              VARCHAR2(255)
+ S2_16                                              VARCHAR2(255)
+ S3_1                                               VARCHAR2(4000)
+ S3_2                                               VARCHAR2(4000)
+ S3_3                                               VARCHAR2(4000)
+ S3_4                                               VARCHAR2(4000)
+ S3_5                                               VARCHAR2(4000)
+ D_1                                                DATE
+ D_2                                                DATE
+ D_3                                                DATE
+ D_4                                                DATE
+ R_1                                                NUMBER(9)
+ R_2                                                NUMBER(9)
+ R_3                                                NUMBER(9)
+ R_4                                                NUMBER(9)
+ R_5                                                NUMBER(9)
+ R_6                                                NUMBER(9)
+ R_7                                                NUMBER(9)
+ R_8                                                NUMBER(9)
+ R_9                                                NUMBER(9)
+ R_10                                               NUMBER(9)
+ R_11                                               NUMBER(9)
+ R_12                                               NUMBER(9)
+ R_13                                               NUMBER(9)
+ R_14                                               NUMBER(9)
+ R_15                                               NUMBER(9)
+ R_16                                               NUMBER(9)
+ R_17                                               NUMBER(9)
+ R_18                                               NUMBER(9)
+ R_19                                               NUMBER(9)
+ R_20                                               NUMBER(9)
+ R_21                                               NUMBER(9)
+ R_22                                               NUMBER(9)
+ R_23                                               NUMBER(9)
+ R_24                                               NUMBER(9)
+ R_25                                               NUMBER(9)
+ R_26                                               NUMBER(9)
+ R_27                                               NUMBER(9)
+ R_28                                               NUMBER(9)
+ R_29                                               NUMBER(9)
+ R_30                                               NUMBER(9)
+ R_31                                               NUMBER(9)
+ R_32                                               NUMBER(9)
+ R_33                                               NUMBER(9)
+ R_34                                               NUMBER(9)
+ R_35                                               NUMBER(9)
+ R_36                                               NUMBER(9)
+ R_37                                               NUMBER(9)
+ R_38                                               NUMBER(9)
+ R_39                                               NUMBER(9)
+ R_40                                               NUMBER(9)
+ R_41                                               NUMBER(9)
+ R_42                                               NUMBER(9)
+ R_43                                               NUMBER(9)
+ R_44                                               NUMBER(9)
+ R_45                                               NUMBER(9)
+ R_46                                               NUMBER(9)
+ R_47                                               NUMBER(9)
+ R_48                                               NUMBER(9)
+ R_49                                               NUMBER(9)
+ R_50                                               NUMBER(9)
+ R_51                                               NUMBER(9)
+ R_52                                               NUMBER(9)
+ R_53                                               NUMBER(9)
+ R_54                                               NUMBER(9)
+ R_55                                               NUMBER(9)
+ R_56                                               NUMBER(9)
+ R_57                                               NUMBER(9)
+ R_58                                               NUMBER(9)
+ R_59                                               NUMBER(9)
+ R_60                                               NUMBER(9)
+ R_61                                               NUMBER(9)
+ R_62                                               NUMBER(9)
+ R_63                                               NUMBER(9)
+ R_64                                               NUMBER(9)
+ R_65                                               NUMBER(9)
+ R_66                                               NUMBER(9)
+ R_67                                               NUMBER(9)
+ R_68                                               NUMBER(9)
+ R_69                                               NUMBER(9)
+ R_70                                               NUMBER(9)
+ R_71                                               NUMBER(9)
+ R_72                                               NUMBER(9)
+ R_73                                               NUMBER(9)
+ R_74                                               NUMBER(9)
+ R_75                                               NUMBER(9)
+ R_76                                               NUMBER(9)
+ R_77                                               NUMBER(9)
+ R_78                                               NUMBER(9)
+ R_79                                               NUMBER(9)
+ R_80                                               NUMBER(9)
+ R_81                                               NUMBER(9)
+ R_82                                               NUMBER(9)
+ R_83                                               NUMBER(9)
+
+SQL> desc RESERVATION_STORE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PARENTID                                  NOT NULL NUMBER
+ DOMAIN                                    NOT NULL VARCHAR2(200)
+ RESERVEDNAME                              NOT NULL VARCHAR2(500)
+ ISPHYS                                    NOT NULL NUMBER(1)
+ SESSID                                    NOT NULL NUMBER
+ SESSSERIAL                                NOT NULL NUMBER
+ SESSLOGONTIME                             NOT NULL VARCHAR2(30)
+ OSUSER                                    NOT NULL VARCHAR2(512)
+
+SQL> desc SYS_IOT_OVER_30024
+ERROR:
+ORA-24383: Overflow segment of an IOT cannot be described 
+
+
+SQL> desc OWB_ERROR_LOG_TABLE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ERRCODE                                   NOT NULL NUMBER
+ ERRTEXT                                   NOT NULL VARCHAR2(500)
+ INFO                                               VARCHAR2(500)
+ WHENHAPPEND                                        VARCHAR2(30)
+
+SQL> desc CLASSIFICATION_STORE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CLASSNAME                                 NOT NULL VARCHAR2(255)
+ DOMAINNAME                                NOT NULL VARCHAR2(255)
+
+SQL> desc SYS_IOT_OVER_30028
+ERROR:
+ORA-24383: Overflow segment of an IOT cannot be described 
+
+
+SQL> desc CMPALLFOLDERFCONAMES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PARENTID                                  NOT NULL NUMBER
+ DOMAIN                                    NOT NULL VARCHAR2(200)
+ NAME                                      NOT NULL VARCHAR2(500)
+ ISPHYS                                    NOT NULL NUMBER(1)
+ ELEMENTID                                          NUMBER
+ AGGREGATEPARENT                                    NUMBER
+
+SQL> desc OWB_UTIL_CONFIGPARAMS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PARAMKEY                                  NOT NULL VARCHAR2(128)
+ PARAMNAME                                 NOT NULL VARCHAR2(64)
+ GROUPKEY                                  NOT NULL VARCHAR2(128)
+ LANGUAGE                                  NOT NULL VARCHAR2(64)
+
+SQL> desc OWB_UTIL_CONFIGGROUPS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ GROUPKEY                                  NOT NULL VARCHAR2(128)
+ FOLDERNAME                                NOT NULL VARCHAR2(64)
+ INSTANCENAME                                       VARCHAR2(64)
+ GROUPTYPE                                 NOT NULL NUMBER(1)
+ LANGUAGE                                  NOT NULL VARCHAR2(64)
+ PARENTKEY                                          VARCHAR2(128)
+
+SQL> desc UOIDMAPPING
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OBJTYPE                                   NOT NULL VARCHAR2(128)
+ NAME                                      NOT NULL VARCHAR2(128)
+ CONTEXT                                   NOT NULL VARCHAR2(1024)
+ GUID                                      NOT NULL VARCHAR2(64)
+
+SQL> desc VBZ$CHANGE_PLANS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ CP_USER_NAME                              NOT NULL VARCHAR2(256)
+ CP_NAME                                   NOT NULL VARCHAR2(50)
+ CP_SOURCE_DB                                       VARCHAR2(100)
+ CP_DESCRIPTION                                     VARCHAR2(2000)
+ CP_CREATE_DATE                                     DATE
+ CP_OPTIONS                                NOT NULL NUMBER
+ CP_TYPE                                            NUMBER
+ CP_LATEST_VERSION_NO                               NUMBER
+ CP_SCOPE                                           LONG RAW
+
+SQL> desc VBZ$COMPARISONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COMPARISON_ID                                      NUMBER
+ USER_NAME                                          VARCHAR2(256)
+ NAME                                               VARCHAR2(50)
+ LEFT_NAME                                          VARCHAR2(50)
+ LEFT_OWNER                                         VARCHAR2(40)
+ LEFT_VERSION_NO                                    NUMBER
+ RIGHT_NAME                                         VARCHAR2(50)
+ RIGHT_OWNER                                        VARCHAR2(40)
+ RIGHT_VERSION_NO                                   NUMBER
+ OPTIONS                                            NUMBER
+ LATEST_VERSION_NO                                  NUMBER
+ SCOPE                                              LONG RAW
+ DESCRIPTION                                        VARCHAR2(2000)
+
+SQL> desc VBZ$COMPARISON_RESULTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COMPARISON_ID                             NOT NULL NUMBER
+ VERSION_NO                                NOT NULL NUMBER
+ HISTORY_ID                                         NUMBER
+ LAST_MOD_DATE                                      DATE
+ COMPARE_DATA                                       LONG RAW
+ LEFT_VERSION                                       NUMBER
+ RIGHT_VERSION                                      NUMBER
+
+SQL> desc VBZ$DB_OBJ_NAMES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ DB_OBJ_ID                                 NOT NULL NUMBER
+ DB_OBJ_TYPE                                        NUMBER
+ DB_OBJ_NAME                               NOT NULL VARCHAR2(128)
+ DB_OBJ_SCHEMA                                      VARCHAR2(30)
+ DB_OBJ_SCOPE                                       LONG RAW
+
+SQL> desc VBZ$DESTINATIONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ DB_NAME                                   NOT NULL VARCHAR2(256)
+ DEST_DESCRIPTION                                   VARCHAR2(2000)
+ OPTIONS                                   NOT NULL NUMBER(4)
+ SCRATCH_TS                                         VARCHAR2(30)
+ VERSION_NO                                         NUMBER
+ DEPLOYMENT_ID                             NOT NULL NUMBER
+ TRANS_STATUS                                       NUMBER
+ TRANS_HISTORY_ID                                   NUMBER
+ EXEC_STATUS                                        NUMBER
+ EXEC_HISTORY_ID                                    NUMBER
+ FLAGS                                              NUMBER
+ MOD_DATE                                           DATE
+ OPTION3_SINCEVERSION                               NUMBER
+ COMMIT_INTERVAL                                    NUMBER
+
+SQL> desc VBZ$DIRECTIVES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ DB_OBJ_ID                                 NOT NULL NUMBER
+ VERSION_NO                                NOT NULL NUMBER
+ DEF_LENGTH                                         NUMBER
+ DEFINITION                                         LONG RAW
+ FLAGS                                              NUMBER
+
+SQL> desc VBZ$EDITED_SCRIPTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPLOYMENT_ID                             NOT NULL NUMBER
+ SCRIPT_LENGTH                                      NUMBER
+ SCRIPT_CONTENT                                     LONG
+ LINE_NUM                                  NOT NULL NUMBER
+
+SQL> desc VBZ$EXEMPLARS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ DB_OBJ_ID                                 NOT NULL NUMBER
+ VERSION_NO                                NOT NULL NUMBER
+ OPTIONS                                            NUMBER
+ DEF_LENGTH                                         NUMBER
+ DEFINITION                                         LONG RAW
+ FLAGS                                              NUMBER
+
+SQL> desc VBZ$EX_UPDATES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ DB_OBJ_ID                                 NOT NULL NUMBER
+ VERSION_NO                                NOT NULL NUMBER
+ DEF_LENGTH                                         NUMBER
+ DEFINITION                                         LONG RAW
+ FLAGS                                              NUMBER
+
+SQL> desc VBZ$HISTORY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ HISTORY_ID                                NOT NULL NUMBER
+ ACTION_OWNER                                       VARCHAR2(256)
+ OBJECT_TYPE                                        NUMBER
+ OBJECT_OWNER                                       VARCHAR2(256)
+ OBJECT_NAME                                        VARCHAR2(50)
+ OBJECT_VERSION                                     NUMBER
+ OPERATION                                          NUMBER
+ OPERAND_1                                          VARCHAR2(64)
+ OPERAND_2                                          VARCHAR2(64)
+ STATUS                                             NUMBER
+ MONITORED                                          NUMBER
+ START_DATE                                         DATE
+ END_DATE                                           DATE
+ REP_OBJ_ID                                         NUMBER
+
+SQL> desc VBZ$IMPACT_LOG
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPLOYMENT_ID                             NOT NULL NUMBER
+ LOG_LINE_NO                               NOT NULL NUMBER
+ LOG_LINE                                  NOT NULL VARCHAR2(2000)
+
+SQL> desc VBZ$OBJECT_GRANTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ GRANTOR_OBJ_ID                                     NUMBER
+ GRANTEE_OBJ_ID                                     NUMBER
+ WITH_GRANT_OPT                            NOT NULL VARCHAR2(3)
+ PRIVILEGE                                 NOT NULL VARCHAR2(50)
+ TARGET_OBJ_ID                                      NUMBER
+ SUBOBJECT_NAME                                     VARCHAR2(30)
+ VERSION_NO                                         NUMBER
+ FLAGS                                              NUMBER
+
+SQL> desc VBZ$OUTPUT_LOG
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPLOYMENT_ID                             NOT NULL NUMBER
+ HISTORY_ID                                NOT NULL NUMBER
+ LOG_LINE_NO                               NOT NULL NUMBER
+ LOG_LINE                                           LONG
+
+SQL> desc VBZ$ROLE_GRANTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ GRANTEE_OBJ_ID                                     NUMBER
+ WITH_ADMIN_OPT                            NOT NULL VARCHAR2(3)
+ DEFAULT_FLAG                              NOT NULL VARCHAR2(3)
+ ROLE_OBJ_ID                                        NUMBER
+ VERSION_NO                                         NUMBER
+ FLAGS                                              NUMBER
+
+SQL> desc VBZ$SCHEMAMAPS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OCM_REP_OBJ_ID                            NOT NULL NUMBER
+ LEFT_SCHEMA                                        VARCHAR2(30)
+ RIGHT_SCHEMA                                       VARCHAR2(30)
+
+SQL> desc VBZ$SCRIPTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPLOYMENT_ID                             NOT NULL NUMBER
+ SCRIPT_LINE_NO                            NOT NULL NUMBER
+ SCRIPT_STEP_NO                            NOT NULL NUMBER
+ SCRIPT_LINE_TYPE                          NOT NULL VARCHAR2(15)
+ SCRIPT_SECTION                            NOT NULL VARCHAR2(10)
+ SCRIPT_LINE                                        LONG
+
+SQL> desc VBZ$SYS_PRIV_GRANTS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CP_ID                                     NOT NULL NUMBER
+ GRANTEE_OBJ_ID                                     NUMBER
+ WITH_ADMIN_OPT                            NOT NULL VARCHAR2(3)
+ PRIVILEGE                                 NOT NULL VARCHAR2(50)
+ VERSION_NO                                         NUMBER
+ FLAGS                                              NUMBER
+
+SQL> desc VBZ$VERSION
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OCM_REP_OBJ_ID                            NOT NULL NUMBER
+ VERSION_NO                                NOT NULL NUMBER
+ FLAGS                                              NUMBER
+ LAST_MOD_DATE                                      DATE
+ DESCRIPTION                                        VARCHAR2(2000)
+
+SQL> desc OWB_COMPPARAM_MV
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COMP_ID                                            NUMBER
+ PARM_ID                                            NUMBER
+ DEPPARM_ID                                         NUMBER
+ DEPCOMP_ID                                         NUMBER
+
+SQL> desc LIA_XML_TABLE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ OBJECTID                                  NOT NULL NUMBER(9)
+ LIATYPE                                   NOT NULL VARCHAR2(10)
+ XML                                                CLOB
+
+SQL> desc HARMOTETEMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                          NUMBER
+ VERSIONOBJID                                       NUMBER
+
+SQL> desc VCTEMP1
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                          NUMBER
+ VERSIONOBJID                                       NUMBER
+
+SQL> desc VCTEMP2
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                          NUMBER
+ VERSIONOBJID                                       NUMBER
+
+SQL> desc RECURSIVE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CHILDITEMID                                        NUMBER
+
+SQL> desc HARITEMTEMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ITEMOBJID                                          NUMBER
+
+SQL> desc TEMPAPPROVEHIST
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ USROBJID                                  NOT NULL NUMBER
+ ACTION                                    NOT NULL VARCHAR2(100)
+ EXECDTIME                                 NOT NULL DATE
+
+SQL> desc TEMPAPPROVELIST
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ISGROUP                                   NOT NULL CHAR(1)
+ USROBJID                                           NUMBER
+ USRGRPOBJID                                        NUMBER
+
+SQL> desc HARPKGSINCMEW
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EPACKAGEOBJID                             NOT NULL NUMBER(38)
+ EPACKAGENAME                              NOT NULL VARCHAR2(200)
+ PACKAGEOBJID                              NOT NULL NUMBER(38)
+ CMEWSTATUS                                NOT NULL VARCHAR2(1)
+
+SQL> desc HARPACKAGESTATUS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PACKAGEOBJID                              NOT NULL NUMBER
+ CLIENTNAME                                NOT NULL VARCHAR2(1024)
+ SERVERNAME                                NOT NULL VARCHAR2(1024)
+ STATUSINFO                                         VARCHAR2(1)
+
+SQL> desc MIGRATIONREQUEST
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FORMOBJID                                 NOT NULL NUMBER(38)
+ MIGREQDATE                                         DATE
+ MIGREQNAME                                         VARCHAR2(30)
+ MIGMIGTYPE                                         VARCHAR2(15)
+ MIGAPPTYPE                                         VARCHAR2(8)
+ MIGSTATE                                           VARCHAR2(6)
+ MIGDESC1                                           VARCHAR2(200)
+ MIGPRI1                                            VARCHAR2(11)
+ MIGHARPACK                                         VARCHAR2(30)
+ MIGSRCENV                                          VARCHAR2(22)
+ MIGTGTENV1                                         VARCHAR2(22)
+ MIGDESMIGDATE1                                     DATE
+ MIGLATEMIGDATE1                                    DATE
+ MIGSCHEDMIGDATE1                                   DATE
+ MIGTGTENV2                                         VARCHAR2(22)
+ MIGDESMIGDATE2                                     DATE
+ MIGLATEMIGDATE2                                    DATE
+ MIGSCHEDMIGDATE2                                   DATE
+ MIGTGTENV3                                         VARCHAR2(22)
+ MIGDESMIGDATE3                                     DATE
+ MIGLATEMIGDATE3                                    DATE
+ MIGSCHEDMIGDATE3                                   DATE
+ MIGTGTENV4                                         VARCHAR2(22)
+ MIGDESMIGDATE4                                     DATE
+ MIGLATEMIGDATE4                                    DATE
+ MIGSCHEDMIGDATE4                                   DATE
+ MIGACTSTAT1                                        VARCHAR2(16)
+ MIGACTSTAT2                                        VARCHAR2(16)
+ MIGACTSTAT3                                        VARCHAR2(16)
+ MIGACTSTAT4                                        VARCHAR2(16)
+ MIGMIGSTEPS                                        VARCHAR2(200)
+ MIGSPECINST                                        VARCHAR2(200)
+ MIGASSIGNEDTO                                      VARCHAR2(30)
+ MIGCLOSEDATE                                       DATE
+
+SQL> desc ENTERPRISE_PACKAGE_STATUS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EP_ID                                     NOT NULL NUMBER(38)
+ ECCM_CONFIGURATIONID                      NOT NULL NUMBER(38)
+ EP_PKGSTATUS                              NOT NULL NUMBER(38)
+
+SQL> desc COUNTER
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(38)
+ USERID                                    NOT NULL NUMBER(38)
+ ECCM_USERID                               NOT NULL NUMBER(38)
+ ECCM_CONFIGURATIONID                      NOT NULL NUMBER(38)
+ EP_ID                                     NOT NULL NUMBER(38)
+ EWDB_ID                                   NOT NULL NUMBER(38)
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> desc ECCM_CONFIGURATION
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ECCM_CONFIGURATIONID                      NOT NULL NUMBER(38)
+ PROVIDER_NAME                             NOT NULL VARCHAR2(20)
+ PRODUCT_CODE                              NOT NULL NUMBER(38)
+ PROVIDER_NUMBER                           NOT NULL NUMBER(38)
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> desc ECCM_USER
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ECCMUSERID                                NOT NULL NUMBER(38)
+ USERID                                    NOT NULL NUMBER(38)
+ ECCM_CONFIGURATIONID                      NOT NULL NUMBER(38)
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> desc ENTERPRISE_PACKAGE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EP_ID                                     NOT NULL NUMBER(38)
+ EP_NAME                                   NOT NULL VARCHAR2(40)
+ ECCM_CONFIGURATIONID                      NOT NULL NUMBER(38)
+ SUBMITTING_ECCMUSERID                     NOT NULL NUMBER(38)
+ EP_LASTACTION                             NOT NULL NUMBER(38)
+ EP_EXECUTIONSTATE                         NOT NULL NUMBER(38)
+ EP_EXECUTIONSTATUS                        NOT NULL NUMBER(38)
+ COMMENTS                                           VARCHAR2(80)
+ EP_EXECUTIONWINDOWBEGIN                   NOT NULL DATE
+ EP_EXECUTIONWINDOWEND                     NOT NULL DATE
+ EP_EXECUTIONSTART                         NOT NULL DATE
+ EP_EXECUTIONFINISH                        NOT NULL DATE
+ DATETIME_UPDATED                          NOT NULL DATE
+ CHRONO1                                   NOT NULL NUMBER(38)
+ CHRONO2                                   NOT NULL NUMBER(38)
+
+SQL> desc ENTERPRISE_PACKAGE_HISTORY
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EP_ID                                     NOT NULL NUMBER(38)
+ CHRONO1                                   NOT NULL NUMBER(38)
+ CHRONO2                                   NOT NULL NUMBER(38)
+ ACTION_DATETIME                           NOT NULL DATE
+ ACTION                                    NOT NULL NUMBER(38)
+ ENTERPRISE_PACKAGE_NAME                            VARCHAR2(40)
+ PRODUCT_NAME                                       VARCHAR2(60)
+ PROVIDER_NAME                                      VARCHAR2(20)
+ USERNAMES                                 NOT NULL VARCHAR2(40)
+ PRODUCT_PACKAGE_NAME                               VARCHAR2(128)
+ ECCM_CONFIGURATIONID                               NUMBER(38)
+
+SQL> desc ECCM_LOG
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ KEY1                                      NOT NULL NUMBER(38)
+ KEY2                                      NOT NULL NUMBER(38)
+ CHRONO1                                   NOT NULL NUMBER(38)
+ CHRONO2                                   NOT NULL NUMBER(38)
+ LOG_TYPE                                  NOT NULL NUMBER
+ SEQ                                       NOT NULL NUMBER
+ LOG_DATETIME                              NOT NULL DATE
+ SEVERITY_LEVEL                            NOT NULL NUMBER(38)
+ LOG_TEXT                                           RAW(133)
+ ACTIONLOG_URL                                      VARCHAR2(100)
+
+SQL> desc ECCM_ACTIONLOG
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ KEY1                                      NOT NULL NUMBER(38)
+ KEY2                                      NOT NULL NUMBER(38)
+ CHRONO1                                   NOT NULL NUMBER(38)
+ CHRONO2                                   NOT NULL NUMBER(38)
+ LOG_TYPE                                  NOT NULL NUMBER
+ SEQ                                       NOT NULL NUMBER
+ LOG_TEXT                                           RAW(1900)
+
+SQL> desc ENTERPRISE_PACKAGE_SUBPACKAGE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SP_ID                                     NOT NULL NUMBER(38)
+ EP_ID                                     NOT NULL NUMBER(38)
+ PRODUCT_CODE                              NOT NULL NUMBER(38)
+ PROVIDER_NAME                                      VARCHAR2(20)
+ PRODUCT_PACKAGEID                         NOT NULL NUMBER(38)
+ PRODUCT_PACKAGE_NAME                               VARCHAR2(128)
+ SP_PRIORITY                               NOT NULL NUMBER(38)
+ SP_LASTACTION                             NOT NULL NUMBER(38)
+ SP_EXECUTIONSTATE                         NOT NULL NUMBER(38)
+ SP_EXECUTIONSTATUS                        NOT NULL NUMBER(38)
+ COMMENTS                                           VARCHAR2(80)
+ SP_EXECUTIONSTART                         NOT NULL DATE
+ SP_EXECUTIONFINISH                        NOT NULL DATE
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> desc HARVEST_SUBPACKAGE_ACTIONS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SP_ID                                     NOT NULL NUMBER(38)
+ EP_ID                                     NOT NULL NUMBER(38)
+ HARVEST_STATE                             NOT NULL NUMBER(38)
+ PROMOTE_PROCESSID                         NOT NULL NUMBER(38)
+ PROMOTE_PROCESSNAME                                VARCHAR2(60)
+ DEMOTE_PROCESSID                          NOT NULL NUMBER(38)
+ DEMOTE_PROCESSNAME                                 VARCHAR2(60)
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> desc WORKBENCH_PRODUCT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PRODUCT_CODE                              NOT NULL NUMBER(38)
+ PRODUCT_NAME                              NOT NULL VARCHAR2(60)
+
+SQL> desc SETTINGS
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ECCMUSERID                                NOT NULL NUMBER(38)
+ CONTEXT                                   NOT NULL VARCHAR2(20)
+ VALUE                                              VARCHAR2(2000)
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> desc USER_PREFERENCES
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PREFERENCE_USERID                         NOT NULL NUMBER(38)
+ PREFERENCE_TYPE                           NOT NULL NUMBER(38)
+ PRODUCT_CODE                              NOT NULL NUMBER(38)
+ PREFERENCE_VALUE                          NOT NULL VARCHAR2(60)
+ DATETIME_UPDATED                          NOT NULL DATE
+
+SQL> spool off

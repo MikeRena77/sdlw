@@ -1,0 +1,39 @@
+Starting VSS to Harvest conversion
+Start time: Tue Feb 22 14:32:33 2011
+Reading Configuration settings from vss2h.ini
+Conversion settings are:
+Need History = 1
+Time Zone = CST
+Keep Files = 0
+Need Repository = 0
+Take Snapshot Only = 0
+Take Snapshot = 0
+Number of HCI attempts is 1
+Keep log files is 1
+Time between HCI attempts is 5
+VSS = TechSupport_Web
+Harvest server = WINDOWS
+Harvest User = vsstoh
+Harvest password = abc1234
+Harvest Home Dir = C:\Program Files\CA\SCM
+VSS User = Vsstoh
+VSS password = abc1234
+VSS bin dir  = H:\Program Files\Microsoft Visual Studio\COMMON\VSS\win32
+ohost = HARVEST2_DEVDBS
+Oracle Connection = hrvstuser/har2vest@HARVEST2_DEVDBS
+SQL scripts location = c:\vss2h\logs\r12\TechSupport_Web
+Harvest Environment = Peer Review Camp
+Harvest View = Development
+Harvest State = Development
+Harvest Check In process = Check In New or Existing Items
+Harvest Package = DevBuddyPR-000001
+Harvest Viewpath = \CustomerSuppt
+Working directory = C:\Program Files\Microsoft Visual Studio\COMMON\VSS\temp
+Version = r12
+
+The creator id is 449
+Projectbase is TechSupport_Web
+Creating project listing file
+Username: Vsstoh
+Password: Username: Terminating on signal SIGINT(2)
+User "Vsstoh" not found

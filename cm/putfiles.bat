@@ -1,0 +1,13 @@
+put applbld.cmd
+put applname.cmd
+put basebld.cmd
+put bldnotes.pl
+put changes.lst
+put chckparm.pl
+put dailybuild.pl
+put finishappl.cmd
+put fndshare.cmd
+put GetServer.cmd
+put GetServerName.pl
+put promote.cmd
+put shdbgBuild.pl

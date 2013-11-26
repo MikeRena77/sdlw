@@ -1,0 +1,5 @@
+set echo on
+SPOOL logs\hardev1Tables.notes
+SELECT OWNER,TABLE_NAME FROM DBA_TABLES where owner = 'SCMUSER' ORDER BY TABLE_NAME;
+SPOOL OFF
+EXIT

@@ -1,0 +1,21 @@
+
+---------- BUILDLOG.TXT
+[22855]       Done executing task "Csc" -- FAILED.
+[22856]     5>Done building target "CoreCompile" in project "TransactionService.csproj" -- FAILED.
+[22885]     5>Done Building Project "D:\TFSBuild_Source\Nucleus\genbase_dev_unittest\Sources\COMMON\TransactionService\TransactionService.csproj" (default targets) -- FAILED.
+[22897]       Done executing task "MSBuild" -- FAILED.
+[22898]     3>Done building target "Build" in project "nbase.sln" -- FAILED.
+[22899]     3>Done Building Project "D:\TFSBuild_Source\Nucleus\genbase_dev_unittest\Sources\nbase.sln" (default targets) -- FAILED.
+[22900]   1:6>Done executing task "MSBuild" -- FAILED.
+[22901]   1:6>Done building target "CoreCompileSolution" in project "TFSBuild.proj" -- FAILED.
+[22902]   1:6>Done Building Project "D:\TFSBuild_Source\Nucleus\genbase_dev_unittest\BuildType\TFSBuild.proj" (CompileSolution target(s)) -- FAILED.
+[22903]   1:2>Done executing task "MSBuild" -- FAILED.
+[22904]   1:2>Done building target "CoreCompile" in project "TFSBuild.proj" -- FAILED.
+[22905]   1:2>Done Building Project "D:\TFSBuild_Source\Nucleus\genbase_dev_unittest\BuildType\TFSBuild.proj" (CoreCompile target(s)) -- FAILED.
+[22906]   1:4>Done executing task "MSBuild" -- FAILED.
+[22907]   1:4>Done building target "CoreCompileConfiguration" in project "TFSBuild.proj" -- FAILED.
+[22908]   1:4>Done Building Project "D:\TFSBuild_Source\Nucleus\genbase_dev_unittest\BuildType\TFSBuild.proj" (CompileConfiguration target(s)) -- FAILED.
+[22909]     1>Done executing task "MSBuild" -- FAILED.
+[22910]     1>Done building target "CallCompile" in project "TFSBuild.proj" -- FAILED.
+[22932]     1>Done Building Project "D:\TFSBuild_Source\Nucleus\genbase_dev_unittest\BuildType\TFSBuild.proj" (EndToEndIteration target(s)) -- FAILED.
+[22946]Build FAILED.

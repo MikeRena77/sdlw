@@ -1,0 +1,127 @@
+TF - Team Foundation Version Control Tool
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Type tf help <command name> for command line description.
+Type tf msdn <command name> for full documentation in Microsoft Document
+Explorer.
+
+Commands:
+tf add         Adds new files and folders from a local file system location
+               to Team Foundation version control.
+
+tf branch      Copies an item or set of items, including metadata and version
+               control history, from one location to another on the Team
+               Foundation version control server and in the local workspace.
+
+tf branches    Displays the history of a branch for a specified file or folder.
+
+tf changeset   Displays information about a changeset and lets you change the
+               associated attributes, such as comments and check-in notes.
+
+tf checkin     Commits pending changes in the current workspace to Team
+               Foundation version control.
+
+tf checkout    Makes the local file writable and changes its pending Change
+               status to "edit" in the workspace. Edit is an alias for the
+               Checkout command.
+
+tf configure   Enables an administrator to view and change the following
+               configuration settings for a team project in the Source Control
+               Settings dialog box:
+               - Check-out settings
+               - Check-in policies
+               - Check-in notes
+
+tf delete      Removes files and folders from Team Foundation version
+               control and deletes them from the disk.
+
+tf destroy     Destroys, or permanently deletes, version-controlled files from
+               Team Foundation version control.
+
+tf diff        Compares, and if it is possible, displays differences between two
+               files, files in two folders, or a shelveset and a local or
+               server file.
+
+tf dir         Displays all or part of the contents of Team Foundation version
+               control.
+
+tf folderdiff  Display a visual representation of the differences between files
+               in two server folders, in a server folder and a local folder, or
+               in two local folders.
+
+tf get         Retrieves a read-only copy of a file from Team Foundation
+               Server to the workspace and creates folders on disk to contain
+               it.
+
+tf help        Displays a help topic to the command-line that contains detailed
+               information about a Team Foundation command.
+
+tf history     Displays the revision history for one or more files and folders.
+
+tf label       Attaches a label to or removes a label from a version of a file
+               or folder in Team Foundation version control.
+
+tf labels      Displays the list of labels in Team Foundation version control.
+
+tf lock        Locks or unlocks a file or folder to deny or restore the
+               permissions of users to check out an item for edit into
+               a different workspace or to check in pending changes to an item
+               from a different workspace.
+
+tf merge       Applies changes from one branch into another.
+
+tf merges      Displays detailed information about past merges between
+               the specified source and destination branches.
+
+tf msdn        Launches the Microsoft Document Explorer to the documentation
+               page for the command.
+
+tf permission  Modifies the user access control list (ACL) and displays
+               authorization settings for an item under version control.
+
+tf properties  Displays information about items under version control.
+
+tf rename      Changes the name or the path of a file or folder. You can use
+               the rename command or the alias move, to move a file or folder
+               to a new location.
+
+tf resolve     Resolves conflicts between changed items in your workspace and
+               the latest or destination versions of items on the server.
+
+tf shelve      Stores a set of pending changes, together with pending check-in
+               notes, a comment, and a list of associated work items in Team
+               Foundation Server without actually checking them into the
+               version control server.
+
+tf shelvesets  Displays information about pending changes to items in one or
+               more workspaces.
+
+tf status      Displays information about pending changes to items in one or
+               more workspaces.
+
+tf undelete    Restores items that were previously deleted.
+
+tf undo        Removes pending changes from a workspace.
+
+tf unlabel     Removes an item from an existing label in Team Foundation
+               version control.
+
+tf unshelve    Restores shelved file revisions, check-in notes, comments, and
+               work item associations to the current workspace or removes
+               an existing shelveset from the server.
+
+tf view        Retrieves a specific version of a file to a temporary folder on
+               your computer and displays it.
+
+tf workfold    Creates, modifies, or displays information about the mappings
+               between your workspace folders and the Team Foundation version
+               control folders.
+
+tf workspace   Creates, deletes, displays, or modifies properties and mappings
+               associated with a workspace.
+			   
+			   o	tf workspace /new OtherWorkspace;GENPITFI01\502194519
+
+tf workspaces  Displays information about workspaces in the system and updates
+               cached information about a user name or computer name change on
+               Team Foundation Server.

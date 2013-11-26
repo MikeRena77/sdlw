@@ -1,0 +1,1 @@
+select versionindicator from hartableinfo;

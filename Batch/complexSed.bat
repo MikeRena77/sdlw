@@ -1,0 +1,1 @@
+sed -i.bak "s/C\:\\Program Files\\AAFES\\AgentSec.Net\\AAFESWorkers\\/C\:\\hScripts\\ftp\\HarvestApps\\Alpha\\AAFES.HR.Workers.2k8/g" AAFES.HR.Workers.2k8.csproj

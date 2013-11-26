@@ -1,0 +1,1 @@
+sqlplus harvest/harvest/da1pct1@copyglobalext 'RBC Repository'

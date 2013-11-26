@@ -1,0 +1,1 @@
+find /n /i "error" *.* > errors.log

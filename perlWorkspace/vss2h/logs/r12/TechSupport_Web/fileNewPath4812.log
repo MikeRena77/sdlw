@@ -1,0 +1,21 @@
+I00060040: New connection with Broker DEVSWA  established.
+rRepository.CreateItemPath() failed.
+I00060040: New connection with Broker DEVSWA  established.
+I00020101: Path ASP  created in \TechSupport .
+hcrtpath has been executed successfully.
+I00060040: New connection with Broker DEVSWA  established.
+I00020101: Path Forms  created in \TechSupport .
+hcrtpath has been executed successfully.
+I00060040: New connection with Broker DEVSWA  established.
+I00020101: Path HTML  created in \TechSupport .
+hcrtpath has been executed successfully.
+I00060040: New connection with Broker DEVSWA  established.
+I00020101: Path Main.html  created in \TechSupport\HTML .
+hcrtpath has been executed successfully.
+I00060040: New connection with Broker DEVSWA  established.
+I00020101: Path images  created in \TechSupport .
+hcrtpath has been executed successfully.
+I00060040: New connection with Broker DEVSWA  established.
+E0302074a: Path \TechSupport\Properties  already exists.
+E03060019: Process Execute failed. Process Name: Check In New or Existing Items .
+rRepository.CreateItemPath() failed.

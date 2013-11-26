@@ -1,0 +1,14 @@
+
+---------- BUILDLOG.TXT
+[20541]         WinObject - 0 error(s), 0 warning(s)
+[20577]         nucassert - 0 error(s), 0 warning(s)
+[21281]         ocxcmn - 0 error(s), 0 warning(s)
+[21399]         cardiptobj - 0 error(s), 0 warning(s)
+[21491]         chsapplobj - 0 error(s), 0 warning(s)
+[21604]         chsscaobj - 0 error(s), 0 warning(s)
+[21667]         chssciptobj - 0 error(s), 0 warning(s)
+[21834]         ecrobj - 0 error(s), 1 warning(s)
+[21990]         IfsfPosFdcMsg - 0 error(s), 0 warning(s)
+[22026]         CommonMsg - 0 error(s), 0 warning(s)
+[22159]         whoblame - 0 error(s), 0 warning(s)
+[22314]         baserptobj - 0 error(s), 0 warning(s)

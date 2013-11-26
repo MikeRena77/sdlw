@@ -1,0 +1,54 @@
+GET: \CustomerSuppt.csproj;1
+INIT PUT 0
+PUT: \TechSupport\CustomerSuppt.csproj;0
+GET: \TechSupport\CustomerSuppt.csproj.vspscc;1
+INIT PUT 0
+PUT: \TechSupport\CustomerSuppt.csproj.vspscc;0
+GET: \TechSupport\Default.aspx;1
+INIT PUT 0
+PUT: \TechSupport\Default.aspx;0
+GET: \TechSupport\Default.aspx.cs;1
+INIT PUT 0
+PUT: \TechSupport\Default.aspx.cs;0
+GET: \TechSupport\Default.aspx.designer.cs;1
+INIT PUT 0
+PUT: \TechSupport\Default.aspx.designer.cs;0
+GET: \TechSupport\global.asa;1
+INIT PUT 0
+PUT: \TechSupport\global.asa;0
+GET: \TechSupport\Testpage.asp;1
+INIT PUT 0
+PUT: \TechSupport\Testpage.asp;0
+GET: \TechSupport\Web.config;1
+INIT PUT 0
+PUT: \TechSupport\Web.config;0
+GET: \TechSupport\Inventory.asp;1
+INIT PUT 0
+PUT: \TechSupport\ASP\Inventory.asp;0
+GET: \TechSupport\ASP\Library.asp;1
+INIT PUT 0
+PUT: \TechSupport\ASP\Library.asp;0
+GET: \TechSupport\ASP\PC Setup.asp;1
+INIT PUT 0
+PUT: \TechSupport\ASP\PC Setup.asp;0
+GET: \TechSupport\ASP\Security.asp;1
+INIT PUT 0
+PUT: \TechSupport\ASP\Security.asp;0
+GET: \TechSupport\ASP\Welcome.asp;1
+INIT PUT 0
+PUT: \TechSupport\ASP\Welcome.asp;0
+GET: \TechSupport\ASP\SecurityREQ.doc;1
+INIT PUT 0
+PUT: \TechSupport\Forms\SecurityREQ.doc;0
+GET: \TechSupport\Forms\AAFES Logo.gif;1
+INIT PUT 0
+PUT: \TechSupport\images\AAFES Logo.gif;0
+GET: \TechSupport\images\Eagle Tear.jpg;1
+INIT PUT 0
+PUT: \TechSupport\images\Eagle Tear.jpg;0
+GET: \TechSupport\images\shuttle with flag.jpg;1
+INIT PUT 0
+PUT: \TechSupport\images\shuttle with flag.jpg;0
+GET: \TechSupport\images\wtc-lights.jpg;1
+INIT PUT 0
+PUT: \TechSupport\images\wtc-lights.jpg;0
