@@ -31,9 +31,9 @@ time /t  >> %LOG%
 title startupExplorer.bat
 rem sleep 30
 
-call clearHistory.bat >> %LOG%
+call clearHistory.bat
 
-call setBuilder.bat >> %LOG%
+call setBuilder.bat
 
 if exist u:\ net use u: /delete
 net use u: "\\tnwp010166.genpitfi01.og.ge.com\Wayne_aus1\groups" /persistent:no

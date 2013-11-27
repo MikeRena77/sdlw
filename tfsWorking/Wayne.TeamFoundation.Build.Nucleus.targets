@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. -->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="CanonicalizePaths">
+    <!-- These tasks are used by the Team Build process defined in this file -->  
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.GetBuildProperties" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.SetBuildProperties" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.BuildStep" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.Get" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.VersionControl.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.Label" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.VersionControl.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.CreateNewWorkItem" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.VersionControl.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.GenCheckinNotesUpdateWorkItems" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.VersionControl.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.UpdateBuildNumberDropLocation" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.CreateWorkspaceTask" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.VersionControl.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.DeleteWorkspaceTask" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.VersionControl.dll"/>
+    <UsingTask TaskName="Microsoft.TeamFoundation.Build.Tasks.WorkspaceItemConverterTask" 
+            AssemblyFile="$(TeamBuildRefPath)\Microsoft.TeamFoundation.Build.Tasks.VersionControl.dll"/>
+    <UsingTask TaskName="TestToolsTask" 
+            AssemblyFile="$(MSTestRefPath)\Microsoft.VisualStudio.QualityTools.MSBuildTasks.dll"/>
+    <!-- The Skip flags may be set to skip certain targets. -->
+    <!-- Additional properties that may be set to customize the build process -->
+    <PropertyGroup>
+        <!-- Set this property to true to enable building configurations in parallel. -->
+        <BuildConfigurationsInParallel Condition=" '$(BuildConfigurationsInParallel)'=='' ">false</BuildConfigurationsInParallel>
+        <!-- Set this property to true to enable building solutions in parallel. -->
+        <BuildSolutionsInParallel Condition=" '$(BuildSolutionsInParallel)'=='' ">false</BuildSolutionsInParallel>
+        <!-- Set this property to false to generate an error when an invalid configuration is encountered. -->
+        <SkipInvalidConfigurations Condition=" '$(SkipInvalidConfigurations)'=='' ">true</SkipInvalidConfigurations>
+        <!-- Set this property to true to stop Cleaning, Compiling, and/or Testing on the first failure encountered -->
+    </PropertyGroup>
+    <!-- Initialize the build for EndToEndIteration -->  
+    <Target Name="InitializeEndToEndIteration">
+
+        <!-- IncrementalGet == true implies CleanCompilationOutputOnly = true, SkipInitializeWorkspace = true, and ForceGet = false -->
+
+        <!-- IncrementalBuild == true implies SkipClean = true, SkipInitializeWorkspace = true, and ForceGet = false -->
+
+        <!-- Update the build number and drop location in the database. This task will also create the drop directory 
+         and grant the service account full rights on it.
+     -->    
+        <UpdateBuildNumberDropLocation 
+                TeamFoundationServerUrl="$(TeamFoundationServerUrl)" 
+                BuildUri="$(BuildUri)" 
+                BuildNumber="$(BuildNumber)" 
+                DropLocation="$(DropLocation)\$(BuildNumber)"/>
+        <PropertyGroup>
+            <LabelName Condition=" '$(RN_BASE)'!='' ">$(RN_BASE)</LabelName>
+        </PropertyGroup>
+    </Target>
+    <!-- Override this target to execute custom tasks before workspace initialization -->  
+    <Target Name="BeforeInitializeWorkspace">
+        <RemoveDir Condition="Exists('$(DropLocation)')" 
+                Directories="$(DropLocation)\"/>
+        <MakeDir Condition="!Exists('$(DropLocation)\$(BuildNumber)')" 
+                Directories="$(DropLocation)\$(BuildNumber)\"/>
+    </Target>
+    <!-- Compute the list of all Platform / Configuration combinations -->
+    <Target Name="ComputeConfigurationList">
+        <ItemGroup>
+            <!-- ConfigurationList for all Platforms -->
+            <ConfigurationList Include="$(MSBuildProjectFile)">
+                <Properties>Configuration=%(ConfigurationToBuild.FlavorToBuild);Platform=%(ConfigurationToBuild.PlatformToBuild);TeamBuildOutDir=$(BinariesRoot)\%(ConfigurationToBuild.PlatformToBuild)\%(ConfigurationToBuild.FlavorToBuild)\;TeamBuildPublishDir=$(BinariesRoot)\%(ConfigurationToBuild.PlatformToBuild)\%(ConfigurationToBuild.FlavorToBuild)\</Properties>
+            </ConfigurationList>
+        </ItemGroup>
+    </Target>
+</Project>
