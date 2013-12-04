@@ -1,0 +1,158 @@
+t/027Watch3.t ........ skipped: only on platforms supporting signals
+No such signal: SIGUSR1 at C:\Users\502256043\.cpanplus\5.14.2\build\Log-Log4per
+l-1.42\blib\lib/Log/Log4perl/Config/Watch.pm line 39.
+t/027Watch4.t ........ ok
+t/028Additivity.t .... ok
+t/029SysWide.t ....... ok
+t/030LDLevel.t ....... ok
+t/031NDC.t ........... ok
+t/032JRollFile.t ..... skipped: only with Log::Dispatch::FileRotate 1.10
+t/033UsrCspec.t ...... ok
+t/034DBI.t ........... skipped: DBI 1.607 or DBD::CSV 0.33 or SQL::Statement 1.2
+0 not installed, skipping tests
+t/035JDBCAppender.t .. skipped: only with Log::Dispatch and DBD::CSV 0.33
+t/036JSyslog.t ....... ok
+t/037JWin32Event.t ... skipped: only with Log::Dispatch::Win32EventLog
+t/038XML-DOM1.t ...... skipped: only with XML::DOM > 1.29
+t/039XML-DOM2.t ...... skipped: only with XML::DOM > 1.29
+t/040Filter.t ........ ok
+t/041SafeEval.t ...... ok
+t/042SyncApp.t ....... skipped: - only with L4P_ALL_TESTS
+t/043VarSubst.t ...... ok
+t/044XML-Filter.t .... skipped: only with XML::DOM > 1.29
+t/045Composite.t ..... ok
+t/046RRDs.t .......... skipped: (RRDs not installed)
+t/048lwp.t ........... skipped: Only with 2.0 < LWP::UserAgent < 5.822
+t/049Unhide.t ........ ok
+t/050Buffer.t ........ ok
+t/051Extra.t ......... ok
+t/052Utf8.t .......... ok
+Deep recursion on subroutine "Log::Log4perl::Resurrector::resurrector_fh" at C:\
+Users\502256043\.cpanplus\5.14.2\build\Log-Log4perl-1.42\blib\lib/Log/Log4perl/R
+esurrector.pm line 70.
+Deep recursion on subroutine "File::Temp::tempfile" at C:\Users\502256043\.cpanp
+lus\5.14.2\build\Log-Log4perl-1.42\blib\lib/Log/Log4perl/Resurrector.pm line 28.
+
+t/053Resurrect.t .....
+Dubious, test returned 253 (wstat 64768, 0xfd00)
+
+
+
+    cpan> install Task::Plack
+
+  once this distribution is installed. Enjoy!
+
+Running [C:\Dwimperl\c\bin\dmake.EXE test]...
+C:\Dwimperl\perl\bin\perl.exe "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "
+undef *Test::Harness::Switches; test_harness(0, 'inc', 'blib\lib', 'blib\arch')"
+ t/*.t t/*/*.t
+t/00_compile.t ..................................... ok
+t/HTTP-Message-PSGI/content_length.t ............... ok
+t/HTTP-Message-PSGI/host.t ......................... ok
+t/HTTP-Message-PSGI/path_info.t .................... ok
+t/HTTP-Message-PSGI/utf8_req.t ..................... ok
+t/HTTP-Server-PSGI/post.t .......................... ok
+t/Plack-Builder/builder.t .......................... ok
+t/Plack-Builder/mount.t ............................ ok
+t/Plack-Builder/oo_interface.t ..................... ok
+t/Plack-Handler/apache1.t .......................... skipped: TEST_APACHE1 is no
+t set
+t/Plack-Handler/apache2-registry.t ................. skipped: TEST_APACHE2 is no
+t set
+t/Plack-Handler/apache2.t .......................... skipped: TEST_APACHE2 is no
+t set
+Bailout called.  Further testing stopped:  Test requires module 'HTTP::Request::AsCGI' but it's not found
+FAILED--Further testing stopped: Test requires module 'HTTP::Request::AsCGI' but
+ it's not found
+dmake.EXE:  Error code 255, while making 'test_dynamic'
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    1     0.717        1.01     Apache::XMLRPC::Lite                 PHRED
+    2     1.30         1.33     Archive::Zip                         PHRED
+    3     1.42         1.60     DateTime::TimeZone::Africa::Juba     DROLSKY
+    4     4.300007     5.006    Dist::Zilla                          RJBS
+    5     0.46         0.51     Excel::Writer::XLSX::Package::XMLwriterSimple JMCNAMARA
+    6     3.27         3.28     Locale::Codes                        SBECK
+    7     1.35         1.42     Log::Log4perl                        MSCHILLI
+    8     0.2602       0.2603   Math::BigRat                         PJACKLAM
+    9     0.96         1.00     Padre                                PLAVEN
+   10     0.9985       0.999    Plack::Server::ServerSimple          MIYAGAWA
+   11     0.09333      0.094001 Pod::Eventual                        RJBS
+   12     1.12         1.15     Term::Cap                            JSTOWE
+   13     1.02         1.03     Unicode::Collate                     SADAHIRO
+   14     1.06         1.07     autouse                              FLORA
+   15     0.4005       0.4203   inc::latest                          LEONT
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The tests for 'Plack::Server::ServerSimple' failed. Would you like me to proceed
+ anyway or should we abort?
+ 
+ 
+ Module 'Task::Plack' requires 'Corona' to be installed
+
+
+Module 'Task::Plack' requires 'FCGI::Client' to be installed
+
+
+Module 'Task::Plack' requires 'FCGI::ProcManager' to be installed
+
+Test::MinimumVersion
+Module 'Task::Plack' requires 'IO::Handle::Util' to be installed
+
+'s conf prereqs 3; s save'
+xxxModule 'Task::Plack' requires 'Net::FastCGI' to be installed
+
+
+xxxModule 'Task::Plack' requires 'PSGI' to be installed
+
+
+Module 'Task::Plack' requires 'Plack::App::Proxy' to be installed
+
+AnyEvent::HTTP
+xxxModule 'Task::Plack' requires 'Plack::Middleware::Auth::Digest' to be installed
+
+
+Module 'Task::Plack' requires 'Plack::Middleware::ConsoleLogger' to be installed
+
+
+
+xxxModule 'Task::Plack' requires 'Plack::Middleware::Debug' to be installed
+
+
+Module 'Task::Plack' requires 'Plack::Middleware::Deflater' to be installed
+
+
+xxxModule 'Task::Plack' requires 'Plack::Middleware::Header' to be installed
+
+
+xxxModule 'Task::Plack' requires 'Plack::Middleware::ReverseProxy' to be installed
+
+
+xxxModule 'Task::Plack' requires 'Plack::Middleware::Session' to be installed
+
+
+Module 'Task::Plack' requires 'Starlet' to be installed
+
+
+Module 'Task::Plack' requires 'Starman' to be installed
+Net::Server
+
+Module 'Task::Plack' requires 'Twiggy' to be installed
+
+
+
+[ERROR] Unable to create a new distribution object for 'Proc::Wait3' -- cannot c
+ontinue
+
+[ERROR] Failed to install 'Proc::Wait3' as prerequisite for 'Parallel::Prefork'
+
+[ERROR] Unable to satisfy prerequisites for 'Parallel::Prefork' -- aborting inst
+all
+
+[ERROR] Unable to create a new distribution object for 'Parallel::Prefork' -- ca
+nnot continue
+
+[ERROR] Failed to install 'Parallel::Prefork' as prerequisite for 'Starlet'
+
+[ERROR] Unable to satisfy prerequisites for 'Starlet' -- aborting install
+
+[ERROR] Unable to create a new distribution object for 'Starlet' -- cannot conti
+nue

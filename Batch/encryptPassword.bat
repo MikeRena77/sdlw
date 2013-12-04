@@ -1,10 +1,8 @@
-rem This is the form for using the command that takes your username
-rem and password and generates an encrypted file to use in Harvest commands
-rem NOTE: use only one of the two switches "s" or "f"
-rem       s specifies that the file will be named "hsvr.dfo"
-rem         and that it will be placed in %HARVESTHOME%
-rem       f allows you to specify the filename and location
-rem svrenc {-s | -f filename} [-usr username] [-pw password] [-dir directory_name] [-o filename | –oa filename] [-arg] [-wts] [-h]
+rem This is the form for using the gpg command that encrypts a file
+rem --here name ReadMe.txt for the example-- and generates a new
+rem encrypted file ReadMe.txt.gpg which you can furnish without fear
+rem  of intermediate decryption
+rem  Running this command will require the keyOwner's passphrase 
+rem Usage:  gpg -se -r keyOwner fileName
 
-
-svrenc -f hardev1.dfo -usr xxxxxxxxx -pw xxxxxxxxxxx
+gpg -se -r "Michael Andrews" ReadMe.txt

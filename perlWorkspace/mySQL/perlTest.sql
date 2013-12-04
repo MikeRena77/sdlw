@@ -1,0 +1,1 @@
+grant all privileges on test.* to 'ODBC'@'localhost';

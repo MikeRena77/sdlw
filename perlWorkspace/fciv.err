@@ -5,3 +5,10 @@ HashAndStore --> c:\users\502256043\workspace\perlworkspace\fciv.err :
 	Error msg  : The process cannot access the file because it is being used by another process.
 	Error code : 20
 
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\perlWorkspace -r -bp C:\Users\502256043\workspace\perlWorkspace -xml perlFilesDB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\perlworkspace\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+

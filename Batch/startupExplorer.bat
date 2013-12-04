@@ -20,14 +20,15 @@ rem -   3.2     10/26/2009  MHA  Commented out the launch of the ftp explorer wi
 rem -   3.3     10/25/2013  MHA  Completely revamped for the GE, Wayne Energy environment
 rem -   3.4     11/18/2013  MHA  Added a new drive mapping for the new file share currently being set up
 rem -   3.5     11/26/2013  MHA  Made setBuilder.bat a part of the initialization routine
+rem -   3.6     12/04/2013  MHA  Changed log file variable for disambiguation
 rem  ------------------------------------------------------------------------------------------------------------
 rem  
 for /f "tokens=1,2,3 delims=: " %%a in ("%time%") do set hour=%%a&set minute=%%b&set second=%%c
-set LOG="C:\Users\502256043\Documents\working\logs\startup%date:~4,2%_%date:~7,2%_%date:~10,4%_%hour%_%minute%.log"
+set ELOG="C:\Users\502256043\Documents\working\logs\startup%date:~4,2%_%date:~7,2%_%date:~10,4%_%hour%_%minute%.log"
 
-echo TODAY > %LOG%
-date /t  >> %LOG%
-time /t  >> %LOG%
+echo TODAY > %ELOG%
+date /t  >> %ELOG%
+time /t  >> %ELOG%
 title startupExplorer.bat
 rem sleep 30
 
@@ -38,7 +39,7 @@ call setBuilder.bat
 if exist u:\ net use u: /delete
 net use u: "\\tnwp010166.genpitfi01.og.ge.com\Wayne_aus1\groups" /persistent:no
 rem net use u: "\\tnwp010166.genpitfi01.og.ge.com\Wayne_aus1\groups\Systems Engineering" /persistent:no
-rem net use u: "\\austinfs.GENPITFI01.og.ge.com\Pdrive$\Software Development" /persistent:no
+net use p: "\\austinfs.GENPITFI01.og.ge.com\Pdrive$\Software Development" /persistent:no
 
 if exist x:\ net use x: /delete
 net use x: \\wdswdevl\ntnuc /persistent:no
@@ -71,9 +72,9 @@ REM start EXPLORER.EXE /n, z:\
 title Window available for reuse
 
 cd %USERPROFILE%
-cd  >> %LOG%
-echo StartUp Finished >> %LOG%
-date /t  >> %LOG%
-time /t  >> %LOG%
+cd  >> %ELOG%
+echo StartUp Finished >> %ELOG%
+date /t  >> %ELOG%
+time /t  >> %ELOG%
 rem exit
 

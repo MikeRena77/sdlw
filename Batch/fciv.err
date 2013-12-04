@@ -5,3 +5,38 @@ Command Line: filechecksumintegrityverifier -add *.* -r
 	Error msg  : The filename, directory name, or volume label syntax is incorrect.
 	Error code : 7b
 
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\Batch -r -exc batchFilesDB.xml -wp -xml batchFilesDB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\batch\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\Batch -r -exc batchFilesSha1DB.xml -wp -xml batchFilesSha1DB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\batch\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+
+********************************************************************************
+Command Line: fciv -SHA1 -add C:\Users\502256043\workspace\Batch -r -exc batchFilesSha1DB.xml -wp -xml batchFilesSha1DB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\batch\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\Batch -r -exc batchFilesDB.xml -bp C:\Users\502256043\workspace\Batch -xml batchFilesDB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\batch\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\Batch -r -SHA1 -exc batchFilesSha1DB.xml -bp C:\Users\502256043\workspace\Batch -xml batchFilesSha1DB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\batch\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+

@@ -37,6 +37,7 @@
         <SkipInvalidConfigurations Condition=" '$(SkipInvalidConfigurations)'=='' ">true</SkipInvalidConfigurations>
         <!-- Set this property to true to stop Cleaning, Compiling, and/or Testing on the first failure encountered -->
     </PropertyGroup>
+
     <!-- Initialize the build for EndToEndIteration -->  
     <Target Name="InitializeEndToEndIteration">
 
@@ -53,7 +54,7 @@
                 BuildNumber="$(BuildNumber)" 
                 DropLocation="$(DropLocation)\$(BuildNumber)"/>
         <PropertyGroup>
-            <LabelName Condition=" '$(RN_BASE)'!='' ">$(RN_BASE)</LabelName>
+            <LabelName Condition=" '$(RN_BASE)'!='' ">$(RN_BASE)_$(RN_APPL)</LabelName>
         </PropertyGroup>
     </Target>
     <!-- Override this target to execute custom tasks before workspace initialization -->  
@@ -62,6 +63,11 @@
                 Directories="$(DropLocation)\"/>
         <MakeDir Condition="!Exists('$(DropLocation)\$(BuildNumber)')" 
                 Directories="$(DropLocation)\$(BuildNumber)\"/>
+        <PropertyGroup>
+            <REGCORRECT>&quot;\\austinfs.genpitfi01.og.ge.com\Software Development\WDSWDEVL\ntnuc\cm\regcorrect.reg&quot;</REGCORRECT>
+            <REGIMP>&quot;\\austinfs.genpitfi01.og.ge.com\Software Development\WDSWDEVL\ntnuc\cm\regimport.bat&quot;</REGIMP>
+        </PropertyGroup>
+        <Exec Command="$(REGIMP) $(REGCORRECT)" />
     </Target>
     <!-- Compute the list of all Platform / Configuration combinations -->
     <Target Name="ComputeConfigurationList">
