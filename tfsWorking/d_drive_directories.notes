@@ -1,0 +1,86 @@
+D:\TFSBuild_Source\Nucleus>dir \
+ Volume in drive D is Local Disk
+ Volume Serial Number is 54F5-F954
+
+ Directory of D:\
+
+12/05/2013  08:57 AM    <DIR>          TFSBuild_Source
+12/05/2013  08:23 AM    <DIR>          Temp
+12/04/2013  04:36 PM    <DIR>          WDSWDEVL
+11/12/2013  02:54 PM    <DIR>          downloader
+10/25/2013  10:45 AM    <DIR>          Binaries
+10/25/2013  10:39 AM    <DIR>          TFSBuild_Sources
+06/24/2013  10:00 AM    <DIR>          RECYCLER
+06/04/2013  08:13 AM    <DIR>          TFS_Builds
+03/21/2013  08:02 PM    <DIR>          System Volume Information
+03/12/2013  11:54 PM    <DIR>          nbase
+03/12/2013  10:53 PM    <DIR>          nchevron
+03/07/2013  08:27 PM    <DIR>          BuildDownloads
+02/04/2013  07:25 PM    <DIR>          iSense
+01/21/2013  07:22 PM    <DIR>          TARGET
+10/15/2012  05:26 AM    <DIR>          nmap
+06/28/2012  12:34 AM    <DIR>          WAYNE
+05/17/2012  04:16 PM    <DIR>          PowerGUI
+02/23/2012  11:01 PM    <DIR>          rubish
+05/19/2011  05:00 PM    <DIR>          sdks
+03/08/2011  03:00 AM    <DIR>          b
+03/08/2011  03:00 AM    <DIR>          Nucleus9
+02/19/2011  02:12 PM    <DIR>          WORK
+02/05/2011  08:30 PM    <DIR>          NBaseMigration
+01/22/2011  08:43 AM    <DIR>          WayneDB
+01/19/2011  02:28 PM    <DIR>          TFS
+11/22/2009  10:16 PM    <DIR>          0ab7c28d2ce71f5e7b1012
+10/26/2009  02:00 PM    <DIR>          Security
+10/26/2009  02:00 PM    <DIR>          NMC
+10/26/2009  02:00 PM    <DIR>          iSenseTray
+10/26/2009  02:00 PM    <DIR>          iSenseRestore
+10/26/2009  02:00 PM    <DIR>          iSenseRemote
+10/26/2009  02:00 PM    <DIR>          iSenseManager
+10/26/2009  02:00 PM    <DIR>          iSenseAgent
+10/26/2009  02:00 PM    <DIR>          iXMedia
+10/06/2009  02:17 PM    <DIR>          Tools
+03/04/2009  08:00 PM    <DIR>          Main.DailyBuild
+01/30/2009  02:53 AM    <DIR>          Test
+10/01/2008  02:59 PM    <DIR>          TmpInclude
+              39 File(s)    247,696,112 bytes
+              36 Dir(s)  78,523,494,400 bytes free
+
+
+TFSBuild_Source
+Temp
+WDSWDEVL
+downloader
+Binaries
+TFSBuild_Sources
+RECYCLER
+TFS_Builds
+System Volume Information
+nbase
+nchevron
+BuildDownloads
+iSense
+TARGET
+nmap
+WAYNE
+PowerGUI
+rubish
+sdks
+b
+Nucleus9
+WORK
+NBaseMigration
+WayneDB
+TFS
+0ab7c28d2ce71f5e7b1012
+Security
+NMC
+iSenseTray
+iSenseRestore
+iSenseRemote
+iSenseManager
+iSenseAgent
+iXMedia
+Tools
+Main.DailyBuild
+Test
+TmpInclude

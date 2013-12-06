@@ -40,3 +40,17 @@ HashAndStore --> c:\users\502256043\workspace\batch\fciv.err :
 	Error msg  : The process cannot access the file because it is being used by another process.
 	Error code : 20
 
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\Batch -r -bp C:\Users\502256043\workspace\Batch -xml batchFilesDB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\batch\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+
+********************************************************************************
+Command Line: fciv -add C:\Users\502256043\workspace\Batch -r -sha1 -bp C:\Users\502256043\workspace\Batch -xml batchFilesSha1DB.xml 
+
+HashAndStore --> c:\users\502256043\workspace\batch\fciv.err : 
+	Error msg  : The process cannot access the file because it is being used by another process.
+	Error code : 20
+
