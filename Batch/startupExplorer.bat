@@ -37,9 +37,10 @@ call clearHistory.bat
 call setBuilder.bat
 
 if exist u:\ net use u: /delete
-net use u: "\\tnwp010166.genpitfi01.og.ge.com\Wayne_aus1\groups" /persistent:no
+net use u: "\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL" /persistent:no
 rem net use u: "\\tnwp010166.genpitfi01.og.ge.com\Wayne_aus1\groups\Systems Engineering" /persistent:no
-net use p: "\\austinfs.GENPITFI01.og.ge.com\Pdrive$\Software Development" /persistent:no
+rem if exist p:\ net use p: /delete
+rem net use p: "\\GENPITFI01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL" /persistent:no
 
 if exist x:\ net use x: /delete
 net use x: \\wdswdevl\ntnuc /persistent:no
@@ -61,9 +62,7 @@ start EXPLORER.EXE /e, ::{031E4825-7B94-4dc3-B131-E946B44C8DD5}
 rem My Documents
 start EXPLORER.EXE /N, ::{450D8FBA-AD25-11D0-98A8-0800361B1103}
 
-rem start EXPLORER.EXE /n, x:\
-
-start EXPLORER.EXE /n, "\\austinfs.GENPITFI01.og.ge.com\Software Development"
+start EXPLORER.EXE /n, u:\
 
 REM start EXPLORER.EXE /n, y:\
 
