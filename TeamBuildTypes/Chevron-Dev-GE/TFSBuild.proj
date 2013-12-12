@@ -88,7 +88,8 @@
      definition is now stored in the database. For compatibility with V1 clients, keep this property 
      in sync with the value in the database.
     -->
-    <DropLocation>\\tnwp011355.genpitfi01.og.ge.com\TFS_BuildOutPuts\ChvrnDvGe</DropLocation>
+    <ProjectFamily>ChvrnDvGe</ProjectFamily>
+    <DropLocation>\\tnwp011355.genpitfi01.og.ge.com\TFS_BuildOutPuts\$(ProjectFamily)</DropLocation>
     <!-- TESTING
      Set this flag to enable/disable running tests as a post-compilation build step.
     -->
@@ -329,7 +330,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="Chevron Dev Build: Custom Output Copy In Progress... To Build Server Drop Location">
+      Message="Chevron Dev $(RN_BASE)_$(RN_APPL) Build: Custom Output Copy In Progress... To Build Server Drop Location">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <!-- COPY FILES -->
@@ -377,7 +378,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="Chevron Dev Base TFS Build: Custom Output Copy In Progress ... Base Build Folder">
+      Message="Chevron Dev $(RN_BASE) Base TFS Build: Custom Output Copy In Progress ... Base Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(BaseTrue) (XCOPY &quot;$(TargetDestination)\NBASE\*.*&quot; &quot;$(BaseDropFolderPath)\$(RN_BASE)\*.*&quot; $(XcopyParameter))" />
@@ -390,7 +391,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="Chevron Dev Appl Build: Custom Output Copy In Progress ... Chevron Build Folder">
+      Message="Chevron Dev Appl $(RN_APPL) Build: Custom Output Copy In Progress ... Chevron Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(ApplTrue) (XCOPY &quot;$(EpsReleaseFolderPath)\Redirector\*.*&quot; &quot;$(ChevronTargetFolderPath)\BIN\*.*&quot; $(XcopyParameter))" />
@@ -444,7 +445,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="Chevron Dev TFS Build: Custom Output Step In Progress ... Unregister OCXes ">
+      Message="Chevron Dev $(RN_BASE)_$(RN_APPL) TFS Build: Custom Output Step In Progress ... Unregister OCXes ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\nchevron&quot;)" />
@@ -467,14 +468,14 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="Chevron Dev TFS Build: Custom Output Step In Progress ... Unregister OCXes ">
+      Message="Chevron Dev $(RN_BASE)_$(RN_APPL) TFS Build: Custom Output Step In Progress ... Unregister OCXes ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\nchevron&quot;)" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="Chevron Dev TFS Build: Unregister OCXes Failed!!!"
+      Message="Chevron Dev $(RN_BASE)_$(RN_APPL) TFS Build: Unregister OCXes Failed!!!"
       Id="$(StepId)"
       Status="Failed" />
   </Target>

@@ -285,7 +285,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Drop Location">
+      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Drop Location">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <!-- COPY FILES -->
@@ -333,7 +333,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Base Build Folder">
+      Message="$(RN_BASE) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Base Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(BaseTrue) (XCOPY &quot;$(TargetDestination)\NBASE\*.*&quot; &quot;$(BaseBuildFolderPath)\$(RN_BASE)\*.*&quot; $(XcopyParameter))" />
@@ -347,7 +347,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Application Build Folder">
+      Message="$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Application Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(ApplTrue) (XCOPY &quot;$(TargetDestination)\NGP\*.*&quot; &quot;$(ApplBuildFolderPath)\$(RN_APPL)\*.*&quot; $(XcopyParameter))" />
@@ -376,7 +376,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
+      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\NGP&quot; &quot;$(SolutionRoot)\NBASE&quot;)" />
@@ -399,14 +399,14 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
+      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\NGP&quot; &quot;$(SolutionRoot)\NBASE&quot;)" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT COPY FAILED."
+      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY FAILED."
       Id="$(StepId)"
       Status="Failed" />
   </Target>

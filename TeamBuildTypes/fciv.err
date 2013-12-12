@@ -1,7 +1,0 @@
-********************************************************************************
-Command Line: fciv -add C:\Users\502256043\workspace\TeamBuildTypes -r -bp C:\Users\502256043\workspace\TeamBuildTypes -xml buildFilesDB.xml 
-
-HashAndStore --> c:\users\502256043\workspace\teambuildtypes\fciv.err : 
-	Error msg  : The process cannot access the file because it is being used by another process.
-	Error code : 20
-
