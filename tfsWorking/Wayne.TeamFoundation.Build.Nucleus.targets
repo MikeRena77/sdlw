@@ -61,6 +61,7 @@
                 BuildNumber="$(BuildNumber)" 
                 DropLocation="$(DropLocation)\$(BuildNumber)"/>
         <PropertyGroup>
+            <LabelName Condition=" '$(RN_BASE)'=='' ">$(BuildNumber)</LabelName>
             <LabelName Condition=" '$(RN_BASE)'!='' ">$(RN_BASE)_$(RN_APPL)</LabelName>
         </PropertyGroup>
     </Target>

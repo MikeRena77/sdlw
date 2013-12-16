@@ -1,0 +1,9 @@
+C:\Users\502256043\workspace\vb\Reverb\obj\Debug\Reverb.pdb
+C:\Users\502256043\workspace\vb\Reverb\bin\Reverb.exe
+C:\Users\502256043\workspace\vb\Reverb\bin\Reverb.pdb
+C:\Users\502256043\workspace\vb\Reverb\bin\Reverb.xml
+C:\Users\502256043\workspace\vb\Reverb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\502256043\workspace\vb\Reverb\obj\Debug\Reverb.frmMain.resources
+C:\Users\502256043\workspace\vb\Reverb\obj\Debug\Reverb.vbproj.GenerateResource.Cache
+C:\Users\502256043\workspace\vb\Reverb\obj\Debug\Reverb.exe
+C:\Users\502256043\workspace\vb\Reverb\obj\Debug\Reverb.xml

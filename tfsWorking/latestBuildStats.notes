@@ -1,0 +1,67 @@
+ Volume in drive Y is Local Disk
+ Volume Serial Number is 54F5-F954
+
+ Directory of Y:\Nucleus
+
+12/11/2013  12:57 PM    <DIR>          .
+12/11/2013  12:57 PM    <DIR>          ..
+12/07/2013  02:24 AM    <DIR>          Chevron-Dev
+12/09/2013  04:47 PM    <DIR>          Chevron-Dev-GE
+12/07/2013  02:39 AM    <DIR>          Chevron-Release
+12/07/2013  02:52 AM    <DIR>          Dev-Heartland-600
+12/07/2013  03:02 AM    <DIR>          FD0800_Dev
+12/10/2013  11:55 AM    <DIR>          genbase_dev_unittest
+12/07/2013  03:13 AM    <DIR>          GenPOS_Fullup_ATX
+12/10/2013  10:48 AM    <DIR>          GenPOS_Fullup_ATX_GE
+12/07/2013  03:23 AM    <DIR>          GenPOS_Fullup_OP1
+12/09/2013  11:24 AM    <DIR>          GenPOS_Fullup_OP1_GE
+12/07/2013  03:33 AM    <DIR>          GenPOS_Fullup_OP2
+12/11/2013  12:01 PM    <DIR>          GenPOS_Fullup_OP2_GE
+12/07/2013  03:44 AM    <DIR>          GenPOS_Fullup_SH
+12/11/2013  12:58 PM    <DIR>          GenPOS_Fullup_SH_GE
+12/07/2013  03:55 AM    <DIR>          GenPOS_Main
+12/10/2013  01:36 PM    <DIR>          GenPOS_Main_GE
+12/07/2013  04:05 AM    <DIR>          GenPOS_NucLite
+12/11/2013  01:58 PM    <DIR>          GenPOS_NucLite_GE
+12/07/2013  04:17 AM    <DIR>          GenPOS_NucLite_LPR1
+12/11/2013  10:29 AM    <DIR>          GenPOS_NucLite_LPR1_GE
+               0 File(s)              0 bytes
+              21 Dir(s)  35,031,465,984 bytes free
+
+              
+Chevron-Dev-GE
+    N2270AD 10 Dec 2013 4:00pm SmartHeap_production
+    CH0804AD 10 Dec 2013 4:00pm SmartHeap_production BASE=N2270AD
+    107865	edit	CORP\rahina.fernandes	12/10/2013 3:57:58 AM	Check-in for Build CH0804AD BASE=N2270AD EPS 3730
+    /P:RN_BASE=N2270AD;RN_APPL=CH0804AD;EPS=TRUE;S1=3;S2=7;S3=3;S4=0
+genbase_dev_unittest
+    N2400AS 12 July 2013 10:00am SmartHeap_production
+    /P:RN_BASE=N2400AS
+    /P:RN_BASE=N2400AS;ForceGet=True
+    /P:RN_BASE=N2400AS;RunTest=True
+GenPOS_Fullup_ATX_GE
+    GP2480I 06 Dec 2013 02:00pm SmartHeap_production BASE=N2480I
+    /P:RN_BASE=N2480I;RN_APPL=GP2480I
+GenPOS_Fullup_OP1_GE
+    GP2450M 06 Dec 2013 06:00pm SmartHeap_production BASE=N2450M
+    /P:RN_BASE=N2450M;RN_APPL=GP2450M
+GenPOS_Fullup_OP2_GE
+    GP2460I 02 December 2013 02:00pm SmartHeap_production BASE=N2460I
+    /P:RN_BASE=N2460I;RN_APPL=GP2460I
+GenPOS_Fullup_SH_GE
+    GP2470I 25 Nov 2013 10:28am SmartHeap_production BASE=N2470I
+    /P:RN_BASE=N2470I;RN_APPL=GP2470I
+GenPOS_Main_GE
+    GP2500E 06 December 2013 02:00pm SmartHeap_production BASE=N2500E
+    /P:RN_BASE=N2500E;RN_APPL=GP2500E
+GenPOS_NucLite_GE
+    GP2400BB 29 October 2013 02:00pm SmartHeap_production BASE=N2400BB
+    /P:RN_BASE=N2400BB;RN_APPL=GP2400BB
+GenPOS_NucLite_LPR1_GE
+    N2400AW 3 September 2013 02:00pm SmartHeap_production
+    /P:RN_BASE=N2400AW;RN_APPL=GP2400AW
+    
+    
+    *DRE-AUS1-NPD Process-*DRE-AUS1-Systems Engi
+    *DRE-AUS-WDSWDEVL Grou*OneAD_OGUsers
+    *DRE-AUS1-Systems Engi*Domain Users

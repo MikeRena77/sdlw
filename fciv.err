@@ -13,3 +13,39 @@ Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml 
 ********************************************************************************
 Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\workspace -xml tfsFilesDB.xml 
 
+********************************************************************************
+Command Line: fciv -add cm -r -exc .git -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add cm -r -exc cm\.git -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add Batch -r -bp C:\Users\502256043\workspace -xml batchFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\workspace -xml perlFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml teamFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\workspace -xml perlFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add research -r -bp C:\Users\502256043\workspace -xml researchFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml teamFilesDB.xml 
+
+********************************************************************************
+Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\workspace -xml tfsFilesDB.xml 
+

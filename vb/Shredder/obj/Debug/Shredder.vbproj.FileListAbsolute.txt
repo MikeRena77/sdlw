@@ -1,0 +1,7 @@
+C:\Users\502256043\workspace\vb\Shredder\obj\Debug\Shredder.vbproj.ResolveComReference.cache
+C:\Users\502256043\workspace\vb\Shredder\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\502256043\workspace\vb\Shredder\obj\Debug\Shredder.frmAbout.resources
+C:\Users\502256043\workspace\vb\Shredder\obj\Debug\Shredder.frmMain.resources
+C:\Users\502256043\workspace\vb\Shredder\obj\Debug\Shredder.frmOptions.resources
+C:\Users\502256043\workspace\vb\Shredder\obj\Debug\Shredder.frmMain.af.resources
+C:\Users\502256043\workspace\vb\Shredder\obj\Debug\Shredder.vbproj.GenerateResource.Cache

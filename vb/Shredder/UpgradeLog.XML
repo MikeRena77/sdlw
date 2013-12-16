@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Shredder">
+</Property><Property Name="Solution File" Value="C:\Users\502256043\workspace\vb\Shredder\Shredder.sln">
+</Property><Property Name="Date" Value="Monday, December 16, 2013">
+</Property><Property Name="Time" Value="15:43 PM">
+</Property></Properties><Event ErrorLevel="0" Project="Shredder" Source="Shredder.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Shredder" Source="Shredder.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Shredder.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Shredder.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Shredder" Source="Shredder.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
