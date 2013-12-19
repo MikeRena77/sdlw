@@ -28,12 +28,33 @@
                0 File(s)              0 bytes
               21 Dir(s)  35,031,465,984 bytes free
 
+Correction necessary due to change in the path for the file share - embedded space replaced with underscore (Software Development => Software_Development)
+Michael H Andrews
+Continued work on migration of build server to GE Domain
+
+Working with Wayne Energy on migration to the GE Domain
+Added a new GE Domain build definition for Chevron-Main-GE incorporating changes required for the migration
+Added a new GE Domain build definition for Chevron-Release-GE incorporating changes required for the migration
+Added a new GE Domain build definition for Dev-Heartland-600-GE incorporating changes required for the migration
+
               
 Chevron-Dev-GE
     N2270AD 10 Dec 2013 4:00pm SmartHeap_production
     CH0804AD 10 Dec 2013 4:00pm SmartHeap_production BASE=N2270AD
     107865	edit	CORP\rahina.fernandes	12/10/2013 3:57:58 AM	Check-in for Build CH0804AD BASE=N2270AD EPS 3730
     /P:RN_BASE=N2270AD;RN_APPL=CH0804AD;EPS=TRUE;S1=3;S2=7;S3=3;S4=0
+Chevron-Main-GE
+    CH0802BD 31 May 2013 10:30am SmartHeap_production BASE=N2260BD
+    97858	merge, edit	CORP\David.Gindler	6/5/2013 11:00:20 AM	Reverse Merge of Application Changes made in 8.02BC and 8.02BD
+    /P:RN_BASE=N2260BD;RN_APPL=CH0802BD;EPS=TRUE;S1=3;S2=6;S3=0;S4=5
+Chevron-Release-GE
+    CH0802BD 31 May 2013 10:30am SmartHeap_production BASE=N2260BD
+    97478	edit	CORP\svc-TFSbuild.aus	5/30/2013 9:05:34 PM	Update Chevron-Release version info for beta refresh versioning ( just bumping revision numbers ).   802BD, 2260BD, 3605...
+    /P:RN_BASE=N2260BD;RN_APPL=CH0802BD;EPS=TRUE;S1=3;S2=6;S3=0;S4=5
+Dev-Heartland-600-GE
+    HPS0600AI 16 Dec 2013 07:20PM SmartHeap_production BASE=N2300AX
+    108194	edit	CORP\sanjay.kaledhonkar	12/16/2013 7:50:24 AM	RELEASE N2300AX HP0600AI
+    /P:RN_BASE=N2300AX;RN_APPL=HP0600AI
 genbase_dev_unittest
     N2400AS 12 July 2013 10:00am SmartHeap_production
     /P:RN_BASE=N2400AS

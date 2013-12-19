@@ -2,15 +2,15 @@
 '               clsURLHistItem
 
 Option Explicit On 
-Imports Shredder.UrlHist
+Imports Shredder.UrlHistory
 
 Public Class clsHistory
 
     Private _History As urlHistory
     Private _URLs As Collection
 
-    Public Function Clear() As 
-        _History = New urlHistory
+    Public Function Clear()
+        _History = New UrlHistory
         _History.ClearHistory()
         RefreshHistory()
     End Function

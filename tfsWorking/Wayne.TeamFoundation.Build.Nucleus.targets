@@ -50,8 +50,8 @@
          and grant the service account full rights on it. -->    
 
         <PropertyGroup>
-            <REGCORRECT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\regcorrect.reg&quot;</REGCORRECT>
-            <REGIMP>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\regimport.bat&quot;</REGIMP>
+            <REGCORRECT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\regcorrect.reg&quot;</REGCORRECT>
+            <REGIMP>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\regimport.bat&quot;</REGIMP>
         </PropertyGroup>
         <Exec Command="$(REGIMP) $(REGCORRECT) $(ProjectFamily)" />
 

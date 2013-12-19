@@ -1,0 +1,10 @@
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\obj\Debug\getKeyInfo.vbproj.ResolveComReference.cache
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\obj\Debug\getKeyInfo.vbproj.GenerateResource.Cache
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\bin\getKeyInfo.exe
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\bin\getKeyInfo.pdb
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\bin\getKeyInfo.xml
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\obj\Debug\getKeyInfo.Form1.resources
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\obj\Debug\getKeyInfo.exe
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\obj\Debug\getKeyInfo.xml
+C:\Users\502256043\workspace\vb\getKeyInfo\getKeyInfo.NET\obj\Debug\getKeyInfo.pdb

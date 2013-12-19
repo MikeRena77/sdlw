@@ -1,7 +1,7 @@
 ' Requirements: UrlHist interface library
 
 Option Explicit On 
-Imports Shredder.UrlHist
+Imports Shredder.UrlHistory
 
 Public Class clsURLHistItem
     Private _MyStat As STATURL

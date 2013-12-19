@@ -37,7 +37,7 @@ call clearHistory.bat
 call setBuilder.bat
 
 if exist u:\ net use u: /delete
-net use u: "\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL" /persistent:no
+net use u: "\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL" /persistent:no
 rem net use u: "\\tnwp010166.genpitfi01.og.ge.com\Wayne_aus1\groups\Systems Engineering" /persistent:no
 rem if exist p:\ net use p: /delete
 rem net use p: "\\GENPITFI01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL" /persistent:no

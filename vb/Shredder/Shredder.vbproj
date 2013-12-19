@@ -150,6 +150,8 @@
     <Compile Include="Classes\clsURLHistItem.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\IEnumSTATURL.vb" />
+    <Compile Include="Classes\STATURL.vb" />
     <Compile Include="Forms\frmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -162,7 +164,7 @@
     <Compile Include="Modules\modGeneral.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\urlList.vb" />
+    <Compile Include="Classes\urlHistory.vb" />
     <Content Include="bomb.ico" />
     <EmbeddedResource Include="Fire.ico" />
     <EmbeddedResource Include="Forms\frmAbout.resx">
@@ -177,9 +179,6 @@
     <EmbeddedResource Include="Forms\frmOptions.resx">
       <DependentUpon>frmOptions.vb</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -197,6 +196,9 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
