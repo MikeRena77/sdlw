@@ -13,6 +13,7 @@ rem -     by Michael Andrews (MHA)
 rem -     
 rem - Version    Date        by   Change Description
 rem -   1.0      11/04/2013  MHA  Setting environment variables - script finally getting headerized
+rem -   1.1      12/19/2013  MHA  Do a dir on the WDSWDEVL and better identify START
 rem  ------------------------------------------------------------------------------------------------------------
 rem  
 IF [%1]==[] GOTO missingparam
@@ -23,7 +24,7 @@ echo %TESTTILDE%
 IF DEFINED TEST GOTO END
 :missingparam
 echo ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-echo "START! You are now running setBuilder.bat"
+echo "START! Reminder: You are now running setBuilder.bat"
 set JRE_HOME=
 set JRE_HOME=C:\bin\Java\jdk1.7.0_45\jre
 set PATH=
@@ -36,7 +37,7 @@ set VDISK=c:\VDISK
 IF NOT EXIST e: subst e: c:\temp\e
 :END
 
-dir "\\GENPITFI01.og.ge.com\Wayne_aus1\groups"
+dir "\\GENPITFI01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL"
 echo "If any errors were encountered since this job's START, they belong to setBuilder.bat"
 echo "Ending setBuilder.bat"
 echo ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

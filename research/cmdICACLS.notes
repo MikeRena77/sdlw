@@ -133,3 +133,8 @@ Examples:
         icacls file /grant *S-1-1-0:(D,WDAC)
         - Will grant the user defined by sid S-1-1-0 Delete and
           Write DAC permissions to file.
+
+          
+          
+dsacls WDSWDEVL 
+rem dsacls object [/a] [/d {user | group}:permissions [...]] [/g {user | group}:permissions [...]] [/i:{p | s | t}] [/n] [/p:{y | n}] [/r {user | group} [...]] [/s [/t]] 

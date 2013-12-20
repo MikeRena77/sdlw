@@ -1,0 +1,11 @@
+C:\Users\502256043\workspace\vb\Dots\VB\bin\Release\Game.exe
+C:\Users\502256043\workspace\vb\Dots\VB\bin\Release\Game.pdb
+C:\Users\502256043\workspace\vb\Dots\VB\bin\Release\Game.xml
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\ResolveAssemblyReference.cache
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\Game.MainForm.resources
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\Game.Resources.resources
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\Game.Options.resources
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\Game.vbproj.GenerateResource.Cache
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\Game.exe
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\Game.xml
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Release\Game.pdb

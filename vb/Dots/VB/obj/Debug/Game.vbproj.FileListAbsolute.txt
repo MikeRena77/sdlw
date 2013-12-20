@@ -1,0 +1,22 @@
+C:\Users\502256043\workspace\temp\Game Sample\VB\bin\Debug\Game.exe
+C:\Users\502256043\workspace\temp\Game Sample\VB\bin\Debug\Game.pdb
+C:\Users\502256043\workspace\temp\Game Sample\VB\bin\Debug\Game.xml
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\Game.MainForm.resources
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\Game.Resources.resources
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\Game.Options.resources
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\Game.vbproj.GenerateResource.Cache
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\Game.exe
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\Game.xml
+C:\Users\502256043\workspace\temp\Game Sample\VB\obj\Debug\Game.pdb
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\Game.exe
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\Game.xml
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\Game.pdb
+C:\Users\502256043\workspace\vb\Dots\VB\bin\Debug\Game.exe
+C:\Users\502256043\workspace\vb\Dots\VB\bin\Debug\Game.pdb
+C:\Users\502256043\workspace\vb\Dots\VB\bin\Debug\Game.xml
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\Game.MainForm.resources
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\Game.Resources.resources
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\Game.Options.resources
+C:\Users\502256043\workspace\vb\Dots\VB\obj\Debug\Game.vbproj.GenerateResource.Cache

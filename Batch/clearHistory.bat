@@ -16,6 +16,7 @@ rem -   1.0      10/25/2013  MHA  Clean Temp directories
 rem -   1.1      12/04/2013  MHA  Changed log file variable for disambiguation with additional notifications
 rem  ------------------------------------------------------------------------------------------------------------
 rem  
+@echo off
 for /f "tokens=1,2,3 delims=: " %%a in ("%time%") do set hour=%%a&set minute=%%b&set second=%%c
 set HLOG="C:\Users\502256043\Documents\working\logs\clearHistory%date:~4,2%_%date:~7,2%_%date:~10,4%_%hour%_%minute%.log"
 

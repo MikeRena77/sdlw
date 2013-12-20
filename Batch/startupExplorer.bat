@@ -21,6 +21,7 @@ rem -   3.3     10/25/2013  MHA  Completely revamped for the GE, Wayne Energy en
 rem -   3.4     11/18/2013  MHA  Added a new drive mapping for the new file share currently being set up
 rem -   3.5     11/26/2013  MHA  Made setBuilder.bat a part of the initialization routine
 rem -   3.6     12/04/2013  MHA  Changed log file variable for disambiguation
+rem -   3.7     12/19/2013  MHA  Cleaned up some net use pointing to now defunct shares; do a cd to workspace
 rem  ------------------------------------------------------------------------------------------------------------
 rem  
 for /f "tokens=1,2,3 delims=: " %%a in ("%time%") do set hour=%%a&set minute=%%b&set second=%%c
@@ -38,9 +39,8 @@ call setBuilder.bat
 
 if exist u:\ net use u: /delete
 net use u: "\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL" /persistent:no
-rem net use u: "\\tnwp010166.genpitfi01.og.ge.com\Wayne_aus1\groups\Systems Engineering" /persistent:no
+
 rem if exist p:\ net use p: /delete
-rem net use p: "\\GENPITFI01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL" /persistent:no
 
 if exist x:\ net use x: /delete
 net use x: \\wdswdevl\ntnuc /persistent:no
@@ -70,7 +70,7 @@ REM start EXPLORER.EXE /n, z:\
 
 title Window available for reuse
 
-cd %USERPROFILE%
+cd %USERPROFILE%\workspace
 cd  >> %ELOG%
 echo StartUp Finished >> %ELOG%
 date /t  >> %ELOG%

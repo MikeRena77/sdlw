@@ -1,0 +1,148 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Game
+</name>
+</assembly>
+<members>
+<member name="M:Game.Grid.#ctor(System.Int32)">
+	<summary>
+ Creates a few rows of blocks to start the game. Game starts with Red, Blue, and Green blocks.
+ </summary>
+	<param name="nrows">Number of rows of blocks to create to start the game.</param>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.AddRow">
+	<summary>
+ A new row may be added at any time. New rows have Gray blocks in addition
+ to Red, Blue, and Green. This makes the game more difficult.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.Draw(System.Drawing.Graphics,System.Drawing.Color)">
+	<summary>
+ Draw the grid of blocks
+ </summary>
+	<param name="graphics"></param>
+	<param name="backColor"></param>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.Click(System.Drawing.Point)">
+	<summary>
+ This method responds to a click event in the UI.
+ </summary>
+	<param name="point"></param>
+	<returns>The number of blocks removed from the grid.</returns>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.CalculateScore">
+	<summary>
+ Find out how many blocks will be eliminated.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.CollapseColumns">
+	<summary>
+ After the blocks are removed from the columns, there may be
+ columns that are empty. Move columns from right to left to
+ fill in the empty columns.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.CollapseBlocks">
+	<summary>
+ Remove all the blocks from the grid.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Game.Grid.Item(System.Int32,System.Int32)">
+	<summary>
+ Provides access into the grid.
+ </summary>
+	<param name="row"></param>
+	<param name="column"></param>
+	<value></value>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.FindSameColorNeighbors(System.Int32,System.Int32)">
+	<summary>
+ Set MarkedForDeletion to True for each neighboring block
+ of the same color.
+ </summary>
+	<param name="row"></param>
+	<param name="column"></param>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.FindNeighbors">
+	<summary>
+ Look to the blocks on each side.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Game.Grid.ExamineNeighbor(Game.Block,System.Int32,System.Int32,System.Drawing.Color)">
+	<summary>
+ If the neighbor is the same color, add it to the blocks
+ to examine.
+ </summary>
+	<param name="selected"></param>
+	<param name="row"></param>
+	<param name="column"></param>
+	<param name="color"></param>
+	<remarks></remarks>
+</member><member name="T:Game.Grid">
+	<summary>
+ This class represents the grid of blocks. It handles most of the game play.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Game.PointTranslator">
+	<summary>
+ Form coordinates have the top, left as (0,0). For the game grid,
+ it is easier to have the bottom left of the grid as (0,0). This
+ translates the points.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Game.HighScores.GetHighScores">
+	<summary>
+ Read scores from the registry.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Game.HighScores.UpdateScores(System.Int32)">
+	<summary>
+ Update and write the high scores.
+ </summary>
+	<param name="score"></param>
+	<remarks></remarks>
+</member><member name="M:Game.HighScores.SetUpHighScores">
+	<summary>
+ Set up the entries for new scores.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Game.HighScores.ResetScores">
+	<summary>
+ Reset scores.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Game.HighScores">
+	<summary>
+ Reads and writes the top three high scores to the registry.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Game.Block">
+	<summary>
+ This class represents one of the balls in the game grid.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Game.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Game.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Game.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Game.HighScore">
+	<summary>
+ Represents one high score.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
