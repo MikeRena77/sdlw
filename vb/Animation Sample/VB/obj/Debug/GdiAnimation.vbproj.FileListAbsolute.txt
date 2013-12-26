@@ -1,0 +1,10 @@
+C:\Users\502256043\workspace\vb\Animation Sample\VB\bin\Debug\GdiAnimation.exe
+C:\Users\502256043\workspace\vb\Animation Sample\VB\bin\Debug\GdiAnimation.pdb
+C:\Users\502256043\workspace\vb\Animation Sample\VB\bin\Debug\GdiAnimation.xml
+C:\Users\502256043\workspace\vb\Animation Sample\VB\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\502256043\workspace\vb\Animation Sample\VB\obj\Debug\GdiAnimation.MainForm.resources
+C:\Users\502256043\workspace\vb\Animation Sample\VB\obj\Debug\GdiAnimation.Resources.resources
+C:\Users\502256043\workspace\vb\Animation Sample\VB\obj\Debug\GdiAnimation.vbproj.GenerateResource.Cache
+C:\Users\502256043\workspace\vb\Animation Sample\VB\obj\Debug\GdiAnimation.exe
+C:\Users\502256043\workspace\vb\Animation Sample\VB\obj\Debug\GdiAnimation.xml
+C:\Users\502256043\workspace\vb\Animation Sample\VB\obj\Debug\GdiAnimation.pdb

@@ -67,9 +67,11 @@ FD0800_Dev_GE
     /P:RN_BASE=N2310I;RN_APPL=FD0800I
 genbase_dev_unittest
     N2400AS 12 July 2013 10:00am SmartHeap_production
+  RUN THESE PARAMETERS ON THE FIRST BUILD
+    /P:RN_BASE=N2400AS;SkipClean=False;SkipInitializeWorkspace=False;ForceGet=True;RunTest=True
+  RUN THESE PARAMETERS ON SUBSEQUENT BUILDS IN ORDER TO BUILD UPON THE PREVIOUS SUCCESSFUL BUILDS
     /P:RN_BASE=N2400AS
-    /P:RN_BASE=N2400AS;ForceGet=True
-    /P:RN_BASE=N2400AS;RunTest=True
+    /P:RN_BASE=N2400AS;RunTest=True;SkipClean=False /t:Rebuild
 GenPOS_Fullup_ATX_GE
     GP2480I 06 Dec 2013 02:00pm SmartHeap_production BASE=N2480I
     GP2480L 18 Dec 2013 02:00pm SmartHeap_production BASE=N2480L
