@@ -76,7 +76,9 @@ GenPOS_Fullup_ATX_GE
     GP2480I 06 Dec 2013 02:00pm SmartHeap_production BASE=N2480I
     GP2480L 18 Dec 2013 02:00pm SmartHeap_production BASE=N2480L
     108392	edit	CORP\anirudha.ketkar	12/18/2013 10:00:31 AM	GP2480L Release to QA UI related changes in frmloyaltymod and  Host disc postpay related change reverted from comautpo.c...
-    /P:RN_BASE=N2480L;RN_APPL=GP2480L
+    GP2480N 23 Dec 2013 02:00pm SmartHeap_production BASE=N2480N
+    108598	edit	CORP\anirudha.ketkar	12/24/2013 8:35:58 AM	ATX:2480N OUTDOOR PREPAY POSTPAY transactions for local discount
+    /P:RN_BASE=N2480N;RN_APPL=GP2480N
 GenPOS_Fullup_OP1_GE
     GP2450N 16 Dec 2013 06:00pm SmartHeap_production BASE=N2450N
     GP2450M 06 Dec 2013 06:00pm SmartHeap_production BASE=N2450M
@@ -92,7 +94,9 @@ GenPOS_Fullup_SH_GE
     108171	merge, edit	CORP\DING.TAO	12/16/2013 12:39:28 AM	Updated base RELEASE.NUM (N2470M) for GP2470M
     GP2470K 02 December 2013 02:00pm SmartHeap_production BASE=N2470K
     108172	merge	CORP\DING.TAO	12/16/2013 12:40:13 AM	Updated app RELEASE.NUM (GP2470M) for GP2470M
-    /P:RN_BASE=N2470M;RN_APPL=GP2470M
+    N2470M 02 December 2013 02:00pm SmartHeap_production
+    108565	merge	CORP\DING.TAO	12/22/2013 10:14:10 PM	Updated app RELEASE.NUM for GP2470N
+    /P:RN_BASE=N2470M;RN_APPL=GP2470N
 GenPOS_Main_GE
     GP2500E 06 December 2013 02:00pm SmartHeap_production BASE=N2500E
     GP2500F 16 December 2013 02:00pm SmartHeap_production BASE=N2500F

@@ -11,9 +11,9 @@
      Key Data values below are:
 
      <TargetDestination>$(DropLocation)\$(BuildNumber)_Nucleus\TARGET_$(Year)$(Month)$(Day)$(Hour)$(Minute).$(Second)</TargetDestination>
-     <BaseDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntbase\build\test</BaseDropFolderPath>
-     <ChevronDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\nchevron\build\test</ChevronDropFolderPath>
-     <EpsDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\nchevron\build\test</EpsDropFolderPath>
+     <BaseDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test</BaseDropFolderPath>
+     <ChevronDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</ChevronDropFolderPath>
+     <EpsDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</EpsDropFolderPath>
      <ChevronTargetFolderPath>$(TargetDestination)\nchevron\target</ChevronTargetFolderPath>
      <EpsReleaseFolderPath>$(TargetDestination)\EPS\epsApp\Bin\Release</EpsReleaseFolderPath>
      <BaseTrue>&quot;$(RN_Nxxxx)&quot; NEQ &quot;&quot;</BaseTrue>
@@ -292,13 +292,13 @@
     </Time>
     <PropertyGroup>
       <TargetDestination>$(DropLocation)\$(BuildNumber)_Nucleus\TARGET_$(Year)$(Month)$(Day)$(Hour)$(Minute).$(Second)</TargetDestination>
-      <BaseDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntbase\build\test</BaseDropFolderPath>
-      <ChevronDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\nchevron\build\test</ChevronDropFolderPath>
-      <EpsDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\nchevron\build\test</EpsDropFolderPath>
+      <BaseDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test</BaseDropFolderPath>
+      <ChevronDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</ChevronDropFolderPath>
+      <EpsDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</EpsDropFolderPath>
       <ChevronTargetFolderPath>$(TargetDestination)\nchevron\target</ChevronTargetFolderPath>
       <EpsReleaseFolderPath>$(TargetDestination)\EPS\epsApp\Bin\Release</EpsReleaseFolderPath>
-      <PKZIP25>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\pkzip25&quot;</PKZIP25>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
+      <PKZIP25>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\pkzip25&quot;</PKZIP25>
+      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
       <ZipParameter>-ADD -REC -PATH=RELATIVE</ZipParameter>
       <ZipExcludeDatabaseParameter>-ADD -REC -PATH=RELATIVE -EXCL=3party.db -EXCL=3party.zip -EXCL=cnucleus.dat -EXCL=cnucleus.zip -EXCL=jobber.db -EXCL=jobber.zip -EXCL=nucleus.dat -EXCL=nucleus.zip -EXCL=orca.db -EXCL=orca.zip -EXCL=orcacanada.db -EXCL=orcacanada.zip</ZipExcludeDatabaseParameter>
       <XcopyParameter>/S/E/R/D/V/Y</XcopyParameter>
@@ -338,7 +338,7 @@
     <!-- COPY FOLDER - SAVE LOG TO XCOPY_FOLDER.LOG -->
     <!-- 
     ERROR HISTROY:
-    Overwrite \\tnwp011355.genpitfi01.og.ge.com\TFS_BuildOutPuts\Chevron-Dev\Build\Log\BuildLog.htm (Yes/No/All)?
+    Overwrite \\tnwp011355.genpitfi01.og.ge.com\TFS_BuildOutPuts\Chevron-Dev-GE\Build\Log\BuildLog.htm (Yes/No/All)?
     HOW TO FIX IT:
     CHANGE THE PARAMETER OF XCOPY "/T/E" TO "/T/E/R/D/V/Y" TO FIX THIS PROBLEM.  
     -->
@@ -460,7 +460,7 @@
   </Target>
   <Target Name="MarkBuildStepAsFailed">
     <PropertyGroup>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
+      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
       <BaseTrue>&quot;$(RN_BASE)&quot; NEQ &quot;&quot;</BaseTrue>
       <ApplTrue>&quot;$(RN_APPL)&quot; NEQ &quot;&quot;</ApplTrue>
     </PropertyGroup>

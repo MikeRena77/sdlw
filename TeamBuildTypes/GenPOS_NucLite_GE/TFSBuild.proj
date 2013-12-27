@@ -262,11 +262,11 @@
     </Time>
     <PropertyGroup>
       <TargetDestination>$(DropLocation)\$(BuildNumber)_Nucleus\TARGET_$(Year)$(Month)$(Day)$(Hour)$(Minute).$(Second)</TargetDestination>
-      <BaseBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntbase\build\test</BaseBuildFolderPath>
-      <ApplBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\NGP\build\test</ApplBuildFolderPath>
+      <BaseBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test</BaseBuildFolderPath>
+      <ApplBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\NGP\build\test</ApplBuildFolderPath>
       <ApplTargetFolderPath>$(TargetDestination)\NGP\target</ApplTargetFolderPath>
-      <PKZIP25>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\pkzip25&quot;</PKZIP25>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
+      <PKZIP25>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\pkzip25&quot;</PKZIP25>
+      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
       <ZipParameter>-ADD -REC -PATH=RELATIVE</ZipParameter>
       <XcopyParameter>/S/E/R/D/V/Y</XcopyParameter>
       <XcopyFolderParameter>/T/E/R/D/V/Y</XcopyFolderParameter>
@@ -399,7 +399,7 @@
   </Target>
   <Target Name="MarkBuildStepAsFailed">
     <PropertyGroup>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
+      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
       <BaseTrue>&quot;$(RN_BASE)&quot; NEQ &quot;&quot;</BaseTrue>
       <ApplTrue>&quot;$(RN_APPL)&quot; NEQ &quot;&quot;</ApplTrue>
     </PropertyGroup>

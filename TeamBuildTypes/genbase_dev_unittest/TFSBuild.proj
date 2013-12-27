@@ -32,7 +32,11 @@
 
   <PropertyGroup>
 
-    <!--  TEAM PROJECT
+    <SkipClean>true</SkipClean>
+    <SkipInitializeWorkspace>true</SkipInitializeWorkspace>
+    <ForceGet>false</ForceGet>
+
+  <!--  TEAM PROJECT
      This property is included only for backwards compatibility. The team project for a build 
      definition is now stored in the database. For compatibility with V1 clients, keep this property in 
      sync with the value in the database.
@@ -185,9 +189,9 @@
       <FlavorToBuild>Release_UnitTest</FlavorToBuild>
       <PlatformToBuild>Mixed Platforms</PlatformToBuild>
     </ConfigurationToBuild>
-    <ConfigurationToBuild Include="Release|Mixed Platforms">
+    <ConfigurationToBuild Include="Release|Win32">
       <FlavorToBuild>Release</FlavorToBuild>
-      <PlatformToBuild>Mixed Platforms</PlatformToBuild>
+      <PlatformToBuild>Win32</PlatformToBuild>
     </ConfigurationToBuild>
 
   </ItemGroup>

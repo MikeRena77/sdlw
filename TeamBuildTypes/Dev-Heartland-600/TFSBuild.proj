@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- DO NOT EDIT the project element - the ToolsVersion specified here does not prevent the solutions 
      and projects in the SolutionToBuild item group from targeting other versions of the .NET framework. 
      -->
@@ -6,7 +6,6 @@
 
   <!-- Do not edit this -->
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\TeamBuild\Microsoft.TeamFoundation.Build.targets" />
-  <Import Project="c:\target\build\Wayne.TeamFoundation.Build.Nucleus.targets" />
 
   <ProjectExtensions>
 
@@ -18,13 +17,7 @@
      is now stored in the database. For compatibility with V1 clients, keep this property in sync with 
      the value in the database.
     -->
-    <Description>
-      This build definition uses parameters of RN_APPL and RN_BASE for the application and base versions.
-
-      An example would be /P:RN_BASE=N2400AW;RN_APPL=GP2400AW
-
-      These versions would also be applied for the source code label: N2400AW_GP2400AW
-    </Description>
+    <Description></Description>
 
     <!--  BUILD MACHINE
      This property is included only for backwards compatibility. The default machine used for a build 
@@ -32,7 +25,7 @@
      DefaultBuildAgent. For compatibility with V1 clients, keep this property in sync with the value 
      in the database.
     -->
-    <BuildMachine>tnwp011355.genpitfi01.og.ge.com</BuildMachine>
+    <BuildMachine>AUS111VSTFB1</BuildMachine>
 
   </ProjectExtensions>
 
@@ -51,15 +44,14 @@
      DefaultBuildAgent. For compatibility with V1 clients, keep this property in sync with the value 
      in the database.
     -->
-    <BuildDirectoryPath>D:\TFSBuild_Source\Nucleus\GenPOS_NucLite_LPR1_GE\Sources</BuildDirectoryPath>
+    <BuildDirectoryPath>C:\Documents and Settings\Nucleus\Dev-Heartland-600</BuildDirectoryPath>
 
     <!--  DROP LOCATION
      This property is included only for backwards compatibility. The drop location used for a build 
      definition is now stored in the database. For compatibility with V1 clients, keep this property 
      in sync with the value in the database.
     -->
-    <ProjectFamily>GnPs</ProjectFamily>
-    <DropLocation>\\tnwp011355.genpitfi01.og.ge.com\TFS_BuildOutPuts\$(ProjectFamily)</DropLocation>
+    <DropLocation>\\UNKNOWN\TFS_BuildOutPuts</DropLocation>
 
     <!--  TESTING
      Set this flag to enable/disable running tests as a post-compilation build step.
@@ -67,6 +59,7 @@
     <RunTest>false</RunTest>
     <SkipWorkItemCreation>true</SkipWorkItemCreation>
     <CustomizableOutDir>true</CustomizableOutDir>
+    <!-- <SkipDropBuild>true</SkipDropBuild> -->
 
     <!--  CODE ANALYSIS
      Set this property to enable/disable running code analysis. Valid values for this property are 
@@ -162,18 +155,15 @@
              <Properties>Property1=Value1;Property2=Value2</Properties>
          </SolutionToBuild>
     -->
-    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../GenBase/Release/NucLite_LPR1/GPComponents/gpcomponents.sln" Condition="'$(Platform)' == 'Mixed Platforms'">
-      <Targets></Targets>
-      <Properties></Properties>
+    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../Dev/Base/N2300/nbase.sln">
+        <Targets></Targets>
+        <Properties></Properties>
     </SolutionToBuild>
-    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../GenBase/Release/NucLite_LPR1/nbase.sln" Condition="'$(Platform)' == 'Mixed Platforms'">
-      <Targets></Targets>
-      <Properties></Properties>
+    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../Dev/Heartland/600/nmarathon.sln">
+        <Targets></Targets>
+        <Properties></Properties>
     </SolutionToBuild>
-    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../GenPOS/Release/NucLite_LPR1/ngp.sln" Condition="'$(Platform)' == 'WIN32'">
-      <Targets></Targets>
-      <Properties></Properties>
-    </SolutionToBuild>
+
   </ItemGroup>
 
   <ItemGroup>
@@ -185,16 +175,18 @@
              <FlavorToBuild>Debug</FlavorToBuild>
              <PlatformToBuild>x86</PlatformToBuild>
          </ConfigurationToBuild>
+
      The Include attribute value should be unique for each ConfigurationToBuild node.
     -->
-    <ConfigurationToBuild Include="Release|Mixed Platforms">
-      <FlavorToBuild>Release</FlavorToBuild>
-      <PlatformToBuild>Mixed Platforms</PlatformToBuild>
-    </ConfigurationToBuild>
     <ConfigurationToBuild Include="Release|Win32">
-      <FlavorToBuild>Release</FlavorToBuild>
-      <PlatformToBuild>Win32</PlatformToBuild>
+        <FlavorToBuild>Release</FlavorToBuild>
+        <PlatformToBuild>Win32</PlatformToBuild>
     </ConfigurationToBuild>
+    <ConfigurationToBuild Include="Release|Any CPU">
+        <FlavorToBuild>Release</FlavorToBuild>
+        <PlatformToBuild>Any CPU</PlatformToBuild>
+    </ConfigurationToBuild>
+
   </ItemGroup>
 
   <ItemGroup>
@@ -215,8 +207,10 @@
         <TestContainer Include="$(OutDir)\HelloWorldTests.dll" />
         <TestContainer Include="$(SolutionRoot)\TestProject\WebTest1.webtest" />
         <TestContainer Include="$(SolutionRoot)\TestProject\LoadTest1.loadtest" />
+
      Use %2a instead of * and %3f instead of ? to prevent expansion before test assemblies are built
     -->
+
   </ItemGroup>
 
   <PropertyGroup>
@@ -224,8 +218,10 @@
      If the RunTest property is set to true, then particular tests within a
      metadata file or test container may be specified here.  This is
      equivalent to the /test switch on mstest.exe.
+
      <TestNames>BVT;HighPriority</TestNames>
     -->
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -254,11 +250,11 @@
     </Time>
     <PropertyGroup>
       <TargetDestination>$(DropLocation)\$(BuildNumber)_Nucleus\TARGET_$(Year)$(Month)$(Day)$(Hour)$(Minute).$(Second)</TargetDestination>
-      <BaseBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test</BaseBuildFolderPath>
-      <ApplBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\NGP\build\test</ApplBuildFolderPath>
-      <ApplTargetFolderPath>$(TargetDestination)\NGP\target</ApplTargetFolderPath>
-      <PKZIP25>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\pkzip25&quot;</PKZIP25>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
+      <BaseBuildFolderPath>\\wdswdevl\ntbase\build\test</BaseBuildFolderPath>
+      <ApplBuildFolderPath>\\wdswdevl\nmap\build\test</ApplBuildFolderPath>
+      <ApplTargetFolderPath>$(TargetDestination)\Nmap\target</ApplTargetFolderPath>
+      <PKZIP25>&quot;\\wdswdevl\ntnuc\cm\pkzip25&quot;</PKZIP25>
+      <UNREGBAT>&quot;\\wdswdevl\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
       <ZipParameter>-ADD -REC -PATH=RELATIVE</ZipParameter>
       <XcopyParameter>/S/E/R/D/V/Y</XcopyParameter>
       <XcopyFolderParameter>/T/E/R/D/V/Y</XcopyFolderParameter>
@@ -279,13 +275,13 @@
     <WebDownload FileUri="$(BuildDownloadBaseUri)@(BuildLogUriId)" FileName="$(BuildLogFile)" UseDefaultCredentials="True" />
     <Exec Command="&quot;$(MSBuildExtensionsPath)\msxsl.exe&quot; &quot;$(BuildLogFile)&quot; &quot;$(ReleaseNotesXslFile)&quot; -o &quot;$(ReleaseNotesOutputFile)&quot;" />
     <ItemGroup>
-      <TargetSource Include="$(SolutionRoot)\**\*" Exclude="$(SolutionRoot)\Win32Release.txt;$(SolutionRoot)\**\Release.txt;$(SolutionRoot)\NBASE\Win32Release.txt;$(SolutionRoot)\NGP\Win32Release.txt;$(SolutionRoot)\nbase\COMMON\TransactionService\Mixed PlatformsRelease.txt;$(SolutionRoot)\nbase\Mixed PlatformsRelease.txt;$(SolutionRoot)\nbase\gpcomponents\gpCmnWayneUtilities\Mixed PlatformsRelease.txt"/>
+      <TargetSource Include="$(SolutionRoot)\**\*" Exclude="$(SolutionRoot)\Win32Release.txt;$(SolutionRoot)\**\Release.txt;$(SolutionRoot)\NBASE\Win32Release.txt;$(SolutionRoot)\Nmap\Win32Release.txt"/>
     </ItemGroup>
-
+ 
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Drop Location">
+      Message="Heartland 6.00 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Drop Location">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <!-- COPY FILES -->
@@ -293,7 +289,7 @@
     <!-- COPY FOLDER - SAVE LOG TO XCOPY_FOLDER.LOG -->
     <!-- 
     ERROR HISTROY:
-    Overwrite \\AUS111VSTFB1\TFS_BuildOutPuts\Dev-Chevron-CH0800_20110305.2_Nucleus\TARGET_201135316.42\CH0800\BuildLog.htm (Yes/No/All)?
+    Overwrite \\AUS111VSTFB1\TFS_BuildOutPuts\Dev-Heartland-600_20110305.2_Nucleus\TARGET_201135316.42\nmap\BuildLog.htm (Yes/No/All)?
     HOW TO FIX IT:
     CHANGE THE PARAMETER OF XCOPY "/T/E" TO "/T/E/R/D/V/Y" TO FIX THIS PROBLEM.  
     -->
@@ -311,11 +307,11 @@
     1. BUILDING SEQUENCE CHANGED. 
     2. OPEN AND BUILD SOLUTION IN SOURCE FOLDER MANUALLY, FILE BEING USED BY ANOTHER PROCESS, LOGOFF COMPUTER(BUILD MACHINE) TO FIX THIS PROBLEM. 
     ERROR HISTORY:
-    D:\TFSBuild_Source\Nucleus\Dev-Chevron-CH0800\BuildType\TFSBuild.proj(278,5): 
+    D:\TFSBuild_Source\Nucleus\Dev-Heartland-600\BuildType\TFSBuild.proj(278,5): 
     error MSB3021: 
-    Unable to copy file "D:\TFSBuild_Source\Nucleus\Dev-Chevron-CH0800\Sources\Dev\EPS\EPS0350\Win32Release.txt" 
-    to "\\AUS111VSTFB1\TFS_BuildOutPuts\Dev-Chevron-CH0800_20110304.10_Nucleus\TARGET_2011341139.0\Dev\EPS\EPS0350\Win32Release.txt". 
-    The process cannot access the file 'D:\TFSBuild_Source\Nucleus\Dev-Chevron-CH0800\Sources\Dev\EPS\EPS0350\Win32Release.txt' 
+    Unable to copy file "D:\TFSBuild_Source\Nucleus\Dev-Heartland-600\Sources\NBASE\Win32Release.txt" 
+    to "\\AUS111VSTFB1\TFS_BuildOutPuts\Dev-Heartland-600\Win32Release.txt". 
+    The process cannot access the file 'D:\TFSBuild_Source\Nucleus\Dev-Heartland-600\Sources\Win32Release.txt' 
     because it is being used by another process. 
     HOW TO FIX IT:
     LOGOFF BUILD MACHINE TO KILL RELATED PROCESS.
@@ -333,7 +329,7 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Base Build Folder">
+      Message="Heartland 6.00 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Base Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
     <Exec Command="IF $(BaseTrue) (XCOPY &quot;$(TargetDestination)\NBASE\*.*&quot; &quot;$(BaseBuildFolderPath)\$(RN_BASE)\*.*&quot; $(XcopyParameter))" />
@@ -342,15 +338,15 @@
       BuildUri="$(BuildUri)"
       Id="$(StepId)"
       Status="Succeeded" />
-
-    <!-- /P:RN_APPL=GP2400A -->
+    
+    <!-- /P:RN_APPL=HPS0600A -->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Application Build Folder">
+      Message="Heartland 6.00 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Application Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <Exec Command="IF $(ApplTrue) (XCOPY &quot;$(TargetDestination)\NGP\*.*&quot; &quot;$(ApplBuildFolderPath)\$(RN_APPL)\*.*&quot; $(XcopyParameter))" />
+    <Exec Command="IF $(ApplTrue) (XCOPY &quot;$(TargetDestination)\Nmap\*.*&quot; &quot;$(ApplBuildFolderPath)\$(RN_APPL)\*.*&quot; $(XcopyParameter))" />
     <!--Exec Command="IF $(ApplTrue) ($(PKZIP25) $(ZipParameter) &quot;$(ApplBuildFolderPath)\$(RN_APPL)\TARGET.ZIP&quot; &quot;$(ApplTargetFolderPath)\*.*&quot;)" /-->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
@@ -358,11 +354,11 @@
       Id="$(StepId)"
       Status="Succeeded" />
 
-    <!-- /P:RN_APPL=GP2400A -->
+    <!-- /P:RN_APPL=HPS0600A -->
     <!--BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... ZIP Application Build Folder ">
+      Message="Heartland 6.00 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... ZIP Application Build Folder ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep-->
     <!--Exec Command="IF $(ApplTrue) ($(PKZIP25) $(ZipParameter) &quot;$(ApplBuildFolderPath)\$(RN_APPL).ZIP&quot; &quot;$(ApplTargetFolderPath)\*.*&quot;)" /-->
@@ -371,15 +367,15 @@
       BuildUri="$(BuildUri)"
       Id="$(StepId)"
       Status="Succeeded" /-->
-
+    
     <!-- Unregister ocxes -->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
+      Message="Heartland 6.00 TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\NGP&quot; &quot;$(SolutionRoot)\NBASE&quot;)" />
+    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\Nmap&quot;)" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
@@ -391,7 +387,7 @@
   </Target>
   <Target Name="MarkBuildStepAsFailed">
     <PropertyGroup>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
+      <UNREGBAT>&quot;\\wdswdevl\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
       <BaseTrue>&quot;$(RN_BASE)&quot; NEQ &quot;&quot;</BaseTrue>
       <ApplTrue>&quot;$(RN_APPL)&quot; NEQ &quot;&quot;</ApplTrue>
     </PropertyGroup>
@@ -399,14 +395,14 @@
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
+      Message="Heartland 6.00 TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\NGP&quot; &quot;$(SolutionRoot)\NBASE&quot;)" />
+    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\Nmap&quot;)" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY FAILED."
+      Message="Heartland 6.00 TEAM BUILD: CUSTOM OUTPUT COPY FAILED."
       Id="$(StepId)"
       Status="Failed" />
   </Target>

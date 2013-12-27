@@ -69,33 +69,33 @@ Public Class frmMain
     Friend WithEvents chkAll As System.Windows.Forms.CheckBox
     Friend WithEvents lblMin As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(frmMain))
-        Me.tabMain = New System.Windows.Forms.TabControl()
-        Me.tpgOptions = New System.Windows.Forms.TabPage()
-        Me.lblSide2 = New System.Windows.Forms.Label()
-        Me.grpOptions = New System.Windows.Forms.GroupBox()
-        Me.chkAll = New System.Windows.Forms.CheckBox()
-        Me.nudSongs = New System.Windows.Forms.NumericUpDown()
-        Me.lblMin = New System.Windows.Forms.Label()
-        Me.lblFolderPL = New System.Windows.Forms.Label()
-        Me.lnkBrowsePL = New System.Windows.Forms.LinkLabel()
-        Me.txtFolderPL = New System.Windows.Forms.TextBox()
-        Me.lblInfo2 = New System.Windows.Forms.Label()
-        Me.cmbFormat = New System.Windows.Forms.ComboBox()
-        Me.lblFormat = New System.Windows.Forms.Label()
-        Me.lnkBrowseMP3 = New System.Windows.Forms.LinkLabel()
-        Me.lblFolderMP3 = New System.Windows.Forms.Label()
-        Me.txtFolderMP3 = New System.Windows.Forms.TextBox()
-        Me.lblInfo1 = New System.Windows.Forms.Label()
-        Me.tpgResults = New System.Windows.Forms.TabPage()
-        Me.lblSide1 = New System.Windows.Forms.Label()
-        Me.grpResults = New System.Windows.Forms.GroupBox()
-        Me.pbrProgress = New System.Windows.Forms.ProgressBar()
-        Me.lstArtists = New System.Windows.Forms.ListBox()
-        Me.lblArtists = New System.Windows.Forms.Label()
-        Me.cmdClose = New System.Windows.Forms.Button()
-        Me.cmdStart = New System.Windows.Forms.Button()
-        Me.lnkReverb = New System.Windows.Forms.LinkLabel()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
+        Me.tabMain = New System.Windows.Forms.TabControl
+        Me.tpgOptions = New System.Windows.Forms.TabPage
+        Me.lblSide2 = New System.Windows.Forms.Label
+        Me.grpOptions = New System.Windows.Forms.GroupBox
+        Me.chkAll = New System.Windows.Forms.CheckBox
+        Me.nudSongs = New System.Windows.Forms.NumericUpDown
+        Me.lblMin = New System.Windows.Forms.Label
+        Me.lblFolderPL = New System.Windows.Forms.Label
+        Me.lnkBrowsePL = New System.Windows.Forms.LinkLabel
+        Me.txtFolderPL = New System.Windows.Forms.TextBox
+        Me.lblInfo2 = New System.Windows.Forms.Label
+        Me.cmbFormat = New System.Windows.Forms.ComboBox
+        Me.lblFormat = New System.Windows.Forms.Label
+        Me.lnkBrowseMP3 = New System.Windows.Forms.LinkLabel
+        Me.lblFolderMP3 = New System.Windows.Forms.Label
+        Me.txtFolderMP3 = New System.Windows.Forms.TextBox
+        Me.lblInfo1 = New System.Windows.Forms.Label
+        Me.tpgResults = New System.Windows.Forms.TabPage
+        Me.lblSide1 = New System.Windows.Forms.Label
+        Me.grpResults = New System.Windows.Forms.GroupBox
+        Me.pbrProgress = New System.Windows.Forms.ProgressBar
+        Me.lstArtists = New System.Windows.Forms.ListBox
+        Me.lblArtists = New System.Windows.Forms.Label
+        Me.cmdClose = New System.Windows.Forms.Button
+        Me.cmdStart = New System.Windows.Forms.Button
+        Me.lnkReverb = New System.Windows.Forms.LinkLabel
         Me.tabMain.SuspendLayout()
         Me.tpgOptions.SuspendLayout()
         Me.grpOptions.SuspendLayout()
@@ -106,19 +106,22 @@ Public Class frmMain
         '
         'tabMain
         '
-        Me.tabMain.Controls.AddRange(New System.Windows.Forms.Control() {Me.tpgOptions, Me.tpgResults})
+        Me.tabMain.Controls.Add(Me.tpgOptions)
+        Me.tabMain.Controls.Add(Me.tpgResults)
+        Me.tabMain.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tabMain.Location = New System.Drawing.Point(4, 4)
         Me.tabMain.Name = "tabMain"
         Me.tabMain.SelectedIndex = 0
-        Me.tabMain.Size = New System.Drawing.Size(392, 272)
+        Me.tabMain.Size = New System.Drawing.Size(402, 272)
         Me.tabMain.TabIndex = 0
         '
         'tpgOptions
         '
-        Me.tpgOptions.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblSide2, Me.grpOptions})
-        Me.tpgOptions.Location = New System.Drawing.Point(4, 26)
+        Me.tpgOptions.Controls.Add(Me.lblSide2)
+        Me.tpgOptions.Controls.Add(Me.grpOptions)
+        Me.tpgOptions.Location = New System.Drawing.Point(4, 25)
         Me.tpgOptions.Name = "tpgOptions"
-        Me.tpgOptions.Size = New System.Drawing.Size(384, 242)
+        Me.tpgOptions.Size = New System.Drawing.Size(394, 243)
         Me.tpgOptions.TabIndex = 0
         Me.tpgOptions.Text = "Options"
         '
@@ -131,14 +134,26 @@ Public Class frmMain
         Me.lblSide2.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.lblSide2.Location = New System.Drawing.Point(4, 6)
         Me.lblSide2.Name = "lblSide2"
-        Me.lblSide2.Size = New System.Drawing.Size(40, 230)
+        Me.lblSide2.Size = New System.Drawing.Size(46, 230)
         Me.lblSide2.TabIndex = 3
         Me.lblSide2.Text = "Reverb"
         Me.lblSide2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'grpOptions
         '
-        Me.grpOptions.Controls.AddRange(New System.Windows.Forms.Control() {Me.chkAll, Me.nudSongs, Me.lblMin, Me.lblFolderPL, Me.lnkBrowsePL, Me.txtFolderPL, Me.lblInfo2, Me.cmbFormat, Me.lblFormat, Me.lnkBrowseMP3, Me.lblFolderMP3, Me.txtFolderMP3, Me.lblInfo1})
+        Me.grpOptions.Controls.Add(Me.chkAll)
+        Me.grpOptions.Controls.Add(Me.nudSongs)
+        Me.grpOptions.Controls.Add(Me.lblMin)
+        Me.grpOptions.Controls.Add(Me.lblFolderPL)
+        Me.grpOptions.Controls.Add(Me.lnkBrowsePL)
+        Me.grpOptions.Controls.Add(Me.txtFolderPL)
+        Me.grpOptions.Controls.Add(Me.lblInfo2)
+        Me.grpOptions.Controls.Add(Me.cmbFormat)
+        Me.grpOptions.Controls.Add(Me.lblFormat)
+        Me.grpOptions.Controls.Add(Me.lnkBrowseMP3)
+        Me.grpOptions.Controls.Add(Me.lblFolderMP3)
+        Me.grpOptions.Controls.Add(Me.txtFolderMP3)
+        Me.grpOptions.Controls.Add(Me.lblInfo1)
         Me.grpOptions.Location = New System.Drawing.Point(48, 0)
         Me.grpOptions.Name = "grpOptions"
         Me.grpOptions.Size = New System.Drawing.Size(332, 236)
@@ -160,7 +175,7 @@ Public Class frmMain
         Me.nudSongs.Minimum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.nudSongs.Name = "nudSongs"
         Me.nudSongs.ReadOnly = True
-        Me.nudSongs.Size = New System.Drawing.Size(76, 22)
+        Me.nudSongs.Size = New System.Drawing.Size(76, 21)
         Me.nudSongs.TabIndex = 35
         Me.nudSongs.Value = New Decimal(New Integer() {5, 0, 0, 0})
         '
@@ -174,7 +189,7 @@ Public Class frmMain
         '
         'lblFolderPL
         '
-        Me.lblFolderPL.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFolderPL.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFolderPL.Location = New System.Drawing.Point(8, 112)
         Me.lblFolderPL.Name = "lblFolderPL"
         Me.lblFolderPL.Size = New System.Drawing.Size(64, 16)
@@ -183,7 +198,7 @@ Public Class frmMain
         '
         'lnkBrowsePL
         '
-        Me.lnkBrowsePL.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lnkBrowsePL.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lnkBrowsePL.Location = New System.Drawing.Point(276, 116)
         Me.lnkBrowsePL.Name = "lnkBrowsePL"
         Me.lnkBrowsePL.Size = New System.Drawing.Size(48, 16)
@@ -197,9 +212,8 @@ Public Class frmMain
         Me.txtFolderPL.Location = New System.Drawing.Point(88, 108)
         Me.txtFolderPL.Name = "txtFolderPL"
         Me.txtFolderPL.ReadOnly = True
-        Me.txtFolderPL.Size = New System.Drawing.Size(184, 22)
+        Me.txtFolderPL.Size = New System.Drawing.Size(184, 21)
         Me.txtFolderPL.TabIndex = 31
-        Me.txtFolderPL.Text = ""
         '
         'lblInfo2
         '
@@ -229,7 +243,7 @@ Public Class frmMain
         '
         'lnkBrowseMP3
         '
-        Me.lnkBrowseMP3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lnkBrowseMP3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lnkBrowseMP3.Location = New System.Drawing.Point(276, 88)
         Me.lnkBrowseMP3.Name = "lnkBrowseMP3"
         Me.lnkBrowseMP3.Size = New System.Drawing.Size(48, 16)
@@ -239,7 +253,7 @@ Public Class frmMain
         '
         'lblFolderMP3
         '
-        Me.lblFolderMP3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFolderMP3.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFolderMP3.Location = New System.Drawing.Point(8, 84)
         Me.lblFolderMP3.Name = "lblFolderMP3"
         Me.lblFolderMP3.Size = New System.Drawing.Size(76, 16)
@@ -255,7 +269,6 @@ Public Class frmMain
         Me.txtFolderMP3.ReadOnly = True
         Me.txtFolderMP3.Size = New System.Drawing.Size(184, 22)
         Me.txtFolderMP3.TabIndex = 25
-        Me.txtFolderMP3.Text = ""
         '
         'lblInfo1
         '
@@ -265,14 +278,15 @@ Public Class frmMain
         Me.lblInfo1.Size = New System.Drawing.Size(320, 32)
         Me.lblInfo1.TabIndex = 24
         Me.lblInfo1.Text = "Reverb examines your MP3 collection, creating playlists for artists you have a mi" & _
-        "nimum number of songs by."
+            "nimum number of songs by."
         '
         'tpgResults
         '
-        Me.tpgResults.Controls.AddRange(New System.Windows.Forms.Control() {Me.lblSide1, Me.grpResults})
-        Me.tpgResults.Location = New System.Drawing.Point(4, 22)
+        Me.tpgResults.Controls.Add(Me.lblSide1)
+        Me.tpgResults.Controls.Add(Me.grpResults)
+        Me.tpgResults.Location = New System.Drawing.Point(4, 25)
         Me.tpgResults.Name = "tpgResults"
-        Me.tpgResults.Size = New System.Drawing.Size(384, 246)
+        Me.tpgResults.Size = New System.Drawing.Size(394, 243)
         Me.tpgResults.TabIndex = 1
         Me.tpgResults.Text = "Results"
         '
@@ -285,14 +299,16 @@ Public Class frmMain
         Me.lblSide1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.lblSide1.Location = New System.Drawing.Point(4, 6)
         Me.lblSide1.Name = "lblSide1"
-        Me.lblSide1.Size = New System.Drawing.Size(40, 230)
+        Me.lblSide1.Size = New System.Drawing.Size(46, 230)
         Me.lblSide1.TabIndex = 4
         Me.lblSide1.Text = "Reverb"
         Me.lblSide1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'grpResults
         '
-        Me.grpResults.Controls.AddRange(New System.Windows.Forms.Control() {Me.pbrProgress, Me.lstArtists, Me.lblArtists})
+        Me.grpResults.Controls.Add(Me.pbrProgress)
+        Me.grpResults.Controls.Add(Me.lstArtists)
+        Me.grpResults.Controls.Add(Me.lblArtists)
         Me.grpResults.Location = New System.Drawing.Point(48, 0)
         Me.grpResults.Name = "grpResults"
         Me.grpResults.Size = New System.Drawing.Size(332, 236)
@@ -308,10 +324,10 @@ Public Class frmMain
         '
         'lstArtists
         '
-        Me.lstArtists.ItemHeight = 17
+        Me.lstArtists.ItemHeight = 16
         Me.lstArtists.Location = New System.Drawing.Point(16, 40)
         Me.lstArtists.Name = "lstArtists"
-        Me.lstArtists.Size = New System.Drawing.Size(304, 157)
+        Me.lstArtists.Size = New System.Drawing.Size(304, 148)
         Me.lstArtists.TabIndex = 20
         '
         'lblArtists
@@ -353,8 +369,11 @@ Public Class frmMain
         'frmMain
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
-        Me.ClientSize = New System.Drawing.Size(402, 313)
-        Me.Controls.AddRange(New System.Windows.Forms.Control() {Me.lnkReverb, Me.cmdClose, Me.cmdStart, Me.tabMain})
+        Me.ClientSize = New System.Drawing.Size(418, 313)
+        Me.Controls.Add(Me.lnkReverb)
+        Me.Controls.Add(Me.cmdClose)
+        Me.Controls.Add(Me.cmdStart)
+        Me.Controls.Add(Me.tabMain)
         Me.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -364,6 +383,7 @@ Public Class frmMain
         Me.tabMain.ResumeLayout(False)
         Me.tpgOptions.ResumeLayout(False)
         Me.grpOptions.ResumeLayout(False)
+        Me.grpOptions.PerformLayout()
         CType(Me.nudSongs, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpgResults.ResumeLayout(False)
         Me.grpResults.ResumeLayout(False)
@@ -375,10 +395,10 @@ Public Class frmMain
 
     Function CheckFields() As Boolean
         Dim bCheck1, bCheck2 As Boolean
-        Dim dTest As Directory
+        ' Dim dTest As Directory
 
         If txtFolderMP3.Text <> "" Then
-            If Not dTest.Exists(txtFolderMP3.Text) Then
+            If Not Directory.Exists(txtFolderMP3.Text) Then
                 MessageBox.Show("No MP3 source folder selected. Please rectify on the 'Options' tab", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 bCheck1 = True
@@ -386,7 +406,7 @@ Public Class frmMain
         End If
 
         If txtFolderPL.Text <> "" Then
-            If Not dTest.Exists(txtFolderPL.Text) Then
+            If Not Directory.Exists(txtFolderPL.Text) Then
                 MessageBox.Show("No playlist destination folder selected. Please rectify on the 'Options' tab", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 bCheck2 = True
@@ -528,7 +548,7 @@ Public Class frmMain
 
     Function FilterArtists(ByVal sName As String, ByRef fFileArray() As FileInfo) As String()
         Dim fFile As FileInfo
-        Dim sFileList As String
+        Dim sFileList As String = ""
 
         sName = sName.ToLower
 

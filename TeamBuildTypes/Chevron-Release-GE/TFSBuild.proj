@@ -1,13 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- DO NOT EDIT the project element - the ToolsVersion specified here does not prevent the solutions 
-     and projects in the SolutionToBuild item group from targeting other versions of the .NET framework. 
-     -->
+<!-- DO NOT EDIT the project element 
+
+     Revision History
+
+     1.1      4/26/2013   david.gindler
+
+     Change the parameters to be more generic:  RN_APPL, RN_BASE and the EPS values of S1,S2,S3, and S4
+     Changed ChevronTrue to ApplTrue to be more generic
+
+     Key Data values below are:
+
+     <TargetDestination>$(DropLocation)\$(BuildNumber)_Nucleus\TARGET_$(Year)$(Month)$(Day)$(Hour)$(Minute).$(Second)</TargetDestination>
+     <BaseDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test</BaseDropFolderPath>
+     <ChevronDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</ChevronDropFolderPath>
+     <EpsDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</EpsDropFolderPath>
+     <ChevronTargetFolderPath>$(TargetDestination)\nchevron\target</ChevronTargetFolderPath>
+     <EpsReleaseFolderPath>$(TargetDestination)\EPS\epsApp\Bin\Release</EpsReleaseFolderPath>
+     <BaseTrue>&quot;$(RN_Nxxxx)&quot; NEQ &quot;&quot;</BaseTrue>
+     <ApplTrue>&quot;$(RN_CHxxxx)&quot; NEQ &quot;&quot;</ChevronTrue>
+     
+     Code will be built here ( on tnwp011355 ):  
+      D:\TFSBuild_Source\Nucleus\Chevron-Release-GE\Sources\nchevron
+      D:\TFSBuild_Source\Nucleus\Chevron-Release-GE\Sources\nbase
+      D:\TFSBuild_Source\Nucleus\Chevron-Release-GE\Sources\EPS
+   
+     Code will be dropped here:
+      \\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test\CHxxxx
+      \\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test\EPSxxxx
+      \\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test\Nxxxx
+   
+
+ The ToolsVersion specified here does not prevent the solutions 
+ and projects in the SolutionToBuild item group from targeting 
+ other versions of the .NET framework. 
+-->
 <Project DefaultTargets="DesktopBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
 
   <!-- Do not edit this -->
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\TeamBuild\Microsoft.TeamFoundation.Build.targets" />
   <Import Project="c:\target\build\Wayne.TeamFoundation.Build.Nucleus.targets" />
-
   <ProjectExtensions>
 
     <!-- Team Foundation Build Version - DO NOT CHANGE -->
@@ -19,11 +50,11 @@
      the value in the database.
     -->
     <Description>
-      This build definition uses parameters of RN_APPL and RN_BASE for the application and base versions.
+      This build definition uses parameters of RN_APPL and RN_BASE for the application and base versions
 
-      An example would be /P:RN_BASE=N2400AW;RN_APPL=GP2400AW
+      An example would be: /P:RN_BASE=N2260BD;RN_APPL=CH0802BD;EPS=TRUE;S1=3;S2=6;S3=0;S4=5
 
-      These versions would also be applied for the source code label: N2400AW_GP2400AW
+      Only the Project Lead or a designated person should kick off a build.
     </Description>
 
     <!--  BUILD MACHINE
@@ -51,23 +82,21 @@
      DefaultBuildAgent. For compatibility with V1 clients, keep this property in sync with the value 
      in the database.
     -->
-    <BuildDirectoryPath>D:\TFSBuild_Source\Nucleus\GenPOS_NucLite_LPR1_GE\Sources</BuildDirectoryPath>
+    <BuildDirectoryPath>D:\TFSBuild_Source\Nucleus\Chevron-Release-GE\Sources</BuildDirectoryPath>
 
     <!--  DROP LOCATION
      This property is included only for backwards compatibility. The drop location used for a build 
      definition is now stored in the database. For compatibility with V1 clients, keep this property 
      in sync with the value in the database.
     -->
-    <ProjectFamily>GnPs</ProjectFamily>
+    <ProjectFamily>ChvrnRlGe</ProjectFamily>
     <DropLocation>\\tnwp011355.genpitfi01.og.ge.com\TFS_BuildOutPuts\$(ProjectFamily)</DropLocation>
-
     <!--  TESTING
      Set this flag to enable/disable running tests as a post-compilation build step.
     -->
     <RunTest>false</RunTest>
     <SkipWorkItemCreation>true</SkipWorkItemCreation>
     <CustomizableOutDir>true</CustomizableOutDir>
-
     <!--  CODE ANALYSIS
      Set this property to enable/disable running code analysis. Valid values for this property are 
      Default, Always and Never.
@@ -162,18 +191,19 @@
              <Properties>Property1=Value1;Property2=Value2</Properties>
          </SolutionToBuild>
     -->
-    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../GenBase/Release/NucLite_LPR1/GPComponents/gpcomponents.sln" Condition="'$(Platform)' == 'Mixed Platforms'">
+    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../Chevron/Base/Release/nbase.sln">
       <Targets></Targets>
       <Properties></Properties>
     </SolutionToBuild>
-    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../GenBase/Release/NucLite_LPR1/nbase.sln" Condition="'$(Platform)' == 'Mixed Platforms'">
+    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../Chevron/App/Release/nchevron.sln">
       <Targets></Targets>
       <Properties></Properties>
     </SolutionToBuild>
-    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../GenPOS/Release/NucLite_LPR1/ngp.sln" Condition="'$(Platform)' == 'WIN32'">
+    <SolutionToBuild Include="$(BuildProjectFolderPath)/../../Chevron/EPS/Release/EpsPro.sln">
       <Targets></Targets>
       <Properties></Properties>
     </SolutionToBuild>
+
   </ItemGroup>
 
   <ItemGroup>
@@ -185,16 +215,18 @@
              <FlavorToBuild>Debug</FlavorToBuild>
              <PlatformToBuild>x86</PlatformToBuild>
          </ConfigurationToBuild>
+
      The Include attribute value should be unique for each ConfigurationToBuild node.
     -->
-    <ConfigurationToBuild Include="Release|Mixed Platforms">
-      <FlavorToBuild>Release</FlavorToBuild>
-      <PlatformToBuild>Mixed Platforms</PlatformToBuild>
-    </ConfigurationToBuild>
     <ConfigurationToBuild Include="Release|Win32">
       <FlavorToBuild>Release</FlavorToBuild>
       <PlatformToBuild>Win32</PlatformToBuild>
     </ConfigurationToBuild>
+    <ConfigurationToBuild Include="Release|Any CPU">
+      <FlavorToBuild>Release</FlavorToBuild>
+      <PlatformToBuild>Any CPU</PlatformToBuild>
+    </ConfigurationToBuild>
+
   </ItemGroup>
 
   <ItemGroup>
@@ -215,8 +247,10 @@
         <TestContainer Include="$(OutDir)\HelloWorldTests.dll" />
         <TestContainer Include="$(SolutionRoot)\TestProject\WebTest1.webtest" />
         <TestContainer Include="$(SolutionRoot)\TestProject\LoadTest1.loadtest" />
+
      Use %2a instead of * and %3f instead of ? to prevent expansion before test assemblies are built
     -->
+
   </ItemGroup>
 
   <PropertyGroup>
@@ -224,8 +258,10 @@
      If the RunTest property is set to true, then particular tests within a
      metadata file or test container may be specified here.  This is
      equivalent to the /test switch on mstest.exe.
+
      <TestNames>BVT;HighPriority</TestNames>
     -->
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -236,13 +272,10 @@
          <AdditionalReferencePath Include="C:\MyFolder2\" />
     -->
   </ItemGroup>
-
   <Target Name="AfterGetChangesetsAndUpdateWorkItems">
     <CallTarget Targets="GenerateReleaseNotes" />
-    <!--<CallTarget Targets="CustomOutputCopy" />-->
   </Target>
   <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
-  <!-- Download the build log from the Build.aspx web app and tranform to ReleaseNotes.txt-->
   <Target Name="GenerateReleaseNotes">
     <Time>
       <Output TaskParameter="Month" PropertyName="Month" />
@@ -254,16 +287,24 @@
     </Time>
     <PropertyGroup>
       <TargetDestination>$(DropLocation)\$(BuildNumber)_Nucleus\TARGET_$(Year)$(Month)$(Day)$(Hour)$(Minute).$(Second)</TargetDestination>
-      <BaseBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test</BaseBuildFolderPath>
-      <ApplBuildFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\NGP\build\test</ApplBuildFolderPath>
-      <ApplTargetFolderPath>$(TargetDestination)\NGP\target</ApplTargetFolderPath>
+      <BaseDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntbase\build\test</BaseDropFolderPath>
+      <ChevronDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</ChevronDropFolderPath>
+      <EpsDropFolderPath>\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\nchevron\build\test</EpsDropFolderPath>
+      <ChevronTargetFolderPath>$(TargetDestination)\nchevron\target</ChevronTargetFolderPath>
+      <EpsReleaseFolderPath>$(TargetDestination)\EPS\epsApp\Bin\Release</EpsReleaseFolderPath>
       <PKZIP25>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\pkzip25&quot;</PKZIP25>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
+      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
       <ZipParameter>-ADD -REC -PATH=RELATIVE</ZipParameter>
+      <ZipExcludeDatabaseParameter>-ADD -REC -PATH=RELATIVE -EXCL=3party.db -EXCL=3party.zip -EXCL=cnucleus.dat -EXCL=cnucleus.zip -EXCL=jobber.db -EXCL=jobber.zip -EXCL=nucleus.dat -EXCL=nucleus.zip -EXCL=orca.db -EXCL=orca.zip -EXCL=orcacanada.db -EXCL=orcacanada.zip</ZipExcludeDatabaseParameter>
       <XcopyParameter>/S/E/R/D/V/Y</XcopyParameter>
       <XcopyFolderParameter>/T/E/R/D/V/Y</XcopyFolderParameter>
       <BaseTrue>&quot;$(RN_BASE)&quot; NEQ &quot;&quot;</BaseTrue>
       <ApplTrue>&quot;$(RN_APPL)&quot; NEQ &quot;&quot;</ApplTrue>
+      <EpsTrue>&quot;$(EPS)&quot; == &quot;TRUE&quot;</EpsTrue>
+      <EpsS1True>&quot;$(S1)&quot; NEQ &quot;&quot;</EpsS1True>
+      <EpsS2True>&quot;$(S2)&quot; NEQ &quot;&quot;</EpsS2True>
+      <EpsS3True>&quot;$(S3)&quot; NEQ &quot;&quot;</EpsS3True>
+      <EpsS4True>&quot;$(S4)&quot; NEQ &quot;&quot;</EpsS4True>
     </PropertyGroup>
     <PropertyGroup>
       <BuildDownloadBaseUri>$(TeamFoundationServerUrl)Build/Build.aspx?artifactMoniker=</BuildDownloadBaseUri>
@@ -271,7 +312,6 @@
       <ReleaseNotesXslFile>$(MSBuildExtensionsPath)\releasenotes.xsl</ReleaseNotesXslFile>
       <ReleaseNotesOutputFile>$(TargetDestination)\NUCLEUS_ReleaseNotes.txt</ReleaseNotesOutputFile>
     </PropertyGroup>
-    <!-- Extract the artifact ID from the BuildUri for passing to Build.aspx -->
     <RegexReplace Input="$(BuildUri)" Expression="vstfs:///Build/Build/" Replacement="" Count="1">
       <Output ItemName="BuildLogUriId" TaskParameter="Output" />
     </RegexReplace>
@@ -279,136 +319,115 @@
     <WebDownload FileUri="$(BuildDownloadBaseUri)@(BuildLogUriId)" FileName="$(BuildLogFile)" UseDefaultCredentials="True" />
     <Exec Command="&quot;$(MSBuildExtensionsPath)\msxsl.exe&quot; &quot;$(BuildLogFile)&quot; &quot;$(ReleaseNotesXslFile)&quot; -o &quot;$(ReleaseNotesOutputFile)&quot;" />
     <ItemGroup>
-      <TargetSource Include="$(SolutionRoot)\**\*" Exclude="$(SolutionRoot)\Win32Release.txt;$(SolutionRoot)\**\Release.txt;$(SolutionRoot)\NBASE\Win32Release.txt;$(SolutionRoot)\NGP\Win32Release.txt;$(SolutionRoot)\nbase\COMMON\TransactionService\Mixed PlatformsRelease.txt;$(SolutionRoot)\nbase\Mixed PlatformsRelease.txt;$(SolutionRoot)\nbase\gpcomponents\gpCmnWayneUtilities\Mixed PlatformsRelease.txt"/>
+      <TargetSource Include="$(SolutionRoot)\**\*" Exclude="$(SolutionRoot)\Win32Release.txt;$(SolutionRoot)\**\Release.txt;$(SolutionRoot)\NBASE\Win32Release.txt;$(SolutionRoot)\CHEVRON-TFS\Win32Release.txt"/>
     </ItemGroup>
-
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Drop Location">
+      Message="Chevron Release $(RN_BASE)_$(RN_APPL) build: Custom Output Copy In Progress... To Build Server Drop Location">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <!-- COPY FILES -->
     <Copy SourceFiles="@(TargetSource)" DestinationFolder="$(TargetDestination)\%(RecursiveDir)"> </Copy>
-    <!-- COPY FOLDER - SAVE LOG TO XCOPY_FOLDER.LOG -->
-    <!-- 
-    ERROR HISTROY:
-    Overwrite \\AUS111VSTFB1\TFS_BuildOutPuts\Dev-Chevron-CH0800_20110305.2_Nucleus\TARGET_201135316.42\CH0800\BuildLog.htm (Yes/No/All)?
-    HOW TO FIX IT:
-    CHANGE THE PARAMETER OF XCOPY "/T/E" TO "/T/E/R/D/V/Y" TO FIX THIS PROBLEM.  
-    -->
     <Exec Command="XCOPY &quot;$(SolutionRoot)\*.*&quot; &quot;$(TargetDestination)\*.*&quot; $(XcopyFolderParameter)" />
-    <!-- COPY BOTH FILES AND FOLDER - TESTING - SAVE LOG TO XCOPY_BOTH.LOG -->
-    <!-- 
-    COPY ERROR MAYBE CAUSED BY:
-    "File verification failed." 
-    BECAUSE GENERATING XCOPY_BOTH.LOG FILE IN "SOURCE FOLDER" WHILE COPYING "SOURCE FOLDER". 
-    HOW TO FIX IT:
-    GENERATE XCOPY_BOTH.LOG IN TARGET FOLDER.
-    -->
-    <!-- 
-    COPY ERROR MAYBE CAUSED BY: 
-    1. BUILDING SEQUENCE CHANGED. 
-    2. OPEN AND BUILD SOLUTION IN SOURCE FOLDER MANUALLY, FILE BEING USED BY ANOTHER PROCESS, LOGOFF COMPUTER(BUILD MACHINE) TO FIX THIS PROBLEM. 
-    ERROR HISTORY:
-    D:\TFSBuild_Source\Nucleus\Dev-Chevron-CH0800\BuildType\TFSBuild.proj(278,5): 
-    error MSB3021: 
-    Unable to copy file "D:\TFSBuild_Source\Nucleus\Dev-Chevron-CH0800\Sources\Dev\EPS\EPS0350\Win32Release.txt" 
-    to "\\AUS111VSTFB1\TFS_BuildOutPuts\Dev-Chevron-CH0800_20110304.10_Nucleus\TARGET_2011341139.0\Dev\EPS\EPS0350\Win32Release.txt". 
-    The process cannot access the file 'D:\TFSBuild_Source\Nucleus\Dev-Chevron-CH0800\Sources\Dev\EPS\EPS0350\Win32Release.txt' 
-    because it is being used by another process. 
-    HOW TO FIX IT:
-    LOGOFF BUILD MACHINE TO KILL RELATED PROCESS.
-    
-    <Exec Command="XCOPY &quot;$(SolutionRoot)\*.*&quot; &quot;$(TargetDestination)\*.*&quot; /S/E/R/D/V/Y > &quot;$(TargetDestination)\XCOPY_BOTH.LOG&quot;" />
-    -->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
       Id="$(StepId)"
       Status="Succeeded" />
-
-    <!-- RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE  -->
-    <!-- /P:RN_BASE=N2300A -->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Base Build Folder">
+      Message="Chevron Release $(RN_BASE) Base TFS Build: Custom Output Copy In Progress ... Base Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <Exec Command="IF $(BaseTrue) (XCOPY &quot;$(TargetDestination)\NBASE\*.*&quot; &quot;$(BaseBuildFolderPath)\$(RN_BASE)\*.*&quot; $(XcopyParameter))" />
+    <Exec Command="IF $(BaseTrue) (XCOPY &quot;$(TargetDestination)\NBASE\*.*&quot; &quot;$(BaseDropFolderPath)\$(RN_BASE)\*.*&quot; $(XcopyParameter))" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
       Id="$(StepId)"
       Status="Succeeded" />
-
-    <!-- /P:RN_APPL=GP2400A -->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... Application Build Folder">
+      Message="Chevron Release $(RN_APPL) Appl Build: Custom Output Copy In Progress ... Chevron Build Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <Exec Command="IF $(ApplTrue) (XCOPY &quot;$(TargetDestination)\NGP\*.*&quot; &quot;$(ApplBuildFolderPath)\$(RN_APPL)\*.*&quot; $(XcopyParameter))" />
-    <!--Exec Command="IF $(ApplTrue) ($(PKZIP25) $(ZipParameter) &quot;$(ApplBuildFolderPath)\$(RN_APPL)\TARGET.ZIP&quot; &quot;$(ApplTargetFolderPath)\*.*&quot;)" /-->
+    <Exec Command="IF $(ApplTrue) (XCOPY &quot;$(EpsReleaseFolderPath)\Redirector\*.*&quot; &quot;$(ChevronTargetFolderPath)\BIN\*.*&quot; $(XcopyParameter))" />
+    <Exec Command="IF $(ApplTrue) (XCOPY &quot;$(TargetDestination)\nchevron\*.*&quot; &quot;$(ChevronDropFolderPath)\$(RN_APPL)\*.*&quot; $(XcopyParameter))" />
+    <Exec Command="IF $(ApplTrue) ($(PKZIP25) $(ZipExcludeDatabaseParameter) &quot;$(ChevronDropFolderPath)\$(RN_APPL)\TARGET.ZIP&quot; &quot;$(ChevronTargetFolderPath)\*.*&quot;)" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
       Id="$(StepId)"
       Status="Succeeded" />
-
-    <!-- /P:RN_APPL=GP2400A -->
-    <!--BuildStep
-      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
-      BuildUri="$(BuildUri)"
-      Message="GP2400 TEAM BUILD: CUSTOM OUTPUT COPY IN PROGRESS ... ZIP Application Build Folder ">
-      <Output TaskParameter="Id" PropertyName="StepId" />
-    </BuildStep-->
-    <!--Exec Command="IF $(ApplTrue) ($(PKZIP25) $(ZipParameter) &quot;$(ApplBuildFolderPath)\$(RN_APPL).ZIP&quot; &quot;$(ApplTargetFolderPath)\*.*&quot;)" /-->
-    <!--BuildStep
-      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
-      BuildUri="$(BuildUri)"
-      Id="$(StepId)"
-      Status="Succeeded" /-->
-
-    <!-- Unregister ocxes -->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
+      Message="Chevron Release EPS Build: Custom Output Copy In Progress ... Chevron Build Eps Folder">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\NGP&quot; &quot;$(SolutionRoot)\NBASE&quot;)" />
+    <Exec Command="IF $(EpsTrue) (XCOPY &quot;$(TargetDestination)\EPS\*.*&quot; &quot;$(ChevronDropFolderPath)\EPS$(S1)$(S2)$(S3)$(S4)\*.*&quot; $(XcopyParameter))" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
       Id="$(StepId)"
       Status="Succeeded" />
-    <!-- RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE RELEASE  -->
-
+    <BuildStep
+      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+      BuildUri="$(BuildUri)"
+      Message="Chevron Release TFS Build: Custom ZIP In Progress ... ZIP Chevron Build Folder ">
+      <Output TaskParameter="Id" PropertyName="StepId" />
+    </BuildStep>
+    <Exec Command="IF $(ApplTrue) ($(PKZIP25) $(ZipParameter) &quot;$(ChevronDropFolderPath)\$(RN_APPL).ZIP&quot; &quot;$(ChevronTargetFolderPath)\*.*&quot;)" />
+    <BuildStep
+      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+      BuildUri="$(BuildUri)"
+      Id="$(StepId)"
+      Status="Succeeded" />
+    <BuildStep
+      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+      BuildUri="$(BuildUri)"
+      Message="Chevron Release TFS Build: Custom Zip In Progress ... Zip Chevron EPS Folder ">
+      <Output TaskParameter="Id" PropertyName="StepId" />
+    </BuildStep>
+    <Exec Command="IF $(EpsTrue) ($(PKZIP25) $(ZipParameter) &quot;$(ChevronDropFolderPath)\EPS$(S1).$(S2).$(S3).$(S4).ZIP&quot; &quot;$(EpsReleaseFolderPath)\*.*&quot;)" />
+    <BuildStep
+      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+      BuildUri="$(BuildUri)"
+      Id="$(StepId)"
+      Status="Succeeded" />
+    <BuildStep
+      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+      BuildUri="$(BuildUri)"
+      Message="Chevron Release $(RN_BASE)_$(RN_APPL) TFS Build: Custom Output Step In Progress ... Unregister OCXes ">
+      <Output TaskParameter="Id" PropertyName="StepId" />
+    </BuildStep>
+    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\nchevron&quot;)" />
+    <BuildStep
+      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+      BuildUri="$(BuildUri)"
+      Id="$(StepId)"
+      Status="Succeeded" />
     <OnError ExecuteTargets="MarkBuildStepAsFailed" />
   </Target>
   <Target Name="MarkBuildStepAsFailed">
     <PropertyGroup>
-      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocxTFS.bat&quot;</UNREGBAT>
+      <UNREGBAT>&quot;\\genpitfi01.og.ge.com\Wayne_aus1\groups\Software_Development\WDSWDEVL\ntnuc\cm\unregocx.bat&quot;</UNREGBAT>
       <BaseTrue>&quot;$(RN_BASE)&quot; NEQ &quot;&quot;</BaseTrue>
       <ApplTrue>&quot;$(RN_APPL)&quot; NEQ &quot;&quot;</ApplTrue>
     </PropertyGroup>
-    <!-- Unregister ocxes -->
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT STEP IN PROGRESS ... UNREGISTER OCXES  ">
+      Message="Chevron Release $(RN_BASE)_$(RN_APPL) TFS Build: Custom Output Step In Progress ... Unregister OCXes ">
       <Output TaskParameter="Id" PropertyName="StepId" />
     </BuildStep>
-    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\NGP&quot; &quot;$(SolutionRoot)\NBASE&quot;)" />
+    <Exec Command="IF $(ApplTrue) ($(UNREGBAT) &quot;$(SolutionRoot)\nchevron&quot;)" />
     <BuildStep
       TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
       BuildUri="$(BuildUri)"
-      Message="$(RN_BASE)_$(RN_APPL) TEAM BUILD: CUSTOM OUTPUT COPY FAILED."
+      Message="Chevron Release $(RN_BASE)_$(RN_APPL) TFS Build: Unregister OCXes Failed!!!"
       Id="$(StepId)"
       Status="Failed" />
   </Target>
-
 </Project>
