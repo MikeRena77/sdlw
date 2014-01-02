@@ -1,0 +1,29 @@
+From: CustomeronnectNoReply@ca.com
+Sent: Wednesday, August 07, 2002 2:45 PM
+To: andrewsmichael@otc.army.mil
+Cc: SWELA01@ca.com
+Subject: CustomerConnect Certificate Installation
+
+CustomerConnect 
+Computer Associates 
+ 
+Thank you for enrolling in CustomerConnect.  In order to access your company's account on AccountConnect, you need to install a digital certificate.  The URL below will provide access to a secure page that contains your digital certificate.  However, do not install the certificate until you receive a second email entitled "CustomerConnect Access,"which will contain your installation password. For optimum security, we are sending the certificate and the password in separate emails.  After you receive your password, you may begin the install by clicking on  http://connectpki.ca.com/andrewsmichael.htm 
+ 
+*Note:  Please save this email in case you need to reinstall your certificate at a later date. 
+ 
+ 
+How to Download Your certificate: 
+ 
+1. Click on URL link provided 
+2. The Security Warning Screen is displayed and asks, "Do you want to install and run...?" 
+3. Click Yes 
+4. CustomerConnect Terms of Use page is displayed 
+5. Click the I Agree button to install 
+6. A password window is displayed  
+7. Type in your password and click OK   
+8. A verification message is displayed: "Your Connect Certificate has been installed" 
+9. To access AccountConnect, go to http://customerconnect.ca.com 
+10. Select AccountConnect 
+11. A client authentication window is displayed  
+12. Click OK  
+13. The AccountConnect Site Summary screen is displayed with a list of the site(s) that you can access 

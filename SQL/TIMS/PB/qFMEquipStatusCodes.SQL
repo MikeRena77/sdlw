@@ -1,0 +1,1 @@
+select * from ae_r_eqm_s

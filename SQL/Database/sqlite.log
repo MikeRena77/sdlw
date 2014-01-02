@@ -1,0 +1,8 @@
+     echo: off
+  explain: off
+  headers: off
+     mode: list
+nullvalue: ""
+   output: sqlite.log;
+separator: "|"
+    width: 

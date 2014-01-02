@@ -1,0 +1,6 @@
+drop user harvest CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'HARVEST' does not exist 
+
+

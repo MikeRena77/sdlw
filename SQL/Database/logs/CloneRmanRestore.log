@@ -1,0 +1,14 @@
+ORACLE instance started.
+Total System Global Area  171966464 bytes
+Fixed Size		     787988 bytes
+Variable Size		  144964076 bytes
+Database Buffers	   25165824 bytes
+Redo Buffers		    1048576 bytes
+18-FEB-09 02.22.03.507000 PM -06:00
+Allocating device....
+Specifying datafiles...
+Specifing datafiles...
+Restoring ...
+Restore done.
+18-FEB-09 02.26.09.875000 PM -06:00
+Connected.

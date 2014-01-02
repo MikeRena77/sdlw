@@ -1,0 +1,33 @@
+From: Tim Boyce 
+To: Harvest Forum 
+
+Hi all
+I am wrinting a perl script to do an auto chaekout for browse. It took a while but I finally got it working.....sort of anyway. I am trying to checkout the files associated with a package. What it does is try's to checkout ALL the packages in harvest. I am relatively new to the command line aspect so any help would vbe appreciated. the command line I am using is below. 
+
+`hco -b "$broker" -en "$project" -st "$state" -p $pkg -vp "/" -cp "$basedir" -br -to -s "*.*" -pf -po -pn "checkout" -usr "UDP" -pw "udpuser"`
+
+This is in a stand alone UDP. 
+
+
+From: Tom Cameron 
+To: Harvest Forum 
+
+Hi Tim,
+
+Using browse (-br) mode of hco, the -p option is ignored. The -p option is only used for update, conc. update and res. only modes. Instead, you want to use your package name as the argument to the package filter option (-pf):
+
+`hco -b "$broker" -en "$project" -st "$state" -vp "/" -cp "$basedir" -br -to -s "*" -pf "$pkg" -po -pn "checkout" -usr "UDP" -pw "udpuser"`
+
+-Tom
+
+From: Flemming 
+To: Harvest Forum 
+
+Hi Tim,
+
+I guess you want to checkout the files in package $pkg. in that case you should specify -pf "$pkg", and drop the -p $pkg parameter. -p is used to specify to harvest in what package the reserver tag should be put. For browse you do not need to specify -p. -pf specifies the filter on which files to checkout
+
+Regards
+
+Flemming 
+CA Denmark 

@@ -41,29 +41,32 @@ Working with Wayne Energy on migration to the GE Domain
 Added a new GE Domain build definition for Chevron-Main-GE incorporating changes required for the migration
 Added a new GE Domain build definition for Chevron-Release-GE incorporating changes required for the migration
 Added a new GE Domain build definition for Dev-Heartland-600-GE incorporating changes required for the migration
-Added a new GE Domain build definition for FD0800_Dev_GE incorporating changes required for the migration
+Added a new GE Domain Continuous Integration build definition for GenPOS_Fullup_ATX_CI incorporating changes required for the migration
+Modified the TFSBuild.rsp for a new GE Domain Nightly Build build definition GenPOS_Fullup_SH1_NB incorporating changes required for the migration
 
               
 Chevron-Dev-GE
     N2270AD 10 Dec 2013 4:00pm SmartHeap_production
     CH0804AD 10 Dec 2013 4:00pm SmartHeap_production BASE=N2270AD
-    107865	edit	CORP\rahina.fernandes	12/10/2013 3:57:58 AM	Check-in for Build CH0804AD BASE=N2270AD EPS 3730
+    107865  edit    CORP\rahina.fernandes   12/10/2013 3:57:58 AM   Check-in for Build CH0804AD BASE=N2270AD EPS 3730
     /P:RN_BASE=N2270AD;RN_APPL=CH0804AD;EPS=TRUE;S1=3;S2=7;S3=3;S4=0
 Chevron-Main-GE
     CH0802BD 31 May 2013 10:30am SmartHeap_production BASE=N2260BD
-    97858	merge, edit	CORP\David.Gindler	6/5/2013 11:00:20 AM	Reverse Merge of Application Changes made in 8.02BC and 8.02BD
+    97858   merge, edit CORP\David.Gindler  6/5/2013 11:00:20 AM    Reverse Merge of Application Changes made in 8.02BC and 8.02BD
     /P:RN_BASE=N2260BD;RN_APPL=CH0802BD;EPS=TRUE;S1=3;S2=6;S3=0;S4=5
 Chevron-Release-GE
     CH0802BD 31 May 2013 10:30am SmartHeap_production BASE=N2260BD
-    97478	edit	CORP\svc-TFSbuild.aus	5/30/2013 9:05:34 PM	Update Chevron-Release version info for beta refresh versioning ( just bumping revision numbers ).   802BD, 2260BD, 3605...
+    97478   edit    CORP\svc-TFSbuild.aus   5/30/2013 9:05:34 PM    Update Chevron-Release version info for beta refresh versioning ( just bumping revision numbers ).   802BD, 2260BD, 3605...
     /P:RN_BASE=N2260BD;RN_APPL=CH0802BD;EPS=TRUE;S1=3;S2=6;S3=0;S4=5
 Dev-Heartland-600-GE
     HPS0600AI 16 Dec 2013 07:20PM SmartHeap_production BASE=N2300AX
-    108194	edit	CORP\sanjay.kaledhonkar	12/16/2013 7:50:24 AM	RELEASE N2300AX HP0600AI
-    /P:RN_BASE=N2300AX;RN_APPL=HP0600AI
+    108194  edit    CORP\sanjay.kaledhonkar 12/16/2013 7:50:24 AM   RELEASE N2300AX HP0600AI
+    108688	CORP\sanjay.kaledhonkar	12/31/2013 3:21:41 AM	RELEASE N2300AY HP0600AJ timestamp updated 
+    HP0600AJ 31 Dec 2013 12:15PM SmartHeap_production BASE=N2300AY
+    /P:RN_BASE=N2300AY;RN_APPL=HP0600AJ
 FD0800_Dev_GE
     FD0800I 20 Dec 2013 12:20Am SmartHeap_production BASE=N2310I
-    108515	edit	CORP\vanita.lute	12/20/2013 4:22:18 AM	N2310I and FD0800I
+    108515  edit    CORP\vanita.lute    12/20/2013 4:22:18 AM   N2310I and FD0800I
     /P:RN_BASE=N2310I;RN_APPL=FD0800I
 genbase_dev_unittest
     N2400AS 12 July 2013 10:00am SmartHeap_production
@@ -75,32 +78,38 @@ genbase_dev_unittest
 GenPOS_Fullup_ATX_GE
     GP2480I 06 Dec 2013 02:00pm SmartHeap_production BASE=N2480I
     GP2480L 18 Dec 2013 02:00pm SmartHeap_production BASE=N2480L
-    108392	edit	CORP\anirudha.ketkar	12/18/2013 10:00:31 AM	GP2480L Release to QA UI related changes in frmloyaltymod and  Host disc postpay related change reverted from comautpo.c...
+    108392  edit    CORP\anirudha.ketkar    12/18/2013 10:00:31 AM  GP2480L Release to QA UI related changes in frmloyaltymod and  Host disc postpay related change reverted from comautpo.c...
     GP2480N 23 Dec 2013 02:00pm SmartHeap_production BASE=N2480N
-    108598	edit	CORP\anirudha.ketkar	12/24/2013 8:35:58 AM	ATX:2480N OUTDOOR PREPAY POSTPAY transactions for local discount
-    /P:RN_BASE=N2480N;RN_APPL=GP2480N
+    108598  edit    CORP\anirudha.ketkar    12/24/2013 8:35:58 AM   ATX:2480N OUTDOOR PREPAY POSTPAY transactions for local discount
+    GP2480O 30 Dec 2013 01:00pm SmartHeap_production BASE=N2480O
+    108659  CORP\anirudha.ketkar    12/30/2013  1:29:15 AM   Updated RELEASE.NUM for GP2480O release
+    108690	CORP\anirudha.ketkar	12/31/2013 4:26:50 AM	Updated RELEASE.NUM for GP2480P Release
+    GP2480P 31 Dec 2013 01:00pm SmartHeap_production BASE=N2480P
+    /P:RN_BASE=N2480P;RN_APPL=GP2480P
 GenPOS_Fullup_OP1_GE
     GP2450N 16 Dec 2013 06:00pm SmartHeap_production BASE=N2450N
     GP2450M 06 Dec 2013 06:00pm SmartHeap_production BASE=N2450M
-     
 GenPOS_Fullup_OP2_GE
     GP2460I 02 December 2013 02:00pm SmartHeap_production BASE=N2460I
     GP2460J 16 December 2013 02:00pm SmartHeap_production BASE=N2460J
-    108188	merge, edit	CORP\ravi.jadhav	12/16/2013 5:17:51 AM	Merged changes from main branch for GP2500F version
+    108188  merge, edit CORP\ravi.jadhav    12/16/2013 5:17:51 AM   Merged changes from main branch for GP2500F version
+    108669  CORP\milind.adpaikar    12/30/2013  7:12:07 AM   Accumulate rewards instead of overwrite
     /P:RN_BASE=N2460J;RN_APPL=GP2460J
 GenPOS_Fullup_SH_GE
     GP2470I 25 Nov 2013 10:28am SmartHeap_production BASE=N2470I
     N2470M 02 December 2013 02:00pm SmartHeap_production
-    108171	merge, edit	CORP\DING.TAO	12/16/2013 12:39:28 AM	Updated base RELEASE.NUM (N2470M) for GP2470M
+    108171  merge, edit CORP\DING.TAO   12/16/2013 12:39:28 AM  Updated base RELEASE.NUM (N2470M) for GP2470M
     GP2470K 02 December 2013 02:00pm SmartHeap_production BASE=N2470K
-    108172	merge	CORP\DING.TAO	12/16/2013 12:40:13 AM	Updated app RELEASE.NUM (GP2470M) for GP2470M
+    108172  merge   CORP\DING.TAO   12/16/2013 12:40:13 AM  Updated app RELEASE.NUM (GP2470M) for GP2470M
     N2470M 02 December 2013 02:00pm SmartHeap_production
-    108565	merge	CORP\DING.TAO	12/22/2013 10:14:10 PM	Updated app RELEASE.NUM for GP2470N
-    /P:RN_BASE=N2470M;RN_APPL=GP2470N
+    108565  merge   CORP\DING.TAO   12/22/2013 10:14:10 PM  Updated app RELEASE.NUM for GP2470N
+    108696	CORP\DING.TAO	1/1/2014 9:32:00 PM	Updated app RELEASE.NUM for GP2470O
+    GP2470O 02 January 2014 02:00pm SmartHeap_production BASE=N2470O
+    /P:RN_BASE=N2470O;RN_APPL=GP2470O
 GenPOS_Main_GE
     GP2500E 06 December 2013 02:00pm SmartHeap_production BASE=N2500E
     GP2500F 16 December 2013 02:00pm SmartHeap_production BASE=N2500F
-    108158	edit	CORP\kale.mahesh	12/13/2013 11:10:27 PM	Updated RELEASE.NUM for GP2500F release
+    108158  edit    CORP\kale.mahesh    12/13/2013 11:10:27 PM  Updated RELEASE.NUM for GP2500F release
     /P:RN_BASE=N2500F;RN_APPL=GP2500F
 GenPOS_NucLite_GE
     GP2400BB 29 October 2013 02:00pm SmartHeap_production BASE=N2400BB
@@ -113,3 +122,14 @@ GenPOS_NucLite_LPR1_GE
     *DRE-AUS1-NPD Process-*DRE-AUS1-Systems Engi
     *DRE-AUS-WDSWDEVL Grou*OneAD_OGUsers
     *DRE-AUS1-Systems Engi*Domain Users
+    
+    
+Fullup_OP2_GE           108669  CORP\milind.adpaikar    12/30/2013  7:12:07 AM   Accumulate rewards instead of overwrite
+Dev-Heartland-600-GE    108662    CORP\vanita.lute      12/30/2013  2:54:32 AM   Issue 59238 - Partically Approval, Remaining Tender Amount Not Updated After Accepted Partially Approval
+Dev-Heartland-600-GE    108661    CORP\vanita.lute      12/30/2013  2:51:04 AM   Issue 59238 - Partically Approval, Remaining Tender Amount Not Updated After Accepted Partially Approval
+Fullup_ATX_GE           108659  CORP\anirudha.ketkar    12/30/2013  1:29:15 AM   Updated RELEASE.NUM for GP2480O release
+Fullup_ATX_GE           108658  CORP\apurva.vidolkar    12/30/2013  1:12:59 AM   Bug 59355 - "start Time must be before the End time" warning window is not poping up Bug 59358 - Whenever Local Discount...
+Dev-Heartland-600-GE    108657  CORP\vanita.lute        12/30/2013 12:24:27 AM   Issue 57330 - Duplicate Loyalty Item Discount Showing in ECR
+Fullup_ATX_GE           108649  CORP\jafar.kumarkiri    12/27/2013  9:51:38 AM   PBI 46645 -Receipt Layout changes for local discounting
+Fullup_ATX_GE           108646  CORP\sunil.lokhende     12/27/2013  8:53:58 AM   PBI 46639 - Local Discounting by Tender or Card Typke -  Fixed issue ralated to ECR discount item list display.
+Fullup_ATX_GE           108620  CORP\apurva.vidolkar    12/27/2013  2:47:31 AM   WI 59351 - When selected Local discount under program configuration End Date & Time Indefinite than Local discount is no...

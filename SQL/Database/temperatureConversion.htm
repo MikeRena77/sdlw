@@ -1,0 +1,74 @@
+<form name="Converter">
+<script language="JavaScript1.2">
+function clearFields() {
+        document.Converter.one.value = "";
+        document.Converter.two.value = "";
+}
+
+function sendError() {
+        alert("Bitte eine Zahl eingeben");
+}
+
+function checknumber() {
+        var x = document.Converter.one.value;
+        var y = document.Converter.two.value;
+	var nx = x.split("");
+	var ny = y.split("");
+	if(nx[0] == "-") { x = nx[1];}
+	if(ny[0] == "-") { y = ny[1];}
+        var anum = /(^\d+$)|(^\d+\.\d+$)/;
+        if ( (anum.test(x) || anum.test(y)) && (x != "" || y != "") )
+                testresult=true;
+        else {
+                alert("Bitte eine gultige Zahl eingeben");
+                testresult=false;
+        }
+        return (testresult);
+}
+function updateCelsius() {
+	document.Converter.one.value = Math.round((5.0/9.0) * (document.Converter.two.value - 32.0));
+}
+function updateFahrenheit() {
+	document.Converter.two.value = Math.round((9.0/5.0) * document.Converter.one.value + 32.0);
+}
+function convertTemperature() 
+{
+	if ( (document.Converter.one.value != "") && (document.Converter.two.value == "") )
+	{
+		if(checknumber())
+		{
+			updateFahrenheit();
+		}
+	}
+	else if( (document.Converter.one.value == "") && (document.Converter.two.value != "") )
+	{
+		if(checknumber())
+		{
+			updateCelsius();
+		}
+	}
+	else if( (document.Converter.one.value == "") && (document.Converter.two.value == "") )
+	{
+		sendError();
+	}
+	else
+	{
+		if(checknumber())
+		{
+			document.Converter.two.value = "";
+			updateFahrenheit();
+		}
+	}
+}
+
+</script>
+<A CLASS="captionText">Temperaturumrechner - Zahl eingeben und auf "Rechnen" klicken</A><BR>
+<INPUT TYPE="text" NAME="one" VALUE="" SIZE="3" MAXLENGTH="6" onfocus="clearFields()">
+&deg;C
+&nbsp;=&nbsp;
+<INPUT TYPE="text" NAME="two" VALUE="" SIZE="3" MAXLENGTH="6" onfocus="clearFields()">
+&deg;F
+<input type="button" name="convert" value="Rechnen" onclick="convertTemperature()">
+<INPUT TYPE="reset" NAME="reset" VALUE="Neustart">
+</FORM>
+     <!-- end CDATA -->

@@ -1,0 +1,512 @@
+---------------Begin-------------
+UDP Report:
+
+ENVIRONMENTNAME	ENVISACTIVE	STATENAME	PROCESSNAME	PROCESSNAME
+---------------	-----------	---------	-----------	-----------
+974001xx Vacuum	N	Development	Promote to Test	Notify of Promote to Testing
+974001xx Vacuum	N	Test	Demote to Development	Notify Demote to Coding
+974001xx Vacuum	N	Test	Promote to Release	Notify Promoting to QA
+974003xx Mass Storage	N	Development	Promote to Test	Notify of Promote to Testing
+974003xx Mass Storage	N	Test	Demote to Development	Notify Demote to Coding
+974003xx Mass Storage	N	Test	Promote to Release	Notify Promoting to QA
+984004xx IVAT	N	Development	Promote to Test	Notify of Promote to Testing
+984004xx IVAT	N	Development Snapshots	Promote to Test	Notify of Promote to Testing
+984004xx IVAT	N	Test	Demote to Development	Notify Demote to Coding
+984004xx IVAT	N	Test	Promote to Release	Notify Promoting to QA
+994001xx Micro TIS Script	N	Development	Promote to Test	Notify of Promote to Testing
+994001xx Micro TIS Script	N	Test	Demote to Development	Notify Demote to Coding
+994001xx Micro TIS Script	N	Test	Promote to Release	Notify Promoting to QA
+994002xx New Frame Tracking System	N	Development	Promote to Test	Notify of Promote to Testing
+994002xx New Frame Tracking System	N	Test	Demote to Development	Notify Demote to Coding
+994002xx New Frame Tracking System	N	Test	Promote to Release	Notify Promoting to QA
+Attitude Project	N	Development	Promote to Test	Notify of Promote to Testing
+Attitude Project	N	Test	Demote to Development	Notify Demote to Coding
+Attitude Project	N	Test	Promote to Release	Notify Promoting to QA
+BFVS A3 LUT#2	N	Development	Promote to Test	Notify of Promote to Testing
+BFVS A3 LUT#2	N	Test	Demote to Development	Notify Demote to Coding
+BFVS A3 LUT#2	N	Test	Promote to Release	Notify Promoting to QA
+Bradley IOT&E PI PU	N	Development	Promote to Test	Notify of Promote to Testing
+Bradley IOT&E PI PU	N	Test	Demote to Development	Notify Demote to Coding
+Bradley IOT&E PI PU	N	Test	Promote to Release	Notify Promoting to QA
+FBCB2	N	Development	Promote to Test	Notify of Promote to Testing
+FBCB2	N	Test	Demote to Development	Notify Demote to Coding
+FBCB2	N	Test	Promote to Release	Notify Promoting to QA
+Formal Problem Tracking Model	N	Create Request	Create Package	Notify Problem Manager
+Formal Problem Tracking Model	N	Invalid	Demote to Investigate	Notify Problem Manager
+Formal Problem Tracking Model	N	Investigate	Promote to Invalid	Notify
+Formal Problem Tracking Model	N	Investigate	Promote to Review Board	Notify Review Board
+Formal Problem Tracking Model	N	Review Board	Promote to Fact of Life	Notify Promote to Fact of Life
+Formal Problem Tracking Model	N	Review Board	Promote to Invalid	Notify Promote to Open
+Formal Problem Tracking Model	N	Review Board	Promote to Schedule	Notify Promote to Schedule
+Formal Problem Tracking Model	N	Schedule	Move to Development Environment	Notify of Move
+GEO BASE	N	Development	Promote to Test	Notify of Promote to Testing
+GEO BASE	N	Test	Demote to Development	Notify Demote to Coding
+GEO BASE	N	Test	Promote to Release	Notify Promoting to QA
+Inventory Comparison Applications	N	Development	Promote to Test	Notify of Promote to Testing
+Inventory Comparison Applications	N	Test	Demote to Development	Notify Demote to Coding
+Inventory Comparison Applications	N	Test	Promote to Release	Notify Promoting to QA
+LAV III SCM	N	Integration_Test	Promote to System_Test	Notify Promoting to QA
+LAV III SCM	N	System_Test	Demote to Development	Notify Demote to Coding
+LAV III SCM	N	System_Test	Promote to Release	Notify Promoting to QA
+LAV3_TEST	N	Code_Review	Promote to Test	Notify Code Review team
+LAV3_TEST	N	Code_Review	Promote to Test	Notify of Promote to Testing
+LAV3_TEST	N	Development	Promote to Code_Review	Notify Code Review team
+LAV3_TEST	N	Development	Promote to Code_Review	Notify of Promote to Testing
+LAV3_TEST	N	Integration_Test	Demote to Development	Notify Demote to Coding
+LAV3_TEST	N	Integration_Test	Promote to System_Test	Notify Promoting to QA
+LAV3_TEST	N	System_Test	Demote to Development	Notify Demote to Coding
+LAV3_TEST	N	System_Test	Promote to Release	Notify Promoting to QA
+MAIS 9Feb00	N	Development	Promote to Test	Notify of Promote to Testing
+MAIS 9Feb00	N	Test	Demote to Development	Notify Demote to Coding
+MAIS 9Feb00	N	Test	Promote to Release	Notify Promoting to QA
+MAIS_PU	N	Development	Promote to Test	Notify of Promote to Testing
+MAIS_PU	N	Test	Demote to Development	Notify Demote to Coding
+MAIS_PU	N	Test	Promote to Release	Notify Promoting to QA
+MAIS_TES	N	Development	Promote to Test	Notify of Promote to Testing
+MAIS_TES	N	Test	Demote to Development	Notify Demote to Coding
+MAIS_TES	N	Test	Promote to Release	Notify Promoting to QA
+MICAD SDCP	N	Development	Approve Promotion to Test	Process-15
+MICAD SDCP	N	Development	Promote to Test	Notify of Promote to Testing
+MICAD SDCP	N	Test	Demote to Development	Notify Demote to Coding
+MICAD SDCP	N	Test	Promote to Release	Notify Promoting to QA
+My test	N	Development	Promote to Test	Notify of Promote to Testing
+My test	N	Test	Demote to Development	Notify Demote to Coding
+My test	N	Test	Promote to Release	Notify Promoting to QA
+New_NCP_v1	N	Development	Promote to Test	Notify Code Review team
+New_NCP_v1	N	Development	Promote to Test	Notify of Promote to Testing
+New_NCP_v1	N	Test	Demote to Development	Notify Demote to Coding
+New_NCP_v1	N	Test	Promote to Release	Notify Promoting to QA
+PEW	N	Development	Promote to Test	Notify of Promote to Testing
+PEW	N	Test	Demote to Development	Notify Demote to Coding
+PEW	N	Test	Promote to Release	Notify Promoting to QA
+PI_PUEA	N	Development	Promote to Test	Notify of Promote to Testing
+PI_PUEA	N	Test	Demote to Development	Notify Demote to Coding
+PI_PUEA	N	Test	Promote to Release	Notify Promoting to QA
+Parallel Development Model	N	Assigned Changes	Move to Problem Environment	Notify of Move
+Parallel Development Model	N	Assigned Changes	Promote to Coding	Notify of Promote
+Parallel Development Model	N	Closed	Demote to Quality Assurance	Notify Demoting to QA
+Parallel Development Model	N	Coding	Demote to Assigned Changes	Notify Demote to Assigned Changes
+Parallel Development Model	N	Coding	Promote to Unit Testing	Notify of Promote to Testing
+Parallel Development Model	N	Quality Assurance	Approve Package	Notify of Approval
+Parallel Development Model	N	Quality Assurance	Demote to Coding	Notify Demoting to Coding
+Parallel Development Model	N	Quality Assurance	Promote to Closed	Notify Promoting to Closed
+Parallel Development Model	N	Unit Testing	Approve Package	Notify of Approval
+Parallel Development Model	N	Unit Testing	Demote to Coding	Notify Demote to Coding
+Parallel Development Model	N	Unit Testing	Promote to Quality Assurance	Notify Promoting to QA
+RST	N	Development	Promote to Test	Notify of Promote to Testing
+RST	N	Test	Demote to Development	Notify Demote to Coding
+RST	N	Test	Promote to Release	Notify Promoting to QA
+Release Model	N	Development	Promote to Test	Notify of Promote to Testing
+Release Model	N	Test	Demote to Development	Notify Demote to Coding
+Release Model	N	Test	Promote to Release	Notify Promoting to QA
+Repos_Mv_Test	N	Development	Promote to Test	Notify of Promote to Testing
+Repos_Mv_Test	N	Test	Demote to Development	Notify Demote to Coding
+Repos_Mv_Test	N	Test	Promote to Release	Notify Promoting to QA
+Source	N	Development	Promote to Test	Notify of Promote to Testing
+Source	N	Test	Demote to Development	Notify Demote to Coding
+Source	N	Test	Promote to Release	Notify Promoting to QA
+TESCO_MAIS_Model	N	Code_Review	Demote To Development	Notify of Demotion
+TESCO_MAIS_Model	N	Code_Review	Promote to Integration Test	Notify test team
+TESCO_MAIS_Model	N	Development	Check Out for Update	Notify Check Out for Update
+TESCO_MAIS_Model	N	Development	Promote to Code_Review	Notify Code Review team
+TESCO_MAIS_Model	N	Integration_Test	Demote to Development	Notify demote to coding
+TESCO_MAIS_Model	N	Integration_Test	Promote to System_Test	Notify system testers
+TESCO_MAIS_Model	N	System_Test	Demote to Development	Notify of Demote to Development
+TESCO_MAIS_Model	N	System_Test	Promote to Release	Notify of Promote to Release
+TESCO_TIMS_Model	N	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TESCO_TIMS_Model	N	AlphaTest	Promote To Beta Test	Notify of Promotion
+TESCO_TIMS_Model	N	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TESCO_TIMS_Model	N	Analysis&Design	Promote to Release	Notify of Promotion
+TESCO_TIMS_Model	N	Beta Test	Promote To Release	Notify of Promotion
+TESCO_TIMS_Model	N	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TESCO_TIMS_Model	N	Development	Delete Version	Notify of deletion
+TEST	N	Code_Review	Promote to Test	Notify Code Review team
+TEST	N	Code_Review	Promote to Test	Notify of Promote to Testing
+TEST	N	Development	Promote to Code_Review	Notify Code Review team
+TEST	N	Development	Promote to Code_Review	Notify of Promote to Testing
+TEST	N	Integration_Test	Demote to Development	Notify Demote to Coding
+TEST	N	Integration_Test	Promote to System_Test	Notify Promoting to QA
+TEST	N	System_Test	Demote to Development	Notify Demote to Coding
+TEST	N	System_Test	Promote to Release	Notify Promoting to QA
+TIMS WAO Rollover / Project Management	N	Development	Promote to Test	Notify of Promote to Testing
+TIMS WAO Rollover / Project Management	N	Test	Demote to Development	Notify Demote to Coding
+TIMS WAO Rollover / Project Management	N	Test	Promote to Release	Notify Promoting to QA
+TSC Gerber Files	N	Development	Promote to Test	Notify of Promote to Testing
+TSC Gerber Files	N	Test	Demote to Development	Notify Demote to Coding
+TSC Gerber Files	N	Test	Promote to Release	Notify Promoting to QA
+TUAV2_PreDevelopment_NCP\C3	N	Code_Review	Demote To Development	Package demoted
+TUAV2_PreDevelopment_NCP\C3	N	Code_Review	Promote to Integration Test	Notify test team
+TUAV2_PreDevelopment_NCP\C3	N	Development	Promote to Code_Review	Notify Code Review team
+TUAV2_PreDevelopment_NCP\C3	N	Integration_Test	Demote to Development	Notify demote to coding
+TUAV2_PreDevelopment_NCP\C3	N	Integration_Test	Promote to System_Test	Notify system testers
+TUAV2_PreDevelopment_NCP\C3	N	System_Test	Demote to Development	Notify demoting to development
+TUAV2_PreDevelopment_NCP\C3	N	System_Test	Promote to Release	Notify promotion to release
+TimeCard2	N	Development	Promote to Test	Notify of Promote to Testing
+TimeCard2	N	Test	Demote to Development	Notify Demote to Coding
+TimeCard2	N	Test	Promote to Release	Notify Promoting to QA
+Timecard	N	Development	Promote to Test	Notify of Promote to Testing
+Timecard	N	Test	Demote to Development	Notify Demote to Coding
+Timecard	N	Test	Promote to Release	Notify Promoting to QA
+VTS	N	Development	Promote to Test	Notify of Promote to Testing
+VTS	N	Test	Demote to Development	Notify Demote to Coding
+VTS	N	Test	Promote to Release	Notify Promoting to QA
+Warehouse Transaction	N	Development	Promote to Test	Notify of Promote to Testing
+Warehouse Transaction	N	Test	Demote to Development	Notify Demote to Coding
+Warehouse Transaction	N	Test	Promote to Release	Notify Promoting to QA
+ZipServer	N	Development	Promote to Test	Notify of Promote to Testing
+ZipServer	N	Test	Demote to Development	Notify Demote to Coding
+ZipServer	N	Test	Promote to Release	Notify Promoting to QA
+commonsTest	N	Development	Promote to Test	Notify of Promote to Testing
+commonsTest	N	Test	Demote to Development	Notify Demote to Coding
+commonsTest	N	Test	Promote to Release	Notify Promoting to QA
+ TUAV2_PRE_Development	Y	Code_Review	Promote to Test	Notify Code Review team
+ TUAV2_PRE_Development	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+ TUAV2_PRE_Development	Y	Development	Promote to Code_Review	Notify Code Review team
+ TUAV2_PRE_Development	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+ TUAV2_PRE_Development	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+ TUAV2_PRE_Development	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+ TUAV2_PRE_Development	Y	System_Test	Demote to Development	Notify Demote to Coding
+ TUAV2_PRE_Development	Y	System_Test	Promote to Release	Notify Promoting to QA
+AC3_V2	Y	Development	Promote to Test	Notify Code Review team
+AC3_V2	Y	Development	Promote to Test	Notify of Promote to Testing
+AC3_V2	Y	Test	Demote to Development	Notify Demote to Coding
+AC3_V2	Y	Test	Promote to Release	Notify Promoting to QA
+ALOT1_PU_V2	Y	Development	Promote to Test	Notify Code Review team
+ALOT1_PU_V2	Y	Development	Promote to Test	Notify of Promote to Testing
+ALOT1_PU_V2	Y	Test	Demote to Development	Notify Demote to Coding
+ALOT1_PU_V2	Y	Test	Promote to Release	Notify Promoting to QA
+API_V4	Y	Development	Promote to Test	Notify Code Review team
+API_V4	Y	Development	Promote to Test	Notify of Promote to Testing
+API_V4	Y	Test	Demote to Development	Notify Demote to Coding
+API_V4	Y	Test	Promote to Release	Notify Promoting to QA
+BCIS	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+BCIS	Y	Code_Review	Promote to Test	Notify Code Review team
+BCIS	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+BCIS	Y	Development	Promote to Code_Review	Notify Code Review team
+BCIS	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+BCIS	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+BCIS	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+BCIS	Y	System_Test	Demote to Development	Notify Demote to Coding
+BCIS	Y	System_Test	Promote to Release	Notify Promoting to QA
+BDOG	Y	Development	Promote to Test	Notify of Promote to Testing
+BDOG	Y	Test	Demote to Development	Notify Demote to Coding
+BDOG	Y	Test	Promote to Release	Notify Promoting to QA
+Bradley IOT&E Lot 1 PU	Y	Development	Promote to Test	Notify of Promote to Testing
+Bradley IOT&E Lot 1 PU	Y	Test	Demote to Development	Notify Demote to Coding
+Bradley IOT&E Lot 1 PU	Y	Test	Promote to Release	Notify Promoting to QA
+C3 Sys Sim	Y	Development	Promote to Test	Notify of Promote to Testing
+C3 Sys Sim	Y	Test	Demote to Development	Notify Demote to Coding
+C3 Sys Sim	Y	Test	Promote to Release	Notify Promoting to QA
+CM Test	Y	Code_Review	Promote to Test	Notify Code Review team
+CM Test	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+CM Test	Y	Development	Promote to Code_Review	Notify Code Review team
+CM Test	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+CM Test	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+CM Test	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+CM Test	Y	System_Test	Demote to Development	Notify Demote to Coding
+CM Test	Y	System_Test	Promote to Release Staging	Notify Promoting to QA
+CM Test	Y	System_Test_Staging	Demote to Integration Test	Notify Demote to Coding
+CM Test	Y	System_Test_Staging	Promote to System Test	Notify Promoting to QA
+CM Testbed	Y	Code_Review	Promote to Test	Notify Code Review team
+CM Testbed	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+CM Testbed	Y	Development	Promote to Code_Review	Notify Code Review team
+CM Testbed	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+CM Testbed	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+CM Testbed	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+CM Testbed	Y	System_Test	Demote to Development	Notify Demote to Coding
+CM Testbed	Y	System_Test	Promote to Release Staging	Notify Promoting to QA
+CM Testbed	Y	System_Test_Staging	Demote to Integration Test	Notify Demote to Coding
+CM Testbed	Y	System_Test_Staging	Promote to System Test	Notify Promoting to QA
+DDI	Y	Development	Promote to Test	Notify of Promote to Testing
+DDI	Y	Test	Demote to Development	Notify Demote to Coding
+DDI	Y	Test	Promote to Release	Notify Promoting to QA
+DDI Base	Y	Development	Promote to Test	Notify of Promote to Testing
+DDI Base	Y	Test	Demote to Development	Notify Demote to Coding
+DDI Base	Y	Test	Promote to Release	Notify Promoting to QA
+DDI Filter Software	Y	Development	Promote to Test	Notify of Promote to Testing
+DDI Filter Software	Y	Test	Demote to Development	Notify Demote to Coding
+DDI Filter Software	Y	Test	Promote to Release	Notify Promoting to QA
+DID Software	Y	Code_Review	Promote to Test	Notify Code Review team
+DID Software	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+DID Software	Y	Development	Promote to Code_Review	Notify Code Review team
+DID Software	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+DID Software	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+DID Software	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+DID Software	Y	System_Test	Demote to Development	Notify Demote to Coding
+DID Software	Y	System_Test	Promote to Release	Notify Promoting to QA
+DLC	Y	Development	Promote to Test	Notify of Promote to Testing
+DLC	Y	Test	Demote to Development	Notify Demote to Coding
+DLC	Y	Test	Promote to Release	Notify Promoting to QA
+DVER	Y	Development	Promote to Test	Notify of Promote to Testing
+DVER	Y	Test	Demote to Development	Notify Demote to Coding
+DVER	Y	Test	Promote to Release	Notify Promoting to QA
+DVER_MFIB	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+DVER_MFIB	Y	Code_Review	Promote to Test	Notify CM/QA team
+DVER_MFIB	Y	Development	Promote to Code_Review	Notify CM/QA team
+DVER_MFIB	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+DVER_MFIB	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+DVER_MFIB	Y	System_Test	Demote to Development	Notify Demote to Coding
+DVER_MFIB	Y	System_Test	Promote to Release	Notify Promoting to QA
+DataHunter	Y	Development	Create Package	Create Package Notify
+DataHunter	Y	Development	Promote to Test	Notify of Promote to TEST
+DataHunter	Y	Test	Demote to Development	Notify Demote to Coding
+DataHunter	Y	Test	Promote to Release	Notify Promoting to Release
+DataXpress	Y	Development	Promote to Test	Notify of Promote to Testing
+DataXpress	Y	Test	Demote to Development	Notify Demote to Coding
+DataXpress	Y	Test	Promote to Release	Notify Promoting to QA
+Emergency NCP Fix	Y	Code_Review	Promote to Test	Notify Code Review team
+Emergency NCP Fix	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+Emergency NCP Fix	Y	Development	Promote to Code_Review	Notify Code Review team
+Emergency NCP Fix	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+Emergency NCP Fix	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+Emergency NCP Fix	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+Emergency NCP Fix	Y	System_Test	Demote to Development	Notify Demote to Coding
+Emergency NCP Fix	Y	System_Test	Promote to Release	Notify Promoting to QA
+External Device Controller (EDC)	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+External Device Controller (EDC)	Y	Code_Review	Promote to Test	Notify Code Review team
+External Device Controller (EDC)	Y	Development	Promote to Code_Review	Notify Code Review team
+External Device Controller (EDC)	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+External Device Controller (EDC)	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+External Device Controller (EDC)	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+External Device Controller (EDC)	Y	System_Test	Demote to Development	Notify Demote to Coding
+External Device Controller (EDC)	Y	System_Test	Promote to Release	Notify Promoting to QA
+Geometric Pairing	Y	Code Review	Promote to Test	Notify of Promote to Testing
+Geometric Pairing	Y	Development	Create Package	Notify of package creation
+Geometric Pairing	Y	Development	Promote to Code Review	Notify of Promote to Code Review
+Geometric Pairing	Y	Integration Test	Demote to Development	Notify Demote to Coding
+Geometric Pairing	Y	Integration Test	Promote to System Test	Notify Promoting to QA
+Geometric Pairing	Y	System Test	Demote to Development	Notify Demote to Coding
+Geometric Pairing	Y	System Test	Promote to Release	Notify Promoting to QA
+LAV3_C3	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+LAV3_C3	Y	Code_Review	Promote to Test	Notify CM/QA team
+LAV3_C3	Y	Development	Promote to Code_Review	Notify CM/QA team
+LAV3_C3	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+LAV3_C3	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+LAV3_C3	Y	System_Test	Demote to Development	Notify Demote to Coding
+LAV3_C3	Y	System_Test	Promote to Release	Notify Promoting to QA
+LAV3_LOT1	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+LAV3_LOT1	Y	Code_Review	Promote to Test	Notify Code Review team
+LAV3_LOT1	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+LAV3_LOT1	Y	Development	Promote to Code_Review	Notify Code Review team
+LAV3_LOT1	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+LAV3_LOT1	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+LAV3_LOT1	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+LAV3_LOT1	Y	System_Test	Demote to Development	Notify Demote to Coding
+LAV3_LOT1	Y	System_Test	Promote to Release	Notify Promoting to QA
+LAV3_NCP	Y	Code_Review	Promote to Test	Notify Code Review team
+LAV3_NCP	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+LAV3_NCP	Y	Development	Promote to Code_Review	Notify Code Review team
+LAV3_NCP	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+LAV3_NCP	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+LAV3_NCP	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+LAV3_NCP	Y	System_Test	Demote to Development	Notify Demote to Coding
+LAV3_NCP	Y	System_Test	Promote to Release	Notify Promoting to QA
+LAV3_PI	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+LAV3_PI	Y	Code_Review	Promote to Test	Notify Code Review team
+LAV3_PI	Y	Development	Promote to Code_Review	Notify Code Review team
+LAV3_PI	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+LAV3_PI	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+LAV3_PI	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+LAV3_PI	Y	System_Test	Demote to Development	Notify Demote to Coding
+LAV3_PI	Y	System_Test	Promote to Release	Notify Promoting to QA
+LM Proprietary	Y	Development	Promote to Test	Notify of Promote to Testing
+LM Proprietary	Y	Test	Demote to Development	Notify Demote to Coding
+LM Proprietary	Y	Test	Promote to Release	Notify Promoting to QA
+Lot 1 CPU	Y	Development	Promote to Test	Notify of Promote to Testing
+Lot 1 CPU	Y	Test	Demote to Development	Notify Demote to Coding
+Lot 1 CPU	Y	Test	Promote to Release	Notify Promoting to QA
+MAIS	Y	Development	Promote to Test	Notify of Promote to Testing
+MAIS	Y	Test	Demote to Development	Notify Demote to Coding
+MAIS	Y	Test	Promote to Release	Notify Promoting to QA
+MAIS OT	Y	Development	E-Mail	Process-38
+MAIS OT	Y	Development	Promote to Test	Promote to Test Notify
+MAIS Utilities	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+MAIS Utilities	Y	Code_Review	Promote to Test	Notify Code Review team
+MAIS Utilities	Y	Development	Promote to Code_Review	Notify Code Review team
+MAIS Utilities	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+MAIS Utilities	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+MAIS Utilities	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+MAIS Utilities	Y	System_Test	Demote to Development	Notify Demote to Coding
+MAIS Utilities	Y	System_Test	Promote to Release	Notify Promoting to QA
+MILT	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+MILT	Y	Code_Review	Promote to Test	Notify Code Review team
+MILT	Y	Code_Review	Promote to Test	Notify of Promote to Testing
+MILT	Y	Development	Promote to Code_Review	Notify Code Review team
+MILT	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+MILT	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+MILT	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+MILT	Y	System_Test	Demote to Development	Notify Demote to Coding
+MILT	Y	System_Test	Promote to Release	Notify Promoting to QA
+Mais Test Lab Development	Y	Code_Review	Approve Promotion To Test	Notify CM Team
+Mais Test Lab Development	Y	Code_Review	Promote to Test	Notify Code Review team
+Mais Test Lab Development	Y	Development	Promote to Code_Review	Notify Code Review team
+Mais Test Lab Development	Y	Development	Promote to Code_Review	Notify of Promote to Testing
+Mais Test Lab Development	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+Mais Test Lab Development	Y	Integration_Test	Promote to System_Test	Notify Promoting to QA
+Mais Test Lab Development	Y	System_Test	Demote to Development	Notify Demote to Coding
+Mais Test Lab Development	Y	System_Test	Promote to Release	Notify Promoting to QA
+SEARCH	Y	Development	Promote to Test	Notify of Promote to Testing
+SEARCH	Y	Test	Demote to Development	Notify Demote to Coding
+SEARCH	Y	Test	Promote to Release	Notify Promoting to QA
+SSF_PC	Y	Development	Promote to Test	Notify of Promote to Testing
+SSF_PC	Y	Test	Demote to Development	Notify Demote to Coding
+SSF_PC	Y	Test	Promote to Release	Notify Promoting to QA
+TIMS	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS	Y	Development	Delete Version	Notify of deletion
+TIMS Dispatching	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Dispatching	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Dispatching	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Dispatching	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Dispatching	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Dispatching	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Dispatching	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Dispatching	Y	Development	Delete Version	Notify of deletion
+TIMS Problem Management	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Problem Management	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Problem Management	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Problem Management	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Problem Management	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Problem Management	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Problem Management	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Problem Management	Y	Development	Delete Version	Notify of deletion
+TIMS Project Management	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Project Management	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Project Management	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Project Management	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Project Management	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Project Management	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Project Management	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Project Management	Y	Development	Delete Version	Notify of deletion
+TIMS Projected Engineering Work	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Projected Engineering Work	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Projected Engineering Work	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Projected Engineering Work	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Projected Engineering Work	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Projected Engineering Work	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Projected Engineering Work	Y	Development	Delete Version	Notify of deletion
+TIMS Property Management	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Property Management	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Property Management	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Property Management	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Property Management	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Property Management	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Property Management	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Property Management	Y	Development	Delete Version	Notify of deletion
+TIMS RST	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS RST	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS RST	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS RST	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS RST	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS RST	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS RST	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS RST	Y	Development	Delete Version	Notify of deletion
+TIMS TEL	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS TEL	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS TEL	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS TEL	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS TEL	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS TEL	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS TEL	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS TEL	Y	Development	Delete Version	Notify of deletion
+TIMS Time Entry	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Time Entry	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Time Entry	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Time Entry	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Time Entry	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Time Entry	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Time Entry	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Time Entry	Y	Development	Delete Version	Notify of deletion
+TIMS Warehouse Transactions	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Warehouse Transactions	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Warehouse Transactions	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Warehouse Transactions	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Warehouse Transactions	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Warehouse Transactions	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Warehouse Transactions	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Warehouse Transactions	Y	Development	Delete Version	Notify of deletion
+TIMS Work Orders	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Work Orders	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Work Orders	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Work Orders	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Work Orders	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Work Orders	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Work Orders	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Work Orders	Y	Development	Delete Version	Notify of deletion
+TIMS Work Request	Y	AlphaTest	Approve Promotion To BetaTest	Notify Approval of Promotion
+TIMS Work Request	Y	AlphaTest	Promote To Beta Test	Notify of Promotion
+TIMS Work Request	Y	Analysis&Design	Approve Promotion To Release	Notify of Approval
+TIMS Work Request	Y	Analysis&Design	Promote to Release	Notify of Promotion
+TIMS Work Request	Y	Beta Test	Approve Promotion To BetaTest	Notify of Approval to Promote
+TIMS Work Request	Y	Beta Test	Promote To Release	Notify of Promotion
+TIMS Work Request	Y	Development	Approve Promotion to Alpha Test	Notify of Approval to Promote
+TIMS Work Request	Y	Development	Delete Version	Notify of deletion
+TUAV2_C3	Y	Code_Review	Demote To Development	Package demoted
+TUAV2_C3	Y	Code_Review	Promote to Code Review Complete	Notify test team
+TUAV2_C3	Y	Code_Review_Complete	Demote To Code_Review	Package demoted
+TUAV2_C3	Y	Code_Review_Complete	Promote to Integration Test	Notify test team
+TUAV2_C3	Y	Development	Promote to Code_Review	Notify Code Review team
+TUAV2_C3	Y	Documentation	Promote to Code_Review	Notify Code Review team
+TUAV2_C3	Y	Integration_Test	Demote to Development	Notify demote to coding
+TUAV2_C3	Y	Integration_Test	Promote to System_Test	Notify system testers
+TUAV2_C3	Y	System_Test	Demote to Development	Notify demoting to development
+TUAV2_C3	Y	System_Test	Promote to Release	Notify promotion to release
+TUAV2_LOT1	Y	Code_Review	Demote To Development	Package demoted
+TUAV2_LOT1	Y	Code_Review	Promote to Code Review Complete	Process-22
+TUAV2_LOT1	Y	Code_Review_Complete	Demote back to CRC	Demote back to CRC
+TUAV2_LOT1	Y	Code_Review_Complete	Promote to Integration Test	Notify Promotion to Integration Test
+TUAV2_LOT1	Y	Development	Check In Items	Process-6
+TUAV2_LOT1	Y	Development	Promote to Code_Review	Notify Code Review team
+TUAV2_LOT1	Y	Integration_Test	Create Revision Package	Process-29
+TUAV2_LOT1	Y	Integration_Test	Demote to Development	Notify demote to coding
+TUAV2_LOT1	Y	Integration_Test	Promote to System_Test	Notify system testers
+TUAV2_LOT1	Y	System_Test	Demote to Development	Notify demoting to development
+TUAV2_LOT1	Y	System_Test	Promote to Release	Notify promotion to release
+TUAV2_NCP	Y	Code_Review	Demote To Development	Package demoted
+TUAV2_NCP	Y	Code_Review	Promote to Code Review Complete	Notify test team
+TUAV2_NCP	Y	Code_Review_Complete	Demote To Code_Review	Package demoted
+TUAV2_NCP	Y	Code_Review_Complete	Promote to Integration Test	Notify test team
+TUAV2_NCP	Y	Development	Promote to Code_Review	Notify Code Review team
+TUAV2_NCP	Y	Documentation	Promote to Code_Review	Notify Code Review team
+TUAV2_NCP	Y	Integration_Test	Demote to Development	Notify demote to coding
+TUAV2_NCP	Y	Integration_Test	Promote to System_Test	Notify system testers
+TUAV2_NCP	Y	System_Test	Demote to Development	Notify demoting to development
+TUAV2_NCP	Y	System_Test	Promote to Release	Notify promotion to release
+TUAV2_PI	Y	Code_Review	Demote To Development	Demote notification
+TUAV2_PI	Y	Code_Review	Package Distribution Report	Process-25
+TUAV2_PI	Y	Code_Review	Promote to Code Review Completed	Promote Notification
+TUAV2_PI	Y	Completed_Code_Review	Demote back to CRC	Process-21
+TUAV2_PI	Y	Completed_Code_Review	Promote to Integration Test	Process-20
+TUAV2_PI	Y	Development	Approve Promotion To Code_Review	Process-23
+TUAV2_PI	Y	Development	E-Mail	Process-24
+TUAV2_PI	Y	Development	Promote to Code Review	Notify of promotion to Code Review
+TUAV2_PI	Y	Integration_Test	Create Version Package	Process-32
+TUAV2_PI	Y	Integration_Test	Demote to Development	Notify demote to coding
+TUAV2_PI	Y	Integration_Test	Promote to System_Test	Notify system testers
+TUAV2_PI	Y	System_Test	Demote to Development	Notify demoting to development
+TUAV2_PI	Y	System_Test	Promote to Release	Notify promotion to release
+TV2	Y	Code_Review	Promote to Code Review Complete	Notify Code Review Team/Developer
+TV2	Y	Code_Review	Promote to Code Review Complete	Notify of Promote to Testing
+TV2	Y	Code_Review_Complete	Promote to Test	Notify of Promote to Testing
+TV2	Y	Code_Review_Complete	Promote to Test	Notive CM Admin
+TV2	Y	Development	Approve	Process-59
+TV2	Y	Development	Promote to Code Review	Notify Code Review Team
+TV2	Y	Development	Promote to Code Review	Notify of Promote to Testing
+TV2	Y	Integration_Test	Demote to Development	Notify Demote to Coding
+TV2	Y	Integration_Test	Promote to System Test	Notify Promoting to QA
+TV2	Y	System _Test	Demote to Development	Notify Demote to Coding
+TV2	Y	System _Test	Promote to Release	Notify Promoting to QA
+Tape Reader	Y	Development	Promote to Test	Notify of Promote to Testing
+Tape Reader	Y	Test	Demote to Development	Notify Demote to Coding
+Tape Reader	Y	Test	Promote to Release	Notify Promoting to QA
+Target Lifter	Y	Development	Promote to Test	Notify of Promote to Testing
+Target Lifter	Y	Test	Demote to Development	Notify Demote to Coding
+Target Lifter	Y	Test	Promote to Release	Notify Promoting to QA
+Tools	Y	Development	Promote to Test	Notify of Promote to Testing
+Tools	Y	Test	Demote to Development	Notify Demote to Coding
+Tools	Y	Test	Promote to Release	Notify Promoting to QA
+--------------- End -------------

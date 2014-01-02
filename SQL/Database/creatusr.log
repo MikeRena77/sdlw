@@ -1,0 +1,69 @@
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+User altered.
+
+
+User altered.
+
+
+User altered.
+
+
+User altered.
+
+alter user harvest quota UNLIMITED ON UNDOTBS1
+*
+ERROR at line 1:
+ORA-30041: Cannot grant quota on the tablespace 
+
+
+
+Revoke succeeded.
+
+
+Commit complete.
+

@@ -1,0 +1,1 @@
+select processobjid, processname, stateobjid, pathoption, replacefile, updmode, creationtime, creatorid, viewpath from harcheckoutproc

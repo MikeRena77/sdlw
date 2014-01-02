@@ -1,0 +1,40 @@
+	 1
+==============	Ultra Search Configuration  ==============
+
+
+============== argument list
+WKSYSPW=XXXXXXXX
+JDBC_CONNSTR=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hardev3.aafes.com)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=SCMUSER)))
+LAUNCH_ANYWHERE=false
+CONN_STRING=
+OH=C:\oracle\product\10.1.0\db_1
+JDBCDRIVER_PATH=C:\oracle\product\10.1.0\db_1\jdbc\lib\classes12.zip
+JDBCNLS_PATH=C:\oracle\product\10.1.0\db_1\jdbc\lib\nls_charset12.zip
+JRE_HOME=C:\oracle\product\10.1.0\db_1\jdk\jre\
+JAVA_EXE_PATH=C:\oracle\product\10.1.0\db_1\jdk\bin\java.exe
+PSEP=;
+CTXHX=C:\oracle\product\10.1.0\db_1\bin\ctxhx.exe
+==================
+
+Connected.
+====== User is WKSYS
+============== populating the WK$CRAWLER_CONFIG_DEFAULT table
+============== load crawler classpath
+...... setting the crawler classpath
+============== updating crawler configuration
+...... creating lexer preference
+...... creating wordlist preference
+...... creating storage preference
+...... creating stoplist
+...... creating section group
+...... creating zone sections
+...... creating field sections
+...... creating filter preference
+...... creating datastore preference
+
+... checking for invalid objects... see list below
+================== list start
+================== list end
+
+==============	End of Configuration  ==============
+

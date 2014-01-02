@@ -1,0 +1,5 @@
+SQL> drop user harvest CASCADE;
+
+User dropped.
+
+SQL> spool off

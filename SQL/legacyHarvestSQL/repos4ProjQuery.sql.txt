@@ -1,0 +1,37 @@
+From: info@cmcrossroads.com
+Sent: Friday, March 04, 2005 3:32 PM
+To: michael.h.andrews1@otc.army.mil
+Subject: [Harvest Forum] Re: Harvest 5.1.1 DB Schema - 40837
+From: Lyle Salam 
+To: Harvest Forum 
+
+Tom,
+Something has changed between 5.2.1 base and 5.2.1 patch 4
+The query earlier in this thread is now returning two identical rows for repository, rather than one. Any ideas what has changed ? I can add unique, but what is up ?
+
+select
+R.repositname
+from
+harenvironment E, harrepository R,
+harview V, harrepinview I
+where
+E.environmentname = 'Your Project Name' and
+E.envobjid = V.envobjid and
+V.viewtype = 'Baseline' and
+V.viewobjid = I.viewobjid and
+I.repositobjid = R.repositobjid
+order by 1; 
+
+--------------------------------------------------------------------------------
+You may reply to this post by email or use the link below to review the entire thread
+http://www.cmcrossroads.com/ubbthreads/showflat.php?Number=40837
+
+
+--------------------------------------------------------------------------------
+This message was sent in HTML format to michael.h.andrews1@otc.army.mil
+  a.. Change your email address here.
+  b.. Change to TEXT format or to unsubscribe completely. 
+
+--------------------------------------------------------------------------------
+
+Copyright © 1998-2004 CM Crossroads, the configuration management community - www.cmcrossroads.com 

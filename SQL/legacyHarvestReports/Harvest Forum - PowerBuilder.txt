@@ -1,0 +1,25 @@
+From: info@cmcrossroads.com
+Sent: Wednesday, May 08, 2002 4:19 PM
+To: info@cmcrossroads.com
+Subject: Harvest Forum - PowerBuilder &amp; Harvest : Harvest Forum
+
+Craig just posted a Harvest Forum message at CM Crossroads The message text is below. 
+
+ This email message is for notification only, please DO NOT reply. You can review the entire thread and post your reply at the following link:
+
+  http://cmcrossroads.com/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic&f=1&t=001596
+
+MESSAGE TEXT:
+
+--------------------------------
+
+I have posted this on the forum before, but we have found that there are really only two solutions that work WELL in regards to handling PowerBuilder objects with Harvest. These are:
+
+-PowerGen with the old 'TC' UDP's
+-HarPB, the GUI based drag and drop Powerbuilder/Harvest application.
+
+You can download a copy of our HarPB whitepaper from our website, as well I can send out a 30-day eval copy to anyone who would like to look at the product.
+
+Craig Farkas
+Polaris Technologies Ltd.
+www.polaristech.com

@@ -1,0 +1,7 @@
+--
+-- manifest for patch p14446952
+--
+
+-- patch prerequisites
+-- patch requires build 30
+14446952,30,setcollation

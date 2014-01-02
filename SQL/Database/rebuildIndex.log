@@ -1,0 +1,624 @@
+
+SQL*Plus: Release 10.1.0.2.0 - Production on Thu Sep 25 06:45:41 2008
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+ALTER INDEX SCMUSER.HARSCMUSER.HARVEST_PK REBUILD
+                              *
+ERROR at line 1:
+ORA-02243: invalid ALTER INDEX or ALTER MATERIALIZED VIEW option
+
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+
+Index altered.
+
+SQL> Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options

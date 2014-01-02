@@ -1,0 +1,1 @@
+exp hrvstuser/har2vest@HARVEST2_PRODDBS1 owner=hrvstuser grants=y file=proddbs1Exp.dmp log=proddbs1Bkup.log

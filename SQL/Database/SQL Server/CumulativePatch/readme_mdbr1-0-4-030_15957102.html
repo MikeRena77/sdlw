@@ -1,0 +1,1956 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="readme_mdbr1-0-4-030_15957102_files/filelist.xml">
+<link rel=Edit-Time-Data href="readme_mdbr1-0-4-030_15957102_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>CA Management Database r1.0.04-030 Service Pack 15957102 Readme</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Karen Matoke</o:Author>
+  <o:LastAuthor>Karen Matoke</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:Created>2007-09-10T14:57:00Z</o:Created>
+  <o:LastSaved>2007-09-10T14:57:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3961</o:Words>
+  <o:Characters>22582</o:Characters>
+  <o:Company>CA</o:Company>
+  <o:Lines>188</o:Lines>
+  <o:Paragraphs>52</o:Paragraphs>
+  <o:CharactersWithSpaces>26491</o:CharactersWithSpaces>
+  <o:Version>11.8036</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:21.5pt;
+	font-family:"Times New Roman";
+	color:#336699;
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.5pt;
+	font-family:Verdana;
+	color:#336699;
+	font-weight:normal;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:15.5pt;
+	font-family:Verdana;
+	color:#336699;
+	font-weight:bold;}
+h4
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:15.5pt;
+	font-family:Verdana;
+	color:#336699;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:#336699;
+	font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#336699;
+	font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;}
+p.computerassoc, li.computerassoc, div.computerassoc
+	{mso-style-name:computerassoc;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	background:#336699;
+	font-size:15.5pt;
+	font-family:Verdana;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:white;
+	font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:974993363;
+	mso-list-template-ids:-1431115936;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:1879007355;
+	mso-list-template-ids:763417314;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1925413526;
+	mso-list-template-ids:1325170004;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1973628370;
+	mso-list-template-ids:606404564;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link="#336699" vlink="#336699" style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#336699;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b><span style='font-size:11.5pt;font-family:Verdana;
+  color:white'>CA<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<h1><a name="ca_management_database_r1_0_04_030_servi"><span style='font-size:
+17.0pt;font-family:Verdana'>CA Management Database r1.0.04-030 Service Pack
+15957102 Readme</span></a><span style='font-size:17.0pt;font-family:Verdana'><o:p></o:p></span></h1>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<p><b><span style='font-size:9.5pt'><a href="#welcome">1.0 Welcome</a></span></b><span
+style='font-size:9.5pt'> <o:p></o:p></span></p>
+
+<p><b><span style='font-size:9.5pt'><a href="#system_requirements">2.0 System
+Requirements</a></span></b><span style='font-size:9.5pt'> <o:p></o:p></span></p>
+
+<p><b><span style='font-size:9.5pt'><a href="#installation_considerations">3.0
+Installation Considerations</a></span></b><span style='font-size:9.5pt'> <br>
+<a href="#general_installation_considerations"><b>3.1 General Installation
+Considerations</b></a> <br>
+<a href="#ingres_installation"><b>3.2 Ingres Installation</b></a> <br>
+<a href="#sql_server_windows_installation"><b>3.3 SQL Server Installation</b></a>
+<br>
+<a href="#oracle_installation"><b>3.4 Oracle Installation</b></a> <o:p></o:p></span></p>
+
+<p><b><span style='font-size:9.5pt'><a href="#known_issues">4.0 Known Issues</a></span></b><span
+style='font-size:9.5pt'> <o:p></o:p></span></p>
+
+<p><b><span style='font-size:9.5pt'><a href="#published_fixes">5.0 Published
+Fixes</a></span></b><span style='font-size:9.5pt'> <br>
+<a href="#critical_bug_fixes"><b>5.1 Critical Bug Fixes</b></a> <o:p></o:p></span></p>
+
+<p><b><span style='font-size:9.5pt'><a href="#documentation">6.0 Documentation</a></span></b><span
+style='font-size:9.5pt'> <o:p></o:p></span></p>
+
+<p><b><span style='font-size:9.5pt'><a href="#contact_technical_support">7.0
+Contact Technical Support</a></span></b><span style='font-size:9.5pt'> <o:p></o:p></span></p>
+
+<h2><a name=welcome><span style='font-size:14.5pt'>1.0 Welcome</span></a><span
+style='font-size:14.5pt'><o:p></o:p></span></h2>
+
+<p><span style='font-size:9.5pt'>Welcome to CA Management Database (MDB)
+r1.0.04-030 Service Pack 15957102, a cumulative patch for MDB 1.0.4-030. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>The MDB is the common enterprise data
+repository that integrates CA product suites. It provides a unified database
+schema for the management data stored by CA products. Use of the MDB with CA
+products enables full integration for managing your IT infrastructure. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>This document contains information you need to
+know about service pack installation, solutions, and how to contact Technical
+Support. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h2><a name="system_requirements"><span style='font-size:14.5pt'>2.0 System
+Requirements</span></a><span style='font-size:14.5pt'><o:p></o:p></span></h2>
+
+<p><span style='font-size:9.5pt'>The MDB system requirements will vary
+depending on the CA Products utilizing the MDB. Typically a system should be
+configured with the following: <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo1;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Minimum of 1 CPU with 2GB RAM <o:p></o:p></span></li>
+</ul>
+
+<p style='margin-left:36.0pt'><span style='font-size:9.5pt'>A second CPU is
+recommended, especially where multiple products share one MDB. <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo1;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Minimum of 100 GB available disk space. <o:p></o:p></span></li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h2><a name="installation_considerations"><span style='font-size:14.5pt'>3.0
+Installation Considerations</span></a><span style='font-size:14.5pt'><o:p></o:p></span></h2>
+
+<p><span style='font-size:9.5pt'>Before installing CA MDB 1.0 Service Pack
+15957102, please review the following sections carefully to determine if there
+are additional installation and/or configuration steps you need to follow. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>The following installation requirements apply
+to CA MDB r1.5. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><a name="general_installation_considerations"><span style='font-size:12.5pt'>3.1
+General Installation Considerations</span></a><span style='font-size:12.5pt'><o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>The same General Installation Considerations
+hold for installation of the Service Pack as for the Installation of the MDB.
+Please refer to the “Management Database r1 Readme”. <o:p></o:p></span></p>
+
+<p><b><span style='font-size:9.5pt'>Important!</span></b><span
+style='font-size:9.5pt'> An existing MDB should be backed up prior to
+application of CA Product MDB Upgrade Packages and MDB Service Packs or
+additional Product Packages. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><a name="ingres_installation"><span style='font-size:12.5pt'>3.2 Ingres
+Installation</span></a><span style='font-size:12.5pt'><o:p></o:p></span></h3>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Pre-installation Considerations<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>This patch may be installed offline (requires
+exclusive database access) or online (only locks required tables). The patch
+installer in ONLINE mode will make lock requests on specific database objects
+with a timeout, allowing continued usage of the MDB. On a busy system the patch
+installer may not be able to acquire all locks, and timeout. This will result a
+rollback to a logical consistency point within the patch and an error reported
+from the patch installer. Re-invoking the patch installer during a period of
+less database activity will recommence patch application where it left off.
+Continued lock timeouts during patch application may be avoided by scheduling
+an install in OFFLINE mode when there are no user connections to the database
+and therefore no lock timeouts should be encountered. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>In ONLINE mode the patch installer may be
+requested to perform a database checkpoint before applying patch changes and/or
+another after the patch installation completes. If selected, the Pre-Patch and
+Post-Patch Checkpoint will be online (see pre-install considerations point 1).
+In OFFLINE mode both Pre-Patch and Post-Patch Checkpoints are mandatory. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>DB Administrators should ensure that
+sufficient disk space is available prior to patch installation to complete the
+requested checkpoints. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>If a patch install in OFFLINE mode fails for
+any reason the installer will perform recovery (<span class=SpellE>rollforward</span>).
+This will completely remove any changes introduced by the patch. If an install
+fails ONLINE mode then a rollback occurs to a consistent point within the
+patch. Some of the patch elements may remain installed. No automatic online
+patch recovery is performed, however the database is returned to a consistent
+state. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>If a patch install in ONLINE mode fails and
+&quot;none&quot; or &quot;post&quot; was specified for the checkpoint action,
+the corrected versions of the patches that failed and/or the patches that did
+not run may need to be applied by using individual patchMdb commands. The
+install_&lt;<span class=SpellE>mdb_name</span>&gt;.log contains error messages
+that indicate which patches failed to apply.<span style='mso-spacerun:yes'> 
+</span>The patchmdberr.txt file that is written to the %II_SYSTEM%\<span
+class=SpellE>ingres\files\mdb</span> Windows directory or $II_SYSTEM/<span
+class=SpellE>ingres/files/mdb</span> <span class=GramE>Unix</span> directory
+contains the patch number of the failing patch.<span style='mso-spacerun:yes'> 
+</span>The mdb_signature.txt file that is written in the same directory
+contains the list of patches that were applied during the last successful run
+of the patchMdb command.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>For a Windows install, this patch install
+requires that the Ingres installation is started as a service. If the patch
+install is run against an installation started using command line the install
+will fail with an error indicating the MDB does not exist. This is a known
+Ingres problem. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>For a <span class=GramE>Unix</span> install,
+the Ingres installation can be started from the command line or from the Ingres
+RC. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Installation Instructions<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>To apply all patch modules within the patch
+invoke the installer with II_MDB_PATCH=15957102. This will apply all modules in
+this cumulative patch (recommended). Invoking the patch installer with specific
+patch module numbers will apply that module only. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>For Windows: <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>mdb030_15957102.zip</span></span><span
+style='font-size:9.5pt'> should be unzipped to the directory of your choice,
+using a standard Windows unzip tool. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Run <span class=SpellE>PatchMDB.bat</span> to
+apply the patch. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>For <span class=GramE>Unix</span>: <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Run <span class=SpellE>patchMDB</span> as
+either the original Ingres Installation user, or as root. <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>mdb030_15957102.tar.gz</span></span><span
+style='font-size:9.5pt'> should be unzipped using one of the following methods
+(dependant on the Unix platform) : <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>a) <span class=GramE>tar</span> -<span
+class=SpellE>xzvf</span> mdb030_15957102.tar.gz <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>b) <span class=SpellE><span class=GramE>gunzip</span></span>
+mdb030_15957102.tar.gz <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>tar</span></span><span
+style='font-size:9.5pt'> -<span class=SpellE>xvf</span> mdb030_15957102.tar <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Run <span class=SpellE>patchMDB</span> to
+apply the patch. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>PatchMdb [-II_MDB_NAME=<span class=SpellE>xxxx</span>]
+[-II_MDB_PATCH=<span class=SpellE>xxxx</span>] [-II_MDB_PATCH_MODE=online/offline]
+[-II_MDB_CHECKPOINT=none/pre/post/both] [-II_SYSTEM=<span class=SpellE>xxxx</span>]
+[-debug] [-?] <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>e.g.<span class=GramE>) .</span>/patchMdb
+-II_MDB_NAME=MDB -II_MDB_PATCH=15957102 -II_MDB_PATCH_MODE=online
+-II_MDB_CHECKPOINT=none <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Usage: <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>[-II_MDB_NAME=<span class=SpellE>xxxx</span>]
+- Name of MDB <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>[-II_MDB_PATCH=<span class=SpellE>xxxx</span>]
+- Name of Patch to apply (all numeric) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>[-II_MDB_PATCH_MODE=online/offline] - Mode to
+apply patch. <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>offline</span></span><span
+style='font-size:9.5pt'> - Default is offline. Use of offline requires
+exclusive access to the <span class=SpellE>mdb</span>. Checkpoints will be
+performed offline. Patch failure will results in <span class=SpellE>rollforward</span>
+recovery. <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>online</span></span><span
+style='font-size:9.5pt'> - Does not require exclusive access to the <span
+class=SpellE>mdb</span>. <span class=GramE>May be performed with other users
+accessing the <span class=SpellE>mdb</span>.</span> Any checkpoints will be
+performed online. No <span class=SpellE>rollforward</span> recovery will be
+performed in the event of patch failure. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>[-II_MDB_CHECKPOINT=none/pre/post/both] -
+Checkpoint before/after Patch. Default 'Both'. <span class=GramE>Only
+selectable for ONLINE Patch mode.</span> <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>none</span></span><span
+style='font-size:9.5pt'> - No Checkpoint performed before or after Patch
+install. <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>pre</span></span><span
+style='font-size:9.5pt'> - Checkpoint performed prior to patch install <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>post</span></span><span
+style='font-size:9.5pt'> - Checkpoint performed after patch install <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>both</span></span><span
+style='font-size:9.5pt'> - Checkpoint performed prior and after patch install. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>[-II_SYSTEM=<span class=SpellE>xxxx</span>] -
+Location of <span class=SpellE><span class=GramE>ingres</span></span>
+installation <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>[-debug] - Apply patch with &quot;echo
+on&quot; <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>[-?] - Prints usage message <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>The patch installer appends logs messages to
+the file &quot;%II_SYSTEM%\<span class=SpellE>ingres</span>\files\install_&lt;<span
+class=SpellE>mdb_name</span>&gt;.log&quot; for Windows and “$II_SYSTEM\<span
+class=SpellE>ingres</span>\files\install_&lt;<span class=SpellE>mdb_name</span>&gt;.log
+for <span class=GramE>Unix</span>. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>There is no un-install mechanism for this
+patch. To restore the database to the Pre-patch state, use the relevant
+database restore utility. Should the patch install fail with
+-II_MDB_PATCH_MODE=offline and -II_MDB_CHECKPOINT=pre or both, the database
+will automatically be restored to the pre-patch checkpoint. In cases where the
+Patch install is invoked online, an automatic <span class=SpellE>rollforward</span>
+recovery will not be performed. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Installation Method<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>Patch installation will perform the following
+steps: <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Patch log file created <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check if database <span class=SpellE>mdb</span>
+     exists <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check the <span class=SpellE>mdb</span> version
+     <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check if the patch already applied <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check for active sessions <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Set the database private (offline only) <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Execute pre-patch checkpoint (if selected) <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Installing any prerequisite patches <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Install the patch <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Register patch - insert into <span
+     class=SpellE>mdb_patch</span> table <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Execute post-patch checkpoint (if selected) <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo2;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Set the database public (offline only) <o:p></o:p></span></li>
+</ul>
+
+<p><span style='font-size:9.5pt'>Details are available in Patch log file (see
+above). <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><a name="sql_server_windows_installation"><span style='font-size:12.5pt'>3.3
+SQL Server Installation</span></a><span style='font-size:12.5pt'><o:p></o:p></span></h3>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Pre-installation Considerations<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>The patch installation process will NOT
+perform a backup of the <span class=SpellE>mdb</span> either before or after
+patch application. Failure of the patch installation process will NOT restore
+the database to a pre-patch condition, but will rollback transactions to a
+logical consistency point within the patch process (see item 2 below). <span
+class=SpellE>DBA's</span> should make <span class=GramE>their own</span>
+provision for database backups as required. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>The installation of this patch is performed
+online, allowing continued usage of the MDB by other sessions. The patch
+install process will make lock requests on specific database objects with a
+timeout. On a busy system the patch installer may not be able to acquire all
+locks, and timeout. This will result a rollback to a logical consistency point
+within the patch and an error reported from the patch installer. Re-invoking
+the patch installer during a period of less database activity will recommence patch
+application where it left off. Continued lock timeouts during patch application
+may be avoided by scheduling <span class=GramE>a</span> offline install when
+there are no user connections to the database. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Installation Instructions<o:p></o:p></span></h3>
+
+<p><span class=GramE><span style='font-size:9.5pt'>mssql_mdb030_15957102.zip</span></span><span
+style='font-size:9.5pt'> should be unzipped to the directory of your choice,
+using a standard windows unzip tool. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Run <span class=SpellE>PatchMDB.bat</span> to
+apply the patch: <o:p></o:p></span></p>
+
+<p><span class=SpellE><span style='font-size:9.5pt'>PatchMDB</span></span><span
+style='font-size:9.5pt'> [-MDB_NAME=<span class=SpellE>xxxx</span>]
+[-MDB_PATCH=<span class=SpellE>xxxx</span>] [-debug] <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>e.g.) <span class=SpellE>PatchMDB</span>
+-MDB_NAME=MDB -MDB_PATCH=15957102 <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Usage: <span class=SpellE>PatchMDB</span>
+[-DBMS_INSTANCE=<span class=SpellE>xxxx</span>] [-MDB_NAME=<span class=SpellE>xxxx</span>]
+-MDB_PATCH=<span class=SpellE>xxxx</span> [-MDB_TARGET_DIR=dir] [-debug] [-?]
+[-DBUSER=<span class=SpellE>xxxx</span>] [-DBPASSWORD=<span class=SpellE>xxxx</span>]
+[-DBPORT=<span class=SpellE>xxxx</span>] <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>where</span></span><span
+style='font-size:9.5pt'>: <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>DBMS_INSTANCE server name or local (optional
+with default local) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>MDB_NAME database name (optional with default <span
+class=SpellE>mdb</span>) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>MDB_PATCH patch number (required) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>MDB_TARGET_DIR target <span class=SpellE>mdb</span>
+directory (optional with default current directory) <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>debug</span></span><span
+style='font-size:9.5pt'> echo output (optional) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>DBUSER <span class=SpellE>sql</span> server
+user (optional) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>DBPASSWORD password for <span class=SpellE>sql</span>
+server user (optional) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>DBPORT port number of server to connect to
+(optional) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>A Patch log file, install_&lt;<span
+class=SpellE>mdb_name</span>&gt;.log, is created in the same directory that <span
+class=SpellE>Patchmdb.bat</span> is invoked. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>There is no un-install mechanism for this
+patch. To restore database to the Pre-patch state, use the relevant database
+restore utility. Should the patch install fail the transactions within the
+current patch <span class=SpellE>sql</span> script will be rolled <span
+class=GramE>back.</span> Patches containing multiple <span class=SpellE>sql</span>
+scripts will commit those scripts that apply successfully. Where a <span
+class=SpellE>sql</span> script fails within a multi-script patch that script
+will be rolled back and patch application terminated. Scripts already committed
+will not be rolled back. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Installation Method<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>Patch installation will perform the following
+steps: <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Patch log file created <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check if database <span class=SpellE>mdb</span>
+     exists <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check the <span class=SpellE>mdb</span> version
+     <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check if the patch already applied <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Install the patch script(s) <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Register patch - insert into <span
+     class=SpellE>mdb_patch</span> table <o:p></o:p></span></li>
+</ul>
+
+<p><span style='font-size:9.5pt'>Details are available in Patch log file (see
+above). <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><a name="oracle_installation"><span style='font-size:12.5pt'>3.4 Oracle
+Installation</span></a><span style='font-size:12.5pt'><o:p></o:p></span></h3>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Pre-installation Considerations<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>By default, the patch installation process
+will perform a backup of the Oracle database prior to patch application only if
+the instance is in ARCHIVELOG mode. If the instance is in NOARCHIVELOG mode
+then the patch installer must be started with the -ORA_BACKUP=no option for the
+patch application process to proceed. Failure of the patch installation process
+will NOT restore the database to a pre-patch condition. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>The backup performed is a full RMAN database <span
+class=GramE>backup,</span> <span class=SpellE>DBA's</span> should use standard
+recovery procedures to restore to a pre-patch condition. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>The installation of this patch is performed
+online, allowing continued usage of the MDB by other sessions. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Installation Instructions<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>The patchMdb command is used to install the
+MDB patch. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Some portions of the patch are installed under
+the system user. If specified, ORA_SYS_USER does not have to be SYS (or sys)
+but if it is not, either the user is able to connect in 'as <span class=SpellE>sysdba</span>'
+mode, i.e. <span class=SpellE>Myuser/mypasswd@mysid</span> as <span
+class=SpellE>sysdba</span> OR the user has the <span class=SpellE>dba</span>
+role granted to it. If ORA_SYS_USER is specified, then ORA_SYS_PSWD must be
+specified. If the ORA_SYS_PSWD is specified without an ORA_SYS_USER, then
+ORA_SYS_USER defaults to sys. If ORA_SYS_USER is not being used, then OS
+authentication is attempted with and without 'as <span class=SpellE>sysdba</span>';
+if those attempts both fail then a message is returned that advises using
+ORA_SYS_USER and ORA_SYS_PSWD. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>For Windows: <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>ora_mdb030_15957102.zip</span></span><span
+style='font-size:9.5pt'> should be unzipped to the directory of your choice,
+using a standard windows unzip tool. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Run <span class=SpellE>PatchMDB.bat</span> to
+apply the patch: <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>For <span class=GramE>Unix</span>: <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>ora_mdb030_15957102.tar.gz</span></span><span
+style='font-size:9.5pt'> should be unzipped using one of the following methods
+(dependant on the <span class=SpellE>unix</span> platform) : <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>a) <span class=GramE>tar</span> -<span
+class=SpellE>xzvf</span> ora_mdb030_15957102.tar.gz <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>b) <span class=SpellE><span class=GramE>gunzip</span></span>
+ora_mdb030_15957102.tar.gz <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>tar</span></span><span
+style='font-size:9.5pt'> -<span class=SpellE>xvf</span> ora_mdb030_15957102.tar
+<o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>To ensure your oracle environment is setup
+correctly run the setup script provided by your Oracle install appropriate for
+the shell that you are using for <span class=SpellE>csh</span> users <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>source</span></span><span
+style='font-size:9.5pt'> $ORACLE_HOME/bin/<span class=SpellE>coraenv</span> <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>for</span></span><span
+style='font-size:9.5pt'> other shells (<span class=SpellE>sh</span>, bash, <span
+class=SpellE>ksh</span>) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>. $ORACLE_HOME/bin/<span class=SpellE>oraenv</span>
+<o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Run <span class=SpellE>patchMDB</span> as root
+to apply the patch. <o:p></o:p></span></p>
+
+<p><span class=SpellE><span style='font-size:9.5pt'>PatchMDB</span></span><span
+style='font-size:9.5pt'> -ORA_CONNECT_ID=XXXX [-MDB_NAME=<span class=SpellE>xxxx</span>]
+-MDB_ADMIN_PSWD=<span class=SpellE>xxxx</span> [-ORA_INDEX_TBLSPACE_NAME=<span
+class=SpellE>xxxx</span>] -MDB_PATCH=<span class=SpellE>xxxx</span>
+[-MDB_TARGET_DIR=&lt;dir&gt;] [-ORA_BACKUP=<span class=SpellE>yes|no</span>]
+[-ORA_SYS_USER=<span class=SpellE>xxxx</span>] [-ORA_SYS_PSWD=xxx] [-debug]
+[-?] <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>where</span></span><span
+style='font-size:9.5pt'>: <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>ORA_CONNECT_ID connection identifier
+(required) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>MDB_NAME database name (optional with default <span
+class=SpellE>mdb</span>) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>MDB_ADMIN_PSWD <span class=SpellE>mdbadmin</span>
+user password (required) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>ORA_INDEX_TBLSPACE_NAME name of the index <span
+class=SpellE>tablespace</span> (optional with default) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>MDB_PATCH patch number (required) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>MDB_TARGET_DIR target <span class=SpellE>mdb</span>
+directory (optional with default current directory) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>ORA_BACKUP yes for a backup or no (optional
+with default yes) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>ORA_SYS_USER for patching using privileged
+user (optional) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>ORA_SYS_PSWD password of privileged user
+(optional) <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-size:9.5pt'>debug</span></span><span
+style='font-size:9.5pt'> echo output (optional) <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>? <span class=GramE>syntax</span> and
+description of this command (optional) <o:p></o:p></span></p>
+
+<p><span class=SpellE><span class=GramE><span style='font-size:9.5pt'>eg</span></span></span><span
+style='font-size:9.5pt'>) <span class=SpellE>PatchMDB</span> -ORA_CONNECT_ID=<span
+class=SpellE>orcl</span> -MDB_NAME=<span class=SpellE>mdb</span>
+-MDB_ADMIN_PSWD=password -ORA_INDEX_TBLSPACE_NAME=<span class=SpellE>mdb_index</span>
+-MDB_PATCH=15957102 <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Invoking <span class=SpellE>PatchMDB</span>
+with -MDB_PATCH=15957102 will apply all patch modules within this cumulative
+patch. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>A Patch log file, install_&lt;<span
+class=SpellE>mdb_name</span>&gt;.log, is created in the same directory in which
+<span class=SpellE>PatchMDB</span> is invoked. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>There is no un-install mechanism for this
+patch. To restore DB to the Pre-patch state, use the relevant database restore
+utility. Should the patch install fail the MDB will need to be restored from <span
+class=GramE>backup.</span> <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Installation Method<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>Patch installation will perform the following
+steps: <o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Patch log file created <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check if database <span class=SpellE>mdb</span>
+     exists <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check the <span class=SpellE>mdb</span> version
+     <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Check if the patch already applied <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Install the patch script(s) <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l3 level1 lfo4;tab-stops:list 36.0pt'><span style='font-size:
+     9.5pt;font-family:Verdana'>Register patch - insert into <span
+     class=SpellE>mdb_patch</span> table <o:p></o:p></span></li>
+</ul>
+
+<p><span style='font-size:9.5pt'>Details are available in Patch log file (see
+above). <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h2><a name="known_issues"><span style='font-size:14.5pt'>4.0 Known Issues</span></a><span
+style='font-size:14.5pt'><o:p></o:p></span></h2>
+
+<p><span style='font-size:9.5pt'>This section describes known issues,
+workarounds, and/or solutions for this release of CA MDB. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>All published problems for this product can be
+found on <span class=SpellE>SupportConnect</span>. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h2><a name="published_fixes"><span style='font-size:14.5pt'>5.0 Published
+Fixes</span></a><span style='font-size:14.5pt'><o:p></o:p></span></h2>
+
+<p><span style='font-size:9.5pt'>All published fixes for this product can be
+found through Published Solutions on <span class=SpellE>SupportConnect</span>. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><a name="critical_bug_fixes"><span style='font-size:12.5pt'>5.1 Critical
+Bug Fixes</span></a><span style='font-size:12.5pt'><o:p></o:p></span></h3>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>Product Install fixes and Patch Install
+fixes<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>Install fixes have been included in this
+service pack. The install fixes include product install fixes as well as patch
+install fixes. These are listed in the in this section. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>Fixes to both product-install and
+patch-install problems are contained in the install-fix patch that is included
+in this patch package. There is an install fix patch for each DBMS server on
+each Operating System. The names of the files are as follows: <o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid #EBEBEB .75pt;
+ mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=107 valign=top style='width:80.6pt;border:solid #EBEBEB 1.0pt;
+  mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DBMS Server </span></b><span style='font-size:9.0pt;font-family:
+  Verdana;color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=108 valign=top style='width:80.65pt;border:solid #EBEBEB 1.0pt;
+  border-left:none;mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:9.0pt;font-family:Verdana;color:black'>Operating System <o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;border-left:none;mso-border-left-alt:
+  solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:9.0pt;font-family:Verdana;color:black'>Install fix patch
+  file <o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=107 valign=top style='width:80.6pt;border:solid #EBEBEB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Ingres <o:p></o:p></span></p>
+  </td>
+  <td width=108 valign=top style='width:80.65pt;border-top:none;border-left:
+  none;border-bottom:solid #EBEBEB 1.0pt;border-right:solid #EBEBEB 1.0pt;
+  mso-border-top-alt:solid #EBEBEB .75pt;mso-border-left-alt:solid #EBEBEB .75pt;
+  mso-border-alt:solid #EBEBEB .75pt;background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Windows <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>mdb030_manual_16190425.zip <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=107 valign=top style='width:80.6pt;border:solid #EBEBEB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Ingres <o:p></o:p></span></p>
+  </td>
+  <td width=108 valign=top style='width:80.65pt;border-top:none;border-left:
+  none;border-bottom:solid #EBEBEB 1.0pt;border-right:solid #EBEBEB 1.0pt;
+  mso-border-top-alt:solid #EBEBEB .75pt;mso-border-left-alt:solid #EBEBEB .75pt;
+  mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Linux/Unix <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>mdb030_manual_15874081.tar.gz <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=107 valign=top style='width:80.6pt;border:solid #EBEBEB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>SQL Server <o:p></o:p></span></p>
+  </td>
+  <td width=108 valign=top style='width:80.65pt;border-top:none;border-left:
+  none;border-bottom:solid #EBEBEB 1.0pt;border-right:solid #EBEBEB 1.0pt;
+  mso-border-top-alt:solid #EBEBEB .75pt;mso-border-left-alt:solid #EBEBEB .75pt;
+  mso-border-alt:solid #EBEBEB .75pt;background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Windows <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>mssql_mdb030_manual_15985502.zip <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=107 valign=top style='width:80.6pt;border:solid #EBEBEB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Oracle <o:p></o:p></span></p>
+  </td>
+  <td width=108 valign=top style='width:80.65pt;border-top:none;border-left:
+  none;border-bottom:solid #EBEBEB 1.0pt;border-right:solid #EBEBEB 1.0pt;
+  mso-border-top-alt:solid #EBEBEB .75pt;mso-border-left-alt:solid #EBEBEB .75pt;
+  mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Windows <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>ora_mdb030_manual_16208138.zip <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=107 valign=top style='width:80.6pt;border:solid #EBEBEB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Oracle <o:p></o:p></span></p>
+  </td>
+  <td width=108 valign=top style='width:80.65pt;border-top:none;border-left:
+  none;border-bottom:solid #EBEBEB 1.0pt;border-right:solid #EBEBEB 1.0pt;
+  mso-border-top-alt:solid #EBEBEB .75pt;mso-border-left-alt:solid #EBEBEB .75pt;
+  mso-border-alt:solid #EBEBEB .75pt;background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Linux/Unix <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>ora_mdb030_manual_16229910.tar.gz <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='font-size:9.5pt'>The patch-install fixes have already been
+applied to this service pack. The product-install fixes have not been applied
+to this patch. <o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>The product-install fixes do not necessarily
+need to be applied. If the MDB is not already installed or is not already at
+the version and build level required by this patch, or if this patch is being
+automatically installed from the <span class=SpellE>CumulativePatch</span>
+subdirectory using <span class=SpellE>setupmdb</span> from the MDB base install
+image, then the product-install fixes should be manually applied to the base
+install image. Please follow the instructions in the readme file contained in
+the install-fix patch to apply the product-install fixes. After applying the
+product-install fixes, the MDB can be installed or upgraded using the <span
+class=SpellE>setupmdb</span> command that is in the base install image. If the <span
+class=SpellE>CumulativePatch</span> subdirectory of the base install image
+contains this patch, then <span class=SpellE>setupmdb</span> will install this
+patch afterwards. <o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid #EBEBEB .75pt;
+ mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=203 valign=top style='width:152.6pt;border:solid #EBEBEB 1.0pt;
+  mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Ingres on Windows </span></b><span style='font-size:9.0pt;
+  font-family:Verdana;color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=180 valign=top style='width:135.0pt;border:solid #EBEBEB 1.0pt;
+  border-left:none;mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:9.0pt;font-family:Verdana;color:black'>Ingres on Unix/Linux <o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=203 valign=top style='width:152.6pt;border:solid #EBEBEB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 16190425 MDB 97 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14737599 MDB 89 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15233441 MDB 65 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15226336 MDB 76 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15463052 MDB 73 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15233516 MDB 74 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15977333 MDB 85 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15521637 MDB 39 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15429265 MDB 33 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15424133 MDB 40 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15419605 MDB 88 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14568983 MDB 19 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14938051 MDB 10 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15026854 MDB 17 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15027036 MDB 13 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15027060 MDB 12 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14392805 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14039159 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15148450 MDB 21 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14712269 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14404741 <o:p></o:p></span></p>
+  </td>
+  <td width=180 valign=top style='width:135.0pt;border-top:none;border-left:
+  none;border-bottom:solid #EBEBEB 1.0pt;border-right:solid #EBEBEB 1.0pt;
+  mso-border-top-alt:solid #EBEBEB .75pt;mso-border-left-alt:solid #EBEBEB .75pt;
+  mso-border-alt:solid #EBEBEB .75pt;background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 14761324 MDB 71 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15118018 MDB 72 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15233441 MDB 65 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15226336 MDB 76 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15463052 MDB 73 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15233516 MDB 74 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15451345 MDB 48 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15462226 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14806863 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14314691 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14803563 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15166741 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15066898 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15105307 <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p style='margin:0cm;margin-bottom:.0001pt'><span style='font-size:9.5pt;
+display:none;mso-hide:all'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid #EBEBEB .75pt;
+ mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Oracle on Windows </span></b><span style='font-size:9.0pt;
+  font-family:Verdana;color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;border-left:none;mso-border-left-alt:
+  solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:9.0pt;font-family:Verdana;color:black'>Oracle on Unix/Linux <o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;background:#F1F5FA;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 16208138 MDB 106 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16229910 MDB 104 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16218237 MDB 105 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16127354 MDB 95 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15928642 MDB 83 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15927464 MDB 82 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15762891 MDB 81 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15535775 MDB 55 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15494656 MDB 56 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14967472 MDB 57 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14967569 MDB 58 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14970798 MDB 59 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14833830 MDB 60 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14971412 MDB 61 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15733559 MDB 51 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15437869 MDBORA 4 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15440999 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14995562 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14995373 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14995393 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15392969 MDB 38 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14610972 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14585283 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14618702 <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 16208138 MDB 106 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16127354 MDB 95 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16146287 MDB 93 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15928642 MDB 83 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15927464 MDB 82 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15762891 MDB 81 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15535775 MDB 55 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15494656 MDB 56 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14967472 MDB 57 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14967569 MDB 58 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14970798 MDB 59 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14833830 MDB 60 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14971412 MDB 61 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15733559 MDB 51 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15437869 MDBORA 4 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15440999 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14995562 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14995373 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14995393 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15613650 MDB 50 <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p style='margin:0cm;margin-bottom:.0001pt'><span style='font-size:9.5pt;
+display:none;mso-hide:all'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid #EBEBEB .75pt;
+ mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>SQL Server on Windows</span></b><span style='font-size:9.0pt;
+  font-family:Verdana;color:black'> <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;background:#F1F5FA;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 15277870 MDB 90 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15985502 MDB 86 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15832202 MDB 79 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15914385 MDB 78 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15918155 MDB 77 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15823162 MDB 75 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15546020 MDB 54 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15215592 MDB 53 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14539264 MDB 52 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15441161 MDB 30 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15377965 MDB 30 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15216694 MDB 25 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15251588 MDB 23 <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h3><span style='font-size:12.5pt'>DDL Changes<o:p></o:p></span></h3>
+
+<p><span style='font-size:9.5pt'>DDL changes have been included in this service
+pack. These are listed in this section. For details of database objects
+affected by the above changes see the related <span class=SpellE>sql</span>
+script in the “patch” subdirectory of the corresponding service pack package. <o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid #EBEBEB .75pt;
+ mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;mso-border-alt:solid #EBEBEB .75pt;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>Ingres </span></b><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;border-left:none;mso-border-left-alt:
+  solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:9.0pt;font-family:Verdana;color:black'>SQL Server <o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;border-left:none;mso-border-left-alt:
+  solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:9.0pt;font-family:Verdana;color:black'>Oracle <o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid #EBEBEB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;background:#F1F5FA;
+  padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 15957102 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16190194 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15990494 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15505796 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15032461 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15278327 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15273416 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15273484 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15321636 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15373640 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15483938 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15416338 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15450469 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15591509 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15649403 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15819026 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15010584 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15592233 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15703451 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15042101 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15147582 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15456989 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15810931 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15000408 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15269493 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15403416 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15425654 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15637612 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15657272 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15705345 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15875618 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15259492 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14984021 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14385013 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15089641 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15027007 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14990799 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14939583 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14923019 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14881094 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14994265 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14716065 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14990617 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15224504 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15191610 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15191607 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15173977 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15128076 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15095944 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15050809 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15050804 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14963123 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14875628 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14875622 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14843396 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14843395 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14843392 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14835674 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14835455 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14835452 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14835424 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14903293 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14906843 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14905857 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14737809 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14657517 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14732594 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14892743 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14761153 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14720512 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14697138 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14681365 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14681355 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14681327 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14668173 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14655659 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14626896 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14588454 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14504590 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14505834 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14573920 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14660275 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14567794 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14574281 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14662608 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14539620 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14571426 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14604332 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14590854 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14590772 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14498118 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14632318 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14652113 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14633389 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14632279 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14579613 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14624859 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14507108 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14558296 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14529371 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14568562 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14568542 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14599569 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14618311 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14590062 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14585253 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14475441 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14554626 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14554654 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14554616 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14428091 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14548256 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14430661 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14446952 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14493497 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14514072 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14452385 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14436549 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14425822 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14461126 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14389243 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14389337 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14367415 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14362814 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14362009 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14361928 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14388168 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14384256 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14404917 - Deleted <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14419261 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14410581 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14234637 - Deleted <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 15957102 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16190194 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15525432 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15032461 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15273404 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15224752 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15321639 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15354066 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15373649 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15423964 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15444683 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15254573 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15518617 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15483929 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15450466 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15649403 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15819026 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15395763 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15532632 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15450594 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15010584 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15592233 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15703451 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15042101 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15147582 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15456989 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15543853 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15860702 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14607142 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14609496 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15047531 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15810931 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15403416 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15425654 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15637612 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15824920 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15657272 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15705345 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15875618 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15505796 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15990494 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16029018 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15259492 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15251588 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14984021 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15224511 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15191619 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15191617 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15191614 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15191613 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15174008 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14923043 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15128112 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15095923 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15050800 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15050793 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15050780 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15089641 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14823018 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15000408 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14990807 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14939613 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14930657 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14911227 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14911176 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14842193 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14716065 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14990617 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14963131 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14875635 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14875632 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14843603 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14843599 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14843483 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14835457 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14835448 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14835390 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14903293 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14906843 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14737809 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14732594 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14657517 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14620643 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14892743 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14694926 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14793104 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14705556 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14739657 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14539620 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14761153 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14720512 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14673022 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14446952 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14504590 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14580254 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14588437 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14655659 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14668173 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14573732 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14825128 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14652105 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14665944 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14727370 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14626896 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14681327 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14537257 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14551464 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14567794 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14571426 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14573920 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14590854 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14604332 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14606116 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14627469 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14632318 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14633394 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14640144 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14632279 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14623658 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14608268 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14618309 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14590059 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14528293 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14585259 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14569492 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14657498 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14569472 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14569473 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14507108 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14558296 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14529371 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14568562 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14568542 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14556293 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14556290 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14556282 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14556268 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14543336 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14529450 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14566526 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14623623 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14681365 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14697138 <o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #EBEBEB 1.0pt;
+  border-right:solid #EBEBEB 1.0pt;mso-border-top-alt:solid #EBEBEB .75pt;
+  mso-border-left-alt:solid #EBEBEB .75pt;mso-border-alt:solid #EBEBEB .75pt;
+  background:#F1F5FA;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><span style='font-size:9.0pt;font-family:Verdana;
+  color:black'>DTAMOD 15957102 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16209413 – modified v2<o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16190194 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 16029018 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15918878 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15032461 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14857075 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15395750 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15592233 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15703451 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 1577761101 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15777611 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14984021 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15042101 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15147582 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15456989 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 1493836401 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14938364 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14949028 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15000408 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15403416 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 1542565401 - modified v3 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15425654 - modified v3 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15637612 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15657272 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15705345 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15875618 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15259492 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14770933 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 15128417 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14990815 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14939623 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14813935 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14911227 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14911057 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14842193 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14675242 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14990617 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14903293 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14732594 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14857075 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14906843 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14655659 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14588437 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14504590 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14737809 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14657517 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14774500 - modified <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14892743 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14830232 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14750221 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14761317 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14761153 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14720512 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14753486 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14749700 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14809098 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14697138 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14681365 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14651279 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14632318 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14612192 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14611503 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14611472 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14606139 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14604332 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14574281 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14571426 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14539620 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14715473 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14681327 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14626896 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14632279 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14715618 <o:p></o:p></span></p>
+  <p><span style='font-size:9.0pt'>DTAMOD 14668173 <o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h2><a name=documentation><span style='font-size:14.5pt'>6.0 Documentation</span></a><span
+style='font-size:14.5pt'><o:p></o:p></span></h2>
+
+<p><span style='font-size:9.5pt'>Updated guides for this product are available
+at <a href="http://www.ca.com/support" target="_blank"><b>http://ca.com/support</b></a>.
+<o:p></o:p></span></p>
+
+<p><span style='font-size:9.5pt'>To view PDF files, you must download and
+install the Adobe Reader from the Adobe web site if it is not already installed
+on your computer. <o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<h2><a name="contact_technical_support"><span style='font-size:14.5pt'>7.0
+Contact Technical Support</span></a><span style='font-size:14.5pt'><o:p></o:p></span></h2>
+
+<p><span style='font-size:9.5pt'>For online technical assistance and a complete
+list of locations, primary service hours, and telephone numbers, contact
+Technical Support at <a href="http://www.ca.com/support" target="_blank"><b>http://ca.com/support</b></a>.
+<o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:9.5pt;font-family:Verdana'>
+
+<hr size=1 width="100%" noshade color="#cccccc" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span style='font-size:7.5pt;font-family:Verdana'>Copyright
+© 2007 CA. All rights reserved. </span><span style='font-size:9.5pt;font-family:
+Verdana'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+select * from ae_r_eqm_e where eqm_desc like '%AMPLIFIER AUDIO%' /* and attr_val_0='1602' */

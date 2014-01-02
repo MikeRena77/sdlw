@@ -1,0 +1,1 @@
+select min (workdate) from timeentry2

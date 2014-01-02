@@ -1,0 +1,33 @@
+From: <info@cmcrossroads.com> [TEXCOM.SMTP."info@cmcrossroads.com"] on
+behalf of TEXCOM.SMTP."info@cmcrossroads.com"
+Sent: Friday, March 15, 2002 8:02 AM
+To: info@cmcrossroads.com
+Subject: Harvest Forum - Checkout as postlink of promote: Harvest Forum
+
+Tracy Norrell just posted a Harvest Forum message at CM Crossroads The message
+text is below. 
+
+ This email message is for notification only, please DO NOT reply. You can
+review the entire thread and post your reply at the following link:
+
+ 
+http://cmcrossroads.com/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic&f=1&t=000264
+
+MESSAGE TEXT:
+--------------------------------
+[QUOTE]Originally posted by Elke Bresler:
+[QB]Hello,
+C:\Programme\Platin~1\ccchar~1\bin\hco -en %1 -st %2 -vp "D:\RepTestVerfahren"
+-v -sy -s -r -op pc -pn %4 -usr user -pw password -o hco_02.log "*.*"
+[/QB]
+[/QUOTE]
+
+I'm no harvest pro yet, but I see what I think is an error in your hco
+statment.  vp is the view path not the client path.  use -cp when you specify
+d:\RepTestVerfahren.  in the -vp argument put a '/'(forward slash) and then
+the name of your repository. so that it looks more like this
+
+-vp /MyRepository -cp d:\MyDir
+
+I imagine that you have the problem solved by now, but just in case...
+

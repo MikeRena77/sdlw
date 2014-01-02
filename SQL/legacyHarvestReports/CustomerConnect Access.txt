@@ -1,0 +1,9 @@
+From: CustomeronnectNoReply@ca.com
+Sent: Wednesday, August 07, 2002 2:45 PM
+To: andrewsmichael@otc.army.mil
+Subject: CustomerConnect Access
+
+CustomerConnect 
+Computer Associates 
+ 
+Thank you for enrolling in CustomerConnect.  In order to install your certificate, please type in the following password: <account14>  This password will be required only for the initial install; however, you should save it in case you need to reinstall your certificate at a later date.

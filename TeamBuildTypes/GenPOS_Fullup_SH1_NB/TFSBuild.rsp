@@ -1,0 +1,3 @@
+﻿# This is a response file for MSBuild of the GenPOS_Fullup_SH1_NB Nightly Build
+# Add custom MSBuild command line options in this file
+/P:RN_BASE=N247xx;RN_APPL=GP247xx

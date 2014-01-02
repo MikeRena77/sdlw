@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2900.2873" name=GENERATOR></HEAD>
+<BODY><B>From:</B> info@cmcrossroads.com<BR><B>Sent:</B> Tuesday, May 09, 2006 
+1:15 AM<BR><B>To:</B> michael.h.andrews1@otc.army.mil<BR><B>Subject:</B> 
+[Harvest Forum] Re: Get package name and history to create a report - 
+66482<BR><FONT face=arial size=2><B>From:</B> Uwe <BR><B>To:</B> Harvest Forum 
+<BR><BR>Hi Felipe,<BR><BR>if I understand you, you want to create a package 
+history report. For this I give you the SQL-Command to get the packagename, 
+action, State and execution time of the package.<BR><BR>SELECT 
+HARPACKAGE.PACKAGENAME,<BR>HARPKGHISTORY.ACTION,<BR>HARPKGHISTORY.STATENAME,<BR>HARPKGHISTORY.EXECDTIME<BR>FROM 
+HARPACKAGE HARPACKAGE,<BR>HARPKGHISTORY HARPKGHISTORY<BR>WHERE 
+HARPACKAGE.PACKAGEOBJID = HARPKGHISTORY.PACKAGEOBJID<BR>ORDER BY 
+HARPACKAGE.PACKAGENAME, HARPKGHISTORY.EXECDTIME<BR><BR>Hope that helps <BR>
+<HR>
+<B>You may reply to this post by email or use the link below to review the 
+entire thread</B><BR><A 
+href="http://www.cmcrossroads.com/ubbthreads/showflat.php?Cat=0&amp;Board=UBB1&amp;Number=66482" 
+target=_blank>http://www.cmcrossroads.com/ubbthreads/showflat.php?Number=66482</A><BR><BR>
+<HR>
+This message was sent in <B>HTML</B> format to <B>mich 
+ael.h.andrews1@otc.army.mil</B>
+<UL>
+  <LI><A href="http://www.cmcrossroads.com/ubbthreads/editbasic.php" 
+  target=_blank>Change your email address here.</A>
+  <LI><A href="http://www.cmcrossroads.com/ubbthreads/editemail.php" 
+  target=_blank>Change to TEXT format or to unsubscribe completely.</A> </LI></UL>
+<HR>
+</FONT>
+<CENTER><FONT face=verdana size=1>Copyright © 1998-2004 CM Crossroads, the 
+configuration management community - <A href="http://www.cmcrossroads.com" 
+target=_blank>www.cmcrossroads.com</A> </FONT></CENTER></BODY></HTML>

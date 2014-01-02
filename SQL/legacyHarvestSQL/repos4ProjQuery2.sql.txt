@@ -1,0 +1,42 @@
+From: info@cmcrossroads.com
+Sent: Friday, March 04, 2005 8:09 PM
+To: michael.h.andrews1@otc.army.mil
+Subject: [Harvest Forum] Re: Harvest 5.1.1 DB Schema - 40847
+From: Jeff Suess 
+To: Harvest Forum 
+
+You may already know it but you could fix it quickly with "select distinct R.reportname etc...
+
+You wouldn't by chance have had more than one repository in that project? Total for its entire life. Maybe you deleted one and there is still row with an inactive status on the dB.
+
+Try the following to get a better idea as to where the 2nd row is at.
+
+select R.repositname
+, R.envobjid
+, V.viewobjid
+, I.repositobjid
+from harenvironment E
+, harrepository R
+, harview V
+, harrepinview I
+where E.environmentname = 'Your Project Name' 
+and E.envobjid = V.envobjid 
+and V.viewtype = 'Baseline' 
+and V.viewobjid = I.viewobjid 
+and I.repositobjid = R.repositobjid
+order by 1
+; 
+
+--------------------------------------------------------------------------------
+You may reply to this post by email or use the link below to review the entire thread
+http://www.cmcrossroads.com/ubbthreads/showflat.php?Number=40847
+
+
+--------------------------------------------------------------------------------
+This message was sent in HTML format to michael.h.andrews1@otc.army.mil
+  a.. Change your email address here.
+  b.. Change to TEXT format or to unsubscribe completely. 
+
+--------------------------------------------------------------------------------
+
+Copyright © 1998-2004 CM Crossroads, the configuration management community - www.cmcrossroads.com 

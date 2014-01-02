@@ -1,0 +1,2126 @@
+SQL> set feedback on
+SQL> set heading on
+SQL> 
+SQL> -- create the read-only Oracle user
+SQL> create user &T_READER identified by &T_READERPASS;
+
+User created.
+
+SQL> alter user &T_READER identified by &T_READERPASS;
+
+User altered.
+
+SQL> grant create session to &T_READER;
+
+Grant succeeded.
+
+SQL> grant create synonym to &T_READER;
+
+Grant succeeded.
+
+SQL> grant alter session to &T_READER;
+
+Grant succeeded.
+
+SQL> disconnect
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+SQL> 
+SQL> 
+SQL> -- connect as the owner and create the grants
+SQL> connect &T_CONNSTRING1
+Connected.
+SQL> start tmp_reader_grants.sql
+SQL> grant select on COUNTER to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ECCM_ACTIONLOG to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ECCM_CONFIGURATION to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ECCM_LOG to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ECCM_USER to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ENTERPRISE_PACKAGE to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ENTERPRISE_PACKAGE_HISTORY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ENTERPRISE_PACKAGE_STATUS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on ENTERPRISE_PACKAGE_SUBPACKAGE to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARALLCHILDRENPATH to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARALLUSERS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARAPPROVE to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARAPPROVEACTIONVIEW_TEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARAPPROVEHIST to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARAPPROVEHISTACTIONVIEW_TEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARAPPROVEHISTVIEW_TEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARAPPROVELIST to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARASSOCPKG to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARASSOCPKGTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARBASELINEVIEWTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARBRANCH to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARCHECKINPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARCHECKOUTPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARCOMMENT to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARCONMRGPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARCONVERSIONLOG to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARCRPKGPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARCRSENVMRGPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARDEFECT to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARDELVERSPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARDEMOTEPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARENVIRONMENT to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARENVIRONMENTACCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARESD to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFILEEXTENSION to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFORM to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFORMATTACHMENT to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFORMHISTORY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFORMTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFORMTYPE to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFORMTYPEACCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARFORMTYPEDEFS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARHARVEST to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARINTMRGPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARITEMACCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARITEMIDTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARITEMRELATIONSHIP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARITEMS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARITEMTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARLINKEDPROCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARLISTDIFFPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARLISTVERSPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARMOTETEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARMOVEPKGPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARMR to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARNOTIFY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARNOTIFYLIST to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HAROBJECTSEQUENCEID to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HAROBJIDTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPAC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPACKAGE to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPACKAGEGROUP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPACKAGENAMEGEN to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPACKAGESTATUS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPACKAGETEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPACKAGETEMP2 to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPASSWORDHISTORY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPASSWORDPOLICY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPATHFULLNAME to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPKGGRPTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPKGHISTORY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPKGSINCMEW to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPKGSINPKGGRP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPMSTATUS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPROBLEMREPORT to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARPROMOTEPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARQANDA to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARREMITEMPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARRENAMEITEMPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARREPINVIEW to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARREPOSITORY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARREPOSITORYACCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARREPOSITORYTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARSNAPVIEWPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARSTATE to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARSTATEACCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARSTATEPROCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARSTATEPROCESSACCESS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARSWITCHPKGPROC to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARTABLEINFO to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARTESTINGINFO to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARTIMESHEET to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUDP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSDCOMPUTERNAMES to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSDDEPLOYINFO to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSDGROUPNAMES to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSDHISTORY to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSDPACKAGEINFO to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSDPACKAGENAMES to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSDPLATFORMINFO to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSER to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSERCONTACT to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSERDATA to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSERGROUP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSERSINGROUP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSERTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARUSRGRPTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVERSIONDATA to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVERSIONDELTA to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVERSIONDTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVERSIONINVIEW to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVERSIONS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVERSIONTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVEST_SUBPACKAGE_ACTIONS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVIEW to harrep;
+
+Grant succeeded.
+
+SQL> grant select on HARVIEWTEMP to harrep;
+
+Grant succeeded.
+
+SQL> grant select on MGMT$REORG_OBJECTS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on MGMT$REORG_SCRIPTS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on PROVIDER_USER to harrep;
+
+Grant succeeded.
+
+SQL> grant select on RECURSIVE to harrep;
+
+Grant succeeded.
+
+SQL> grant select on SETTINGS to harrep;
+
+Grant succeeded.
+
+SQL> grant select on TEMPAPPROVEHIST to harrep;
+
+Grant succeeded.
+
+SQL> grant select on TEMPAPPROVELIST to harrep;
+
+Grant succeeded.
+
+SQL> grant select on USER_PREFERENCES to harrep;
+
+Grant succeeded.
+
+SQL> grant select on VCTEMP1 to harrep;
+
+Grant succeeded.
+
+SQL> grant select on VCTEMP2 to harrep;
+
+Grant succeeded.
+
+SQL> grant select on VCTEMPD to harrep;
+
+Grant succeeded.
+
+SQL> grant select on VCTEMPD2 to harrep;
+
+Grant succeeded.
+
+SQL> grant select on WORKBENCH_PRODUCT to harrep;
+
+Grant succeeded.
+
+SQL> grant select on WORKBENCH_PROVIDER to harrep;
+
+Grant succeeded.
+
+SQL> disconnect
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+SQL> 
+SQL> -- connect as the reader and create the synonyms
+SQL> connect &T_CONNSTRING2
+Connected.
+SQL> start tmp_reader_synonyms.sql
+SQL> drop synonym COUNTER;
+drop synonym COUNTER
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym COUNTER for hrvstuser.COUNTER;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ECCM_ACTIONLOG;
+drop synonym ECCM_ACTIONLOG
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ECCM_ACTIONLOG for hrvstuser.ECCM_ACTIONLOG;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ECCM_CONFIGURATION;
+drop synonym ECCM_CONFIGURATION
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ECCM_CONFIGURATION for hrvstuser.ECCM_CONFIGURATION;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ECCM_LOG;
+drop synonym ECCM_LOG
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ECCM_LOG for hrvstuser.ECCM_LOG;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ECCM_USER;
+drop synonym ECCM_USER
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ECCM_USER for hrvstuser.ECCM_USER;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ENTERPRISE_PACKAGE;
+drop synonym ENTERPRISE_PACKAGE
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ENTERPRISE_PACKAGE for hrvstuser.ENTERPRISE_PACKAGE;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ENTERPRISE_PACKAGE_HISTORY;
+drop synonym ENTERPRISE_PACKAGE_HISTORY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ENTERPRISE_PACKAGE_HISTORY for hrvstuser.ENTERPRISE_PACKAGE_HISTORY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ENTERPRISE_PACKAGE_STATUS;
+drop synonym ENTERPRISE_PACKAGE_STATUS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ENTERPRISE_PACKAGE_STATUS for hrvstuser.ENTERPRISE_PACKAGE_STATUS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym ENTERPRISE_PACKAGE_SUBPACKAGE;
+drop synonym ENTERPRISE_PACKAGE_SUBPACKAGE
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym ENTERPRISE_PACKAGE_SUBPACKAGE for hrvstuser.ENTERPRISE_PACKAGE_SUBPACKAGE;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARALLCHILDRENPATH;
+drop synonym HARALLCHILDRENPATH
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARALLCHILDRENPATH for hrvstuser.HARALLCHILDRENPATH;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARALLUSERS;
+drop synonym HARALLUSERS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARALLUSERS for hrvstuser.HARALLUSERS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARAPPROVE;
+drop synonym HARAPPROVE
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARAPPROVE for hrvstuser.HARAPPROVE;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARAPPROVEACTIONVIEW_TEMP;
+drop synonym HARAPPROVEACTIONVIEW_TEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARAPPROVEACTIONVIEW_TEMP for hrvstuser.HARAPPROVEACTIONVIEW_TEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARAPPROVEHIST;
+drop synonym HARAPPROVEHIST
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARAPPROVEHIST for hrvstuser.HARAPPROVEHIST;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARAPPROVEHISTACTIONVIEW_TEMP;
+drop synonym HARAPPROVEHISTACTIONVIEW_TEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARAPPROVEHISTACTIONVIEW_TEMP for hrvstuser.HARAPPROVEHISTACTIONVIEW_TEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARAPPROVEHISTVIEW_TEMP;
+drop synonym HARAPPROVEHISTVIEW_TEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARAPPROVEHISTVIEW_TEMP for hrvstuser.HARAPPROVEHISTVIEW_TEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARAPPROVELIST;
+drop synonym HARAPPROVELIST
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARAPPROVELIST for hrvstuser.HARAPPROVELIST;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARASSOCPKG;
+drop synonym HARASSOCPKG
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARASSOCPKG for hrvstuser.HARASSOCPKG;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARASSOCPKGTEMP;
+drop synonym HARASSOCPKGTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARASSOCPKGTEMP for hrvstuser.HARASSOCPKGTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARBASELINEVIEWTEMP;
+drop synonym HARBASELINEVIEWTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARBASELINEVIEWTEMP for hrvstuser.HARBASELINEVIEWTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARBRANCH;
+drop synonym HARBRANCH
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARBRANCH for hrvstuser.HARBRANCH;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARCHECKINPROC;
+drop synonym HARCHECKINPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARCHECKINPROC for hrvstuser.HARCHECKINPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARCHECKOUTPROC;
+drop synonym HARCHECKOUTPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARCHECKOUTPROC for hrvstuser.HARCHECKOUTPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARCOMMENT;
+drop synonym HARCOMMENT
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARCOMMENT for hrvstuser.HARCOMMENT;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARCONMRGPROC;
+drop synonym HARCONMRGPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARCONMRGPROC for hrvstuser.HARCONMRGPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARCONVERSIONLOG;
+drop synonym HARCONVERSIONLOG
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARCONVERSIONLOG for hrvstuser.HARCONVERSIONLOG;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARCRPKGPROC;
+drop synonym HARCRPKGPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARCRPKGPROC for hrvstuser.HARCRPKGPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARCRSENVMRGPROC;
+drop synonym HARCRSENVMRGPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARCRSENVMRGPROC for hrvstuser.HARCRSENVMRGPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARDEFECT;
+drop synonym HARDEFECT
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARDEFECT for hrvstuser.HARDEFECT;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARDELVERSPROC;
+drop synonym HARDELVERSPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARDELVERSPROC for hrvstuser.HARDELVERSPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARDEMOTEPROC;
+drop synonym HARDEMOTEPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARDEMOTEPROC for hrvstuser.HARDEMOTEPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARENVIRONMENT;
+drop synonym HARENVIRONMENT
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARENVIRONMENT for hrvstuser.HARENVIRONMENT;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARENVIRONMENTACCESS;
+drop synonym HARENVIRONMENTACCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARENVIRONMENTACCESS for hrvstuser.HARENVIRONMENTACCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARESD;
+drop synonym HARESD
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARESD for hrvstuser.HARESD;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFILEEXTENSION;
+drop synonym HARFILEEXTENSION
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFILEEXTENSION for hrvstuser.HARFILEEXTENSION;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFORM;
+drop synonym HARFORM
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFORM for hrvstuser.HARFORM;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFORMATTACHMENT;
+drop synonym HARFORMATTACHMENT
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFORMATTACHMENT for hrvstuser.HARFORMATTACHMENT;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFORMHISTORY;
+drop synonym HARFORMHISTORY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFORMHISTORY for hrvstuser.HARFORMHISTORY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFORMTEMP;
+drop synonym HARFORMTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFORMTEMP for hrvstuser.HARFORMTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFORMTYPE;
+drop synonym HARFORMTYPE
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFORMTYPE for hrvstuser.HARFORMTYPE;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFORMTYPEACCESS;
+drop synonym HARFORMTYPEACCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFORMTYPEACCESS for hrvstuser.HARFORMTYPEACCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARFORMTYPEDEFS;
+drop synonym HARFORMTYPEDEFS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARFORMTYPEDEFS for hrvstuser.HARFORMTYPEDEFS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARHARVEST;
+drop synonym HARHARVEST
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARHARVEST for hrvstuser.HARHARVEST;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARINTMRGPROC;
+drop synonym HARINTMRGPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARINTMRGPROC for hrvstuser.HARINTMRGPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARITEMACCESS;
+drop synonym HARITEMACCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARITEMACCESS for hrvstuser.HARITEMACCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARITEMIDTEMP;
+drop synonym HARITEMIDTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARITEMIDTEMP for hrvstuser.HARITEMIDTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARITEMRELATIONSHIP;
+drop synonym HARITEMRELATIONSHIP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARITEMRELATIONSHIP for hrvstuser.HARITEMRELATIONSHIP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARITEMS;
+drop synonym HARITEMS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARITEMS for hrvstuser.HARITEMS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARITEMTEMP;
+drop synonym HARITEMTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARITEMTEMP for hrvstuser.HARITEMTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARLINKEDPROCESS;
+drop synonym HARLINKEDPROCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARLINKEDPROCESS for hrvstuser.HARLINKEDPROCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARLISTDIFFPROC;
+drop synonym HARLISTDIFFPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARLISTDIFFPROC for hrvstuser.HARLISTDIFFPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARLISTVERSPROC;
+drop synonym HARLISTVERSPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARLISTVERSPROC for hrvstuser.HARLISTVERSPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARMOTETEMP;
+drop synonym HARMOTETEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARMOTETEMP for hrvstuser.HARMOTETEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARMOVEPKGPROC;
+drop synonym HARMOVEPKGPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARMOVEPKGPROC for hrvstuser.HARMOVEPKGPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARMR;
+drop synonym HARMR
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARMR for hrvstuser.HARMR;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARNOTIFY;
+drop synonym HARNOTIFY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARNOTIFY for hrvstuser.HARNOTIFY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARNOTIFYLIST;
+drop synonym HARNOTIFYLIST
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARNOTIFYLIST for hrvstuser.HARNOTIFYLIST;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HAROBJECTSEQUENCEID;
+drop synonym HAROBJECTSEQUENCEID
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HAROBJECTSEQUENCEID for hrvstuser.HAROBJECTSEQUENCEID;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HAROBJIDTEMP;
+drop synonym HAROBJIDTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HAROBJIDTEMP for hrvstuser.HAROBJIDTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPAC;
+drop synonym HARPAC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPAC for hrvstuser.HARPAC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPACKAGE;
+drop synonym HARPACKAGE
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPACKAGE for hrvstuser.HARPACKAGE;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPACKAGEGROUP;
+drop synonym HARPACKAGEGROUP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPACKAGEGROUP for hrvstuser.HARPACKAGEGROUP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPACKAGENAMEGEN;
+drop synonym HARPACKAGENAMEGEN
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPACKAGENAMEGEN for hrvstuser.HARPACKAGENAMEGEN;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPACKAGESTATUS;
+drop synonym HARPACKAGESTATUS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPACKAGESTATUS for hrvstuser.HARPACKAGESTATUS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPACKAGETEMP;
+drop synonym HARPACKAGETEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPACKAGETEMP for hrvstuser.HARPACKAGETEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPACKAGETEMP2;
+drop synonym HARPACKAGETEMP2
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPACKAGETEMP2 for hrvstuser.HARPACKAGETEMP2;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPASSWORDHISTORY;
+drop synonym HARPASSWORDHISTORY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPASSWORDHISTORY for hrvstuser.HARPASSWORDHISTORY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPASSWORDPOLICY;
+drop synonym HARPASSWORDPOLICY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPASSWORDPOLICY for hrvstuser.HARPASSWORDPOLICY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPATHFULLNAME;
+drop synonym HARPATHFULLNAME
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPATHFULLNAME for hrvstuser.HARPATHFULLNAME;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPKGGRPTEMP;
+drop synonym HARPKGGRPTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPKGGRPTEMP for hrvstuser.HARPKGGRPTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPKGHISTORY;
+drop synonym HARPKGHISTORY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPKGHISTORY for hrvstuser.HARPKGHISTORY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPKGSINCMEW;
+drop synonym HARPKGSINCMEW
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPKGSINCMEW for hrvstuser.HARPKGSINCMEW;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPKGSINPKGGRP;
+drop synonym HARPKGSINPKGGRP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPKGSINPKGGRP for hrvstuser.HARPKGSINPKGGRP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPMSTATUS;
+drop synonym HARPMSTATUS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPMSTATUS for hrvstuser.HARPMSTATUS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPROBLEMREPORT;
+drop synonym HARPROBLEMREPORT
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPROBLEMREPORT for hrvstuser.HARPROBLEMREPORT;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARPROMOTEPROC;
+drop synonym HARPROMOTEPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARPROMOTEPROC for hrvstuser.HARPROMOTEPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARQANDA;
+drop synonym HARQANDA
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARQANDA for hrvstuser.HARQANDA;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARREMITEMPROC;
+drop synonym HARREMITEMPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARREMITEMPROC for hrvstuser.HARREMITEMPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARRENAMEITEMPROC;
+drop synonym HARRENAMEITEMPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARRENAMEITEMPROC for hrvstuser.HARRENAMEITEMPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARREPINVIEW;
+drop synonym HARREPINVIEW
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARREPINVIEW for hrvstuser.HARREPINVIEW;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARREPOSITORY;
+drop synonym HARREPOSITORY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARREPOSITORY for hrvstuser.HARREPOSITORY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARREPOSITORYACCESS;
+drop synonym HARREPOSITORYACCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARREPOSITORYACCESS for hrvstuser.HARREPOSITORYACCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARREPOSITORYTEMP;
+drop synonym HARREPOSITORYTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARREPOSITORYTEMP for hrvstuser.HARREPOSITORYTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARSNAPVIEWPROC;
+drop synonym HARSNAPVIEWPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARSNAPVIEWPROC for hrvstuser.HARSNAPVIEWPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARSTATE;
+drop synonym HARSTATE
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARSTATE for hrvstuser.HARSTATE;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARSTATEACCESS;
+drop synonym HARSTATEACCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARSTATEACCESS for hrvstuser.HARSTATEACCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARSTATEPROCESS;
+drop synonym HARSTATEPROCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARSTATEPROCESS for hrvstuser.HARSTATEPROCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARSTATEPROCESSACCESS;
+drop synonym HARSTATEPROCESSACCESS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARSTATEPROCESSACCESS for hrvstuser.HARSTATEPROCESSACCESS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARSWITCHPKGPROC;
+drop synonym HARSWITCHPKGPROC
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARSWITCHPKGPROC for hrvstuser.HARSWITCHPKGPROC;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARTABLEINFO;
+drop synonym HARTABLEINFO
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARTABLEINFO for hrvstuser.HARTABLEINFO;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARTESTINGINFO;
+drop synonym HARTESTINGINFO
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARTESTINGINFO for hrvstuser.HARTESTINGINFO;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARTIMESHEET;
+drop synonym HARTIMESHEET
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARTIMESHEET for hrvstuser.HARTIMESHEET;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUDP;
+drop synonym HARUDP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUDP for hrvstuser.HARUDP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSDCOMPUTERNAMES;
+drop synonym HARUSDCOMPUTERNAMES
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSDCOMPUTERNAMES for hrvstuser.HARUSDCOMPUTERNAMES;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSDDEPLOYINFO;
+drop synonym HARUSDDEPLOYINFO
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSDDEPLOYINFO for hrvstuser.HARUSDDEPLOYINFO;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSDGROUPNAMES;
+drop synonym HARUSDGROUPNAMES
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSDGROUPNAMES for hrvstuser.HARUSDGROUPNAMES;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSDHISTORY;
+drop synonym HARUSDHISTORY
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSDHISTORY for hrvstuser.HARUSDHISTORY;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSDPACKAGEINFO;
+drop synonym HARUSDPACKAGEINFO
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSDPACKAGEINFO for hrvstuser.HARUSDPACKAGEINFO;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSDPACKAGENAMES;
+drop synonym HARUSDPACKAGENAMES
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSDPACKAGENAMES for hrvstuser.HARUSDPACKAGENAMES;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSDPLATFORMINFO;
+drop synonym HARUSDPLATFORMINFO
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSDPLATFORMINFO for hrvstuser.HARUSDPLATFORMINFO;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSER;
+drop synonym HARUSER
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSER for hrvstuser.HARUSER;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSERCONTACT;
+drop synonym HARUSERCONTACT
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSERCONTACT for hrvstuser.HARUSERCONTACT;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSERDATA;
+drop synonym HARUSERDATA
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSERDATA for hrvstuser.HARUSERDATA;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSERGROUP;
+drop synonym HARUSERGROUP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSERGROUP for hrvstuser.HARUSERGROUP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSERSINGROUP;
+drop synonym HARUSERSINGROUP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSERSINGROUP for hrvstuser.HARUSERSINGROUP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSERTEMP;
+drop synonym HARUSERTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSERTEMP for hrvstuser.HARUSERTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARUSRGRPTEMP;
+drop synonym HARUSRGRPTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARUSRGRPTEMP for hrvstuser.HARUSRGRPTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVERSIONDATA;
+drop synonym HARVERSIONDATA
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVERSIONDATA for hrvstuser.HARVERSIONDATA;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVERSIONDELTA;
+drop synonym HARVERSIONDELTA
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVERSIONDELTA for hrvstuser.HARVERSIONDELTA;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVERSIONDTEMP;
+drop synonym HARVERSIONDTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVERSIONDTEMP for hrvstuser.HARVERSIONDTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVERSIONINVIEW;
+drop synonym HARVERSIONINVIEW
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVERSIONINVIEW for hrvstuser.HARVERSIONINVIEW;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVERSIONS;
+drop synonym HARVERSIONS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVERSIONS for hrvstuser.HARVERSIONS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVERSIONTEMP;
+drop synonym HARVERSIONTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVERSIONTEMP for hrvstuser.HARVERSIONTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVEST_SUBPACKAGE_ACTIONS;
+drop synonym HARVEST_SUBPACKAGE_ACTIONS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVEST_SUBPACKAGE_ACTIONS for hrvstuser.HARVEST_SUBPACKAGE_ACTIONS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVIEW;
+drop synonym HARVIEW
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVIEW for hrvstuser.HARVIEW;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym HARVIEWTEMP;
+drop synonym HARVIEWTEMP
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym HARVIEWTEMP for hrvstuser.HARVIEWTEMP;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym MGMT$REORG_OBJECTS;
+drop synonym MGMT$REORG_OBJECTS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym MGMT$REORG_OBJECTS for hrvstuser.MGMT$REORG_OBJECTS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym MGMT$REORG_SCRIPTS;
+drop synonym MGMT$REORG_SCRIPTS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym MGMT$REORG_SCRIPTS for hrvstuser.MGMT$REORG_SCRIPTS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym PROVIDER_USER;
+drop synonym PROVIDER_USER
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym PROVIDER_USER for hrvstuser.PROVIDER_USER;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym RECURSIVE;
+drop synonym RECURSIVE
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym RECURSIVE for hrvstuser.RECURSIVE;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym SETTINGS;
+drop synonym SETTINGS
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym SETTINGS for hrvstuser.SETTINGS;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym TEMPAPPROVEHIST;
+drop synonym TEMPAPPROVEHIST
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym TEMPAPPROVEHIST for hrvstuser.TEMPAPPROVEHIST;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym TEMPAPPROVELIST;
+drop synonym TEMPAPPROVELIST
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym TEMPAPPROVELIST for hrvstuser.TEMPAPPROVELIST;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym USER_PREFERENCES;
+drop synonym USER_PREFERENCES
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym USER_PREFERENCES for hrvstuser.USER_PREFERENCES;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym VCTEMP1;
+drop synonym VCTEMP1
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym VCTEMP1 for hrvstuser.VCTEMP1;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym VCTEMP2;
+drop synonym VCTEMP2
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym VCTEMP2 for hrvstuser.VCTEMP2;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym VCTEMPD;
+drop synonym VCTEMPD
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym VCTEMPD for hrvstuser.VCTEMPD;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym VCTEMPD2;
+drop synonym VCTEMPD2
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym VCTEMPD2 for hrvstuser.VCTEMPD2;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym WORKBENCH_PRODUCT;
+drop synonym WORKBENCH_PRODUCT
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym WORKBENCH_PRODUCT for hrvstuser.WORKBENCH_PRODUCT;
+
+Synonym created.
+
+SQL> 
+SQL> drop synonym WORKBENCH_PROVIDER;
+drop synonym WORKBENCH_PROVIDER
+             *
+ERROR at line 1:
+ORA-01434: private synonym to be dropped does not exist
+
+
+SQL> create synonym WORKBENCH_PROVIDER for hrvstuser.WORKBENCH_PROVIDER;
+
+Synonym created.
+
+SQL> 
+SQL> disconnect
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+SQL> 
+SQL> exit

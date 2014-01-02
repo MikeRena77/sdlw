@@ -1,0 +1,90 @@
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>REM *** Delete exisiting Harvest user 
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>sqlplus system/harvest@HARVEST @DropUser.sql harvest DropUser.log 
+
+SQL*Plus: Release 10.1.0.2.0 - Production on Thu Apr 5 14:19:55 2007
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+drop user harvest CASCADE
+*
+ERROR at line 1:
+ORA-01940: cannot drop a user that is currently connected
+
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>rem pause 
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>REM *** Run crtblspc.sql to create table spaces (Will fail if already created) 
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>sqlplus system/harvest@HARVEST @crtblspc.sql HARVESTMETA HARVESTBLOB HARVESTINDEX HarvMeta.ora HarvBlob.ora HarvIndex.ora 50 50 50 crtblspc.log 
+
+SQL*Plus: Release 10.1.0.2.0 - Production on Thu Apr 5 14:19:56 2007
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+CREATE TABLESPACE HARVESTMETA DATAFILE 'HarvMeta.ora'
+*
+ERROR at line 1:
+ORA-01543: tablespace 'HARVESTMETA' already exists
+
+
+CREATE TABLESPACE HARVESTBLOB DATAFILE 'HarvBlob.ora'
+*
+ERROR at line 1:
+ORA-01543: tablespace 'HARVESTBLOB' already exists
+
+
+CREATE TABLESPACE HARVESTINDEX DATAFILE 'HarvIndex.ora'
+*
+ERROR at line 1:
+ORA-01543: tablespace 'HARVESTINDEX' already exists
+
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>rem pause 
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>REM *** Run creatusr.sql to create / set users (modified version of setuser.sql)  
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>sqlplus system/harvest@HARVEST @creatusr.sql harvest harvest HARVESTMETA HARVESTBLOB HARVESTINDEX TEMP RBS creatusr.log 
+
+SQL*Plus: Release 10.1.0.2.0 - Production on Thu Apr 5 14:19:56 2007
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+CREATE USER harvest IDENTIFIED BY harvest
+            *
+ERROR at line 1:
+ORA-01920: user name 'HARVEST' conflicts with another user or role name
+
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>rem pause 
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>REM *** Import the meta data 
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>rem sqlplus harvest/harvestHARVEST @EXPDAT.dmp import.log HARVESTMETA HARVESTBLOB HARVESTINDEX 
+
+C:\Program Files\CA\AllFusion Harvest Change Manager\Database>imp system/harvest@HARVEST IGNORE=Y INDEXES=N LOG=IMP.LOG FILE=EXPDAT.dmp STATISTICS=NONE TOUSER=harvest FULL=Y 

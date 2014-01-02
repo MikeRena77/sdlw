@@ -1,0 +1,18 @@
+CREATE TABLESPACE HARVESTMETA DATAFILE 'c:\harvestTables\SCMMETAFILE.ora'
+*
+ERROR at line 1:
+ORA-01543: tablespace 'HARVESTMETA' already exists 
+
+
+CREATE TABLESPACE HARVESTBLOB DATAFILE 'c:\harvestTables\SCMBLOBFILE.ora'
+*
+ERROR at line 1:
+ORA-01543: tablespace 'HARVESTBLOB' already exists 
+
+
+CREATE TABLESPACE HARVESTINDEX DATAFILE 'c:\harvestTables\SCMINDEXFILE.ora'
+*
+ERROR at line 1:
+ORA-01543: tablespace 'HARVESTINDEX' already exists 
+
+

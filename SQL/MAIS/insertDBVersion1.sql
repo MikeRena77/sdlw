@@ -1,0 +1,23 @@
+INSERT INTO [MAISDB].[dbo].[SYS_CM_Build_Header_Tbl]
+			([Build_ID], 
+			[Build_Name], 
+			[Database_Version], 
+			[Build_Version], 
+			[Overall_Crc], 
+			[Build_Date], 
+			[Build_By], 
+			[Created_By], 
+			[Creation_Date], 
+			[Modification_Date], 
+			[Modified_By])
+VALUES(		001, 
+			'GC3_CM_DB_Initial', 
+			'GC3 DB 1.0' , 
+			'4238', 
+			000000, 
+			'25 Aug 2004', 
+			'Michael H. Andrews', 
+			'Bob Rasmussen', 
+			'23 Aug 2004', 
+			'23 Aug 2004', 
+			'Bob Rasmussen')

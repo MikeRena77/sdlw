@@ -1,0 +1,1321 @@
+/* Database creation SQL program file for the TIMS Inventory System (TIS).
+   
+   Bob Rasmussen
+   Comarco Systems Inc.
+   Creation date October 14, 1999
+   
+This SQL program will create database objects for the TIMSDB.  The objects created
+include tables, primary and secondary indices, defaults, rules and stored procedures.
+The RDBMS used is the Microsoft SQL-Server version 6.5.  This database will be broken 
+down into schema views to show the different functional areas of the TIS.
+
+The following are the objects for the view Master Property.
+*/
+
+/* Table PropertyImport is used to import data from the original
+   Dbase inventory database into the TIS database.  Because of 
+   the format of the data coming from Dbase we could not use BCP
+   routines to bulk copy the file into PropertyImport.  Instead
+   we used Sybase's PowerBuilder application and used the Pipeline
+   feature to copy the data in from an MS Access format.
+*/
+
+use timsdb
+
+go
+
+CREATE TABLE PropertyImport (
+bad char (1) null ,
+bcerr char(1) null,
+snerr char(1) null,
+stockno char (16) null ,
+partno char (18) null ,
+barcode char (6) null ,
+serno char(20) null,
+ctrlserno char(20) null,
+descrip char (80) null ,
+genericname char (20) null ,
+attributes char (50) null ,
+manufacturer char (20) null ,
+model char (20) null ,
+new_desc char (116) null ,
+noun char (25) null ,
+class char (15) null ,
+commodity char (15) null ,
+category char (15) null ,
+subcat char (15) null ,
+warehouse char (15) null ,
+qty smallint null ,
+unit char (2) null ,
+price money null ,
+offstation char(3) null,
+location char (15) null ,
+wao char (6) null ,
+comp char (1) null ,
+enditems char (25) null ,
+drawingno char (13) null ,	
+fsc_code char (4) null ,
+remarks char (30) null ,
+remark1 char (15) null ,
+action char(2) null,
+changes char(8) null,
+postdate char(8) null,
+postinit char(3) null,
+invdata char(9) null,
+schinvyr char(2) null,
+hrno char(3) null,
+oldhr char(3) null,
+shipstatus char(20) null,
+docno char(9) null,
+idnumber char(8) null,
+usanumber char(7) null,
+polkey char(6) null,
+system char(5) null,
+lin char(6) null,
+gfp char(1) null,
+lcc char(1) null,
+cage char(6) null,
+ricc char(1) null,
+fyrptcode char(3) null,
+te10 char(1) null,
+tda char(1) null,
+sequence int null ,
+recseq int null 
+)
+
+GO 
+
+/* Table PropertyDetail stores historical records from the original
+   Dbase tables during the inventory porting process.  These 
+   records may be kept until at some point when the Property
+   database is cleared as being stable.  Maintaining this data after
+   that point would be for archival purposes only.
+*/
+
+create table PropertyDetail
+(
+RecordNo integer,
+stockno char (16) null ,
+partno char (18) null ,
+new_desc char (116) null ,
+descrip char (80) null ,
+genericname char (20) null ,
+attributes char (50) null ,
+manufacturer char (20) null ,
+model char (20) null ,
+barcode char (6) null ,
+noun char (25) null ,
+unit char (2) null ,
+qty smallint null ,
+comp char (1) null ,
+enditems char (25) null ,
+fsc_code char (4) null ,
+drawingno char (13) null ,
+price money null ,
+class char (15) null ,
+offstation char(3) null,
+commodity char (15) null ,
+category char (15) null ,
+subcat char (15) null ,
+warehouse char (15) null ,
+location char (15) null ,
+wao char (6) null ,
+remarks char (30) null ,
+remark1 char (15) null ,
+postdate char(8) null,
+changes char(8) null,
+postinit char(3) null,
+hrno char(3) null,
+oldhr char(3) null,
+invdata char(9) null,
+schinvyr char(2) null,
+shipstatus char(20) null,
+idnumber char(8) null,
+serno char(20) null,
+polkey char(6) null,
+usanumber char(7) null,
+system char(5) null,
+docno char(9) null,
+action char(2) null,
+lin char(6) null,
+te10 char(1) null,
+gfp char(1) null,
+lcc char(1) null,
+cage char(6) null,
+tda char(1) null,
+fyrptcode char(3) null,
+ricc char(1) null
+)
+
+GO
+
+/* Table Property hold information about each part item in the
+   inventory.  This is information at the part level not serial
+   no. level
+*/
+
+create table Property
+(
+ RecordNo integer,
+ StockNo char(16),
+ PartNo varchar(18),
+ GenericName varchar(20),
+ Attributes varchar(50) null,
+ Model varchar(20) null,
+ Noun varchar(50) null,
+ Cost money,
+ DrawingNo varchar(13) null,
+ PropertyBook char(1),
+ Reservable char(1),
+ Serialized char(1),
+ Warranty char(1),
+ Calibration char(1),
+ GovVehicle char(1),
+ Component char(1),
+ Replenishment char(1),
+ GFP char(1) null,
+ TDA char(1) null,
+ MgtInterest char(1),
+ FYReportCode char(3) null,
+ LIN char(6) null,
+ CAGE char(6) null,
+ LCC char(1) null,
+ RICC char(1) null,
+ DODAC char(8) null,
+ TotalQty smallint,
+ Class varchar(20),
+ Source varchar(20),
+ UOM varchar(15)
+)
+ 
+go
+
+create unique clustered index Property_key on Property(RecordNo)
+
+go
+
+/* Table LastPropRecordNo holds the last RecordNo and the date that it was
+   created.  This table is controlled by the stored procedure GetRecordNo
+*/ 
+
+create table LastPropRecordNo
+(
+RecordNo integer,
+LastUpdate datetime
+)
+
+go
+
+/* Table LastInvRecordNo holds the last InvRecordNo and the date that it was
+   created.  This table is controlled by the stored procedure GetInvRecordNo
+*/
+
+create table LastInvRecordNo
+(
+InvRecordNo int,
+LastUpdate datetime
+)
+
+go
+
+/* Table LastStockNo holds the last stock no that was used
+   when creating new Property records. It is controlled and managed by
+   the stored procedure GetNextStockNo.
+*/
+
+create table LastStockNo
+(
+FSC char(4),
+SeqNo char(4)
+)
+
+go
+
+create unique clustered index LastStockNo_key on LastStockNo(FSC)
+
+go
+
+/* Table PropReplenishment holds the replenishment quantity levels for those
+   parts that are replenishable parts.
+*/
+
+create table PropReplenishment
+(
+RecordNo integer,
+MinQty integer,
+MaxQty integer,
+ReorderPoint integer
+)
+
+go
+
+create unique clustered index PropReplenishment_key on PropReplenishment(RecordNo)
+
+go
+
+/* Table Supplier holds information on manufacturers, suppliers, and third party
+   vendors.
+*/
+
+create table Supplier
+(
+SupplierNo smallint,
+SupplierDesc varchar(20),
+SupplierPhone char(11) null
+)
+
+go
+
+create unique clustered index Supplier_key on Supplier(SupplierNo)
+
+go
+
+/* Table PropertySupplier is a relationship between tables Property and Supplier
+*/
+
+create table PropertySupplier
+(
+RecordNo integer,
+SupplierNo smallint
+)
+
+go
+
+create unique clustered index PropertySupplier_key on PropertySupplier(RecordNo,SupplierNo)
+
+go
+
+/* Table FSC is a support table that contains the available Federal Supply Codes and
+   their descriptions for a part
+*/
+
+create table FSC
+(
+FSCCode char(4),
+FSCDesc varchar(100)
+)
+
+go
+
+create unique clustered index FSC_key on FSC(FSCCode)
+
+go
+
+/* Table PropertyFSC is a relationship between tables Property and FSC
+*/
+
+create table PropertyFSC
+(
+RecordNo integer,
+FSCCode char(4)
+)
+
+go
+
+create unique clustered index PropertyFSC_key on PropertyFSC(RecordNo,FSCCode)
+
+go
+
+/* Table Commodity is a support table that holds the available Commodity codes
+   and their descriptions that a part can be classified into.  The employee no.
+   of the commodity manager is provided also.
+*/
+
+create table Commodity
+(
+CommodityCode tinyint,
+CommodityDesc varchar(20),
+CmdMgrEmpNo char(9)
+)
+
+go
+
+create unique clustered index Commodity_key on Commodity(CommodityCode)
+
+go
+
+/* Table Category is a support table that holds the available Categories for
+   parts.
+*/
+
+create table Category
+(
+CategoryCode smallint,
+CategoryDesc varchar(20)
+)
+
+go
+
+create unique clustered index Category_key on Category(CategoryCode)
+
+go
+
+/* Table SubCategory is a support table that holds the available sub categories
+   that can be assigned to any category.
+*/
+
+create table SubCategory
+(
+SubCategoryCode smallint,
+SubCategoryDesc varchar(20)
+)
+
+go
+
+create unique clustered index SubCategory_key on SubCategory(SubCategoryCode)
+
+go
+
+/* Table PropertyComCatSubCat is a relationship of Commodity, Category, and sub Category
+   tripletts to a property item.
+*/
+
+create table PropertyComCatSubCat
+(
+RecordNo int,
+CommodityCode tinyint,
+CategoryCode smallint,
+SubCategoryCode smallint
+)
+
+go
+
+create unique clustered index PropertyComCatSubCat_key on 
+     PropertyComCatSubCat(RecordNo,CommodityCode,CategoryCode,SubCategoryCode)
+
+go
+
+create table ComCat
+(
+CommodityCode tinyint,
+CategoryCode smallint
+)
+
+go
+
+create table CatSubCat
+(
+CategoryCode smallint,
+SubCategoryCode smallint
+)
+
+go
+
+/* Table PropertyWarehouse is a relationship between tables Property and Warehouse.  This
+   links a Property item to the warehouse that is belongs to.
+*/
+
+create table PropertyWarehouse
+(
+RecordNo integer,
+WarehouseCode tinyint
+)
+
+go
+
+create unique clustered index PropertyWarehouse_key on PropertyWarehouse(Recordno)
+
+go
+
+/* Table Location specifies physical locations by address of where property may
+   be stored, both temporarily or permanently.
+*/
+
+create table Location
+(
+Location varchar(25),
+LocationType varchar(15),
+LocationDesc varchar(80),
+Address varchar(80),
+City varchar(25),
+State char(2), 
+Zip char(10)
+)
+
+/* Table Warehouse is a support table that holds the available Warehouses that a part can
+   belong to.
+*/
+
+create table Warehouse
+(
+WarehouseCode tinyint,
+WarehouseDesc varchar(20),
+WhsMgrEmpNo char(9)
+)
+
+go
+
+/* Table Site is a support table that holds the available physical sites that
+   warehouses can belong to.  Ex. Ft. Hood, Ft. Bragg, etc.
+*/
+
+create table Site
+(
+SiteCode tinyint,
+SiteDesc varchar(20)
+)
+
+go
+
+/* Table WarehouseSite is a relationship between tables Warehouse and Site.  It
+   assigns a Warehouse to a physical site.
+*/
+
+create table WarehouseSite
+(
+WarehouseCode tinyint,
+SiteCode tinyint
+)
+
+go
+
+  
+
+
+/* The following objects make up the Transaction Log schema functional view
+*/
+
+/* Table InvSerializedTrans is a relationship between tables InvSerialized and
+   TransactionLog.  It assigns a transaction action to a serialized inventory 
+   item.
+*/
+
+create table InvSerializedTrans
+(
+RecordNo integer,
+InvRecordNo integer,
+TransactionNo decimal
+)
+
+go
+
+create unique clustered index InvSerialzedTrans_key on InvSerializedTrans(RecordNo,InvRecordNo,TransactionNo)
+
+go
+
+/* Table InvNonSerializedTrans is a relationship between tables InvNonSerialized and
+   TransactionLog.  It assigns a transaction action to a non serialized inventory 
+   item.
+*/
+
+create table InvNonSerializedTrans
+(
+RecordNo integer,
+TransactionNo decimal
+)
+
+go
+
+create unique clustered index InvNonSerializedTrans_key on InvNonSerializedTrans(RecordNo,TransactionNo)
+
+go
+
+/* Table PropertyTrans is a relationship between tables Property and TransactionLog.
+   It assigns and tracks transactions or changes made to Property items.
+*/
+
+create table PropertyTrans
+(
+RecordNo integer,
+TransactionNo decimal
+)
+
+go
+
+create unique clustered index PropertyTrans_key on PropertyTrans(RecordNo,TransactionNo)
+
+go
+
+/* Table LastTransaction holds the last transaction no. assigned to the TransactionLog
+   Table.  This table is controlled by the stored procedure GetTransaction.
+*/
+
+create table LastTransaction
+(
+LastTransaction decimal,
+LastDate datetime,
+LastBase smallint
+)
+
+go
+
+/* Table TransactionLog holds all transactions made to items in inventory and
+   to the Property book.
+*/
+
+create table TransactionLog
+(
+TransactionNo decimal,
+TransactionDate datetime,
+PostEmpNo char(9),
+Remarks text null
+)
+
+go
+
+create unique clustered index TransactionLog_key on TransactionLog(TransactionNo)
+
+go
+
+/* Table ActionCode is a support table that contains the available actions that
+   can be transacted to a part item weather it be Property or inventory.
+*/
+
+create table ActionCode
+(
+ActionCode tinyint,
+ActionCodeDesc varchar(20)
+)
+
+go
+
+/* Table TransactionAction is a relationship between tables Actioncode and TransactionLog.
+*/
+
+create table TransactionAction
+(
+TransactionNo decimal,
+ActionCode tinyint
+)
+
+go
+
+create unique clustered index TransactionAction_key on TransactionAction(TransactionNo,ActionCode)
+
+go
+/* Table StatusCode is a support table that describes the status of a part item
+   with the Property book.
+*/
+
+create table StatusCode
+(
+StatusCode tinyint,
+StatusCodeDesc Varchar(20)
+)
+
+go
+
+create table PropertyBookCode
+(
+PBCode tinyint,
+PBDesc varchar(20)
+)
+
+go
+
+create table TransPBCode
+(
+TransactionNo decimal,
+PBCode tinyint
+)
+
+go
+
+create unique clustered index TransPBCode_key on TransPBCode(TransactionNo,PBCode)
+
+go
+
+/* Table FormHead contains the header information for Hand Receipts, Shipping memos,
+   Intransit manefests, etc.  These form types are created upon any property or 
+   inventory transaction.
+*/
+create table FormHeader
+(
+FormNo decimal,
+LastUpdate datetime,
+CreateDate datetime,
+FormType char(15),
+TempIssue char(1),
+TestIssue char(1) null,
+TestNo smallint null,
+IssueByName varchar(25),
+IssueByEmpNo char(9),
+IssueToName varchar(25),
+IssueToEmpNo char(9),
+WorkRequestNo char(15) null,
+PhaseNo char(6) null,
+ExpectReturnDate datetime,
+FormStatus varchar(15),
+OffStation char(1),
+WAONo varchar(10) null
+)
+go
+
+create unique clustered index FormHeader_key on FormHeader(FormNo,LastUpdate)
+
+go
+
+create table FormType
+(
+FormType char(15),
+FormDesc char(25)
+)
+
+go
+
+create table LastFormNo
+(
+FormNo decimal,
+LastUpdate datetime
+)
+
+go
+
+create table FormStatus
+(
+Status tinyint,
+StatusDesc varchar(15)
+)
+
+go
+
+/* Table TransForm is a relationship between tables TransactionLog and FormHeader.
+*/
+
+create table TransForm
+(
+TransactionNo decimal,
+FormNo decimal
+)
+
+go
+
+/* Table FormDetail is a relationship between tables FormHeader and InvSerialized.
+*/
+
+create table FormDetail
+(
+FormNo decimal,
+LastUpdate datetime,
+RecordNo integer,
+ItemNo smallint,
+Status varchar(15),
+TSCSerialNo varchar(15) null,
+MFGSerialNo varchar(15) null,
+Quantity smallint,
+InvRecordNo int null
+)
+
+go
+
+create unique clustered index formdetail_key on formdetail(formno,lastupdate,recordno,itemno)
+
+go
+
+/* Table TransTest is a relationship between tables TransactionLog and Test.
+   It relates what test an inventory transaction was placed against. 
+*/
+
+create table TransTest
+(
+TransactionNo decimal,
+TestNo smallint
+)
+
+go
+
+/* Table TransBuildListHeader holds saved transaction build lists.  These lists
+   are used to build up the parts that a Property or Inventory transaction is 
+   going to be placed against.
+*/
+
+create table TransBuildListHeader
+(
+BuildListNo smallint,
+CreateDate datetime,
+FormType char(15),
+TempIssue char(1),
+TestIssue char(1) null,
+TestNo smallint null,
+IssueByName varchar(25),
+IssueByEmpNo char(9),
+IssueToName varchar(25) null,
+IssueToEmpNo char(9) null,
+WorkRequestNo char(15) null,
+PhaseNo char(6) null,
+ExpectReturnDate datetime,
+OffStation char(1),
+WAONo varchar(10) null,
+WarehouseCode tinyint
+)
+
+create unique clustered index TransBuildListHeader_key on TransBuildListHeader(BuildListNo,CreateDate)
+
+/* Table TransBuildList is a relationship between tables TransactionLog 
+   and TransBuildListHeader.
+*/
+
+
+create table TransBuildListDetail
+(
+BuildListNo smallint,
+RecordNo integer,
+TSCSerialNo varchar(15) null,
+MFGSerialNo varchar(15) null,
+Quantity smallint,
+InvRecordNo int null
+)
+
+go
+
+create index TransBuildListDetail_key on 
+                       TransBuildListDetail(BuildListNo,Recordno)
+
+go
+
+/* Table PropTransHeader is like the table FormHeader in that is store transaction
+   information performed on PropertyBook items.  
+*/
+
+create table PropTransHeader
+(
+PropTransNo decimal,
+CreateDate datetime,
+PostedByName varchar(25),
+PostedByEmpNo char(9),
+ReceivingOrg varchar(25) null
+)
+
+go
+
+create unique clustered index PropTransHeader_key on PropTransHeader(PropTransNo)
+
+go
+
+/* Table PropTransDetail holds the detail information about an item involved in a
+   PropertyBook transaction.
+*/
+
+create table PropTransDetail
+(
+PropTransNo decimal,
+CreateDate datetime,
+RecordNo int,
+ItemNo int,
+InvRecordNo int null,
+TSCSerialNo varchar(15) null,
+MFGSerialNo varchar(15) null,
+Status tinyint,
+Quantity smallint,
+ActionCode tinyint,
+PBCode tinyint
+)
+
+go
+
+create unique clustered index PropTransDetail_key on PropTransDetail(PropTransNo,ItemNo)
+
+go
+
+create table TransProp
+(
+TransactionNo decimal,
+PropTransNo decimal
+)
+
+go
+
+create unique clustered index TransProp_key on TransProp(TransactionNo,PropTransNo)
+
+go
+
+create table PropTransBuildListHeader
+(
+PropTransBuildListNo decimal,
+CreateDate datetime,
+PostedByName varchar(25),
+PostedByEmpNo char(9),
+ReceivingOrg varchar(25) null,
+BuildListStatus char(6)
+)
+
+go
+
+create unique clustered index PropTransBuildListHeader_key on 
+                PropTransHeader(PropTransBuildListNo)
+
+go
+
+/* Table PropTransBuildListDetail holds the detail information about an item involved in a
+   PropertyBook transaction build list.  
+*/
+
+create table PropTransBuildListDetail
+(
+PropTransBuildListNo decimal,
+CreateDate datetime,
+RecordNo int,
+ItemNo int,
+InvRecordNo int null,
+TSCSerialNo varchar(15) null,
+MFGSerialNo varchar(15) null,
+Status tinyint,
+Quantity smallint,
+ActionCode tinyint,
+PBCode tinyint,
+BuildListItemStatus char(6)
+)
+
+go
+
+create unique clustered index PropTransBuildListDetail_key on 
+        PropTransBuildListDetail(PropTransBuildListNo,ItemNo)
+
+go
+
+/*  The following objects support the Project functional schema view
+*/
+
+/* Table Test is a support table that describes past, present, and future tests
+   that require/d property.
+*/
+
+create table Test
+(
+TestNo smallint,
+TestAcronym varchar(15),
+TestName varchar(50),
+TestClass char(10),
+TestStartDate datetime,
+TestEndDate datetime,
+InstrumentedTest char(1),
+TestOffStation char(1),
+TestLocation varchar(50) null,
+TestLeadDays smallint,
+TestRecoveryDays smallint
+)
+
+go
+
+/* Table TestWAO is a relationship between tables Test and ae_j_prj_d of the
+   FM application database.
+*/
+
+create table TestWAO
+(
+TestNo smallint,
+WAONo varchar(10),
+SystemsEngEmpNo char(9),
+FieldOpsEmpNo char(9)
+)
+
+go
+
+/* Table TestOTP is a relationship between tables Test and OTP
+*/
+
+create table TestOTP
+(
+TestNo smallint,
+OTPNo varchar(20)
+)
+
+go
+
+/* Table OTP is a suport table that describes the operational test plan number and
+   point of contact.
+*/
+
+create table OTP
+(
+OTPNo varchar(20),
+OTPTestOfficer varchar(25)
+)
+
+go
+
+/* Table ProjectTestType is a relationship between tables Test and TestType.
+*/
+
+create table ProjectTestType
+(
+TestNo smallint,
+TestType varchar(20)
+)
+
+go
+
+/* Table TestType is a support table that describes the type of a test and
+   its description that a test can be.
+*/
+
+create table TestType
+(
+TestType varchar(25)
+)
+
+go
+
+create table TestClass
+( Class char(10),
+  Priority tinyint,
+  ClassDesc varchar(60)
+)
+
+go
+
+create table LastTestNo
+( TestNo smallint,
+  LastUpdate datetime
+)
+
+go
+
+/* Table ApplicationAccess describes application functions that are available
+   to assign users access rights to.  The presense of records in this table
+   are application dependent determined by the developer and the customer.  This
+   table is a support table and will require maintenance.
+*/
+
+create table ApplicationAccess
+(
+AppID smallint,
+AppName char(20),
+AppFunction varchar(30)
+)
+
+go
+
+create unique clustered index ApplicationAccess_key on ApplicationAccess(AppID)
+
+go
+
+/* Table UserAppAccess is a relationship between tables ApplicationAccess field
+   EmployeeID and the FM table ae_h_emp_e field u_num.
+*/
+ 
+create table UserAppAccess
+(
+EmployeeID char(15),
+AppID smallint
+)
+
+/* The following objects make up the Serialized and NonSerialized Inventory schema functional view
+*/
+
+/* Table InvSerializedAttributes contains extended information about Property items by
+   serialno through the InvRecordNo which is unique by RecordNo and Serialno.  This is
+   information that is not necessary for every serialized record.
+*/
+
+create table InvSerializedAttributes
+(
+RecordNo integer,
+InvRecordNo integer,
+ParentRecord varchar(25) null,
+MIRRNo char(13) null,
+PONo char(13) null,
+RegisterDocNo char(9) null,
+UsaNo char(7) null,
+BumperNo char(10) null,
+PolKey char(6) null,
+VINNo varchar(20) null,
+ParentRecordNo int null,
+ParentSerialNo varchar(15) null,
+Revision char(3) null,
+StorageLocation varchar(25) null
+)
+
+go
+
+create unique clustered index InvSerializedAttributes_key on InvSerializedAttributes(InvRecordNo)
+
+go
+
+/* Table InvNonSerializedAttributes holds extra attribute information
+   on a non serialized part that has been placed into inventory.
+*/
+ 
+create table InvNonSerializedAttributes
+(
+RecordNo integer,
+ParentRecord varchar(25) null,
+MIRRNo char(13) null,
+PONo char(13) null,
+RegisterDocNO char(9) null,
+ParentRecordNo int null,
+Revision char(3) null,
+StorageLocation varchar(25) null
+)
+
+go
+
+create unique clustered index InvNonSerializedAttributes_key on InvNonSerializedAttributes(RecordNo)
+
+go
+
+/* Table InvQuantity contains the total quantity by RecordNo and StatusCode of Property.
+*/
+/*
+create table InvQuantity
+(
+RecordNo int,
+StatusCode tinyint,
+Qty smallint
+)
+*/
+go
+/*
+create unique clustered index InvQuantity_key on InvQuantity(RecordNo,StatusCode)
+*/
+go
+
+/* Table InvSerialized is the table that contains the current status and location of
+   all serialized inventory items.
+*/
+
+create table InvSerialized
+(
+InvRecordNo integer,
+RecordNo int,
+TSCSerialNo varchar(15) null,
+MfgSerialNo varchar(15) null,
+Location varchar(15) null,
+Remarks text null,
+StatusCode tinyint,
+LastUpdate datetime
+)
+
+go
+
+create unique clustered index InvSerialized_key on InvSerialized(InvRecordNo)
+
+go
+
+/* Table InvNonSerialized is the table that contains the current status and location of
+   all non-serialized inventory items.
+*/
+
+create table InvNonSerialized
+(
+RecordNo integer,
+Location varchar(15) null,
+Remarks text null,
+Qty integer,
+StatusCode tinyint,
+LastUpdate datetime
+)
+
+go
+
+create unique clustered index InvNonSerialized_key on InvNonSerialized(RecordNo,Location)
+
+go
+
+/* Table InvSerializedWarranty contains warranty information for each serialized
+   inventory item.
+*/
+ 
+create table InvSerializedWarranty
+(
+RecordNo int,
+InvRecordNo integer,
+MfgWarranty char(1),
+MfgNo smallint null,
+MfgWarExpDate datetime null,
+VendorWarranty char(1),
+VendorNo smallint null,
+VendorWarExpDate datetime null,
+ThirdPartyWarranty char(1),
+ThirdPartyNo smallint null,
+ThirdPartyWarExpDate datetime null
+)
+
+go
+
+create unique clustered index InvSerializedWarranty_key on InvSerializedWarranty(InvRecordNo)
+
+go
+
+/* Table InvNonSerializedWarranty contains warranty information for all non-serialized
+   inventory items.
+*/
+
+create table InvNonSerializedWarranty
+(
+RecordNo integer,
+MfgWarranty char(1),
+MfgNo smallint null,
+MfgWarExpDate datetime null,
+VendorWarranty char(1),
+VendorNo smallint null,
+VendorWarExpDate datetime null,
+ThirdPartyWarranty char(1),
+ThirdPartyNo smallint null,
+ThirdPartyWarExpDate datetime null
+)
+
+go
+
+create unique clustered index InvNonSerializedWarranty_key on InvNonSerializedWarranty(RecordNo)
+
+go
+
+/* The following table is the Archive table for Property and Inventory
+*/
+
+create table PropertyArchive
+(
+ RecordNo integer,
+ StockNo char(16),
+ PartNo varchar(18),
+ ArchiveDate datetime,
+ GenericName varchar(20),
+ Attributes varchar(50) null,
+ Model varchar(20) null,
+ Noun varchar(50) null,
+ Cost money,
+ DrawingNo varchar(13) null,
+ PropertyBook char(1),
+ Reservable char(1),
+ Serialized char(1),
+ Warranty char(1),
+ Calibration char(1),
+ GovVehicle char(1),
+ Component char(1),
+ Replenishment char(1),
+ GFP char(1) null,
+ TDA char(1) null,
+ MgtInterest char(1),
+ FYReportCode char(3) null,
+ LIN char(6) null,
+ CAGE char(6) null,
+ LCC char(1) null,
+ RICC char(1) null,
+ DODAC char(8) null,
+ TotalQty smallint,
+ Class varchar(15),
+ Source varchar(20),
+ UOM varchar(15),
+ SupplierDesc varchar(20),
+ FSCCode char(4),
+ WarehouseDesc varchar(20),
+ CommodityDesc varchar(20),
+ CategoryDesc varchar(20),
+ SubCategoryDesc varchar(20),
+ InvRecordNo integer null,
+ TSCSerialNo varchar(15) null,
+ MfgSerialNo varchar(15) null,
+ ParentRecord varchar(25) null,
+ MIRRNo char(13) null,
+ PONo char(13) null,
+ RegisterDocNo char(9) null,
+ UsaNo char(7) null,
+ BumperNo char(10) null,
+ PolKey char(6) null,
+ VINNo varchar(20) null,
+ ParentRecordNo int null,
+ ParentSerialNo varchar(15) null,
+ Revision char(3) null,
+ StorageLocation varchar(25) null,
+ InvQty integer
+)
+
+go
+
+/* The following code creates stored procedures that control unique record number
+   creation and access.
+*/
+
+/* Create stored procedure GetFormNo that controls creation of unique 
+   FormNo.s
+*/
+
+create procedure GetFormNo
+
+as
+
+declare @LastFormNo int
+declare @Today datetime
+
+select @Today = getdate()
+select @LastFormNo = (select FormNo from LastFormNo (TabLock))
+if @LastFormNo = null
+  select @LastFormNo = 1
+else
+  select @LastFormNo = @LastFormNo + 1
+update LastFormNo set FormNo = @LastFormNo, 
+                    LastUpDate = @Today
+from LastFormNo (TabLockX)
+
+select @LastFormNo
+
+go
+
+
+/* Create stored procedure GetInvRecordNo that controls creation of unique 
+   InvRecordNo.s
+*/
+
+create procedure GetInvRecordNo
+
+as
+
+declare @LastInvRecordNo int
+declare @Today datetime
+
+select @Today = getdate()
+select @LastInvRecordNo = (select InvRecordNo from LastInvRecordNo (TabLock)) + 1
+update LastInvRecordNo set InvRecordNo = @LastInvRecordNo, 
+                    LastUpDate = @Today
+from LastInvRecordNo (TabLockX)
+
+select @LastInvRecordNo
+
+
+go
+
+/* Create stored procedure GetRecordNo that controls creation of unique 
+   RecordNo.s
+*/
+
+create procedure GetRecordNo
+
+as
+
+declare @LastRecordNo int
+declare @Today datetime
+
+select @Today = getdate()
+select @LastRecordNo = (select RecordNo from LastPropRecordNo (TabLock)) + 1
+update LastPropRecordNo set RecordNo = @LastRecordNo, 
+                    LastUpDate = @Today
+from LastPropRecordNo (TabLockX)
+
+select @LastRecordNo
+
+go
+
+/* Create stored procedure GetTransaction that controls creation of unique 
+   TransactionNo.s
+*/
+create procedure GetTransaction
+
+as
+
+declare @LastTransaction decimal
+declare @Today datetime
+declare @SiteCode decimal
+declare @LastBase smallint
+declare @Year decimal
+declare @Month int
+declare @Day int
+
+select @Today = getdate()
+select @SiteCode = 10*1000000000000
+select @Year = datepart(year,@Today)*1000000
+select @Year = @Year * 100
+select @Month = datepart(month,@Today)*1000000
+select @Day = datepart(day,@Today)*10000
+select @LastBase = (select LastBase from LastTransaction (TabLock)) + 1
+select @LastTransaction = @SiteCode + @Year + @Month + @Day + @LastBase
+update LastTransaction set LastTransaction = @LastTransaction, 
+                    LastBase = @LastBase,
+                    LastDate = @Today
+from LastTransaction (TabLockX)
+
+select @LastTransaction
+
+go
+
+

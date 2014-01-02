@@ -1,0 +1,7 @@
+--
+-- manifest for patch p14939613
+--
+
+-- patch prerequisites
+-- patch requires build 30
+14939613,30

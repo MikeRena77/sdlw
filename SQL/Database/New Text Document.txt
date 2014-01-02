@@ -1,0 +1,1 @@
+find /n /i "constraint" imp.log > constraints.txt

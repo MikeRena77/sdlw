@@ -1,0 +1,697 @@
+e.g.
+sqlplus hrvstuser/har2vest@DEVDBS @dir.sql
+
+Database Management Systems
+by Raghu Ramakrishnan and Johannes Gehrke
+
+[Database Management Systems (3rd Edition)] [WWW Resources] [Material for the Third Edition] [Material for the First Edition] [Material for the Second Edition]
+ 
+Oracle Guide
+This Guide will introduce you to using Oracle for several basic tasks, as well as how to configure the Oracle environment and use special features of its user interface. This guide is divided into the following sections:
+
+Getting Connected 
+Tables
+Creating Tables 
+Observing Table Information 
+Altering Tables 
+Deleting Tables 
+Sample Session 
+Data
+Inserting Data 
+Querying Data 
+Altering Data 
+Deleting Data 
+Sample Session 
+Constraints
+Adding Constraints 
+Observing Constraints 
+Using Constraints 
+Deleting Constraints 
+Sample Session 
+Using SQL*Plus
+Ending Your Session 
+Changing Your Password 
+Editing Commands 
+Committing Data 
+Logging Sessions 
+Using Special Characters 
+Loading Commands From A File 
+Running Commands At Login 
+Changing Date Formatting 
+Changing Output Formatting 
+Getting Additional Help 
+Sample Session 
+When you are done, you may go back to the Welcome Page. You can also register for free and access the online Oracle documentation at technet.oracle.com
+
+Getting Connected
+In order to interact with Oracle you should use the SQL*Plus Application. This application is available on both the windows and Unix platforms.
+
+On Windows go to the Start Menu, then select Start >Programs > Oracle - DBBOOK_HOME > Application Development > SQL * Plus. Use your installation name in place of DBBOOK_HOME. 
+On Unix you can type sqlplus from a Unix Shell. Your instructor should have provided information on how to configure your account and login to Unix. 
+You will be prompted for your username, connect string, and password. If you are using Oracle on windows with the CD accompanying the text, then you may leave the connect string blank. On Unix the connect string will follow your username and the @ symbol in the format username@connectstring. 
+
+Note: If you have installed Oracle on Windows, you may use it to connect to your Unix based server. In order to do this copy the entries from the tnsnames.ora in the $ORACLE_HOME/network/admin directory on the Unix system to the tnsnames.ora file on the Windows machine. Then, use the connect string as you would in Unix. There is also a version of SQL*Plus on windows that works in command line mode, which is identical to the Unix version.
+
+Sample Session
+student|computer-one|~|[1]% sqlplus
+
+SQL*Plus: Release 9.0.1.0.1 - Production on Sat Jun 8 15:28:53 2002
+
+(c) Copyright 2001 Oracle Corporation.  All rights reserved.
+
+Enter user-name: student@oracle.cs.someplace.edu
+Enter password: 
+
+Connected to:
+Personal Oracle9i Release 9.0.1.1.1 - Production
+With the Partitioning option
+JServer Release 9.0.1.1.1 - Production
+
+SQL> 
+
+Back to top 
+
+--------------------------------------------------------------------------------
+
+Tables
+Creating Tables
+Oracle data is stored in tables which represent your fundamental schema design. You create them with the create table command: 
+
+create table tablename ( columnname type, columnname type ...);
+
+where tablename is the name of your table, columnname is the name of your column and type is the type as specified in the table below. There are additional types available, however these are the most common. Give some thought as to the order of columns as it can effect the default order they are displayed and data is entered. 
+
+Type Description 
+varchar2(n) variable length string up to n with maximum 2000 characters. Specified as 'characters' where characters 
+are the characters in the string. 
+date holds a date. By default they are specified as day-month-year as in '12-DEC-1990' 
+number integer or real value up to 40 decimal digits 
+number(n) up to n digits 
+number(n,d) up to n digits with d after the decimal point. The use can help provide formatting information to applications 
+
+Back to top
+
+Observing Table Information
+The easiest way to get information about a table is with the DESCRIBE command:
+
+DESCRIBE tablename
+Back to top
+
+Altering Tables
+To alter a table use the alter table command:
+
+alter table tablename add(  columnname datatype, ...);
+alter table tablename modify ( column newdatatype);
+alter table drop column columnname;
+Back to top
+
+Deleting Tables
+To delete a table use the following:
+
+drop table tablename;
+To Drop all your tables you can use the following in a script:
+
+ SET NEWPAGE 0
+ SET SPACE 0
+ SET LINESIZE 80
+ SET PAGESIZE 0
+ SET ECHO OFF
+ SET FEEDBACK OFF
+ SET HEADING OFF
+ SET MARKUP HTML OFF
+ SET ESCAPE \
+ SPOOL DELETEME.SQL
+ select 'drop table ', table_name, 'cascade constraints \;' from user_tables;
+ SPOOL OFF
+ @DELETEME
+
+Back to top
+
+Sample Session
+SQL> create table sign_sales(Color varchar2(30),date_sold date,
+  2  price_each number);
+
+Table created.
+SQL> alter table students add( sign_shape number);
+
+Table altered.
+
+SQL> alter table students modify (sign_shape varchar2(10));
+
+Table altered.
+
+SQL> alter table students drop column sign_shape ;
+
+Table altered.
+SQL> DESCRIBE sign_shape
+Name                                      Null?    Type
+----------------------------------------- -------- ----------------------------
+COLOR                                              VARCHAR2(30)
+DATE_SOLD                                          DATE
+PRICE_EACH                                         NUMBER
+SQL> drop table sign_sale;
+
+Table dropped.
+ 
+Back to top
+
+--------------------------------------------------------------------------------
+
+Data
+Inserting Data
+Working with data is fundamental to database systems. It is possible to load data with SQL. It can also be done using the Oracle bulk loader. To load values in SQL*Plus use the following syntax:
+
+Insert into tablename values (somevalue, somevalue, ...);
+where somevalue is a value to insert and tablename is the name of the table. Values are inserted in the order of the columns of the table. The first value is inserted into the first column, etc. 
+
+Back to top
+
+Querying Data
+Querying data in SQL is one of a database systems major tasks, and can not be fully described here. In its most basic form a query consists of the SELECT statement:
+
+select columnname, columnname... from tablename;
+Where columnname is the name of a column or * for all columns and tablename is the name of the table.
+
+Back to top
+
+Altering Data
+You can alter data with the update expression. The optional where clause limits the rows effected. The set clause describes the change as follows:
+
+update tablename set columnname=expression where whereclause;
+Back to top
+
+Deleting Data
+You can delete data with the delete expression. The optional where clause limits the rows effected.
+
+delete from tablename where whereclause;
+Back to top
+
+Sample Session
+SQL> insert into signs values(19.95,'White','Rectangle','Park Somewhere Else');
+
+1 row created.
+
+SQL>
+SQL> select * from signs;
+
+PRICE_EACH COLOR     SHAPE	  DESCRIPTION
+---------- --------- ------------ -------------------
+19.95      White     Rectangle    Park Somewhere Else
+
+SQL>
+SQL> update signs set price_each = 4.00 where price_each < 20;
+
+1 row updated.
+
+SQL>
+SQL> delete from signs ;
+
+1 row deleted.
+
+SQL>
+Back to top
+
+--------------------------------------------------------------------------------
+
+Constraints
+Adding Constraints
+In order to finish realizing a schema in Oracle, it is necessary to add the required constraints. Oracle supports several types of constraints, to enforce complex rules may require the use of active database features such as triggers. In this section the examples are limited to key constraints. 
+
+Constraints can be added to new tables or after table creation. To add primary key constraints to a new table specify the primary key after the columns similar to the following: 
+
+create table tablename ( columnname type, columnname type ..., primary key(keycolumn,keycolumn,...);
+
+where keycolumn is the name of a column that is part of the key. 
+
+Foreign keys should refer to unique tuples. To create a new table with foreign keys in addition use: 
+
+create table tablename ( columnname type, columnname type ..., primary key(keycolumn,keycolumn,...),
+foreign key(foreignkeycolumn,foreignkeycolumn,...) references foreigntable,
+foreign key(foreignkeycolumn,foreignkeycolumn,...) references foreigntable,...);
+
+where foreignkeycolumn is the column of the foreign key in table foreigntable. It must match a column in the current table. You can also add constraints with the alter table command where tablename is the name of the table and tableconstraint is the constraint definition: 
+
+Alter table tablename add tableconstraint;
+Back to top
+
+Observing Constraints
+Often you may wish to see what constraints exist on a table. The view USER_CONSTRAINTS is maintained by Oracle and has information about constraints. Some interesting columns include, the CONSTRAINT_NAME, CONSTRAINT_TYPE where P refers to primary key, and R is a foreign key constraints, the TABLE_NAME on which it is defined, and the R_CONSTRAINT_NAME for foreign key constraints. Type DESCRIBE USER_CONSTRAINTS for more informaion.
+
+Once you know the CONSTRAINT_NAME, you can use the USER_CONS_COLUMNS view to find the COLUMN_NAME and POSITION for that CONSTRAINT_NAME. You can query these views as you would any other table:
+
+select column_name, position, constraint_name from User_cons_columns;
+Back to top
+
+Using Constraints
+At times you may need to create constraints that are interdependent, such as two tables that refer to each others primary key in a foreign key constraint. One way to deal with this problem is to defer constraints. They constraint must be made deferrable and the constraints mode set to deferred. You can substitute the names of specific constraints or use the all keyword. They will be checked at the end of the transaction instead of after each insert. To enable them make the mode immediate:
+
+create table tablename ( columnname type, columnname type ...,
+foreign key(foreignkeycolumn,foreignkeycolumn,...) references foreigntable deferrable);
+set constraints all deferred;
+set constraints all immediate;
+Back to top
+
+Deleting Constraints
+Constraints can be deleted with the drop constraint command. where tablename is the table name and someconstraint is the constraint name:
+
+alter table tablename drop constraint someconstraint;
+Back to top
+
+Sample Session
+SQL> create table bids( bid_id varchar2(10), bidder_id varchar2(10), item_id varchar2(10),
+  2  bid_amount number, primary key(bid_id), foreign key ( item_id ) references
+  3  auction_items, foreign key (bidder_id) references members(member_id) deferrable);
+
+Table created.
+
+SQL>
+SQL> select constraint_name, constraint_type from user_constraints where
+  2  table_name='BIDS';
+
+CONSTRAINT_NAME                C
+------------------------------ -
+SYS_C001400                    P
+SYS_C001401                    R
+SYS_C001401                    R
+
+SQL>
+SQL> alter table students drop constraint SYS_C001400;
+
+Table altered.
+
+SQL> alter table students add primary key( bid_id );
+
+Table altered.
+
+SQL> set constraints all deferred;
+
+Constraint set.
+
+Back to top 
+
+--------------------------------------------------------------------------------
+
+Using SQL*Plus
+SQL*Plus provides an interactive command line interface to Oracle. In it you type various commands to manipulate your data. It has many built in features. 
+
+Back to top
+
+Ending Your Session
+To end your session type: 
+
+quit
+In the windows version you can select Exit from the file menu.
+
+Back to top
+
+Changing Your Password
+Type passw to change your password. Try to avoid certain characters like @ and / in your password, as these will confuse oracle.
+
+passw
+Back to top
+
+Editing Commands
+Commands in Oracle are stored in a buffer until ended with a semicolon ; and  are also accessible immediately after execution. They may use several lines. If you make a mistake it is easier to edit your command then type it all over. You can use the edit command to edit a file,  or select Edit >Editor > Invoke Editor in Windows.
+
+edit 
+This will edit the command in the buffer. You may also specify a file as a parameter. By default the editors are vi in Unix and notepad on Windows. You may change the editor where editorname is you editor by using the Define Editor menu in Windows or:
+
+define _editor = editorname 
+You may execute the command in the buffer by either the command RUN or a single slash (/). You can use GET and SAV to retrieve or save the buffer to a file. You can also change a single line with C to replace the old text with the new.
+
+C/old/new
+
+Back to top
+
+Committing Data
+Whenever you have finished a series of changes and you want to insure they are part of the database you should commit the transaction. This will make the changes visible to other database sessions. type: 
+
+commit;
+
+If you make a mistake you can undo the change with: 
+
+rollback;
+
+It will restore data to the last commit. Some commands automatically result in commit, such as creating a table. 
+Back to top
+
+Logging Sessions
+SQL*Plus can record your commands and output to a file. This is useful for class assignments that ask for a log of your session, or in automated self generating scripts. To do this type: 
+
+spool filename
+
+where filename is the name of the file to save the output. In windows you can use the File > Spool >Spool File Command. To stop recording to a file select File >Spool> Spool Off or type 
+
+spool off
+Back to top
+
+Using Special Characters
+Sometimes you may need to use a special character such as & or ; in a query that is used by SQL*Plus. You can define an escape character. You may then use it in queries before a special character. It is often useful in automated scripting. To escape the quote character use multiple quotes
+
+set escape \
+select 'It''s mine\; I like it' from dual;
+You may also turn escape on and off. 
+
+set escape off
+Back to top
+
+Loading Commands From A File
+If you prepared commands in advance, for example by developing them at home to load onto another system type: 
+
+@filename.sql
+
+where filename.sql contains the commands to run. The File > Open menu can also be used.
+
+Back to top
+
+Running Commands At Login
+There is a login file that you may create in the directory from which you call sqlplus. Put the commands in the file called login.sql This is especially useful for common tasks such as setting the editor.
+
+Back to top
+
+Changing Date Formatting
+Oracle provides several options in how both input and output are formatted. One consistent formatting parameter that you may need to change is the date formatting. The ALTER SESSION command allows you to change the date format. use the SET NLS_DATE_FORMAT command followed by the date format string. The default format is DD-MON-YY. Some common Code include:
+
+String Meaning 
+YYYY Year 
+MM Month 
+DD Day 
+HH Hour 
+HH24  Hour (24 hour clock) 
+MI Minuite 
+SS Second 
+
+ALTER SESSION SET NLS_DATE_FORMAT='YYYY/MM/DD HH24:MI'
+
+Back to top
+
+Changing Output Formatting
+You can also change the output formatting in SQL *Plus. This can disable any of the headers normally included with output or change there size and location. This is also helpful when exporting output. For example, the code below disables all heading informaion. 
+
+ SET NEWPAGE 0
+
+ SET SPACE 0
+
+ SET LINESIZE 80
+
+ SET PAGESIZE 0
+
+ SET ECHO OFF
+
+ SET FEEDBACK OFF
+
+ SET HEADING OFF
+Back to top
+
+Getting additional help
+SQL*Plus has an on line help system. To use it type: 
+
+help command
+
+where command is the command you need help with. To obtain a list of commands with help available type: 
+
+help index
+
+Back to top
+
+Sample Session
+SQL> spool answer.txt
+SQL> DEFINE _EDITOR= pico
+SQL> spool off
+SQL> commit;
+
+Commit complete.
+
+SQL> select username from junk;
+select username from junk
+                     *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+SQL> c /junk/user_users
+  1* select username from user_users
+SQL> /
+
+USERNAME
+------------------------------
+STUDENTNAME
+
+SQL> quit
+Disconnected from Personal Oracle9i Release 9.0.1.1.1 - Production
+With the Partitioning option
+JServer Release 9.0.1.1.1 - Production
+student|computer-one|~|[4]%
+Back to top
+
+Back to Supporting Material for the Third Edition
+
+--------------------------------------------------------------------------------
+
+Version 0.1.0.1 Last Updated: 2002/06/08 by David Warden
+Oracle is a registered trademark of Oracle Corporation.
+Copyright (C) 2002 McGraw-Hill Companies Inc. All Rights Reserved.
+
+--------------------------------------------------------------------------------
+
+Oracle Tuning
+
+Document ID:    TEC421840 
+Tech Document
+Title:  Tuning CA Harvest Change Manager r7/r7.1 on Oracle 
+
+
+Here are some good places to start tuning AllFusion Harvest Change Manager (Harvest) on Oracle for optimal performance.
+
+Tune for Optimal Performance
+It is impossible for Harvest to provide a specific tuning plan. The optimal tuning of Harvest DB will change with the amount of system resources available and data stored in the database. However, these are some points noted by customers and consultants.
+
+Warning: Never change production settings without first verifying them on an identical test setup. Parameters do not always work as expected. Many changes that help one situation may hinder another. There are always exceptions for a rule. Please note the current value of each parameter and change only one thing at a time.
+
+Please consult your DBA and the Oracle performance tuning documentation for more information.
+
+Use the Latest Oracle Version
+The optimizer becomes more intelligent with every Oracle release. Upgrading to the latest available version is the easiest and safest way to improve performance.
+
+Tablespace Management
+Consider using locally managed tablespaces with SEGMENT SPACE MANAGEMENT set to AUTO.
+
+Spread HARVESTINDEX, HARVESTBLOB, and HARVESTMETA tablespaces across separately controlled disks.
+
+Consider operating in automatic undo management mode.
+
+Database Parameters
+OPTIMIZER_INDEX_COST_ADJ (1-10000) 
+The default value of 100 is incorrect for most Harvest implementations. Lowering this parameter will make the CBO view indexes as less expensive to use. We recommend starting this value at 10 and then increase it by 10 until optimal performance is reached.
+
+OPTIMIZER_INDEX_CACHING (0-99) 
+The default value of 0 is incorrect for most Harvest implementations. Increasing this parameter makes nested loop joins look less expensive to the optimizer. We recommend starting this value at 90 and lower by 10 until optimal performance is reached.
+
+OPTIMIZER_DYNAMIC_SAMPLING 
+Oracle 9i default value does not handle optimization of temp tables properly. We recommend setting this value to 2. The default on 10g for this parameter is 2 so no change is necessary for 10g.
+
+PARALLEL_MAX_SERVERS 
+The default value for parallel_max_servers is the number of CPUs on your server. Some customers have reported best performance with parallel_max_servers set to 0. alter system set parallel_max_servers = 0 scope=both;
+
+DB_FILE_MULTIBLOCK_READ_COUNT 
+The maximum effective setting for db_file_multiblock_read_count is OS and disk dependant. It is very important that this parameter be set correctly for the current environment. This parameter indicates the number of blocks that are read by the operating system at one time. The optimizer uses this value to evaluate the cost of a full scan against an index. According to Oracle, this parameter should be set to the maximum I/O chunk size divided by the db_block_size.
+
+For example: on Windows NT, if the chunk size is 128 and the block size is 8k, the parameter should be set to 128/(block size)8K = 16. Remember you can set different block sizes in different tablespaces.
+
+OPTIMIZER_FEATURES_ENABLE 
+With each Oracle release, the optimizer changes the way it interprets available data and also introduces new features. Oracle offers this flag as a way to enable previous optimizer version behavior. We strongly recommend not setting this parameter to a prior Oracle version.
+
+OPTIMIZER_MODE 
+When set to the default CHOOSE, Oracle uses the cost-based approach if statistics are available and a rule-based approach if they are not. We recommend leaving this value as CHOOSE and generating complete statistics on the database.
+
+The CBO works based on statistics, if they are old or inaccurate, you will get a poor execution plan. If performance is poor, flipping the optimizer mode to see if performance improves may help identify if it is an optimizer problem. For example, delete statistics if they exist or generate them if they do not.
+
+SGA_MAX_SIZE 
+This parameter should be carefully set based on available memory. A rough starting point would be to set this parameter to around ½ of the total system ram.
+
+SHARED_POOL_SIZE 
+The shared pool contains shared cursors, stored procedures, control structures, and other structures. Larger values improve performance in multi-user systems.
+
+A starting point for this parameter is 50M for a normal Harvest installation. It must then be monitored using the v$db_shared_pool_advice or Statspack.
+
+SORT_AREA_SIZE 
+A small but important component of SQL syntax, sorting is a frequently overlooked aspect of Oracle tuning. Sorts that cannot fit into the sort_area_size will be paged out into the TEMP tablespaces for a disk sort. Disk sorts are thousands of times slower than RAM sorts. Increasing this parameter from its default value up to 5MB may improve performance.
+
+Consider enabling automatic sizing of SQL work areas, starting with setting pga_aggregate_target appropriately.
+
+BUFFER_CACHE 
+A recommended starting value is around 50M. Monitor the hit ratio and then change accordingly.
+
+JAVA_POOL_SIZE 
+Defines the memory used by java in Oracle, if you don't use Java set
+
+JAVA_POOL_SIZE = 1000000. If you do use Java, a JAVA_POOL_SIZE = 33000000 is a starting recommendation.
+
+LARGE_POOL_SIZE 
+The large pool allocation heap is used in shared server systems for session memory, by parallel execution for message buffers, and by backup processes for disk I/O buffers. Oracle calculates a default LARGE_POOL_SIZE only if PARALLEL_AUTOMATIC_TUNING is set to TRUE and LARGE_POOL_SIZE is unset.
+
+A starting value would be to set LARGE_POOL_SIZE = 10000000 and increase as necessary.
+
+DB_CACHE_SIZE, DB_KEEP_CACHE_SIZE, DB_RECYCLE_CACHE_SIZE 
+This parameter determines the number of database block buffers stored in memory.
+
+Please research them and set them appropriately. v$db_cache_advice and other Oracle tools can be used to estimate proper values.
+
+SESSION_CACHED_CURSORS 
+This parameter lets you specify the number of session cursors to cache.
+
+After the first ‘soft parse’, subsequent ‘soft parse’ calls will find the cursor in the cache and do not need to reopen the cursor. To get placed in the session cache the same statement has to be parsed 3 times within the same cursor. Oracle uses a least recently used algorithm to remove entries in the session cursor cache to make room for new entries when needed. Session cached cursors is a great help in reducing latching that takes place due to excessive soft parsing.
+
+The suggested value to start testing with is SESSION_CACHED_CURSORS = 300
+
+OPEN_CURSORS 
+This parameter specifies the maximum number of open cursors (handles to private SQL areas) a session can have at once. It is important to set the value of OPEN_CURSORS high enough to prevent your application from running out of open cursors. Assuming that a session does not open the number of cursors specified by OPEN_CURSORS, there is no added overhead to setting this value higher than actually needed.
+
+A suggested value is to start at OPEN_CURSORS=800 and increase if needed.
+
+CURSOR_SPACE_FOR_TIME 
+This parameter lets you use more space for cursors in order to save time. It affects both the shared SQL area and the client's private SQL area. The default is false. If CURSOR_SPACE_FOR_TIME is set to TRUE, the shared SQL areas remain pinned in the shared pool as long as an open cursor references them. This parameter should be used only if you have a sufficiently large shared pool to simultaneously hold all the processes' cursors.
+
+Maintenance
+Rebuild indexes periodically. Drop and recreate them if performance becomes unexpectedly bad. We have found in certain circumstances that recreating indexes returns better performance than index rebuild.
+
+Ensure that statistics are up to date for best performance. Statistics need to be updated:
+
+On a regular schedule, based on normal changes in a database 
+After inserting a significant amount of data 
+When distinct values in primary columns change 
+After creating indexes and tables
+As a general rule, if you have never enabled statistics before, generate them first in a test database where performance can be verified before generating them in the production database.
+
+Use DBMS_STATS, to generate statistics on the Harvest schema. Do not run this on the SYS schema.
+
+DBMS_STATS has many options that must be carefully considered. Here is an example:
+
+>EXEC DBMS_STATS.GATHER_SCHEMA_STATS( OWNNAME=>'HARVEST', ESTIMATE_PERCENT=>100,METHOD_OPT=>'FOR ALL COLUMNS SIZE SKEWONLY');
+
+or, the following example was generated out of the Oracle Enterprise Manager web app:
+>begin
+
+dbms_stats.gather_schema_stats( 
+ownname=> 'SCMUSER', 
+granularity=> 'DEFAULT', 
+block_sample=> FALSE, 
+cascade=> TRUE, 
+degree=> DBMS_STATS.DEFAULT_DEGREE, 
+method_opt=> 'FOR ALL COLUMNS SIZE AUTO', 
+options=> 'GATHER AUTO');
+
+end;
+
+ALTER INDEX <index_name> REBUILD ONLINE;
+Need to know the index names in order to be able to rebuild them:
+>select index_name from all_indexes where table_owner='SCMUSER';
+
+
+These initialization parameter changes were generated out of the Oracle Enterprise Manager web app:
+ALTER SYSTEM SET large_pool_size = 10000000 SCOPE=MEMORY
+ALTER SYSTEM SET open_cursors = 800 SCOPE=MEMORY
+ALTER SYSTEM SET optimizer_index_cost_adj = 10 SCOPE=MEMORY
+ALTER SYSTEM SET optimizer_mode = "CHOOSE" SCOPE=MEMORY
+ALTER SYSTEM SET parallel_max_servers = 0 SCOPE=MEMORY
+ALTER SYSTEM SET sort_area_size = 5120000 DEFERRED SCOPE=MEMORY
+They didn't work well on HARDEV1 due to hardware restrictions on the box.
+ 
+_________________________________________________________________________________________
+
+Resources
+Database Systems: The Complete Book by Hector Garcia, Jeff Ullman, and Jennifer Widom. 
+
+A First Course in Database Systems by Jeff Ullman and Jennifer Widom. 
+
+Gradiance SQL Tutorial. 
+Oracle Dates and Times  
+--------------------------------------------------------------------------------
+
+Overview 
+DATE Format 
+The Current Time 
+Operations on DATE 
+Further Information 
+
+--------------------------------------------------------------------------------
+Overview
+Oracle supports both date and time, albeit differently from the SQL2 standard. Rather than using two separate entities, date and time, Oracle only uses one, DATE. The DATE type is stored in a special internal format that includes not just the month, day, and year, but also 
+the hour, minute, and second. 
+The DATE type is used in the same way as other built-in types such as INT. For example, the following SQL statement creates a relation with an attribute of type DATE: 
+
+create table x(a int, b date);
+
+--------------------------------------------------------------------------------
+DATE Format
+When a DATE value is displayed, Oracle must first convert that value from the special internal format to a printable string. The conversion is done by a function TO_CHAR, according to a DATE format. Oracle's default format for DATE is "DD-MON-YY". Therefore, when you issue the query 
+select b from x;
+you will see something like: 
+B
+---------
+01-APR-98
+Whenever a DATE value is displayed, Oracle will call TO_CHAR automatically with the default DATE format. However, you may override the default behavior by calling TO_CHAR explicitly with your own DATE format. For example, 
+SELECT TO_CHAR(b, 'YYYY/MM/DD') AS b
+FROM x;
+returns the result: 
+B
+---------------------------------------------------------------------------
+1998/04/01
+The general usage of TO_CHAR is: 
+TO_CHAR(<date>, '<format>')
+where the <format> string can be formed from over 40 options. Some of the more popular ones include: 
+  MM Numeric month (e.g., 07) 
+MON Abbreviated month name (e.g., JUL) 
+MONTH Full month name (e.g., JULY) 
+DD Day of month (e.g., 24) 
+DY Abbreviated name of day (e.g., FRI) 
+YYYY 4-digit year (e.g., 1998) 
+YY Last 2 digits of the year (e.g., 98) 
+RR Like YY, but the two digits are ``rounded'' to a year in the range 1950 to 2049. Thus, 06 is considered 2006 instead of 1906 , for example.  
+AM (or PM) Meridian indicator 
+HH Hour of day (1-12) 
+HH24 Hour of day (0-23) 
+MI Minute (0-59) 
+SS Second (0-59) 
+
+You have just learned how to output a DATE value using TO_CHAR. Now what about inputting a DATE value? This is done through a function called TO_DATE, which converts a string to a DATE value, again according to the DATE format. Normally, you do not have to call TO_DATE explicitly: Whenever Oracle expects a DATE value, it will automatically convert your input string using TO_DATE according to the default DATE format "DD-MON-YY". For example, to insert a tuple with a DATE attribute, you can simply type: 
+
+insert into x values(99, '31-may-98');
+Alternatively, you may use TO_DATE explicitly: 
+insert into x
+values(99, to_date('1998/05/31:12:00:00AM', 'yyyy/mm/dd:hh:mi:ssam'));
+The general usage of TO_DATE is: 
+TO_DATE(<string>, '<format>')
+where the <format> string has the same options as in TO_CHAR. 
+Finally, you can change the default DATE format of Oracle from "DD-MON-YY" to something you like by issuing the following command in sqlplus: 
+
+alter session set NLS_DATE_FORMAT='<my_format>';
+The change is only valid for the current sqlplus session. 
+
+--------------------------------------------------------------------------------
+The Current Time
+The built-in function SYSDATE returns a DATE value containing the current date and time on your system. For example, 
+select to_char(sysdate, 'Dy DD-Mon-YYYY HH24:MI:SS') as "Current Time"
+from dual;
+returns 
+Current Time
+---------------------------------------------------------------------------
+Tue 21-Apr-1998 21:18:27
+which is the time when I was preparing this document :-) Two interesting things to note here: 
+You can use double quotes to make names case sensitive (by default, SQL is case insensitive), or to force spaces into names. Oracle will treat everything inside the double quotes literally as a single name. In this example, if "Current Time" is not quoted, it would have been interpreted as two case insensitive names CURRENT and TIME, which would actually cause a syntax error. 
+DUAL is built-in relation in Oracle which serves as a dummy relation to put in the FROM clause when nothing else is appropriate. For example, try "select 1+2 from dual;". 
+Another name for the built-in function SYSDATE is CURRENT_DATE. Be aware of these special names to avoid name conflicts. 
+
+--------------------------------------------------------------------------------
+Operations on DATE
+You can compare DATE values using the standard comparison operators such as =, !=, >, etc. 
+You can subtract two DATE values, and the result is a FLOAT which is the number of days between the two DATE values. In general, the result may contain a fraction because DATE also has a time component. For obvious reasons, adding, multiplying, and dividing two DATE values are not allowed. 
+
+You can add and subtract constants to and from a DATE value, and these numbers will be interpreted as numbers of days. For example, SYSDATE+1 will be tomorrow. You cannot multiply or divide DATE values. 
+
+With the help of TO_CHAR, string operations can be used on DATE values as well. For example, to_char(<date>, 'DD-MON-YY') like '%JUN%' evaluates to true if <date> is in June. 
+
+
+--------------------------------------------------------------------------------
+This document was written originally by Kristian Widjaja for Prof. Jeff Ullman's CS145 class in Autumn, 1997; revised by Jun Yang for Prof. Jennifer Widom's CS145 class in Spring, 1998; further revisions by Prof. Ullman in Autumn, 1998. 
+
+
+select * from harpackagenamegen where NAMEFORMAT like 'HRSelfService%';

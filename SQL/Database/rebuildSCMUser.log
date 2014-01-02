@@ -1,0 +1,26 @@
+
+SQL*Plus: Release 10.1.0.2.0 - Production on Thu Sep 25 07:08:10 2008
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+SP2-0606: Cannot create SPOOL file "rebuildSCMUser.log"
+not spooling currently
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+------------------------------------------------------------------------------------------
+SQL*Plus: Release 10.1.0.2.0 - Production on Thu Sep 25 07:09:36 2008
+
+Copyright (c) 1982, 2004, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+Disconnected from Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options

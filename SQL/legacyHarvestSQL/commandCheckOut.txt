@@ -1,0 +1,1 @@
+hco -en 'TIMS Warehouse Transactions' -st 'Development' -p 'Warehouse Transactions version 1.5.0.4' -vp 'TIMS Warehouse Transactions\Executable' -sy -usr 'config' -pw 'config' -o check

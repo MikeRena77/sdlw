@@ -1,0 +1,23 @@
+ORA-01109: database not open
+
+
+Database dismounted.
+ORACLE instance shut down.
+ORACLE instance started.
+Total System Global Area  171966464 bytes
+Fixed Size		     787988 bytes
+Variable Size		  144964076 bytes
+Database Buffers	   25165824 bytes
+Redo Buffers		    1048576 bytes
+USERS
+       160	    1
+       161	    7
+       163	    1 SYS
+       164	    1
+       165	    1
+       166	    1
+       167	    1
+       168	    1
+       169	    1
+       170	    1
+Connected.

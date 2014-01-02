@@ -1,0 +1,146 @@
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+Export done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+
+About to export specified users ...
+. exporting pre-schema procedural objects and actions
+. exporting foreign function library names for user HARVEST 
+. exporting PUBLIC type synonyms
+. exporting private type synonyms
+. exporting object type definitions for user HARVEST 
+About to export HARVEST's objects ...
+. exporting database links
+. exporting sequence numbers
+. exporting cluster definitions
+. about to export HARVEST's tables via Conventional Path ...
+. . exporting table             HARALLCHILDRENPATH        828 rows exported
+. . exporting table                    HARALLUSERS         20 rows exported
+. . exporting table                     HARAPPROVE         45 rows exported
+. . exporting table      HARAPPROVEACTIONVIEW_TEMP
+. . exporting table                 HARAPPROVEHIST         19 rows exported
+. . exporting table  HARAPPROVEHISTACTIONVIEW_TEMP
+. . exporting table        HARAPPROVEHISTVIEW_TEMP
+. . exporting table                 HARAPPROVELIST         28 rows exported
+. . exporting table                    HARASSOCPKG         59 rows exported
+. . exporting table                HARASSOCPKGTEMP
+. . exporting table            HARBASELINEVIEWTEMP
+. . exporting table                      HARBRANCH         65 rows exported
+. . exporting table                 HARCHECKINPROC         55 rows exported
+. . exporting table                HARCHECKOUTPROC        155 rows exported
+. . exporting table                     HARCOMMENT          1 rows exported
+. . exporting table                  HARCONMRGPROC         20 rows exported
+. . exporting table               HARCONVERSIONLOG         30 rows exported
+. . exporting table                   HARCRPKGPROC         56 rows exported
+. . exporting table               HARCRSENVMRGPROC         13 rows exported
+. . exporting table                      HARDEFECT          0 rows exported
+. . exporting table                 HARDELVERSPROC         49 rows exported
+. . exporting table                  HARDEMOTEPROC         72 rows exported
+. . exporting table                 HARENVIRONMENT         28 rows exported
+. . exporting table           HARENVIRONMENTACCESS         68 rows exported
+. . exporting table                         HARESD          0 rows exported
+. . exporting table               HARFILEEXTENSION        462 rows exported
+. . exporting table                        HARFORM         57 rows exported
+. . exporting table              HARFORMATTACHMENT          0 rows exported
+. . exporting table                 HARFORMHISTORY        111 rows exported
+. . exporting table                    HARFORMTEMP
+. . exporting table                    HARFORMTYPE         12 rows exported
+. . exporting table              HARFORMTYPEACCESS          0 rows exported
+. . exporting table                HARFORMTYPEDEFS        195 rows exported
+. . exporting table                     HARHARVEST          2 rows exported
+. . exporting table                  HARINTMRGPROC         24 rows exported
+. . exporting table                  HARITEMACCESS       3740 rows exported
+. . exporting table                  HARITEMIDTEMP
+. . exporting table            HARITEMRELATIONSHIP          0 rows exported
+. . exporting table                       HARITEMS       3742 rows exported
+. . exporting table                    HARITEMTEMP
+. . exporting table               HARLINKEDPROCESS        131 rows exported
+. . exporting table                HARLISTDIFFPROC         52 rows exported
+. . exporting table                HARLISTVERSPROC         90 rows exported
+. . exporting table                    HARMOTETEMP
+. . exporting table                 HARMOVEPKGPROC          6 rows exported
+. . exporting table                          HARMR          8 rows exported
+. . exporting table                      HARNOTIFY        127 rows exported
+. . exporting table                  HARNOTIFYLIST         36 rows exported
+. . exporting table            HAROBJECTSEQUENCEID         15 rows exported
+. . exporting table                   HAROBJIDTEMP
+. . exporting table                         HARPAC         39 rows exported
+. . exporting table                     HARPACKAGE         56 rows exported
+. . exporting table                HARPACKAGEGROUP          8 rows exported
+. . exporting table              HARPACKAGENAMEGEN          2 rows exported
+. . exporting table               HARPACKAGESTATUS          0 rows exported
+. . exporting table                 HARPACKAGETEMP
+. . exporting table                HARPACKAGETEMP2
+. . exporting table             HARPASSWORDHISTORY          0 rows exported
+. . exporting table              HARPASSWORDPOLICY          1 rows exported
+. . exporting table                HARPATHFULLNAME        296 rows exported
+. . exporting table                  HARPKGGRPTEMP
+. . exporting table                  HARPKGHISTORY        177 rows exported
+. . exporting table                  HARPKGSINCMEW          0 rows exported
+. . exporting table                HARPKGSINPKGGRP          3 rows exported
+. . exporting table                    HARPMSTATUS          7 rows exported
+. . exporting table               HARPROBLEMREPORT          0 rows exported
+. . exporting table                 HARPROMOTEPROC        108 rows exported
+. . exporting table                       HARQANDA          0 rows exported
+. . exporting table                 HARREMITEMPROC         33 rows exported
+. . exporting table              HARRENAMEITEMPROC          9 rows exported
+. . exporting table                   HARREPINVIEW         38 rows exported
+. . exporting table                  HARREPOSITORY         14 rows exported
+. . exporting table            HARREPOSITORYACCESS          1 rows exported
+. . exporting table              HARREPOSITORYTEMP
+. . exporting table                HARSNAPVIEWPROC         19 rows exported
+. . exporting table                       HARSTATE        140 rows exported
+. . exporting table                 HARSTATEACCESS        214 rows exported
+. . exporting table                HARSTATEPROCESS        862 rows exported
+. . exporting table          HARSTATEPROCESSACCESS       1072 rows exported
+. . exporting table               HARSWITCHPKGPROC         10 rows exported
+. . exporting table                   HARTABLEINFO          1 rows exported
+. . exporting table                 HARTESTINGINFO          0 rows exported
+. . exporting table                   HARTIMESHEET          9 rows exported
+. . exporting table                         HARUDP         50 rows exported
+. . exporting table            HARUSDCOMPUTERNAMES          0 rows exported
+. . exporting table               HARUSDDEPLOYINFO          0 rows exported
+. . exporting table               HARUSDGROUPNAMES          0 rows exported
+. . exporting table                  HARUSDHISTORY          0 rows exported
+. . exporting table              HARUSDPACKAGEINFO          0 rows exported
+. . exporting table             HARUSDPACKAGENAMES          0 rows exported
+. . exporting table             HARUSDPLATFORMINFO          0 rows exported
+. . exporting table                        HARUSER         18 rows exported
+. . exporting table                 HARUSERCONTACT          0 rows exported
+. . exporting table                    HARUSERDATA         18 rows exported
+. . exporting table                   HARUSERGROUP         39 rows exported
+. . exporting table                HARUSERSINGROUP        119 rows exported
+. . exporting table                    HARUSERTEMP
+. . exporting table                  HARUSRGRPTEMP
+. . exporting table                 HARVERSIONDATA       5065 rows exported
+. . exporting table                HARVERSIONDELTA          0 rows exported
+. . exporting table                HARVERSIONDTEMP
+. . exporting table               HARVERSIONINVIEW      22018 rows exported
+. . exporting table                    HARVERSIONS      12021 rows exported
+. . exporting table                 HARVERSIONTEMP
+. . exporting table                        HARVIEW        131 rows exported
+. . exporting table                    HARVIEWTEMP
+. . exporting table                      RECURSIVE
+. . exporting table                TEMPAPPROVEHIST
+. . exporting table                TEMPAPPROVELIST
+. . exporting table                        VCTEMP1
+. . exporting table                        VCTEMP2
+. . exporting table                        VCTEMPD
+. . exporting table                       VCTEMPD2
+. exporting synonyms
+. exporting views
+. exporting stored procedures
+. exporting operators
+. exporting referential integrity constraints
+. exporting triggers
+. exporting indextypes
+. exporting bitmap, functional and extensible indexes
+. exporting posttables actions
+. exporting materialized views
+. exporting snapshot logs
+. exporting job queues
+. exporting refresh groups and children
+. exporting dimensions
+. exporting post-schema procedural objects and actions
+. exporting statistics
+Export terminated successfully without warnings.

@@ -1,0 +1,42 @@
+From: info@cmcrossroads.com
+Sent: Saturday, March 05, 2005 5:11 AM
+To: michael.h.andrews1@otc.army.mil
+Subject: [Visual Source Safe] Re: Database Connections - 40851
+From: Niels Andersen 
+To: Visual Source Safe 
+
+The VSS database information is kept in a registry key under 
+
+HKEY_CURRENT_USER\Software\Microsoft\Sourcesafe
+
+open regedit.exe, move to the above location and select File\Export.
+Type in VssSettings and hit enter. Close Regedit again and be very careful using it, you can do lots of damage in there.
+
+There should now be a file called VssSettings.reg in you MyDocuments folder.
+Copy this file to your new computer and when you have installed VSS on it, doubleclick on the VssSettings.reg file to install the settings on the new pc.
+
+*** Important ***
+The directions above assumes that the Vss Database you are using exist on a network server. If you use a local database then you must also copy the entire database to the new computer.
+To do this the old and new computers must be connected on a network (If your VSS datab ase is small you might be able to back it up to a recordable CD or DVD).
+
+Install Vss on the new PC and then copy the entire VSS folder from the old PC to the new one overwriting everything.
+
+VSS is usually located in the following folder:
+C:\Program Files\Microsoft Visual Studio\Common Files\VSS
+
+Hop this helps
+
+Niels 
+
+--------------------------------------------------------------------------------
+You may reply to this post by email or use the link below to review the entire thread
+http://www.cmcrossroads.com/ubbthreads/showflat.php?Number=40851
+
+
+--------------------------------------------------------------------------------
+This message was sent in HTML format to michael.h.andrews1@otc.army.mil
+  a.. Change your email address here.
+  b.. Change to TEXT format or to unsubscribe completely. 
+
+--------------------------------------------------------------------------------
+Copyright © 1998-2004 CM Crossroads, the configuration management community - www.cmcrossroads.com 

@@ -1,0 +1,2 @@
+INSERT INTO SYS_CM_Build_Header_Tbl
+VALUES(00001,'CM Built DB derived from OTTESDB1', '1.0.23.0', '4195', 0, '22 Sep 2004', 'Michael H. Andrews', 'Bob Rasmussen', '23 Aug 2004', '22 Sep 2004', 'Michael H. Andrews');

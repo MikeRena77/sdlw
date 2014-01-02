@@ -1,0 +1,7 @@
+--
+-- manifest 
+--
+
+-- patch requires build 30
+14571426,30,setcollation
+

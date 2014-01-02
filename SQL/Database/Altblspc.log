@@ -1,0 +1,18 @@
+ALTER TABLESPACE HARVESTMETA
+*
+ERROR at line 1:
+ORA-25143: default storage clause is not compatible with allocation policy 
+
+
+ALTER TABLESPACE HARVESTBLOB DEFAULT STORAGE ( MAXEXTENTS UNLIMITED )
+*
+ERROR at line 1:
+ORA-25143: default storage clause is not compatible with allocation policy 
+
+
+ALTER TABLESPACE HARVESTINDEX
+*
+ERROR at line 1:
+ORA-25143: default storage clause is not compatible with allocation policy 
+
+

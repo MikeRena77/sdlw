@@ -1,0 +1,3 @@
+I00060040: New connection with Broker HOODDBOTC86  established.
+E0302014b: Incorrect login.  Please try again.
+E0302014b: Incorrect login.  Please try again.

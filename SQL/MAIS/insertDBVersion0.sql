@@ -1,0 +1,23 @@
+INSERT INTO [MAISDB].[dbo].[SYS_CM_Build_Header_Tbl]
+		([Build_ID], 
+		[Build_Name], 
+		[Database_Version], 
+		[Build_Version], 
+		[Overall_Crc], 
+		[Build_Date], 
+		[Build_By], 
+		[Created_By], 
+		[Creation_Date], 
+		[Modification_Date], 
+		[Modified_By])
+VALUES(		--	<Build_ID,numeric(3,0),>, 
+			--	<Build_Name,varchar(30),>, 
+			--	<Database_Version,varchar(10),>, 
+			--	<Build_Version,varchar(10),>, 
+			--	<Overall_Crc,numeric(6,0),>, 
+			--	<Build_Date,datetime,>, 
+			--	<Build_By,varchar(30),>, 
+			--	<Created_By,varchar(30),>, 
+			--	<Creation_Date,datetime,>, 
+			--	<Modification_Date,datetime,>, 
+			--	<Modified_By,varchar(30),>)

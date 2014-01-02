@@ -1,0 +1,6 @@
+--
+-- manifest for patch 14528293
+--
+
+-- patch requires build 30
+14528293,30,collation

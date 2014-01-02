@@ -1,0 +1,19 @@
+  
+Signal the end of a batch file with a fanfare! 
+
+Batch files are used for custom jobs that require some simple scripting in order to string together a series of commands. Jobs requiring batch files might include large file copies, file searches, etc. which take a long time to complete. Add an audible indication at the end of the batch file to notify you when it is complete by playing a .wav or similar media file. 
+
+This is very simple to accomplish if you have Windows Media Player, and a compatible audio file, installed in your \windows folder. To do this: 
+
+
+Locate the file in Windows Explorer. 
+Right-click on the file and select Edit. 
+Click at the end of the line on which you want to add the command. 
+Hit [Enter] to create a new line. 
+Add the following command: mplayer /play /close soundfile.ext 
+Save the file. 
+
+When the batch file runs and encounters the preceding command, Media Player will open, play the sound file, and then close. You can also use Media Player to record a warning and completion message specific to your environment. 
+
+ 
+ 

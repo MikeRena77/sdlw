@@ -1,342 +1,39 @@
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\workspace -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\workspace -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\workspace -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -exc .git -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -exc cm\.git -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\workspace -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\workspace -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\workspace -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\workspace -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\workspace -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\workspace -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\workspace -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\workspace -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\workspace -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\workspace -xml vbFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\workspace -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\workspace -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\workspace -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\workspace -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\workspace -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\workspace -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\workspace -xml vbFilesDB.xml 
-
+Thu 01/02/2014 
+03:48 PM
 ********************************************************************************
 Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
 
+03:48 PM
 ********************************************************************************
 Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
 
+03:48 PM
 ********************************************************************************
 Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
 
+03:48 PM
 ********************************************************************************
 Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
 
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
+03:48 PM
 ********************************************************************************
 Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
 
+03:49 PM
+********************************************************************************
+Command Line: fciv -add SQL -r -bp C:\Users\502256043\github -xml SQLFilesDB.xml 
+
+03:49 PM
 ********************************************************************************
 Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
 
+03:49 PM
 ********************************************************************************
 Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
 
+03:49 PM
 ********************************************************************************
 Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
 
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Batch -r -bp C:\Users\502256043\github -xml batchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add cm -r -bp C:\Users\502256043\github -xml cmFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add perlWorkspace -r -bp C:\Users\502256043\github -xml perlFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add research -r -bp C:\Users\502256043\github -xml researchFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add Scripts -r -bp C:\Users\502256043\github -xml scriptsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add TeamBuildTypes -r -bp C:\Users\502256043\github -xml teamFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add tfsWorking -r -bp C:\Users\502256043\github -xml tfsFilesDB.xml 
-
-********************************************************************************
-Command Line: fciv -add vb -r -bp C:\Users\502256043\github -xml vbFilesDB.xml 
-
+Thu 01/02/2014 
+03:49 PM

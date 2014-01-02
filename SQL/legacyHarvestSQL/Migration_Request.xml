@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE harvest_form SYSTEM "harwebForms.dtd">
+<harvest_form dbtable="migrationrequest" id="migrationrequest" name="Migration Request" numtabs="0">
+
+  <text-field cols="80" dbfield="formname" id="formname" label="Form Name" maxsize="128"/>
+
+  <date-field dbfield="migreqdate" id="migreqdate" label="Request Date *"/>
+
+  <dbcombobox cols="30" dbfield="migreqname" hsql="select realname from haruser" id="migreqname" label="Requester Name *"/>
+
+  <combobox cols="15" dbfield="migmigtype" id="migmigtype" label="Migration Type *" maxsize="15" rows="1">
+    <entry dbfield="migmigtype">Code</entry>
+    <entry dbfield="migmigtype">Patch</entry>
+    <entry dbfield="migmigtype">Database Object</entry>
+  </combobox>
+
+  <combobox cols="8" dbfield="migapptype" id="migapptype" label="Application Type *" maxsize="8" rows="1">
+    <entry dbfield="migapptype">Retek</entry>
+    <entry dbfield="migapptype">Oracle</entry>
+    <entry dbfield="migapptype">Teradata</entry>
+    <entry dbfield="migapptype">O/S</entry>
+  </combobox>
+
+  <combobox cols="6" dbfield="migstate" id="migstate" label="State *" maxsize="6" rows="1">
+    <entry dbfield="migstate">Open</entry>
+    <entry dbfield="migstate">Closed</entry>
+  </combobox>
+
+  <text-area cols="40" dbfield="migdesc1" id="migdesc1" label="Description" maxsize="200" rows="5"/>
+
+  <combobox cols="11" dbfield="migpri1" id="migpri1" label="Priority *" maxsize="11" rows="1">
+    <entry dbfield="migpri1">P1 - Urgent</entry>
+    <entry dbfield="migpri1">P2 - High</entry>
+    <entry dbfield="migpri1">P3 - Medium</entry>
+    <entry dbfield="migpri1">P4 - Low</entry>
+  </combobox>
+
+  <dbcombobox cols="30" dbfield="migharpack" hsql="select packagename from harpackage" id="migharpack" label="Harvest Package No."/>
+
+  <combobox cols="22" dbfield="migsrcenv" id="migsrcenv" label="Source Environment *" maxsize="22" rows="1">
+    <entry dbfield="migsrcenv">Tech</entry>
+    <entry dbfield="migsrcenv">Gold</entry>
+    <entry dbfield="migsrcenv">Development</entry>
+    <entry dbfield="migsrcenv">Assembly Test</entry>
+    <entry dbfield="migsrcenv">System Test</entry>
+    <entry dbfield="migsrcenv">Integration Test</entry>
+    <entry dbfield="migsrcenv">Performance Test</entry>
+    <entry dbfield="migsrcenv">User Acceptance Test</entry>
+    <entry dbfield="migsrcenv">Production</entry>
+    <entry dbfield="migsrcenv">Conversion Development</entry>
+    <entry dbfield="migsrcenv">Conversion Test</entry>
+    <entry dbfield="migsrcenv">Training</entry>
+  </combobox>
+
+  <combobox cols="22" dbfield="migtgtenv1" id="migtgtenv1" label="Target Environment (first) *" maxsize="22" rows="1">
+    <entry dbfield="migtgtenv1">Tech</entry>
+    <entry dbfield="migtgtenv1">Gold</entry>
+    <entry dbfield="migtgtenv1">Development</entry>
+    <entry dbfield="migtgtenv1">Assembly Test</entry>
+    <entry dbfield="migtgtenv1">System Test</entry>
+    <entry dbfield="migtgtenv1">Integration Test</entry>
+    <entry dbfield="migtgtenv1">Performance Test</entry>
+    <entry dbfield="migtgtenv1">User Acceptance Test</entry>
+    <entry dbfield="migtgtenv1">Production</entry>
+    <entry dbfield="migtgtenv1">Conversion Development</entry>
+    <entry dbfield="migtgtenv1">Conversion Test</entry>
+    <entry dbfield="migtgtenv1">Training</entry>
+  </combobox>
+
+  <date-field dbfield="migdesmigdate1" id="migdesmigdate1" label="Desired Migration Date (first) *"/>
+
+  <date-field dbfield="miglatemigdate1" id="miglatemigdate1" label="Latest Migration Date (first) *"/>
+
+  <date-field dbfield="migschedmigdate1" id="migschedmigdate1" label="Scheduled Migration Date (first)"/>
+
+  <combobox cols="22" dbfield="migtgtenv2" id="migtgtenv2" label="Target Environment (second)" maxsize="22" rows="1">
+    <entry dbfield="migtgtenv2">Tech</entry>
+    <entry dbfield="migtgtenv2">Gold</entry>
+    <entry dbfield="migtgtenv2">Development</entry>
+    <entry dbfield="migtgtenv2">Assembly Test</entry>
+    <entry dbfield="migtgtenv2">System Test</entry>
+    <entry dbfield="migtgtenv2">Integration Test</entry>
+    <entry dbfield="migtgtenv2">Performance Test</entry>
+    <entry dbfield="migtgtenv2">User Acceptance Test</entry>
+    <entry dbfield="migtgtenv2">Production</entry>
+    <entry dbfield="migtgtenv2">Conversion Development</entry>
+    <entry dbfield="migtgtenv2">Conversion Test</entry>
+    <entry dbfield="migtgtenv2">Training</entry>
+  </combobox>
+
+  <date-field dbfield="migdesmigdate2" id="migdesmigdate2" label="Desired Migration Date (second)"/>
+
+  <date-field dbfield="miglatemigdate2" id="miglatemigdate2" label="Latest Migration Date (second)"/>
+
+  <date-field dbfield="migschedmigdate2" id="migschedmigdate2" label="Scheduled Migration Date (second)"/>
+
+  <combobox cols="22" dbfield="migtgtenv3" id="migtgtenv3" label="Target Environment (third)" maxsize="22" rows="1">
+    <entry dbfield="migtgtenv3">Tech</entry>
+    <entry dbfield="migtgtenv3">Gold</entry>
+    <entry dbfield="migtgtenv3">Development</entry>
+    <entry dbfield="migtgtenv3">Assembly Test</entry>
+    <entry dbfield="migtgtenv3">System Test</entry>
+    <entry dbfield="migtgtenv3">Integration Test</entry>
+    <entry dbfield="migtgtenv3">Performance Test</entry>
+    <entry dbfield="migtgtenv3">User Acceptance Test</entry>
+    <entry dbfield="migtgtenv3">Production</entry>
+    <entry dbfield="migtgtenv3">Conversion Development</entry>
+    <entry dbfield="migtgtenv3">Conversion Test</entry>
+    <entry dbfield="migtgtenv3">Training</entry>
+  </combobox>
+
+  <date-field dbfield="migdesmigdate3" id="migdesmigdate3" label="Desired Migration Date (third)"/>
+
+  <date-field dbfield="miglatemigdate3" id="miglatemigdate3" label="Latest Migration Date (third)"/>
+
+  <date-field dbfield="migschedmigdate3" id="migschedmigdate3" label="Scheduled Migration Date (third)"/>
+
+  <combobox cols="22" dbfield="migtgtenv4" id="migtgtenv4" label="Target Environment (fourth)" maxsize="22" rows="1">
+    <entry dbfield="migtgtenv4">Tech</entry>
+    <entry dbfield="migtgtenv4">Gold</entry>
+    <entry dbfield="migtgtenv4">Development</entry>
+    <entry dbfield="migtgtenv4">Assembly Test</entry>
+    <entry dbfield="migtgtenv4">System Test</entry>
+    <entry dbfield="migtgtenv4">Integration Test</entry>
+    <entry dbfield="migtgtenv4">Performance Test</entry>
+    <entry dbfield="migtgtenv4">User Acceptance Test</entry>
+    <entry dbfield="migtgtenv4">Production</entry>
+    <entry dbfield="migtgtenv4">Conversion Development</entry>
+    <entry dbfield="migtgtenv4">Conversion Test</entry>
+    <entry dbfield="migtgtenv4">Training</entry>
+  </combobox>
+
+  <date-field dbfield="migdesmigdate4" id="migdesmigdate4" label="Desired Migration Date (fourth)"/>
+
+  <date-field dbfield="miglatemigdate4" id="miglatemigdate4" label="Latest Migration Date (fourth)"/>
+
+  <date-field dbfield="migschedmigdate4" id="migschedmigdate4" label="Scheduled Migration Date (fourth)"/>
+
+  <combobox cols="16" dbfield="migactstat1" id="migactstat1" label="Action Status (first) *" maxsize="16" rows="1">
+    <entry dbfield="migactstat1">Not Started</entry>
+    <entry dbfield="migactstat1">Approved</entry>
+    <entry dbfield="migactstat1">Deferred</entry>
+    <entry dbfield="migactstat1">Work in Progress</entry>
+    <entry dbfield="migactstat1">Completed</entry>
+    <entry dbfield="migactstat1">Failed</entry>
+    <entry dbfield="migactstat1">Rejected</entry>
+  </combobox>
+
+  <combobox cols="16" dbfield="migactstat2" id="migactstat2" label="Action Status (second)" maxsize="16" rows="1">
+    <entry dbfield="migactstat2">Not Started</entry>
+    <entry dbfield="migactstat2">Approved</entry>
+    <entry dbfield="migactstat2">Deferred</entry>
+    <entry dbfield="migactstat2">Work in Progress</entry>
+    <entry dbfield="migactstat2">Completed</entry>
+    <entry dbfield="migactstat2">Failed</entry>
+    <entry dbfield="migactstat2">Rejected</entry>
+  </combobox>
+
+  <combobox cols="16" dbfield="migactstat3" id="migactstat3" label="Action Status (third)" maxsize="16" rows="1">
+    <entry dbfield="migactstat3">Not Started</entry>
+    <entry dbfield="migactstat3">Approved</entry>
+    <entry dbfield="migactstat3">Deferred</entry>
+    <entry dbfield="migactstat3">Work in Progress</entry>
+    <entry dbfield="migactstat3">Completed</entry>
+    <entry dbfield="migactstat3">Failed</entry>
+    <entry dbfield="migactstat3">Rejected</entry>
+  </combobox>
+
+  <combobox cols="16" dbfield="migactstat4" id="migactstat4" label="Action Status (fourth)" maxsize="16" rows="1">
+    <entry dbfield="migactstat4">Not Started</entry>
+    <entry dbfield="migactstat4">Approved</entry>
+    <entry dbfield="migactstat4">Deferred</entry>
+    <entry dbfield="migactstat4">Work in Progress</entry>
+    <entry dbfield="migactstat4">Completed</entry>
+    <entry dbfield="migactstat4">Failed</entry>
+    <entry dbfield="migactstat4">Rejected</entry>
+  </combobox>
+
+  <text-area cols="40" dbfield="migmigsteps" id="migmigsteps" label="Migration Steps" maxsize="200" rows="5"/>
+
+  <text-area cols="40" dbfield="migspecinst" id="migspecinst" label="Special Instructions" maxsize="200" rows="5"/>
+
+  <dbcombobox cols="30" dbfield="migassignedto" hsql="select realname from haruser" id="migassignedto" label="Assigned To"/>
+
+  <date-field dbfield="migclosedate" id="migclosedate" label="Closing Date"/>
+
+</harvest_form>
