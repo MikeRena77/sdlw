@@ -85,7 +85,9 @@ GenPOS_Fullup_ATX_GE
     108659  CORP\anirudha.ketkar    12/30/2013  1:29:15 AM   Updated RELEASE.NUM for GP2480O release
     108690	CORP\anirudha.ketkar	12/31/2013 4:26:50 AM	Updated RELEASE.NUM for GP2480P Release
     GP2480P 31 Dec 2013 01:00pm SmartHeap_production BASE=N2480P
-    /P:RN_BASE=N2480P;RN_APPL=GP2480P
+    108757	edit	CORP\anirudha.ketkar	1/3/2014 5:19:14 AM	Changes related to disabling the Local discount
+    GP2480Q 02 Jan 2014 01:00pm SmartHeap_production BASE=N2480Q
+    /P:RN_BASE=N2480Q;RN_APPL=GP2480Q
 GenPOS_Fullup_OP1_GE
     GP2450N 16 Dec 2013 06:00pm SmartHeap_production BASE=N2450N
     GP2450M 06 Dec 2013 06:00pm SmartHeap_production BASE=N2450M
